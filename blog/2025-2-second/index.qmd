@@ -1,0 +1,14 @@
+---
+title: "second"
+description: "Post description for first post"
+author: "Harsha"
+date: "5/22/2021"
+image: "cover.jpg"
+categories:
+  - Science
+  - Technology
+resources:
+  - presentation.pdf
+---
+
+checking out new post. 
