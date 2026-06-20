@@ -1,2 +1,183 @@
+---
+title: "Curriculum Vitae"
+pagetitle: "CV | Amirhossein Ghadiri"
+---
 
-<iframe src="AmirhosseinGhadiri_CV_Oct2025.pdf" width="100%" height="600px"></iframe>
+```{=html}
+<style>
+  .cv-wrap { max-width: 860px; }
+  .cv-top {
+    display: flex; flex-wrap: wrap; gap: 1rem 1.5rem;
+    align-items: baseline; justify-content: space-between;
+    border-bottom: 2px solid #0066b2; padding-bottom: 0.9rem; margin-bottom: 1.6rem;
+  }
+  .cv-top .who h2 { margin: 0 0 0.2rem 0; font-weight: 700; }
+  .cv-top .who p { margin: 0; color: #5a5d60; }
+  .cv-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+  .cv-actions a {
+    text-decoration: none; font-size: 0.92rem;
+    border: 1px solid #d4dde6; border-radius: 6px; padding: 0.35rem 0.7rem; color: rgb(55,58,60);
+    transition: background 0.15s ease, border-color 0.15s ease;
+  }
+  .cv-actions a:hover { background: #f1f6fb; border-color: #0066b2; }
+  .cv-actions a.primary { background: #0066b2; color: #fff; border-color: #0066b2; font-weight: 600; }
+  .cv-actions a.primary:hover { background: #024c86; }
+
+  .cv-section { margin: 1.9rem 0; }
+  .cv-section > h3 {
+    font-size: 1.08rem; text-transform: uppercase; letter-spacing: 0.04em;
+    color: #024c86; border-bottom: 1px solid #e4ebf1; padding-bottom: 0.3rem; margin-bottom: 1rem;
+  }
+
+  .cv-entry { margin-bottom: 1.15rem; }
+  .cv-entry .row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.2rem 1rem; }
+  .cv-entry .role { font-weight: 600; margin: 0; }
+  .cv-entry .place { color: #5a5d60; margin: 0.1rem 0; }
+  .cv-entry .when { color: #76797c; font-size: 0.9rem; white-space: nowrap; }
+  .cv-entry .detail { margin: 0.35rem 0 0 0; color: rgb(55,58,60); }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.3rem; }
+  .chips span {
+    background: #eef4fa; color: #024c86; border: 1px solid #dce8f3;
+    border-radius: 999px; padding: 0.22rem 0.7rem; font-size: 0.86rem;
+  }
+  .skillgroup { margin-bottom: 0.85rem; }
+  .skillgroup .label { font-weight: 600; font-size: 0.92rem; margin-bottom: 0.3rem; }
+
+  .cv-list { margin: 0; padding-left: 1.1rem; }
+  .cv-list li { margin-bottom: 0.5rem; }
+
+  @media (max-width: 520px) {
+    .cv-entry .when { white-space: normal; }
+  }
+</style>
+
+<div class="cv-wrap">
+
+  <div class="cv-top">
+    <div class="who">
+      <h2>Amirhossein Ghadiri</h2>
+      <p>PhD Researcher, Data Lab for Social Good, Cardiff Business School</p>
+    </div>
+    <div class="cv-actions">
+      <a class="primary" href="AmirhosseinGhadiri_CV_April2026.pdf" target="_blank" rel="noopener">Download PDF</a>
+      <a href="mailto:GhadiriA@cardiff.ac.uk">Email</a>
+      <a href="https://github.com/amirhosseinghdv" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/amirhossein-ghadiri-8296781a6/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=e2vu41AAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
+    </div>
+  </div>
+
+  <div class="cv-section">
+    <h3>Education and experience</h3>
+
+    <div class="cv-entry">
+      <div class="row">
+        <p class="role">PhD, Business Management (Data Lab for Social Good)</p>
+        <span class="when">Oct 2025 &ndash; present</span>
+      </div>
+      <p class="place">Cardiff Business School, Cardiff University</p>
+      <p class="detail">Building methods to make healthcare service delivery in Wales resilient to floods and rising seas, using machine learning, NLP, forecasting, and operations research. Supervised by Prof. Bahman Rostami-Tabar, Dr Thomas Woolley, and Dr William Bennett. Funded by an ESRC studentship through the Wales Graduate School for the Social Sciences.</p>
+    </div>
+
+    <div class="cv-entry">
+      <div class="row">
+        <p class="role">Visiting Researcher</p>
+        <span class="when">Sep 2023 &ndash; Sep 2025</span>
+      </div>
+      <p class="place">Purdue University, with Dr Sogand Hasanzadeh</p>
+      <p class="detail">Applied machine learning and large language models to assess the risk of vehicle intrusions into construction work zones, a leading cause of roadwork fatalities.</p>
+    </div>
+
+    <div class="cv-entry">
+      <div class="row">
+        <p class="role">MSc, Construction Engineering and Management</p>
+        <span class="when">Sep 2019 &ndash; Oct 2022</span>
+      </div>
+      <p class="place">Amirkabir University of Technology, Tehran &middot; GPA 18.62/20, ranked 2nd in cohort</p>
+      <p class="detail">Thesis: a computer vision and fuzzy logic system for real-time evaluation of personal protective equipment compliance on construction sites. Supervised by Dr Vahid Shahhosseini.</p>
+    </div>
+
+    <div class="cv-entry">
+      <div class="row">
+        <p class="role">BSc, Civil Engineering</p>
+        <span class="when">2015 &ndash; 2019</span>
+      </div>
+      <p class="place">Amirkabir University of Technology, Tehran &middot; GPA 15.01/20</p>
+    </div>
+  </div>
+
+  <div class="cv-section">
+    <h3>Research interests</h3>
+    <div class="chips">
+      <span>Machine learning</span><span>Deep learning</span><span>Computer vision</span>
+      <span>NLP and LLMs</span><span>Generative AI</span><span>Forecasting</span>
+      <span>Operations research</span><span>Optimisation</span><span>Simulation</span>
+      <span>Statistical learning</span><span>Reinforcement learning</span>
+    </div>
+  </div>
+
+  <div class="cv-section">
+    <h3>Publications</h3>
+    <ul class="cv-list">
+      <li>
+        Ghadiri, A. and Hasanzadeh, S. <em>Leveraging Large Language Models and Deep Learning for Construction Work Zone Intrusion Risk Assessment.</em> Proceedings of the ASCE International Conference on Computing in Civil Engineering (I3CE 2025).
+        <a href="https://ascelibrary.org/doi/abs/10.1061/9780784486436.047" target="_blank" rel="noopener">Link</a>
+      </li>
+      <li>
+        Ghadiri, A. and Shahhosseini, V. <em>Combining Computer Vision with Fuzzy Logic for Real-time Evaluation of Personal Protective Equipment Compliance.</em> Under review, International Journal of Occupational Safety and Ergonomics.
+        <a href="https://github.com/amirhosseinghdv/PPE-Noncompliance-Evaluation" target="_blank" rel="noopener">Code</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="cv-section">
+    <h3>Technical skills</h3>
+
+    <div class="skillgroup">
+      <div class="label">Languages and tools</div>
+      <div class="chips">
+        <span>Python</span><span>R</span><span>PyTorch</span><span>TensorFlow</span><span>Git</span>
+      </div>
+    </div>
+
+    <div class="skillgroup">
+      <div class="label">Methods</div>
+      <div class="chips">
+        <span>Machine learning</span><span>Deep learning</span><span>Computer vision</span>
+        <span>NLP and LLMs</span><span>Generative AI</span><span>Forecasting</span>
+        <span>Statistical learning</span><span>Operations research</span><span>Optimisation</span>
+        <span>GANs</span><span>RNNs</span><span>Signal processing</span><span>Robotics and ROS</span>
+        <span>Reinforcement learning</span>
+      </div>
+    </div>
+
+    <div class="skillgroup">
+      <div class="label">Software</div>
+      <div class="chips">
+        <span>MS Project</span><span>AutoCAD 2D</span><span>MS Office</span>
+      </div>
+    </div>
+
+    <div class="skillgroup">
+      <div class="label">Languages</div>
+      <div class="chips">
+        <span>Persian (native)</span><span>English (TOEFL 110/120)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="cv-section">
+    <h3>Honours and standardised tests</h3>
+    <ul class="cv-list">
+      <li>ESRC Doctoral Studentship (UKRI), Wales Graduate School for the Social Sciences.</li>
+      <li>Ranked 2nd of 17 students in the MSc Construction Engineering and Management cohort.</li>
+      <li>Ranked 591st among more than 200,000 candidates in the national MSc entrance exam.</li>
+      <li>Ranked 75th among more than 30,000 candidates in the civil engineering MSc entrance exam.</li>
+      <li>Ranked in the top 30 of 107 peers in the BSc Civil Engineering programme.</li>
+      <li>GRE 328/340 (Nov 2022) &middot; TOEFL iBT 110/120 (Jul 2025).</li>
+    </ul>
+  </div>
+
+</div>
+```

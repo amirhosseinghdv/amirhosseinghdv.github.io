@@ -2,62 +2,42 @@
 title: "Who am I"
 ---
 
+I'm a first-year PhD researcher at the Data Lab for Social Good in Cardiff Business School. My background is in civil and construction engineering, but most of my research has been about teaching computers to see and read: computer vision for safety on building sites, and more recently language models for risk assessment. Now I'm pointing those tools at a different kind of problem, which is how a changing climate is going to affect the way health and care services get delivered.
 
-  
-## Research focus / PhD project
-  
-  My research focuses on addressing inefficiencies in supply chain management for contraceptive products in developing countries. These inefficiencies often lead to shortages, limiting women's reproductive autonomy and exacerbating societal challenges. By integrating probabilistic forecasting with inventory optimization, I aim to create a novel approach that accounts for uncertainties, poor data quality, and local demand variations. This interdisciplinary project involves collaboration with scholars from Cardiff Business School, the School of Computer Science & Informatics, and the United States Agency for International Development (USAID). The goal is to improve access to contraceptives, reduce unintended pregnancies, and prevent unsafe abortions, ultimately benefiting women, healthcare providers, governments, and donor organizations.
+## What my PhD is about
 
-By utilizing data analytics, forecasting, machine learning, deep learning, probabilistic modelling, computer vision, and natural language processing, this PhD study will explore how climate change risks, particularly rising sea levels and increased flooding, will shape the future delivery of health and care services. 
-This research is supported by four partners: Public Health Wales, the Future Generations Commissioner for Wales, Natural Resources Wales, and the Office for National Statistics.
+Wales floods. Roughly one in eight properties here is at some risk of it, and the climate signal points to wetter winters and higher seas. Hospitals and clinics can't simply shut their doors when the water rises, which makes the failure modes the interesting part: how services break, who loses access, and for how long.
 
+That is harder to pin down than it sounds. Flood maps tell you which buildings get wet. They don't tell you that a flooded substation three streets away has knocked out a dialysis unit, or that staff couldn't reach a ward because the roads were under water. A hospital can stay completely dry and still stop delivering care.
+
+My research builds the layer that is missing. The first part maps the mechanisms through which floods disrupt healthcare, turning scattered evidence from reports, academic papers, news, and the Senedd record into a structured picture of what actually fails. From there the project moves toward scoring which Welsh facilities are most exposed, projecting how that exposure shifts under different climate futures, and helping planners decide where to put resources before the next flood rather than during it. A good chunk of this runs on a text-mining pipeline I'm building, which uses large language models to pull coded events out of messy documents at a scale no single reader could keep up with.
+
+The work is grounded in Wales, but the methods are meant to travel.
 
 ## Supervision team
 
-- Lead: [Prof Bahman Rostami-Tabar](https://profiles.cardiff.ac.uk/staff/rostami-tabarb), Data Lab for Social Good Research Group, Cardiff Business School, UK
-- Co: [Prof Aris Syntetos](https://www.cardiff.ac.uk/people/view/598321-syntetos-aris), Cardiff Business School, UK
-- Co: [Dr Federico Liberatore](https://www.cardiff.ac.uk/people/view/1721244-liberatore-federico), School of Computer Science and Informatics, UK
-- Collaborator: [Glenn Milano](https://www.linkedin.com/in/milano-glenn/), Global Health Supply Chain, Bureau for Global Health, United States Agency for International Development (USAID)
+- Lead: [Prof Bahman Rostami-Tabar](https://profiles.cardiff.ac.uk/staff/rostami-tabarb), Data Lab for Social Good, Cardiff Business School
+- Co-supervisor: [Dr Thomas Woolley](https://profiles.cardiff.ac.uk/staff/woolleyt1), School of Mathematics, Cardiff University
+- Co-supervisor: [Dr William Bennett](https://www.swansea.ac.uk/staff/w.g.bennett/), School of Engineering, Swansea University
 
+## Funding and partners
 
-- Lead: [Prof Bahman Rostami-Tabar](https://profiles.cardiff.ac.uk/staff/rostami-tabarb), Data Lab for Social Good Research Group, Cardiff Business School, UK
-- Co: [Dr Thomas Woolley](https://profiles.cardiff.ac.uk/staff/woolleyt1), Cardiff University School of Mathematics, UK
-- Co: [Dr William Bennett]( https://www.swansea.ac.uk/staff/w.g.bennett/), Lecturer in Civil Engineering, Swansea University, UK
+The PhD is funded by an ESRC studentship through the Wales Graduate School for the Social Sciences (WGSSS). It is shaped by working with people who handle this problem directly: Public Health Wales, the Future Generations Commissioner for Wales, Natural Resources Wales, and the Office for National Statistics. Their experience has already changed how I framed the project, including a shift away from real-time response toward longer-term preparedness planning, because the data you would need during a live incident mostly isn't there.
 
+## Before Cardiff
 
+I did both my BSc in Civil Engineering and my MSc in Construction Engineering and Management at Amirkabir University of Technology in Tehran, finishing second in my master's cohort. My thesis built a computer vision system to check whether construction workers were wearing their protective equipment, combining object detection, image classification, and fuzzy logic. After that I spent two years as a visiting researcher at Purdue University, working with Dr Sogand Hasanzadeh on machine learning and language models for assessing the risk of vehicles intruding into roadwork zones.
 
+## What I work with
 
+Most of my day to day is in Python: PyTorch and TensorFlow for deep learning, the usual data and ML stack, and increasingly the tooling that sits around large language models. I also work in R, mainly for forecasting and statistics. My interests sit where machine learning, computer vision, NLP, forecasting, operations research, and optimisation overlap, which is a roundabout way of saying I like problems that need both a model and a reason to trust what it tells you.
 
-## Funder
+A quick rundown:
 
-Welsh Graduate School for the Social Sciences (WGSSS)
+- Languages and tools: Python, R, PyTorch, TensorFlow, Git
+- Methods: machine learning, deep learning, computer vision, NLP and large language models, forecasting, statistics, operations research, optimisation, simulation
+- Spoken languages: Persian (native), English (TOEFL 110)
 
+## Where I'm headed
 
-## Partners
-Public Health Wales,
-The Future Generations Commissioner for Wales,
-Natural Resources Wales, 
-The Office for National Statistics. 
-
-
-
-
-## Teaching & training
-
-* Graduate tutor: Forecasting and Business Analytics modules (Cardiff).
-* Delivered workshops and short courses: Introduction to Python for researchers, time series forecasting workshops for pharmaceutical officers in Ethiopia, Quarto website training for R users.
-
-## Technical skills
-Languages & tooling: R (tidyverse, tsibble, fable), Python (pandas, mlforecast), Quarto, Git/GitHub, Docker, LaTeX/TikZ
-Forecasting & ML: State‑space models, Tobit/Kalman approaches, conformal prediction, LightGBM/XGBoost, probabilistic forecasting, hierarchical forecasting
-Supply chain / domain tools: LMIS/DHIS2 contexts, inventory simulation, demand censoring and lost‑sales handling
-Reproducibility & deployment: renv, Quarto websites, GitHub Actions, containerised evaluation (CHAP)
-
-
-Language: Persian (Mother Tongue), English (Foreign Language), TOEFL: 110/120, R:29, L:30, S:24, W:27 (Jul. 2025), GRE: 328/340, Q:169, V:159, W:4 (Nov. 2022)
-Programming and AI: Python, Data Analytics, Machine/Deep Learning, Computer Vision, Statistical Learning, Forecasting, NLP, GenAI, LLMs, TensorFlow, PyTorch, Git, GAN, RNN, Signal Processing, Robotics, ROS, RL
-Software: Microsoft Project, Autodesk Autocad(2D), Microsoft Office
-
-
-
-
+After the PhD I want to work as an applied scientist, machine learning engineer, or data scientist, ideally in London. So alongside the research I'm deliberately building the engineering side of the job: putting models into pipelines other people can actually run, instead of notebooks that only work once on my own laptop.

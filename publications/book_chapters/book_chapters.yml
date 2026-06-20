@@ -1,9 +1,7 @@
-- title: 'Harsha Chamara Hewage, H. Niles Perera, Shari De Baets, Forecast adjustments during post-promotional periods, European Journal of Operational Research.'
-  path: https://doi.org/10.1016/j.ejor.2021.07.057
+- title: 'Leveraging Large Language Models and Deep Learning for Construction Work Zone Intrusion Risk Assessment'
+  path: https://ascelibrary.org/doi/abs/10.1061/9780784486436.047
+  author: 'Amirhossein Ghadiri, Sogand Hasanzadeh'
   description: >
-    We study judgmental forecast adjustments in pre-promotional (normal), promotional and post-promotional periods via behavioral experiments. Forecasters need structured support to make effective adjustments during post-promotional periods. The provision of quantitative information can reduce harmful judgmental adjustments in a post-promotional period.
-  categories: [Python, Machine Learning, Data Cleaning]
-  date: 2024-01-01
-
-
-
+    Proceedings of the ASCE International Conference on Computing in Civil Engineering (I3CE 2025). The paper pairs large language models with deep learning to assess the risk of vehicle intrusions into road construction work zones, a leading cause of worker fatalities.
+  categories: [LLMs, Deep Learning, NLP, Construction Safety]
+  date: 2025-01-01

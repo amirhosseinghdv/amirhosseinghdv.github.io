@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A hospital above rising water, with a chain of failures spreading outward">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f3f7fb"/>
+      <stop offset="1" stop-color="#dce8f3"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a86c8"/>
+      <stop offset="1" stop-color="#0066b2"/>
+    </linearGradient>
+    <linearGradient id="deepwater" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0066b2"/>
+      <stop offset="1" stop-color="#024c86"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#sky)"/>
+
+  <!-- distant skyline -->
+  <g fill="#c3d6e6" opacity="0.7">
+    <rect x="90" y="250" width="60" height="150"/>
+    <rect x="160" y="210" width="48" height="190"/>
+    <rect x="980" y="230" width="54" height="170"/>
+    <rect x="1050" y="270" width="64" height="130"/>
+  </g>
+
+  <!-- hospital building -->
+  <g>
+    <rect x="470" y="170" width="260" height="230" fill="#ffffff" stroke="#37393c" stroke-width="3"/>
+    <!-- windows -->
+    <g fill="#cfe0ef">
+      <rect x="500" y="205" width="34" height="34"/>
+      <rect x="556" y="205" width="34" height="34"/>
+      <rect x="612" y="205" width="34" height="34"/>
+      <rect x="668" y="205" width="34" height="34"/>
+      <rect x="500" y="262" width="34" height="34"/>
+      <rect x="668" y="262" width="34" height="34"/>
+      <rect x="500" y="319" width="34" height="34"/>
+      <rect x="556" y="319" width="34" height="34"/>
+      <rect x="612" y="319" width="34" height="34"/>
+      <rect x="668" y="319" width="34" height="34"/>
+    </g>
+    <!-- medical cross panel -->
+    <rect x="556" y="255" width="90" height="90" fill="#0066b2"/>
+    <rect x="592" y="270" width="18" height="60" fill="#ffffff"/>
+    <rect x="571" y="291" width="60" height="18" fill="#ffffff"/>
+    <!-- roof line -->
+    <rect x="470" y="158" width="260" height="14" fill="#37393c"/>
+  </g>
+
+  <!-- cascade nodes spreading from the hospital -->
+  <g>
+    <line x1="600" y1="150" x2="600" y2="92" stroke="#7a8387" stroke-width="3"/>
+    <line x1="600" y1="92" x2="360" y2="92" stroke="#7a8387" stroke-width="3"/>
+    <line x1="600" y1="92" x2="840" y2="92" stroke="#7a8387" stroke-width="3"/>
+    <line x1="360" y1="92" x2="240" y2="92" stroke="#7a8387" stroke-width="3" stroke-dasharray="6 7"/>
+    <line x1="840" y1="92" x2="960" y2="92" stroke="#7a8387" stroke-width="3" stroke-dasharray="6 7"/>
+
+    <g>
+      <circle cx="600" cy="92" r="26" fill="#024c86"/>
+      <circle cx="360" cy="92" r="22" fill="#0066b2"/>
+      <circle cx="840" cy="92" r="22" fill="#0066b2"/>
+      <circle cx="240" cy="92" r="17" fill="#3a86c8"/>
+      <circle cx="960" cy="92" r="17" fill="#3a86c8"/>
+    </g>
+    <!-- node glyphs -->
+    <g stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round">
+      <!-- power -->
+      <path d="M597 82 l-7 12 h10 l-7 12"/>
+      <!-- roads -->
+      <path d="M353 86 l14 0 M353 92 l14 0 M353 98 l14 0" stroke-dasharray="3 3"/>
+      <!-- people/staff -->
+      <circle cx="840" cy="87" r="4"/>
+      <path d="M834 100 a6 7 0 0 1 12 0"/>
+    </g>
+  </g>
+
+  <!-- water -->
+  <path d="M0 430 C 200 405, 360 458, 600 442 C 840 426, 1000 462, 1200 436 L 1200 630 L 0 630 Z" fill="url(#water)"/>
+  <path d="M0 486 C 220 462, 420 510, 620 494 C 860 476, 1010 512, 1200 490 L 1200 630 L 0 630 Z" fill="url(#deepwater)" opacity="0.85"/>
+
+  <!-- water highlights -->
+  <g stroke="#bcdcf2" stroke-width="3" fill="none" opacity="0.55" stroke-linecap="round">
+    <path d="M120 470 q 30 -12 60 0 t 60 0"/>
+    <path d="M820 470 q 30 -12 60 0 t 60 0"/>
+    <path d="M460 524 q 30 -12 60 0 t 60 0"/>
+  </g>
+</svg>

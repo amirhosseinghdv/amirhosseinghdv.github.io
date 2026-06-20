@@ -1,0 +1,54 @@
+---
+title: "Reading twenty years of disasters with a language model"
+description: "There is no clean dataset of how floods disrupt healthcare. The evidence exists, but it is written down in news, reports, and parliamentary records. Here is the pipeline I am building to read it at scale."
+author: "Amirhossein Ghadiri"
+date: "2026-06-12"
+image: "cover.svg"
+categories:
+  - NLP
+  - LLMs
+  - Data Engineering
+  - Pipelines
+---
+
+When I started the first work package of my PhD, I assumed the hard part would be the analysis. It was not. The hard part was that the data I needed did not exist in any usable form.
+
+I wanted to know how floods disrupt healthcare delivery: which services fail, through which mechanisms, and how badly. There is no table for that. No central register records hospital closures or cancelled clinics against the floods that caused them. Aggregated NHS activity data exists, but nothing links it to flood events. The evidence is real, it is just locked inside text, scattered across news articles, humanitarian reports, academic papers, and the bilingual record of the Senedd.
+
+So the project became, in large part, a text problem. The question I have been working on is how to read twenty years of disaster reporting without reading it by hand, and to come out the other side with structured, coded events I can actually count.
+
+This is the part of my work that is closest to the applied science and ML engineering jobs I want after the PhD, so I have tried to build it the way those teams would, as a pipeline rather than a notebook.
+
+## Not a script, a pipeline
+
+I want to be precise about that distinction, because it matters to me. A script runs once on my laptop and produces a number I can no longer reproduce six months later. A pipeline has tested components, versioned data at every stage, experiment tracking, and a single command-line entry point so anyone can run it end to end. New flood reports appear all the time, so the system has to keep ingesting and stay current. That requirement alone rules out the one-off approach.
+
+The flow has five stages. Each one earns its place.
+
+## Ingest
+
+The first stage pulls documents from sources that actually cover flood events: GDELT for global news, ReliefWeb for humanitarian reporting, and the Senedd record for Welsh parliamentary proceedings. The Senedd is an unusual and valuable source here, partly because it is bilingual in English and Welsh, and partly because it captures political and operational detail about real Welsh incidents that news coverage skips.
+
+This stage is built and tested, including the unglamorous parts: detecting when fifty outlets have syndicated the same wire story so I am not counting one flood fifty times.
+
+## Filter, recall first
+
+Most documents that mention flooding are irrelevant to healthcare. But I would rather keep junk than throw away a real signal, so the first filter is deliberately tuned for recall. It keeps every plausibly relevant flood document and accepts that a lot of those will be false positives. A second, semantic pass then tightens the set. Getting this order right matters: if you optimise the first stage for precision, you quietly lose the rare, important reports, and you never find out what you missed.
+
+## Extract, with the model on a leash
+
+This is where the language model does its work. Rather than asking it for free text, I use structured extraction with constrained decoding, so the output has to conform to a schema I defined: the mechanism families, the affected services, the health impacts. The model reads a messy paragraph and returns a coded event, not a paragraph of its own. Constrained decoding is the difference between a model that mostly returns valid data and one that always does, which is the difference between a pipeline that runs unattended and one I have to babysit.
+
+## Resolve across documents
+
+Five reports about the same flood are five descriptions of one event, not five events. So the next stage links documents that refer to the same incident and reconciles what they say. Without this, every count is inflated by however many outlets happened to cover a given flood.
+
+## Quantify and serve
+
+The last stage turns coded events into effect sizes drawn from the text itself, rather than from surveys that were never run. The output is then served as an auto-updating feed that flows into the next work package, where it becomes the basis for scoring how vulnerable Welsh facilities are.
+
+## What I take from building it
+
+The honest status is that the scaffold and the full ingestion layer are implemented and tested, and the extraction, resolution, and quantification stages are the work in front of me. But the shape of it is what I care about. The end state is infrastructure, a service that keeps recovering evidence as new floods are documented, not a single analysis with an expiry date.
+
+The research reason for all this is that you cannot make healthcare resilient to floods if you cannot first see how it fails. The career reason is that this is exactly the kind of system applied scientists are paid to build: messy real-world input, a model doing one well-scoped job in the middle, and engineering around it that makes the whole thing trustworthy and repeatable.

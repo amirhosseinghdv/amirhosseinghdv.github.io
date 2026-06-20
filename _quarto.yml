@@ -22,14 +22,10 @@ website:
         href: talks/index.qmd
       - text: Publications
         menu: 
-          - text: Journal Publications
-            href: publications/journal_articles/index.qmd
-          - text: Book Chapters
+          - text: Conference Papers
             href: publications/book_chapters/index.qmd
           - text: Working Papers
-            href: publications/working_papers/index.qmd
-          - text: Technical Reports
-            href: publications/technical_reports/index.qmd 
+            href: publications/working_papers/index.qmd 
       - text: Blog
         href: blog/index.qmd
     tools:
@@ -37,6 +33,8 @@ website:
         href: https://github.com/amirhosseinghdv
       - icon: linkedin
         href: https://www.linkedin.com/in/amirhossein-ghadiri-8296781a6/
+      - icon: mortarboard-fill
+        href: https://scholar.google.com/citations?user=e2vu41AAAAAJ&hl=en
 
 format:
   html:

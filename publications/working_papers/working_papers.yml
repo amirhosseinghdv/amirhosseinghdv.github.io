@@ -1,9 +1,7 @@
-- title: 'Harsha Chamara Hewage, H. Niles Perera, Shari De Baets, Forecast adjustments during post-promotional periods, European Journal of Operational Research.'
-  path: https://doi.org/10.1016/j.ejor.2021.07.057
+- title: 'Combining Computer Vision with Fuzzy Logic for Real-time Evaluation of Personal Protective Equipment Compliance'
+  path: ppe-fuzzy-vision/index.qmd
+  author: 'Amirhossein Ghadiri, Vahid Shahhosseini'
   description: >
-    We study judgmental forecast adjustments in pre-promotional (normal), promotional and post-promotional periods via behavioral experiments. Forecasters need structured support to make effective adjustments during post-promotional periods. The provision of quantitative information can reduce harmful judgmental adjustments in a post-promotional period.
-  categories: [Python, Machine Learning, Data Cleaning]
+    Under review at the International Journal of Occupational Safety and Ergonomics. A real-time pipeline that combines YOLOX object detection, three dedicated PPE classifiers, and a set of fuzzy inference systems to score how dangerous each worker's protective-equipment non-compliance is.
+  categories: [Computer Vision, Fuzzy Logic, Deep Learning, Under review]
   date: 2024-01-01
-
-
-

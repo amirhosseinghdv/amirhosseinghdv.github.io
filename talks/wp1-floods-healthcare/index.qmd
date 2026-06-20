@@ -1,0 +1,27 @@
+---
+title: "How floods disrupt healthcare"
+description: "WP1 progress talk: mapping the mechanisms behind health service failure during floods, grounded in Wales."
+author: "Amirhossein Ghadiri"
+date: "2026-06-15"
+image: "cover.svg"
+categories:
+  - Floods
+  - Healthcare
+  - NLP
+---
+
+```{=html}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<a href="slides/wp1_talk.html" target="_blank" rel="noopener noreferrer">
+  <button id="journal-article-btn">
+    <i class="fas fa-display"></i> Open slides
+  </button>
+</a>
+```
+
+This is the first work package talk from my PhD at the Data Lab for Social Good. It makes the case for a question that flood maps cannot answer: not where the water goes, but which health services stop, for whom, and for how long.
+
+The talk walks through the problem, the way I am building the evidence base from curated literature and a machine-scaled text corpus, the mechanism map that comes out of it, and why Wales is the right place to ground all of it. It closes on the pipeline I am building to read disaster reporting at scale and turn it into coded events.
+
+Presented with my supervisors Bahman Rostami-Tabar, Thomas Woolley, and William Bennett. The deck runs in the browser. Press `S` for speaker notes and `F` for fullscreen.

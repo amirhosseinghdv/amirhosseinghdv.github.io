@@ -1,0 +1,26 @@
+---
+title: "Combining Computer Vision with Fuzzy Logic for Real-time Evaluation of Personal Protective Equipment Compliance"
+author: "Amirhossein Ghadiri, Vahid Shahhosseini"
+date: 2024-01-01
+categories: [Computer Vision, Fuzzy Logic, Deep Learning, Under review]
+---
+
+::: {.callout-note appearance="simple"}
+Under review at the *International Journal of Occupational Safety and Ergonomics*. Code is available on [GitHub](https://github.com/amirhosseinghdv/PPE-Noncompliance-Evaluation).
+:::
+
+This was the core of my master's research at Amirkabir University of Technology. The idea was to take the part of site safety that usually depends on someone watching a camera feed and turn it into something a model can do continuously, while still giving a safety manager a number they can act on rather than a raw detection.
+
+## Abstract
+
+**Introduction.** Construction safety codes mandate the consistent use of personal protective equipment (PPE). Yet, the inadequacies of manual monitoring lead to PPE non-compliance, resulting in fatalities or severe injuries. Computer vision models are promising alternatives for effectively identifying PPE non-use.
+
+**Methods.** This study leverages computer vision and fuzzy logic to detect workers and assess safety hats, vests, and gloves wearing. Firstly, the YOLOX object detector identifies workers and PPE-related objects, associating each object with its respective worker. Subsequently, the recognized workers undergo cropping and are input into three classifiers, each specialized in evaluating compliance with a specific PPE category. Multiple fuzzy inference systems (FISs) amalgamate the outcomes of the preceding stages to compute danger levels for the non-compliance of each PPE type for each worker. Lastly, another fuzzy inference system integrates the danger levels and evaluates a worker's PPE danger generally.
+
+**Results.** Empirical findings illustrate that utilizing FIS to combine outputs from Object Detection and Image Classification modules enhances precision and recall.
+
+**Conclusions.** This approach enables accurate outcomes even when employing fast algorithms. With the proposed model, safety managers can confidently identify at-risk workers, enabling them to take immediate or future measures with certainty and efficacy.
+
+## Links
+
+- Code and documentation: [github.com/amirhosseinghdv/PPE-Noncompliance-Evaluation](https://github.com/amirhosseinghdv/PPE-Noncompliance-Evaluation)

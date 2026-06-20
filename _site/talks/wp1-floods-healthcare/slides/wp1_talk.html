@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.38">
+
+  <meta name="author" content="Amirhossein Ghadiri, PhD Student">
+  <meta name="author" content="Bahman Rostami-Tabar, Lead supervisor">
+  <meta name="author" content="Thomas Woolley, Co-supervisor">
+  <meta name="author" content="William Bennett, Co-supervisor">
+  <title>How floods disrupt healthcare</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-3a62d53a9cab061f37d8024cc8807800.css">
+  <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../../../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <script src="../../../site_libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="../../../site_libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="../../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<meta property="og:title" content="How floods disrupt healthcare">
+<meta property="og:description" content="Mapping the mechanisms behind service failure | WP1, June 2026">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">How floods disrupt healthcare</h1>
+  <p class="subtitle">Mapping the mechanisms behind service failure | WP1, June 2026</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Amirhossein Ghadiri, PhD Student 
+</div>
+        <p class="quarto-title-affiliation">
+            Data Lab for Social Good, Cardiff Business School, Cardiff University
+          </p>
+    </div>
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Bahman Rostami-Tabar, Lead supervisor 
+</div>
+        <p class="quarto-title-affiliation">
+            Data Lab for Social Good, Cardiff Business School, Cardiff University
+          </p>
+    </div>
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Thomas Woolley, Co-supervisor 
+</div>
+        <p class="quarto-title-affiliation">
+            School of Mathematics, Cardiff University
+          </p>
+    </div>
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+William Bennett, Co-supervisor 
+</div>
+        <p class="quarto-title-affiliation">
+            School of Engineering, University of Swansea
+          </p>
+    </div>
+</div>
+
+</section>
+<section id="february-2020-storm-dennis-hits-south-wales" class="slide level2">
+<h2>February 2020: Storm Dennis hits south Wales</h2>
+<p>The UK’s wettest February on record.</p>
+<div class="fragment">
+<p>Rivers burst their banks. Thousands of homes and businesses flooded. A major incident declared across south Wales.</p>
+</div>
+<div class="fragment">
+<p>GP surgeries closed. Staff could not reach their wards. Appointments were cancelled for people who needed them most.</p>
+</div>
+<div class="fragment">
+<p><span class="remember">The water left in days. The disruption did not.</span></p>
+<aside class="notes">
+<p>About 1 minute. Open with the story, slow delivery. The point: floods are not an abstract climate risk in Wales, they are recent memory. Land on the last line and pause before moving on.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</div>
+</section>
+<section id="what-this-talk-covers" class="slide level2">
+<h2>What this talk covers</h2>
+<ol type="1">
+<li><span class="remember"><strong>The problem</strong></span></li>
+<li><span class="graylight">Building the evidence base</span></li>
+<li><span class="graylight">The mechanism map</span></li>
+<li><span class="graylight">Wales and what comes next</span></li>
+</ol>
+<aside class="notes">
+<p>15 seconds. One sentence per item, then move.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="flood-risk-in-wales-is-large-and-it-is-growing" class="slide level2">
+<h2>Flood risk in Wales is large, and it is growing</h2>
+<ul>
+<li>Roughly one in eight properties in Wales is at risk of flooding <sup>1</sup></li>
+<li>The climate signal points one way: wetter winters and rising seas</li>
+<li>Healthcare cannot simply close: NHS bodies are Category 1 responders under the Civil Contingencies Act 2004</li>
+<li>The question is not whether services face floods, but how they fail when they do</li>
+</ul>
+<aside class="notes">
+<p>About 1 minute. Establish scale, then pivot from exposure to failure. The last bullet sets up the next slide.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Natural Resources Wales, Flood Risk Assessment Wales.</p></li></ol></aside></section>
+<section id="we-map-where-water-goes-not-what-stops-working" class="slide level2">
+<h2>We map where water goes, not what stops working</h2>
+<ul>
+<li>Flood maps tell us which buildings get wet</li>
+<li>They do not tell us which services stop, for whom, or for how long</li>
+<li>Wales has no central record of healthcare disruption: evidence sits fragmented across health boards, reports, papers, and news</li>
+<li>WP1 asks: <span class="remember">through which mechanisms do floods disrupt healthcare service delivery?</span></li>
+</ul>
+<aside class="notes">
+<p>About 1 minute. This is the gap slide. Emphasise that the blind spot is the service layer, not the hazard layer. Read the research question out loud, word for word.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="where-we-are" class="slide level2">
+<h2>Where we are</h2>
+<ol type="1">
+<li><span class="graylight">The problem</span></li>
+<li><span class="remember"><strong>Building the evidence base</strong></span></li>
+<li><span class="graylight">The mechanism map</span></li>
+<li><span class="graylight">Wales and what comes next</span></li>
+</ol>
+</section>
+<section id="wp1-defines-what-the-rest-of-the-phd-measures" class="slide level2">
+<h2>WP1 defines what the rest of the PhD measures</h2>
+<div class="cell" data-reveal="true" data-fig-width="10.5" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A["WP1&lt;br&gt;Disruption mechanisms&lt;br&gt;and taxonomy"] --&gt;|"labels and&lt;br&gt;features"| B["WP2&lt;br&gt;Vulnerability scoring&lt;br&gt;and live dashboard"] 
+  B --&gt;|"current baseline"| C["WP3&lt;br&gt;Future exposure under&lt;br&gt;climate scenarios"]
+  C --&gt;|"scenario inputs"| D["WP4&lt;br&gt;Preparedness resource&lt;br&gt;allocation"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Everything downstream needs to know what “disruption” actually means.</p>
+<aside class="notes">
+<p>About 1 minute. Walk through the figure left to right and explain every box: WP1 builds the mechanism map, WP2 turns it into vulnerability scores for Welsh facilities with a live dashboard, WP3 projects exposure under climate pathways, WP4 optimises preparedness planning. The arrows matter: WP1 supplies the labels and features the models learn from.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="one-taxonomy-three-layers-of-evidence" class="slide level2">
+<h2>One taxonomy, three layers of evidence</h2>
+<ul>
+<li>Curated literature: around 70 sources, evidence from more than 20 countries</li>
+<li>One lens throughout: the WHO health system building blocks, cross-checked against the SOSCHI codebook <sup>1</sup></li>
+<li>A machine-scaled corpus: global multilingual text from news, humanitarian reporting, and the bilingual Senedd Record</li>
+<li>Practitioner interviews with Welsh responders then calibrate the result</li>
+</ul>
+<aside class="notes">
+<p>About 1 minute. Three layers, one output. The curated review built the taxonomy. The NLP corpus scales it far beyond what one reader can cover, and the Senedd Record adds an unusual bilingual public source. Interviews come after the pipeline sprint and test the taxonomy against people who managed real floods.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>World Health Organization, health system building blocks framework.</p></li></ol></aside></section>
+<section id="where-we-are-1" class="slide level2">
+<h2>Where we are</h2>
+<ol type="1">
+<li><span class="graylight">The problem</span></li>
+<li><span class="graylight">Building the evidence base</span></li>
+<li><span class="remember"><strong>The mechanism map</strong></span></li>
+<li><span class="graylight">Wales and what comes next</span></li>
+</ol>
+</section>
+<section id="disruption-unfolds-as-a-chain-not-a-moment" class="slide level2">
+<h2>Disruption unfolds as a chain, not a moment</h2>
+<div class="cell" data-reveal="true" data-fig-width="10.5" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A["1&lt;br&gt;Hazard&lt;br&gt;trigger"] --&gt; B["2&lt;br&gt;Infrastructure&lt;br&gt;failures"] --&gt; C["3&lt;br&gt;Facility and&lt;br&gt;workforce&lt;br&gt;disruption"] --&gt; D["4&lt;br&gt;Demand-side&lt;br&gt;disruption"] --&gt; E["5&lt;br&gt;Cascading&lt;br&gt;dynamics"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>A facility can stay completely dry and still stop delivering care.</p>
+<aside class="notes">
+<p>About 1 minute. Walk through every box: the hazard itself, then lifelines like power, water, transport and ICT, then what happens inside facilities and to staff, then what happens to patients and demand, and finally how failures feed each other over time. Land on the sentence below the figure: dry buildings still fail.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-chain-becomes-a-coding-scheme" class="slide level2">
+<h2>The chain becomes a coding scheme</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 29%">
+<col style="width: 59%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Family</th>
+<th>What it covers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="strong-blue">A</span></td>
+<td>Hazard trigger</td>
+<td>fluvial, surface water, coastal, storm surge, sea-level rise</td>
+</tr>
+<tr class="even">
+<td><span class="strong-blue">B</span></td>
+<td>Infrastructure failure</td>
+<td>power, water, transport, ICT lifelines</td>
+</tr>
+<tr class="odd">
+<td><span class="strong-blue">C</span></td>
+<td>Facility and workforce disruption</td>
+<td>closures, evacuation, staff unable to work</td>
+</tr>
+<tr class="even">
+<td><span class="strong-blue">D</span></td>
+<td>Demand-side disruption</td>
+<td>access barriers, displaced and surging demand</td>
+</tr>
+<tr class="odd">
+<td><span class="remember">X</span></td>
+<td>Cross-cutting cascades</td>
+<td>failures that propagate between families</td>
+</tr>
+</tbody>
+</table>
+<div class="footnote">
+<p>Encoded as controlled vocabularies in the WP1 pipeline; cross-checked against the SOSCHI codebook.</p>
+</div>
+<aside class="notes">
+<p>About 1 minute. Same five layers, now as labels a machine can code text against. Families A to D are the chain’s first four layers, X is the cascade layer, and every coded pathway terminates in a health impact category. This is the moment WP1 turns from a qualitative synthesis into a label set: the same scheme lives in the pipeline’s data model as controlled vocabularies, covering services from ambulances and GPs to dialysis and blood supply.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="one-chain-end-to-end" class="slide level2">
+<h2>One chain, end to end</h2>
+<p>Heavy rain falls over the Taff catchment.</p>
+<div class="fragment">
+<p>A substation floods. Access roads close.</p>
+</div>
+<div class="fragment">
+<p>The clinic shuts. Staff cannot travel in.</p>
+</div>
+<div class="fragment">
+<p>Appointments are cancelled. Demand spills to neighbouring sites.</p>
+</div>
+<div class="fragment">
+<p>Weeks of backlog and delayed care follow. <span class="remember">Most of this chain happens outside the hospital walls.</span></p>
+<aside class="notes">
+<p>About 1 minute. Reveal step by step, one beat each. This is the taxonomy in motion: a hazard trigger, then family B, then C, then D, then an X cascade in a single story. Pause on the final line.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</div>
+</section>
+<section id="where-we-are-2" class="slide level2">
+<h2>Where we are</h2>
+<ol type="1">
+<li><span class="graylight">The problem</span></li>
+<li><span class="graylight">Building the evidence base</span></li>
+<li><span class="graylight">The mechanism map</span></li>
+<li><span class="remember"><strong>Wales and what comes next</strong></span></li>
+</ol>
+</section>
+<section id="wales-gives-the-taxonomy-a-real-world-testbed" class="slide level2">
+<h2>Wales gives the taxonomy a real-world testbed</h2>
+<ul>
+<li>Recent floods with documented healthcare impacts: Monmouth, Rhondda Cynon Taf, the Gwent Levels around Newport</li>
+<li>A clear governance frame: the Civil Contingencies Act 2004 defines who must respond, and how</li>
+<li>Active practitioner partnerships: Public Health Wales, Cardiff Public Services Board, Newport City Council, Aneurin Bevan University Health Board</li>
+<li>Their experience has already reshaped the research design</li>
+</ul>
+<aside class="notes">
+<p>About 1 minute. The point: this is not literature-only work. Practitioner input has changed the design, for example moving WP4 from real-time response to scenario-based preparedness planning, because the data needed in a live incident simply is not available.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-engine-is-already-in-build" class="slide level2">
+<h2>The engine is already in build</h2>
+<ul>
+<li>Not a script, an engineered pipeline: tested, versioned data, experiment tracking, one CLI</li>
+<li>The ingestion layer is built: GDELT global news, ReliefWeb humanitarian reports, the Senedd Record</li>
+<li>Recall-first filtering keeps every plausible flood document, then LLM structured extraction with constrained decoding turns text into coded events</li>
+<li>Cross-document event resolution links reports of the same flood; effect sizes come from text, not surveys</li>
+<li>Ships as a deployed, auto-updating service feeding the WP2 dashboard</li>
+</ul>
+<aside class="notes">
+<p>About 1 minute. Status, honestly stated: the project scaffold and the full ingestion layer are implemented and tested, including syndication detection and the first-stage relevance filter. The extraction, resolution, and quantification stages are the next phases. The end state is infrastructure, not a one-off analysis: a service that keeps updating as new flood reports appear.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="if-you-remember-three-things" class="slide level2">
+<h2>If you remember three things</h2>
+<ol type="1">
+<li>Floods disrupt healthcare through <span class="remember">chains of mechanisms</span>, and most links sit outside the hospital walls</li>
+<li>WP1 turns scattered global evidence into a <span class="remember">structured, codeable taxonomy</span>, grounded in Wales</li>
+<li>That taxonomy becomes the <span class="remember">label set for everything downstream</span>: vulnerability scores, climate scenarios, preparedness planning</li>
+</ol>
+<aside class="notes">
+<p>About 30 seconds. Slow down. These three sentences are the talk.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="thank-you" class="slide level2">
+<h2>Thank you 💬</h2>
+<p>Questions and challenges welcome.</p>
+<p><strong>Amirhossein Ghadiri</strong></p>
+<p>Data Lab for Social Good, Cardiff Business School</p>
+<p><i class="fa-solid fa-envelope"></i> GhadiriA@cardiff.ac.uk</p>
+<p><i class="fa-brands fa-github"></i> <a href="https://github.com/amirhosseinghdv">amirhosseinghdv</a> | <i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/amirhossein-ghadiri-8296781a6/">amirhossein-ghadiri</a> | 🌐 <a href="https://amirhosseinghdv.github.io/">amirhosseinghdv.github.io</a></p>
+<div class="footnote">
+<p>Slides available at: amirhosseinghdv.github.io</p>
+</div>
+<aside class="notes">
+<p>Finish under time. If a question goes deep, the extra slides at the end cover the pipeline, the layers, the data gap, and the WHO lens.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-pipeline-at-a-glance" class="slide level2" data-visibility="uncounted">
+<h2>The pipeline at a glance</h2>
+<div class="cell" data-reveal="true" data-fig-width="11" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A["Ingest&lt;br&gt;GDELT, ReliefWeb,&lt;br&gt;Senedd Record"] --&gt; B["Filter&lt;br&gt;recall-first,&lt;br&gt;then semantic"] --&gt; C["Extract&lt;br&gt;structured LLM,&lt;br&gt;constrained decoding"] --&gt; D["Resolve&lt;br&gt;cross-document&lt;br&gt;events"] --&gt; E["Quantify&lt;br&gt;text-native&lt;br&gt;effect sizes"] --&gt; F["Serve&lt;br&gt;auto-updating,&lt;br&gt;feeds WP2"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Every stage is one command in a single tested CLI, with versioned data end to end.</p>
+</section>
+<section id="the-five-layers-defined" class="slide level2" data-visibility="uncounted">
+<h2>The five layers, defined</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 36%">
+<col style="width: 63%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Layer</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1. Hazard trigger</td>
+<td>The flood event itself: fluvial, surface water, coastal, groundwater, or storm surge</td>
+</tr>
+<tr class="even">
+<td>2. Infrastructure failures</td>
+<td>Lifelines lost: power, water, transport, ICT</td>
+</tr>
+<tr class="odd">
+<td>3. Facility and workforce disruption</td>
+<td>Closures, evacuations, staff unable to reach or perform work</td>
+</tr>
+<tr class="even">
+<td>4. Demand-side disruption</td>
+<td>Patients blocked from care; displaced and surging demand</td>
+</tr>
+<tr class="odd">
+<td>5. Cascading dynamics</td>
+<td>Failures propagating across services, space, and time</td>
+</tr>
+</tbody>
+</table>
+<p>Every coded pathway terminates in a health impact category.</p>
+</section>
+<section id="why-text-mining-not-surveys" class="slide level2" data-visibility="uncounted">
+<h2>Why text mining, not surveys</h2>
+<ul>
+<li>No central dataset records healthcare disruption in Wales: closures and cancellations sit behind fragmented FOI requests</li>
+<li>Aggregated NHS activity data exists, but nothing links it to flood events</li>
+<li>The evidence does exist, written down in reports, papers, news, and public proceedings</li>
+<li>Wales adds a bilingual public record: Senedd proceedings in English and Welsh</li>
+<li>Text-native extraction recovers it at scale, and keeps recovering it as new events are documented</li>
+</ul>
+</section>
+<section id="the-who-building-blocks-lens" class="slide level2" data-visibility="uncounted">
+<h2>The WHO building blocks lens</h2>
+<p>Each study in the corpus is coded against the six building blocks of a health system:</p>
+<ol type="1">
+<li>Service delivery</li>
+<li>Health workforce</li>
+<li>Health information systems</li>
+<li>Access to essential medicines</li>
+<li>Financing</li>
+<li>Leadership and governance</li>
+</ol>
+<p>This keeps the taxonomy about the health system as a whole, not only about wet buildings.</p>
+
+
+</section>
+
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p><i class="fa-brands fa-github"></i> <a href="https://github.com/amirhosseinghdv">amirhosseinghdv</a> <i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/amirhossein-ghadiri-8296781a6/">amirhossein-ghadiri</a> 🌐 <a href="https://amirhosseinghdv.github.io/">amirhosseinghdv.github.io</a></p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
+'chalkboard': {"buttons":true,"theme":"chalkboard","toggleNotesButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

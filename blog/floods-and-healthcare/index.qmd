@@ -1,0 +1,45 @@
+---
+title: "Why a dry hospital can still stop working"
+description: "Flood maps tell you which buildings get wet. They don't tell you which services stop. That gap is what my PhD is about."
+author: "Amirhossein Ghadiri"
+date: "2026-05-18"
+image: "cover.svg"
+categories:
+  - Floods
+  - Healthcare
+  - Resilience
+---
+
+In February 2020, Storm Dennis put much of south Wales under water. It was the wettest February the UK had ever recorded. Rivers came over their banks, a major incident was declared, and thousands of homes and businesses flooded. GP surgeries closed. Some staff could not get to their wards. Appointments were cancelled for people who could least afford to miss them.
+
+The water drained away in a few days. The disruption to care did not.
+
+I keep coming back to that gap, because it is the part we measure worst. When people talk about flood risk, they usually mean a map: this area floods, that one does not. Those maps are genuinely useful and a lot of careful work goes into them. But they answer one question, which is where the water goes. They say nothing about which services stop, for whom, or for how long.
+
+## The building is the wrong unit
+
+Here is the thing that took me a while to properly absorb. A hospital can stay completely dry and still stop delivering care.
+
+Think about how that happens. A substation floods three streets away and the power goes. The backup generator covers theatres and intensive care, but the dialysis unit runs reduced sessions. Meanwhile the main road in is closed, so a third of the nursing staff on the next shift cannot physically get to the site. None of the water has touched the building. The service still degrades.
+
+That is the pattern I find again and again in the evidence. The damage to a health system rarely comes from the floodwater hitting the ward directly. It comes through the things the ward depends on: electricity, clean water, transport, the staff who have their own flooded homes to deal with, the IT links that let one site talk to another.
+
+## Disruption is a chain, not a moment
+
+The way I have started to think about it is as a chain rather than a single event.
+
+It starts with the hazard, the flood itself. That triggers infrastructure failures, the lifelines going down. Those failures hit facilities and the workforce, so places close or run at half capacity and people cannot reach work. That shows up on the demand side, where patients are blocked from care or displaced to other sites that were already full. And then these effects feed each other and spread, which is the part that makes a one-day weather event turn into weeks of backlog.
+
+Run a single example through that chain. Heavy rain over the Taff catchment. A substation floods and the access roads close. A clinic shuts and its staff cannot travel in. Appointments are cancelled and that demand spills over to neighbouring sites. Weeks of delayed care follow. Most of that chain happens outside the hospital walls, which is exactly why a flood map of the building misses it.
+
+## Why Wales is the right place to study this
+
+Roughly one in eight properties in Wales is at risk of flooding, and the climate signal points one way: wetter winters and rising seas. Healthcare here cannot simply close when that happens, because NHS bodies are legally Category 1 responders under the Civil Contingencies Act. So the question is not whether services will face floods. It is how they fail when they do, and what you could have done beforehand to soften it.
+
+There are also recent floods with documented health impacts to learn from, around Monmouth, Rhondda Cynon Taf, and the Gwent Levels near Newport. And there are people who managed those events and are willing to talk about what actually broke.
+
+## What I am building
+
+The first stage of my PhD is to map these mechanisms properly: to take the evidence that currently sits scattered across health board reports, academic papers, news coverage, and the Senedd record, and turn it into a structured account of how floods disrupt care. Once that map exists, the rest of the project can use it to score which Welsh facilities are most exposed, to project how that exposure changes under different climate futures, and to help planners decide where to put resources before the next flood instead of during it.
+
+A dry hospital that has quietly stopped working is not a freak outcome. It is the normal way these failures happen. The aim is to make that visible enough to plan around.

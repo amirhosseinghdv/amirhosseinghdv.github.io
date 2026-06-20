@@ -15,7 +15,9 @@ about:
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/amirhossein-ghadiri-8296781a6/
+    - icon: mortarboard-fill
+      text: Scholar
+      href: https://scholar.google.com/citations?user=e2vu41AAAAAJ&hl=en
 ---
 
-Amirhossein is a PhD researcher at Data Lab for Social Good (DL4SG). He is passionate about utilizing data analytics, forecasting, probabilistic modleing, machine learning, deep learning, computer vision, and natural language processing to solve real-world complex challenges. He previously explored the applications of the aforementioned areas to enhance construction safety, and is now passionate about utilizing them in Healthcare and Climate Change. Under the supervision of Prof. Bahman Rostami-Tabar, and Dr. Thomas Woolley, Amirhossein's PhD research will explore how climate change risks, particularly rising sea levels and increased flooding, will shape the future delivery of health and care services.
-
+Amirhossein is a PhD researcher at the Data Lab for Social Good (DL4SG), Cardiff Business School. His PhD research focuses on how to keep hospitals, GP surgeries, and care services running when floods and rising sea levels get in the way. To answer it, he utilizes machine learning, natural language processing, forecasting, computer vision, and operations research. Before Cardiff, he spent several years applying computer vision and large language models to construction safety. He is supervised by Prof. Bahman Rostami-Tabar.

@@ -1,12 +1,74 @@
 ---
 title: "Projects"
-description: "Overview of forecasting and data science projects."
-listing: 
-  contents: 
-    - "data_science/*.qmd"
-    - "forecasting/*.qmd"
-    - "sustainability/*.qmd"
-  type: grid # Explore more listing types; default, grid or table
-  filter-ui: true
+pagetitle: "Projects | Amirhossein Ghadiri"
 ---
 
+```{=html}
+<style>
+  .pj-wrap { max-width: 900px; }
+  .pj-intro { color: rgb(55,58,60); margin-bottom: 1.6rem; }
+  .pj-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.1rem; }
+  .pj-card {
+    border: 1px solid #e2e9f0; border-radius: 10px; padding: 1.1rem 1.2rem;
+    background: #fff; display: flex; flex-direction: column;
+    transition: box-shadow 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+  }
+  .pj-card:hover { box-shadow: 0 6px 22px rgba(2,76,134,0.10); border-color: #b9d2e8; transform: translateY(-2px); }
+  .pj-card h3 { margin: 0 0 0.2rem 0; font-size: 1.12rem; }
+  .pj-card h3 a { color: #024c86; text-decoration: none; }
+  .pj-card h3 a:hover { text-decoration: underline; }
+  .pj-tag { font-size: 0.78rem; color: #fff; background: #0066b2; border-radius: 4px; padding: 0.1rem 0.45rem; vertical-align: middle; margin-left: 0.4rem; }
+  .pj-tag.review { background: #b9772b; }
+  .pj-card p { color: rgb(55,58,60); margin: 0.5rem 0 0.8rem 0; font-size: 0.95rem; }
+  .pj-chips { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: auto; }
+  .pj-chips span { background: #eef4fa; color: #024c86; border: 1px solid #dce8f3; border-radius: 999px; padding: 0.18rem 0.6rem; font-size: 0.8rem; }
+  .pj-link { margin-top: 0.8rem; font-size: 0.88rem; }
+  .pj-link a { color: #0066b2; text-decoration: none; }
+  .pj-link a:hover { text-decoration: underline; }
+  .pj-foot { margin-top: 1.8rem; padding-top: 1.1rem; border-top: 1px solid #e4ebf1; color: rgb(55,58,60); }
+  .pj-allbtn { display: inline-block; margin-top: 0.6rem; background: #0066b2; color: #fff; text-decoration: none; padding: 0.45rem 0.9rem; border-radius: 6px; font-size: 0.9rem; font-weight: 600; }
+  .pj-allbtn:hover { background: #024c86; }
+</style>
+
+<div class="pj-wrap">
+
+  <p class="pj-intro">A mix of computer vision, deep learning, and applied machine learning work, most of it from before I started the PhD. The code lives on GitHub.</p>
+
+  <div class="pj-grid">
+
+    <div class="pj-card">
+      <h3><a href="https://github.com/amirhosseinghdv/PPE-Noncompliance-Evaluation" target="_blank" rel="noopener">PPE non-compliance evaluation</a><span class="pj-tag review">Under review</span></h3>
+      <p>The system from my master's thesis. YOLOX detects workers and their protective equipment, three classifiers check hats, vests, and gloves, and a set of fuzzy inference systems turn those outputs into a danger score for each worker, so a safety manager gets a judgement rather than a raw detection. The associated paper is under review at the International Journal of Occupational Safety and Ergonomics.</p>
+      <div class="pj-chips"><span>Computer vision</span><span>YOLOX</span><span>Fuzzy logic</span><span>Python</span></div>
+    </div>
+
+    <div class="pj-card">
+      <h3>Asphalt crack segmentation</h3>
+      <p>A deep learning model in PyTorch that segments cracks in road surface images at the pixel level, separating the crack from the pavement so the damage can be measured rather than just flagged.</p>
+      <div class="pj-chips"><span>Semantic segmentation</span><span>PyTorch</span><span>Deep learning</span></div>
+      <div class="pj-link">See this and more on <a href="https://github.com/amirhosseinghdv" target="_blank" rel="noopener">my GitHub</a></div>
+    </div>
+
+    <div class="pj-card">
+      <h3>Covid-19 vaccination prediction</h3>
+      <p>A regression project predicting vaccination uptake from demographic and regional features, built with PyCaret to compare a wide set of models quickly before settling on one.</p>
+      <div class="pj-chips"><span>Regression</span><span>PyCaret</span><span>Machine learning</span></div>
+      <div class="pj-link">See this and more on <a href="https://github.com/amirhosseinghdv" target="_blank" rel="noopener">my GitHub</a></div>
+    </div>
+
+    <div class="pj-card">
+      <h3>Customer churn classification</h3>
+      <p>A classification model that flags which customers are likely to leave, again using PyCaret to benchmark algorithms and handle the class imbalance that comes with churn data.</p>
+      <div class="pj-chips"><span>Classification</span><span>PyCaret</span><span>Machine learning</span></div>
+      <div class="pj-link">See this and more on <a href="https://github.com/amirhosseinghdv" target="_blank" rel="noopener">my GitHub</a></div>
+    </div>
+
+  </div>
+
+  <div class="pj-foot">
+    <p>My current work is the PhD itself, a four-part project on making Welsh healthcare resilient to floods. The first part, building a text-mining pipeline that reads disaster reporting and extracts coded events, is described on the <a href="../talks/wp1-floods-healthcare/index.qmd">talks</a> and <a href="../blog/index.qmd">blog</a> pages.</p>
+    <a class="pj-allbtn" href="https://github.com/amirhosseinghdv" target="_blank" rel="noopener">Browse all repositories</a>
+  </div>
+
+</div>
+```

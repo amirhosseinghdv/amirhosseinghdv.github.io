@@ -1,0 +1,296 @@
+---
+title: "How floods disrupt healthcare"
+subtitle: "Mapping the mechanisms behind service failure | WP1, June 2026"
+author:
+  - Amirhossein Ghadiri, PhD Student
+  - Bahman Rostami-Tabar, Lead supervisor
+  - Thomas Woolley, Co-supervisor
+  - William Bennett, Co-supervisor
+institute:
+  - Data Lab for Social Good, Cardiff Business School, Cardiff University
+  - Data Lab for Social Good, Cardiff Business School, Cardiff University
+  - School of Mathematics, Cardiff University
+  - School of Engineering, University of Swansea
+execute:
+  cache: true
+  warning: false
+  message: false
+  echo: false
+format:
+  revealjs:
+    multiplex: false
+    footer: "<i class='fa-brands fa-github'></i> [amirhosseinghdv](https://github.com/amirhosseinghdv) <i class='fa-brands fa-linkedin'></i> [amirhossein-ghadiri](https://www.linkedin.com/in/amirhossein-ghadiri-8296781a6/) 🌐 [amirhosseinghdv.github.io](https://amirhosseinghdv.github.io/)"
+    theme: ["default", "pp.scss"]
+    slide-number: c/t
+    progress: true
+    transition: none
+    incremental: false
+    menu: false
+    html-math-method: mathjax
+    include-in-header:
+      - text: |
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    chalkboard:
+      theme: chalkboard
+      toggleNotesButton: true
+---
+
+## February 2020: Storm Dennis hits south Wales
+
+The UK's wettest February on record.
+
+. . .
+
+Rivers burst their banks. Thousands of homes and businesses flooded. A major incident declared across south Wales.
+
+. . .
+
+GP surgeries closed. Staff could not reach their wards. Appointments were cancelled for people who needed them most.
+
+. . .
+
+[The water left in days. The disruption did not.]{.remember}
+
+::: {.notes}
+About 1 minute. Open with the story, slow delivery. The point: floods are not an abstract climate risk in Wales, they are recent memory. Land on the last line and pause before moving on.
+:::
+
+## What this talk covers
+
+1. [**The problem**]{.remember}
+2. [Building the evidence base]{.graylight}
+3. [The mechanism map]{.graylight}
+4. [Wales and what comes next]{.graylight}
+
+::: {.notes}
+15 seconds. One sentence per item, then move.
+:::
+
+## Flood risk in Wales is large, and it is growing
+
+- Roughly one in eight properties in Wales is at risk of flooding [^1]
+- The climate signal points one way: wetter winters and rising seas
+- Healthcare cannot simply close: NHS bodies are Category 1 responders under the Civil Contingencies Act 2004
+- The question is not whether services face floods, but how they fail when they do
+
+[^1]: Natural Resources Wales, Flood Risk Assessment Wales.
+
+::: {.notes}
+About 1 minute. Establish scale, then pivot from exposure to failure. The last bullet sets up the next slide.
+:::
+
+## We map where water goes, not what stops working
+
+- Flood maps tell us which buildings get wet
+- They do not tell us which services stop, for whom, or for how long
+- Wales has no central record of healthcare disruption: evidence sits fragmented across health boards, reports, papers, and news
+- WP1 asks: [through which mechanisms do floods disrupt healthcare service delivery?]{.remember}
+
+::: {.notes}
+About 1 minute. This is the gap slide. Emphasise that the blind spot is the service layer, not the hazard layer. Read the research question out loud, word for word.
+:::
+
+## Where we are
+
+1. [The problem]{.graylight}
+2. [**Building the evidence base**]{.remember}
+3. [The mechanism map]{.graylight}
+4. [Wales and what comes next]{.graylight}
+
+## WP1 defines what the rest of the PhD measures
+
+```{mermaid}
+%%| fig-width: 10.5
+%%| fig-align: center
+flowchart LR
+  A["WP1<br>Disruption mechanisms<br>and taxonomy"] -->|"labels and<br>features"| B["WP2<br>Vulnerability scoring<br>and live dashboard"] 
+  B -->|"current baseline"| C["WP3<br>Future exposure under<br>climate scenarios"]
+  C -->|"scenario inputs"| D["WP4<br>Preparedness resource<br>allocation"]
+```
+
+Everything downstream needs to know what "disruption" actually means.
+
+::: {.notes}
+About 1 minute. Walk through the figure left to right and explain every box: WP1 builds the mechanism map, WP2 turns it into vulnerability scores for Welsh facilities with a live dashboard, WP3 projects exposure under climate pathways, WP4 optimises preparedness planning. The arrows matter: WP1 supplies the labels and features the models learn from.
+:::
+
+## One taxonomy, three layers of evidence
+
+- Curated literature: around 70 sources, evidence from more than 20 countries
+- One lens throughout: the WHO health system building blocks, cross-checked against the SOSCHI codebook [^2]
+- A machine-scaled corpus: global multilingual text from news, humanitarian reporting, and the bilingual Senedd Record
+- Practitioner interviews with Welsh responders then calibrate the result
+
+[^2]: World Health Organization, health system building blocks framework.
+
+::: {.notes}
+About 1 minute. Three layers, one output. The curated review built the taxonomy. The NLP corpus scales it far beyond what one reader can cover, and the Senedd Record adds an unusual bilingual public source. Interviews come after the pipeline sprint and test the taxonomy against people who managed real floods.
+:::
+
+## Where we are
+
+1. [The problem]{.graylight}
+2. [Building the evidence base]{.graylight}
+3. [**The mechanism map**]{.remember}
+4. [Wales and what comes next]{.graylight}
+
+## Disruption unfolds as a chain, not a moment
+
+```{mermaid}
+%%| fig-width: 10.5
+%%| fig-align: center
+flowchart LR
+  A["1<br>Hazard<br>trigger"] --> B["2<br>Infrastructure<br>failures"] --> C["3<br>Facility and<br>workforce<br>disruption"] --> D["4<br>Demand-side<br>disruption"] --> E["5<br>Cascading<br>dynamics"]
+```
+
+A facility can stay completely dry and still stop delivering care.
+
+::: {.notes}
+About 1 minute. Walk through every box: the hazard itself, then lifelines like power, water, transport and ICT, then what happens inside facilities and to staff, then what happens to patients and demand, and finally how failures feed each other over time. Land on the sentence below the figure: dry buildings still fail.
+:::
+
+## The chain becomes a coding scheme
+
+|   | Family | What it covers |
+|---|--------|----------------|
+| [A]{.strong-blue} | Hazard trigger | fluvial, surface water, coastal, storm surge, sea-level rise |
+| [B]{.strong-blue} | Infrastructure failure | power, water, transport, ICT lifelines |
+| [C]{.strong-blue} | Facility and workforce disruption | closures, evacuation, staff unable to work |
+| [D]{.strong-blue} | Demand-side disruption | access barriers, displaced and surging demand |
+| [X]{.remember} | Cross-cutting cascades | failures that propagate between families |
+
+::: {.footnote}
+Encoded as controlled vocabularies in the WP1 pipeline; cross-checked against the SOSCHI codebook.
+:::
+
+::: {.notes}
+About 1 minute. Same five layers, now as labels a machine can code text against. Families A to D are the chain's first four layers, X is the cascade layer, and every coded pathway terminates in a health impact category. This is the moment WP1 turns from a qualitative synthesis into a label set: the same scheme lives in the pipeline's data model as controlled vocabularies, covering services from ambulances and GPs to dialysis and blood supply.
+:::
+
+## One chain, end to end
+
+Heavy rain falls over the Taff catchment.
+
+. . .
+
+A substation floods. Access roads close.
+
+. . .
+
+The clinic shuts. Staff cannot travel in.
+
+. . .
+
+Appointments are cancelled. Demand spills to neighbouring sites.
+
+. . .
+
+Weeks of backlog and delayed care follow. [Most of this chain happens outside the hospital walls.]{.remember}
+
+::: {.notes}
+About 1 minute. Reveal step by step, one beat each. This is the taxonomy in motion: a hazard trigger, then family B, then C, then D, then an X cascade in a single story. Pause on the final line.
+:::
+
+## Where we are
+
+1. [The problem]{.graylight}
+2. [Building the evidence base]{.graylight}
+3. [The mechanism map]{.graylight}
+4. [**Wales and what comes next**]{.remember}
+
+## Wales gives the taxonomy a real-world testbed
+
+- Recent floods with documented healthcare impacts: Monmouth, Rhondda Cynon Taf, the Gwent Levels around Newport
+- A clear governance frame: the Civil Contingencies Act 2004 defines who must respond, and how
+- Active practitioner partnerships: Public Health Wales, Cardiff Public Services Board, Newport City Council, Aneurin Bevan University Health Board
+- Their experience has already reshaped the research design
+
+::: {.notes}
+About 1 minute. The point: this is not literature-only work. Practitioner input has changed the design, for example moving WP4 from real-time response to scenario-based preparedness planning, because the data needed in a live incident simply is not available.
+:::
+
+## The engine is already in build
+
+- Not a script, an engineered pipeline: tested, versioned data, experiment tracking, one CLI
+- The ingestion layer is built: GDELT global news, ReliefWeb humanitarian reports, the Senedd Record
+- Recall-first filtering keeps every plausible flood document, then LLM structured extraction with constrained decoding turns text into coded events
+- Cross-document event resolution links reports of the same flood; effect sizes come from text, not surveys
+- Ships as a deployed, auto-updating service feeding the WP2 dashboard
+
+::: {.notes}
+About 1 minute. Status, honestly stated: the project scaffold and the full ingestion layer are implemented and tested, including syndication detection and the first-stage relevance filter. The extraction, resolution, and quantification stages are the next phases. The end state is infrastructure, not a one-off analysis: a service that keeps updating as new flood reports appear.
+:::
+
+## If you remember three things
+
+1. Floods disrupt healthcare through [chains of mechanisms]{.remember}, and most links sit outside the hospital walls
+2. WP1 turns scattered global evidence into a [structured, codeable taxonomy]{.remember}, grounded in Wales
+3. That taxonomy becomes the [label set for everything downstream]{.remember}: vulnerability scores, climate scenarios, preparedness planning
+
+::: {.notes}
+About 30 seconds. Slow down. These three sentences are the talk.
+:::
+
+## Thank you 💬
+
+Questions and challenges welcome.
+
+**Amirhossein Ghadiri**
+
+Data Lab for Social Good, Cardiff Business School
+
+<i class='fa-solid fa-envelope'></i> GhadiriA@cardiff.ac.uk
+
+<i class='fa-brands fa-github'></i> [amirhosseinghdv](https://github.com/amirhosseinghdv) | <i class='fa-brands fa-linkedin'></i> [amirhossein-ghadiri](https://www.linkedin.com/in/amirhossein-ghadiri-8296781a6/) | 🌐 [amirhosseinghdv.github.io](https://amirhosseinghdv.github.io/)
+
+::: {.footnote}
+Slides available at: amirhosseinghdv.github.io
+:::
+
+::: {.notes}
+Finish under time. If a question goes deep, the extra slides at the end cover the pipeline, the layers, the data gap, and the WHO lens.
+:::
+
+## The pipeline at a glance {visibility="uncounted"}
+
+```{mermaid}
+%%| fig-width: 11
+%%| fig-align: center
+flowchart LR
+  A["Ingest<br>GDELT, ReliefWeb,<br>Senedd Record"] --> B["Filter<br>recall-first,<br>then semantic"] --> C["Extract<br>structured LLM,<br>constrained decoding"] --> D["Resolve<br>cross-document<br>events"] --> E["Quantify<br>text-native<br>effect sizes"] --> F["Serve<br>auto-updating,<br>feeds WP2"]
+```
+
+Every stage is one command in a single tested CLI, with versioned data end to end.
+
+## The five layers, defined {visibility="uncounted"}
+
+| Layer | Definition |
+|-------|------------|
+| 1. Hazard trigger | The flood event itself: fluvial, surface water, coastal, groundwater, or storm surge |
+| 2. Infrastructure failures | Lifelines lost: power, water, transport, ICT |
+| 3. Facility and workforce disruption | Closures, evacuations, staff unable to reach or perform work |
+| 4. Demand-side disruption | Patients blocked from care; displaced and surging demand |
+| 5. Cascading dynamics | Failures propagating across services, space, and time |
+
+Every coded pathway terminates in a health impact category.
+
+## Why text mining, not surveys {visibility="uncounted"}
+
+- No central dataset records healthcare disruption in Wales: closures and cancellations sit behind fragmented FOI requests
+- Aggregated NHS activity data exists, but nothing links it to flood events
+- The evidence does exist, written down in reports, papers, news, and public proceedings
+- Wales adds a bilingual public record: Senedd proceedings in English and Welsh
+- Text-native extraction recovers it at scale, and keeps recovering it as new events are documented
+
+## The WHO building blocks lens {visibility="uncounted"}
+
+Each study in the corpus is coded against the six building blocks of a health system:
+
+1. Service delivery
+2. Health workforce
+3. Health information systems
+4. Access to essential medicines
+5. Financing
+6. Leadership and governance
+
+This keeps the taxonomy about the health system as a whole, not only about wet buildings.
