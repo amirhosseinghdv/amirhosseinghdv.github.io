@@ -1,143 +1,45 @@
 [
   {
-    "objectID": "talks/2025-2-or62/index.html",
-    "href": "talks/2025-2-or62/index.html",
-    "title": "First Post",
-    "section": "",
-    "text": "Slides\n  \n\nSed risus ultricies tristique nulla aliquet. Neque volutpat ac tincidunt vitae semper quis lectus nulla.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim sed faucibus turpis in eu mi bibendum neque. Ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Velit sed ullamcorper morbi tincidunt ornare massa. Sagittis id consectetur purus ut faucibus pulvinar elementum integer. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero. Lobortis feugiat vivamus at augue eget arcu. Aliquam ut porttitor leo a diam sollicitudin tempor id eu. Mauris a diam maecenas sed enim ut sem viverra aliquet. Enim ut tellus elementum sagittis vitae et leo duis. Molestie at elementum eu facilisis sed odio morbi quis commodo. Sapien pellentesque habitant morbi tristique senectus. Quam vulputate dignissim suspendisse in est. Nulla pellentesque dignissim enim sit amet venenatis urna cursus eget.\nVelit aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Viverra mauris in aliquam sem fringilla ut morbi tincidunt augue. Tortor at auctor urna nunc id. Sit amet consectetur adipiscing elit duis tristique sollicitudin. Aliquet nibh praesent tristique magna sit amet purus. Tristique senectus et netus et malesuada fames ac turpis. Hac habitasse platea dictumst quisque. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Iaculis at erat pellentesque adipiscing. Cras tincidunt lobortis feugiat vivamus. Nisi est sit amet facilisis magna etiam. Pharetra pharetra massa massa ultricies mi quis hendrerit. Vitae sapien pellentesque habitant morbi tristique senectus. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae."
-  },
-  {
-    "objectID": "talks/2025-1-firsttalk/index.html",
-    "href": "talks/2025-1-firsttalk/index.html",
-    "title": "First Post",
-    "section": "",
-    "text": "Slides\n  \n\n\n\n  \n     Slides\n  \n\nSed risus ultricies tristique nulla aliquet. Neque volutpat ac tincidunt vitae semper quis lectus nulla.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim sed faucibus turpis in eu mi bibendum neque. Ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Velit sed ullamcorper morbi tincidunt ornare massa. Sagittis id consectetur purus ut faucibus pulvinar elementum integer. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero. Lobortis feugiat vivamus at augue eget arcu. Aliquam ut porttitor leo a diam sollicitudin tempor id eu. Mauris a diam maecenas sed enim ut sem viverra aliquet. Enim ut tellus elementum sagittis vitae et leo duis. Molestie at elementum eu facilisis sed odio morbi quis commodo. Sapien pellentesque habitant morbi tristique senectus. Quam vulputate dignissim suspendisse in est. Nulla pellentesque dignissim enim sit amet venenatis urna cursus eget.\nVelit aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Viverra mauris in aliquam sem fringilla ut morbi tincidunt augue. Tortor at auctor urna nunc id. Sit amet consectetur adipiscing elit duis tristique sollicitudin. Aliquet nibh praesent tristique magna sit amet purus. Tristique senectus et netus et malesuada fames ac turpis. Hac habitasse platea dictumst quisque. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Iaculis at erat pellentesque adipiscing. Cras tincidunt lobortis feugiat vivamus. Nisi est sit amet facilisis magna etiam. Pharetra pharetra massa massa ultricies mi quis hendrerit. Vitae sapien pellentesque habitant morbi tristique senectus. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae."
-  },
-  {
-    "objectID": "publications/book_chapters/index.html",
-    "href": "publications/book_chapters/index.html",
-    "title": "Book Chapters",
-    "section": "",
-    "text": "Title\n\n\n\nDescription\n\n\n\nKeywords\n\n\n\n\n\n\n\n\nHarsha Chamara Hewage, H. Niles Perera, Shari De Baets, Forecast adjustments during post-promotional periods, European Journal of Operational Research.\n\n\nWe study judgmental forecast adjustments in pre-promotional (normal), promotional and post-promotional periods via behavioral experiments. Forecasters need structured support to make effective adjustments during post-promotional periods. The…\n\n\nPython, Machine Learning, Data Cleaning\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "publications/working_papers/index.html",
-    "href": "publications/working_papers/index.html",
-    "title": "Working Papers",
-    "section": "",
-    "text": "Title\n\n\n\nDescription\n\n\n\nKeywords\n\n\n\n\n\n\n\n\nHarsha Chamara Hewage, H. Niles Perera, Shari De Baets, Forecast adjustments during post-promotional periods, European Journal of Operational Research.\n\n\nWe study judgmental forecast adjustments in pre-promotional (normal), promotional and post-promotional periods via behavioral experiments. Forecasters need structured support to make effective adjustments during post-promotional periods. The…\n\n\nPython, Machine Learning, Data Cleaning\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "about/index.html",
-    "href": "about/index.html",
-    "title": "Who am I",
-    "section": "",
-    "text": "My research focuses on addressing inefficiencies in supply chain management for contraceptive products in developing countries. These inefficiencies often lead to shortages, limiting women’s reproductive autonomy and exacerbating societal challenges. By integrating probabilistic forecasting with inventory optimization, I aim to create a novel approach that accounts for uncertainties, poor data quality, and local demand variations. This interdisciplinary project involves collaboration with scholars from Cardiff Business School, the School of Computer Science & Informatics, and the United States Agency for International Development (USAID). The goal is to improve access to contraceptives, reduce unintended pregnancies, and prevent unsafe abortions, ultimately benefiting women, healthcare providers, governments, and donor organizations.\nBy utilizing data analytics, forecasting, machine learning, deep learning, probabilistic modelling, computer vision, and natural language processing, this PhD study will explore how climate change risks, particularly rising sea levels and increased flooding, will shape the future delivery of health and care services. This research is supported by four partners: Public Health Wales, the Future Generations Commissioner for Wales, Natural Resources Wales, and the Office for National Statistics."
-  },
-  {
-    "objectID": "about/index.html#research-focus-phd-project",
-    "href": "about/index.html#research-focus-phd-project",
-    "title": "Who am I",
-    "section": "",
-    "text": "My research focuses on addressing inefficiencies in supply chain management for contraceptive products in developing countries. These inefficiencies often lead to shortages, limiting women’s reproductive autonomy and exacerbating societal challenges. By integrating probabilistic forecasting with inventory optimization, I aim to create a novel approach that accounts for uncertainties, poor data quality, and local demand variations. This interdisciplinary project involves collaboration with scholars from Cardiff Business School, the School of Computer Science & Informatics, and the United States Agency for International Development (USAID). The goal is to improve access to contraceptives, reduce unintended pregnancies, and prevent unsafe abortions, ultimately benefiting women, healthcare providers, governments, and donor organizations.\nBy utilizing data analytics, forecasting, machine learning, deep learning, probabilistic modelling, computer vision, and natural language processing, this PhD study will explore how climate change risks, particularly rising sea levels and increased flooding, will shape the future delivery of health and care services. This research is supported by four partners: Public Health Wales, the Future Generations Commissioner for Wales, Natural Resources Wales, and the Office for National Statistics."
-  },
-  {
-    "objectID": "about/index.html#supervision-team",
-    "href": "about/index.html#supervision-team",
-    "title": "Who am I",
-    "section": "Supervision team",
-    "text": "Supervision team\n\nLead: Prof Bahman Rostami-Tabar, Data Lab for Social Good Research Group, Cardiff Business School, UK\nCo: Prof Aris Syntetos, Cardiff Business School, UK\nCo: Dr Federico Liberatore, School of Computer Science and Informatics, UK\nCollaborator: Glenn Milano, Global Health Supply Chain, Bureau for Global Health, United States Agency for International Development (USAID)\nLead: Prof Bahman Rostami-Tabar, Data Lab for Social Good Research Group, Cardiff Business School, UK\nCo: Dr Thomas Woolley, Cardiff University School of Mathematics, UK\nCo: Dr William Bennett, Lecturer in Civil Engineering, Swansea University, UK"
-  },
-  {
-    "objectID": "about/index.html#funder",
-    "href": "about/index.html#funder",
-    "title": "Who am I",
-    "section": "Funder",
-    "text": "Funder\nWelsh Graduate School for the Social Sciences (WGSSS)"
-  },
-  {
-    "objectID": "about/index.html#partners",
-    "href": "about/index.html#partners",
-    "title": "Who am I",
-    "section": "Partners",
-    "text": "Partners\nPublic Health Wales, The Future Generations Commissioner for Wales, Natural Resources Wales, The Office for National Statistics."
-  },
-  {
-    "objectID": "about/index.html#teaching-training",
-    "href": "about/index.html#teaching-training",
-    "title": "Who am I",
-    "section": "Teaching & training",
-    "text": "Teaching & training\n\nGraduate tutor: Forecasting and Business Analytics modules (Cardiff).\nDelivered workshops and short courses: Introduction to Python for researchers, time series forecasting workshops for pharmaceutical officers in Ethiopia, Quarto website training for R users."
-  },
-  {
-    "objectID": "about/index.html#technical-skills",
-    "href": "about/index.html#technical-skills",
-    "title": "Who am I",
-    "section": "Technical skills",
-    "text": "Technical skills\nLanguages & tooling: R (tidyverse, tsibble, fable), Python (pandas, mlforecast), Quarto, Git/GitHub, Docker, LaTeX/TikZ Forecasting & ML: State‑space models, Tobit/Kalman approaches, conformal prediction, LightGBM/XGBoost, probabilistic forecasting, hierarchical forecasting Supply chain / domain tools: LMIS/DHIS2 contexts, inventory simulation, demand censoring and lost‑sales handling Reproducibility & deployment: renv, Quarto websites, GitHub Actions, containerised evaluation (CHAP)\nLanguage: Persian (Mother Tongue), English (Foreign Language), TOEFL: 110/120, R:29, L:30, S:24, W:27 (Jul. 2025), GRE: 328/340, Q:169, V:159, W:4 (Nov. 2022) Programming and AI: Python, Data Analytics, Machine/Deep Learning, Computer Vision, Statistical Learning, Forecasting, NLP, GenAI, LLMs, TensorFlow, PyTorch, Git, GAN, RNN, Signal Processing, Robotics, ROS, RL Software: Microsoft Project, Autodesk Autocad(2D), Microsoft Office"
-  },
-  {
-    "objectID": "blog/2025-2-second/index.html",
-    "href": "blog/2025-2-second/index.html",
-    "title": "second",
-    "section": "",
-    "text": "checking out new post."
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Amirhossein Ghadiri",
     "section": "",
-    "text": "Amirhossein is a PhD researcher at Data Lab for Social Good (DL4SG). He is passionate about utilizing data analytics, forecasting, probabilistic modleing, machine learning, deep learning, computer vision, and natural language processing to solve real-world complex challenges. He previously explored the applications of the aforementioned areas to enhance construction safety, and is now passionate about utilizing them in Healthcare and Climate Change. Under the supervision of Prof. Bahman Rostami-Tabar, and Dr. Thomas Woolley, Amirhossein’s PhD research will explore how climate change risks, particularly rising sea levels and increased flooding, will shape the future delivery of health and care services."
+    "text": "Amirhossein is a PhD researcher at the Data Lab for Social Good (DL4SG), Cardiff Business School. His PhD research focuses on how to keep hospitals, GP surgeries, and care services running when floods and rising sea levels get in the way. To answer it, he utilizes machine learning, natural language processing, forecasting, computer vision, and operations research. Before Cardiff, he spent several years applying computer vision and large language models to construction safety. He is supervised by Prof. Bahman Rostami-Tabar."
   },
   {
-    "objectID": "projects/sustainability/first-post/index.html",
-    "href": "projects/sustainability/first-post/index.html",
-    "title": "First Post",
+    "objectID": "publications/technical_reports/index.html",
+    "href": "publications/technical_reports/index.html",
+    "title": "Technical Reports",
     "section": "",
-    "text": "Sed risus ultricies tristique nulla aliquet. Neque volutpat ac tincidunt vitae semper quis lectus nulla.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim sed faucibus turpis in eu mi bibendum neque. Ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Velit sed ullamcorper morbi tincidunt ornare massa. Sagittis id consectetur purus ut faucibus pulvinar elementum integer. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero. Lobortis feugiat vivamus at augue eget arcu. Aliquam ut porttitor leo a diam sollicitudin tempor id eu. Mauris a diam maecenas sed enim ut sem viverra aliquet. Enim ut tellus elementum sagittis vitae et leo duis. Molestie at elementum eu facilisis sed odio morbi quis commodo. Sapien pellentesque habitant morbi tristique senectus. Quam vulputate dignissim suspendisse in est. Nulla pellentesque dignissim enim sit amet venenatis urna cursus eget.\nVelit aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Viverra mauris in aliquam sem fringilla ut morbi tincidunt augue. Tortor at auctor urna nunc id. Sit amet consectetur adipiscing elit duis tristique sollicitudin. Aliquet nibh praesent tristique magna sit amet purus. Tristique senectus et netus et malesuada fames ac turpis. Hac habitasse platea dictumst quisque. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Iaculis at erat pellentesque adipiscing. Cras tincidunt lobortis feugiat vivamus. Nisi est sit amet facilisis magna etiam. Pharetra pharetra massa massa ultricies mi quis hendrerit. Vitae sapien pellentesque habitant morbi tristique senectus. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae."
+    "text": "Title\nDescription\nKeywords\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "projects/forecasting/first-post/index.html",
-    "href": "projects/forecasting/first-post/index.html",
-    "title": "First Post",
+    "objectID": "publications/working_papers/ppe-fuzzy-vision/index.html",
+    "href": "publications/working_papers/ppe-fuzzy-vision/index.html",
+    "title": "Combining Computer Vision with Fuzzy Logic for Real-time Evaluation of Personal Protective Equipment Compliance",
     "section": "",
-    "text": "Sed risus ultricies tristique nulla aliquet. Neque volutpat ac tincidunt vitae semper quis lectus nulla.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim sed faucibus turpis in eu mi bibendum neque. Ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Velit sed ullamcorper morbi tincidunt ornare massa. Sagittis id consectetur purus ut faucibus pulvinar elementum integer. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero. Lobortis feugiat vivamus at augue eget arcu. Aliquam ut porttitor leo a diam sollicitudin tempor id eu. Mauris a diam maecenas sed enim ut sem viverra aliquet. Enim ut tellus elementum sagittis vitae et leo duis. Molestie at elementum eu facilisis sed odio morbi quis commodo. Sapien pellentesque habitant morbi tristique senectus. Quam vulputate dignissim suspendisse in est. Nulla pellentesque dignissim enim sit amet venenatis urna cursus eget.\nVelit aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Viverra mauris in aliquam sem fringilla ut morbi tincidunt augue. Tortor at auctor urna nunc id. Sit amet consectetur adipiscing elit duis tristique sollicitudin. Aliquet nibh praesent tristique magna sit amet purus. Tristique senectus et netus et malesuada fames ac turpis. Hac habitasse platea dictumst quisque. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Iaculis at erat pellentesque adipiscing. Cras tincidunt lobortis feugiat vivamus. Nisi est sit amet facilisis magna etiam. Pharetra pharetra massa massa ultricies mi quis hendrerit. Vitae sapien pellentesque habitant morbi tristique senectus. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae."
+    "text": "Under review at the International Journal of Occupational Safety and Ergonomics. Code is available on GitHub.\nThis was the core of my master’s research at Amirkabir University of Technology. The idea was to take the part of site safety that usually depends on someone watching a camera feed and turn it into something a model can do continuously, while still giving a safety manager a number they can act on rather than a raw detection."
   },
   {
-    "objectID": "projects/data_science/index.html",
-    "href": "projects/data_science/index.html",
-    "title": "Data Science",
-    "section": "",
-    "text": "First Post\n\n\nPost description for first post\n\n\n\n\n\nMay 22, 2021\n\n\nHarsha\n\n\n\n\n\n\n\n\n\n\n\n\nSecond Post\n\n\nPost description for second post\n\n\n\n\n\nMay 23, 2021\n\n\nAlicia\n\n\n\n\n\n\n\n\n\n\n\n\nThird Blog Post\n\n\nAn example post where the source document is a Jupyter Notebook\n\n\n\n\n\nMay 24, 2021\n\n\nHarsha\n\n\n\n\n\nNo matching items"
+    "objectID": "publications/working_papers/ppe-fuzzy-vision/index.html#abstract",
+    "href": "publications/working_papers/ppe-fuzzy-vision/index.html#abstract",
+    "title": "Combining Computer Vision with Fuzzy Logic for Real-time Evaluation of Personal Protective Equipment Compliance",
+    "section": "Abstract",
+    "text": "Abstract\nIntroduction. Construction safety codes mandate the consistent use of personal protective equipment (PPE). Yet, the inadequacies of manual monitoring lead to PPE non-compliance, resulting in fatalities or severe injuries. Computer vision models are promising alternatives for effectively identifying PPE non-use.\nMethods. This study leverages computer vision and fuzzy logic to detect workers and assess safety hats, vests, and gloves wearing. Firstly, the YOLOX object detector identifies workers and PPE-related objects, associating each object with its respective worker. Subsequently, the recognized workers undergo cropping and are input into three classifiers, each specialized in evaluating compliance with a specific PPE category. Multiple fuzzy inference systems (FISs) amalgamate the outcomes of the preceding stages to compute danger levels for the non-compliance of each PPE type for each worker. Lastly, another fuzzy inference system integrates the danger levels and evaluates a worker’s PPE danger generally.\nResults. Empirical findings illustrate that utilizing FIS to combine outputs from Object Detection and Image Classification modules enhances precision and recall.\nConclusions. This approach enables accurate outcomes even when employing fast algorithms. With the proposed model, safety managers can confidently identify at-risk workers, enabling them to take immediate or future measures with certainty and efficacy."
   },
   {
-    "objectID": "projects/data_science/first-post/index.html",
-    "href": "projects/data_science/first-post/index.html",
-    "title": "First Post",
-    "section": "",
-    "text": "Sed risus ultricies tristique nulla aliquet. Neque volutpat ac tincidunt vitae semper quis lectus nulla.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim sed faucibus turpis in eu mi bibendum neque. Ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Velit sed ullamcorper morbi tincidunt ornare massa. Sagittis id consectetur purus ut faucibus pulvinar elementum integer. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero. Lobortis feugiat vivamus at augue eget arcu. Aliquam ut porttitor leo a diam sollicitudin tempor id eu. Mauris a diam maecenas sed enim ut sem viverra aliquet. Enim ut tellus elementum sagittis vitae et leo duis. Molestie at elementum eu facilisis sed odio morbi quis commodo. Sapien pellentesque habitant morbi tristique senectus. Quam vulputate dignissim suspendisse in est. Nulla pellentesque dignissim enim sit amet venenatis urna cursus eget.\nVelit aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Viverra mauris in aliquam sem fringilla ut morbi tincidunt augue. Tortor at auctor urna nunc id. Sit amet consectetur adipiscing elit duis tristique sollicitudin. Aliquet nibh praesent tristique magna sit amet purus. Tristique senectus et netus et malesuada fames ac turpis. Hac habitasse platea dictumst quisque. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Iaculis at erat pellentesque adipiscing. Cras tincidunt lobortis feugiat vivamus. Nisi est sit amet facilisis magna etiam. Pharetra pharetra massa massa ultricies mi quis hendrerit. Vitae sapien pellentesque habitant morbi tristique senectus. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae."
+    "objectID": "publications/working_papers/ppe-fuzzy-vision/index.html#links",
+    "href": "publications/working_papers/ppe-fuzzy-vision/index.html#links",
+    "title": "Combining Computer Vision with Fuzzy Logic for Real-time Evaluation of Personal Protective Equipment Compliance",
+    "section": "Links",
+    "text": "Links\n\nCode and documentation: github.com/amirhosseinghdv/PPE-Noncompliance-Evaluation"
   },
   {
     "objectID": "projects/index.html",
     "href": "projects/index.html",
     "title": "Projects",
     "section": "",
-    "text": "Data Science\n\n\nMy data sceince projects.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSustainability\n\n\nMy sustainability projects.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTime Series Forecasting\n\n\nMy forecasting projects.\n\n\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "projects/data_science/scond-post/index.html",
-    "href": "projects/data_science/scond-post/index.html",
-    "title": "Second Post",
-    "section": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula. Amet cursus sit amet dictum sit amet. Eget duis at tellus at urna condimentum. Convallis aenean et tortor at risus viverra. Tincidunt ornare massa eget egestas purus viverra accumsan. Et malesuada fames ac turpis egestas. At imperdiet dui accumsan sit amet. Ut ornare lectus sit amet est placerat. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Duis ultricies lacus sed turpis tincidunt id aliquet risus. Mattis enim ut tellus elementum sagittis. Dui id ornare arcu odio ut. Natoque penatibus et magnis dis. Libero justo laoreet sit amet cursus sit. Sed faucibus turpis in eu. Tempus iaculis urna id volutpat lacus laoreet.\nPhasellus vestibulum lorem sed risus. Eget felis eget nunc lobortis mattis. Sit amet aliquam id diam maecenas ultricies. Egestas maecenas pharetra convallis posuere morbi. Etiam erat velit scelerisque in dictum non consectetur a erat. Cras fermentum odio eu feugiat pretium nibh ipsum consequat. Viverra accumsan in nisl nisi scelerisque. Et netus et malesuada fames ac. Amet tellus cras adipiscing enim eu turpis egestas pretium aenean. Eget lorem dolor sed viverra ipsum nunc aliquet. Ultrices dui sapien eget mi proin sed libero enim sed. Ultricies mi eget mauris pharetra et ultrices neque. Ipsum suspendisse ultrices gravida dictum. A arcu cursus vitae congue mauris rhoncus aenean vel. Gravida arcu ac tortor dignissim convallis. Nulla posuere sollicitudin aliquam ultrices."
-  },
-  {
-    "objectID": "projects/data_science/third-post/index.html",
-    "href": "projects/data_science/third-post/index.html",
-    "title": "Third Blog Post",
-    "section": "",
-    "text": "The source for any page in your website could also be a Jupyter Notebook. This one is third-post/index.ipynb.\nHere’s an example I borrowed from the Seaborn docs:\n\nimport seaborn as sns\n\nsns.set_theme(style=\"whitegrid\")\n\n# Load the diamonds dataset\ndiamonds = sns.load_dataset(\"diamonds\")\n\n# Plot the distribution of clarity ratings, conditional on carat\nsns.displot(\n    data=diamonds,\n    x=\"carat\", hue=\"cut\",\n    kind=\"kde\", height=4, aspect=1.5,\n    multiple=\"fill\", clip=(0, None),\n    palette=\"ch:rot=-.25,hue=1,light=.75\",   \n)"
+    "text": "A mix of computer vision, deep learning, and applied machine learning work, most of it from before I started the PhD. The code lives on GitHub.\n\n  \n\n    \n      PPE non-compliance evaluationUnder review\n      The system from my master's thesis. YOLOX detects workers and their protective equipment, three classifiers check hats, vests, and gloves, and a set of fuzzy inference systems turn those outputs into a danger score for each worker, so a safety manager gets a judgement rather than a raw detection. The associated paper is under review at the International Journal of Occupational Safety and Ergonomics.\n      Computer visionYOLOXFuzzy logicPython\n    \n\n    \n      Asphalt crack segmentation\n      A deep learning model in PyTorch that segments cracks in road surface images at the pixel level, separating the crack from the pavement so the damage can be measured rather than just flagged.\n      Semantic segmentationPyTorchDeep learning\n      See this and more on my GitHub\n    \n\n    \n      Covid-19 vaccination prediction\n      A regression project predicting vaccination uptake from demographic and regional features, built with PyCaret to compare a wide set of models quickly before settling on one.\n      RegressionPyCaretMachine learning\n      See this and more on my GitHub\n    \n\n    \n      Customer churn classification\n      A classification model that flags which customers are likely to leave, again using PyCaret to benchmark algorithms and handle the class imbalance that comes with churn data.\n      ClassificationPyCaretMachine learning\n      See this and more on my GitHub\n    \n\n  \n\n  \n    My current work is the PhD itself, a four-part project on making Welsh healthcare resilient to floods. The first part, building a text-mining pipeline that reads disaster reporting and extracts coded events, is described on the talks and blog pages.\n    Browse all repositories"
   },
   {
     "objectID": "projects/forecasting/index.html",
@@ -154,38 +56,388 @@
     "text": "First Post\n\n\nPost description for first post\n\n\n\n\n\nMay 22, 2021\n\n\nHarsha\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "",
+    "objectID": "projects/data_science/index.html",
+    "href": "projects/data_science/index.html",
+    "title": "Data Science",
     "section": "",
-    "text": "First Post 2025-1-keyword\n\n\nPost description for first post\n\n\n\n\n\nMay 22, 2021\n\n\nHarsha\n\n\n\n\n\n\n\n\n\n\n\n\nsecond\n\n\nPost description for first post\n\n\n\n\n\nMay 22, 2021\n\n\nHarsha\n\n\n\n\n\nNo matching items"
+    "text": "First Post\n\n\nPost description for first post\n\n\n\n\n\nMay 22, 2021\n\n\nHarsha\n\n\n\n\n\n\n\n\n\n\n\n\nSecond Post\n\n\nPost description for second post\n\n\n\n\n\nMay 23, 2021\n\n\nAlicia\n\n\n\n\n\n\n\n\n\n\n\n\nThird Blog Post\n\n\nAn example post where the source document is a Jupyter Notebook\n\n\n\n\n\nMay 24, 2021\n\n\nHarsha\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "blog/2025-1-first/index.html",
-    "href": "blog/2025-1-first/index.html",
-    "title": "First Post 2025-1-keyword",
+    "objectID": "projects/data_science/scond-post/index.html",
+    "href": "projects/data_science/scond-post/index.html",
+    "title": "Second Post",
     "section": "",
-    "text": "checking out new post."
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula. Amet cursus sit amet dictum sit amet. Eget duis at tellus at urna condimentum. Convallis aenean et tortor at risus viverra. Tincidunt ornare massa eget egestas purus viverra accumsan. Et malesuada fames ac turpis egestas. At imperdiet dui accumsan sit amet. Ut ornare lectus sit amet est placerat. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Duis ultricies lacus sed turpis tincidunt id aliquet risus. Mattis enim ut tellus elementum sagittis. Dui id ornare arcu odio ut. Natoque penatibus et magnis dis. Libero justo laoreet sit amet cursus sit. Sed faucibus turpis in eu. Tempus iaculis urna id volutpat lacus laoreet.\nPhasellus vestibulum lorem sed risus. Eget felis eget nunc lobortis mattis. Sit amet aliquam id diam maecenas ultricies. Egestas maecenas pharetra convallis posuere morbi. Etiam erat velit scelerisque in dictum non consectetur a erat. Cras fermentum odio eu feugiat pretium nibh ipsum consequat. Viverra accumsan in nisl nisi scelerisque. Et netus et malesuada fames ac. Amet tellus cras adipiscing enim eu turpis egestas pretium aenean. Eget lorem dolor sed viverra ipsum nunc aliquet. Ultrices dui sapien eget mi proin sed libero enim sed. Ultricies mi eget mauris pharetra et ultrices neque. Ipsum suspendisse ultrices gravida dictum. A arcu cursus vitae congue mauris rhoncus aenean vel. Gravida arcu ac tortor dignissim convallis. Nulla posuere sollicitudin aliquam ultrices."
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Reading twenty years of disasters with a language model\n\n\nThere is no clean dataset of how floods disrupt healthcare. The evidence exists, but it is written down in news, reports, and parliamentary records. Here is the pipeline I am building to read it at scale.\n\n\n\n\n\nJun 12, 2026\n\n\nAmirhossein Ghadiri\n\n\n\n\n\n\n\n\n\n\n\n\nWhy a dry hospital can still stop working\n\n\nFlood maps tell you which buildings get wet. They don’t tell you which services stop. That gap is what my PhD is about.\n\n\n\n\n\nMay 18, 2026\n\n\nAmirhossein Ghadiri\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/floods-and-healthcare/index.html",
+    "href": "blog/floods-and-healthcare/index.html",
+    "title": "Why a dry hospital can still stop working",
+    "section": "",
+    "text": "In February 2020, Storm Dennis put much of south Wales under water. It was the wettest February the UK had ever recorded. Rivers came over their banks, a major incident was declared, and thousands of homes and businesses flooded. GP surgeries closed. Some staff could not get to their wards. Appointments were cancelled for people who could least afford to miss them.\nThe water drained away in a few days. The disruption to care did not.\nI keep coming back to that gap, because it is the part we measure worst. When people talk about flood risk, they usually mean a map: this area floods, that one does not. Those maps are genuinely useful and a lot of careful work goes into them. But they answer one question, which is where the water goes. They say nothing about which services stop, for whom, or for how long."
+  },
+  {
+    "objectID": "blog/floods-and-healthcare/index.html#the-building-is-the-wrong-unit",
+    "href": "blog/floods-and-healthcare/index.html#the-building-is-the-wrong-unit",
+    "title": "Why a dry hospital can still stop working",
+    "section": "The building is the wrong unit",
+    "text": "The building is the wrong unit\nHere is the thing that took me a while to properly absorb. A hospital can stay completely dry and still stop delivering care.\nThink about how that happens. A substation floods three streets away and the power goes. The backup generator covers theatres and intensive care, but the dialysis unit runs reduced sessions. Meanwhile the main road in is closed, so a third of the nursing staff on the next shift cannot physically get to the site. None of the water has touched the building. The service still degrades.\nThat is the pattern I find again and again in the evidence. The damage to a health system rarely comes from the floodwater hitting the ward directly. It comes through the things the ward depends on: electricity, clean water, transport, the staff who have their own flooded homes to deal with, the IT links that let one site talk to another."
+  },
+  {
+    "objectID": "blog/floods-and-healthcare/index.html#disruption-is-a-chain-not-a-moment",
+    "href": "blog/floods-and-healthcare/index.html#disruption-is-a-chain-not-a-moment",
+    "title": "Why a dry hospital can still stop working",
+    "section": "Disruption is a chain, not a moment",
+    "text": "Disruption is a chain, not a moment\nThe way I have started to think about it is as a chain rather than a single event.\nIt starts with the hazard, the flood itself. That triggers infrastructure failures, the lifelines going down. Those failures hit facilities and the workforce, so places close or run at half capacity and people cannot reach work. That shows up on the demand side, where patients are blocked from care or displaced to other sites that were already full. And then these effects feed each other and spread, which is the part that makes a one-day weather event turn into weeks of backlog.\nRun a single example through that chain. Heavy rain over the Taff catchment. A substation floods and the access roads close. A clinic shuts and its staff cannot travel in. Appointments are cancelled and that demand spills over to neighbouring sites. Weeks of delayed care follow. Most of that chain happens outside the hospital walls, which is exactly why a flood map of the building misses it."
+  },
+  {
+    "objectID": "blog/floods-and-healthcare/index.html#why-wales-is-the-right-place-to-study-this",
+    "href": "blog/floods-and-healthcare/index.html#why-wales-is-the-right-place-to-study-this",
+    "title": "Why a dry hospital can still stop working",
+    "section": "Why Wales is the right place to study this",
+    "text": "Why Wales is the right place to study this\nRoughly one in eight properties in Wales is at risk of flooding, and the climate signal points one way: wetter winters and rising seas. Healthcare here cannot simply close when that happens, because NHS bodies are legally Category 1 responders under the Civil Contingencies Act. So the question is not whether services will face floods. It is how they fail when they do, and what you could have done beforehand to soften it.\nThere are also recent floods with documented health impacts to learn from, around Monmouth, Rhondda Cynon Taf, and the Gwent Levels near Newport. And there are people who managed those events and are willing to talk about what actually broke."
+  },
+  {
+    "objectID": "blog/floods-and-healthcare/index.html#what-i-am-building",
+    "href": "blog/floods-and-healthcare/index.html#what-i-am-building",
+    "title": "Why a dry hospital can still stop working",
+    "section": "What I am building",
+    "text": "What I am building\nThe first stage of my PhD is to map these mechanisms properly: to take the evidence that currently sits scattered across health board reports, academic papers, news coverage, and the Senedd record, and turn it into a structured account of how floods disrupt care. Once that map exists, the rest of the project can use it to score which Welsh facilities are most exposed, to project how that exposure changes under different climate futures, and to help planners decide where to put resources before the next flood instead of during it.\nA dry hospital that has quietly stopped working is not a freak outcome. It is the normal way these failures happen. The aim is to make that visible enough to plan around."
+  },
+  {
+    "objectID": "talks/index.html",
+    "href": "talks/index.html",
+    "title": "Talks",
+    "section": "",
+    "text": "How floods disrupt healthcare\n\n\nWP1 progress talk: mapping the mechanisms behind health service failure during floods, grounded in Wales.\n\n\n\n\n\nJun 15, 2026\n\n\nAmirhossein Ghadiri\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "talks/2025-1-firsttalk/index.html",
+    "href": "talks/2025-1-firsttalk/index.html",
+    "title": "First Post",
+    "section": "",
+    "text": "Slides\n  \n\n\n\n  \n     Slides\n  \n\nSed risus ultricies tristique nulla aliquet. Neque volutpat ac tincidunt vitae semper quis lectus nulla.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim sed faucibus turpis in eu mi bibendum neque. Ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Velit sed ullamcorper morbi tincidunt ornare massa. Sagittis id consectetur purus ut faucibus pulvinar elementum integer. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero. Lobortis feugiat vivamus at augue eget arcu. Aliquam ut porttitor leo a diam sollicitudin tempor id eu. Mauris a diam maecenas sed enim ut sem viverra aliquet. Enim ut tellus elementum sagittis vitae et leo duis. Molestie at elementum eu facilisis sed odio morbi quis commodo. Sapien pellentesque habitant morbi tristique senectus. Quam vulputate dignissim suspendisse in est. Nulla pellentesque dignissim enim sit amet venenatis urna cursus eget.\nVelit aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Viverra mauris in aliquam sem fringilla ut morbi tincidunt augue. Tortor at auctor urna nunc id. Sit amet consectetur adipiscing elit duis tristique sollicitudin. Aliquet nibh praesent tristique magna sit amet purus. Tristique senectus et netus et malesuada fames ac turpis. Hac habitasse platea dictumst quisque. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Iaculis at erat pellentesque adipiscing. Cras tincidunt lobortis feugiat vivamus. Nisi est sit amet facilisis magna etiam. Pharetra pharetra massa massa ultricies mi quis hendrerit. Vitae sapien pellentesque habitant morbi tristique senectus. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae."
+  },
+  {
+    "objectID": "talks/wp1-floods-healthcare/slides/wp1_talk.html#february-2020-storm-dennis-hits-south-wales",
+    "href": "talks/wp1-floods-healthcare/slides/wp1_talk.html#february-2020-storm-dennis-hits-south-wales",
+    "title": "How floods disrupt healthcare",
+    "section": "February 2020: Storm Dennis hits south Wales",
+    "text": "February 2020: Storm Dennis hits south Wales\nThe UK’s wettest February on record.\n\nRivers burst their banks. Thousands of homes and businesses flooded. A major incident declared across south Wales.\n\n\nGP surgeries closed. Staff could not reach their wards. Appointments were cancelled for people who needed them most.\n\n\nThe water left in days. The disruption did not.\n\nAbout 1 minute. Open with the story, slow delivery. The point: floods are not an abstract climate risk in Wales, they are recent memory. Land on the last line and pause before moving on."
+  },
+  {
+    "objectID": "talks/wp1-floods-healthcare/slides/wp1_talk.html#what-this-talk-covers",
+    "href": "talks/wp1-floods-healthcare/slides/wp1_talk.html#what-this-talk-covers",
+    "title": "How floods disrupt healthcare",
+    "section": "What this talk covers",
+    "text": "What this talk covers\n\nThe problem\nBuilding the evidence base\nThe mechanism map\nWales and what comes next\n\n\n15 seconds. One sentence per item, then move."
+  },
+  {
+    "objectID": "talks/wp1-floods-healthcare/slides/wp1_talk.html#flood-risk-in-wales-is-large-and-it-is-growing",
+    "href": "talks/wp1-floods-healthcare/slides/wp1_talk.html#flood-risk-in-wales-is-large-and-it-is-growing",
+    "title": "How floods disrupt healthcare",
+    "section": "Flood risk in Wales is large, and it is growing",
+    "text": "Flood risk in Wales is large, and it is growing\n\nRoughly one in eight properties in Wales is at risk of flooding 1\nThe climate signal points one way: wetter winters and rising seas\nHealthcare cannot simply close: NHS bodies are Category 1 responders under the Civil Contingencies Act 2004\nThe question is not whether services face floods, but how they fail when they do\n\n\nAbout 1 minute. Establish scale, then pivot from exposure to failure. The last bullet sets up the next slide.\n\nNatural Resources Wales, Flood Risk Assessment Wales."
+  },
+  {
+    "objectID": "talks/wp1-floods-healthcare/slides/wp1_talk.html#we-map-where-water-goes-not-what-stops-working",
+    "href": "talks/wp1-floods-healthcare/slides/wp1_talk.html#we-map-where-water-goes-not-what-stops-working",
+    "title": "How floods disrupt healthcare",
+    "section": "We map where water goes, not what stops working",
+    "text": "We map where water goes, not what stops working\n\nFlood maps tell us which buildings get wet\nThey do not tell us which services stop, for whom, or for how long\nWales has no central record of healthcare disruption: evidence sits fragmented across health boards, reports, papers, and news\nWP1 asks: through which mechanisms do floods disrupt healthcare service delivery?\n\n\nAbout 1 minute. This is the gap slide. Emphasise that the blind spot is the service layer, not the hazard layer. Read the research question out loud, word for word."
+  },
+  {
+    "objectID": "talks/wp1-floods-healthcare/slides/wp1_talk.html#where-we-are",
+    "href": "talks/wp1-floods-healthcare/slides/wp1_talk.html#where-we-are",
+    "title": "How floods disrupt healthcare",
+    "section": "Where we are",
+    "text": "Where we are\n\nThe problem\nBuilding the evidence base\nThe mechanism map\nWales and what comes next"
+  },
+  {
+    "objectID": "talks/wp1-floods-healthcare/slides/wp1_talk.html#wp1-defines-what-the-rest-of-the-phd-measures",
+    "href": "talks/wp1-floods-healthcare/slides/wp1_talk.html#wp1-defines-what-the-rest-of-the-phd-measures",
+    "title": "How floods disrupt healthcare",
+    "section": "WP1 defines what the rest of the PhD measures",
+    "text": "WP1 defines what the rest of the PhD measures\n\n\n\n\n\nflowchart LR\n  A[\"WP1&lt;br&gt;Disruption mechanisms&lt;br&gt;and taxonomy\"] --&gt;|\"labels and&lt;br&gt;features\"| B[\"WP2&lt;br&gt;Vulnerability scoring&lt;br&gt;and live dashboard\"] \n  B --&gt;|\"current baseline\"| C[\"WP3&lt;br&gt;Future exposure under&lt;br&gt;climate scenarios\"]\n  C --&gt;|\"scenario inputs\"| D[\"WP4&lt;br&gt;Preparedness resource&lt;br&gt;allocation\"]\n\n\n\n\n\n\nEverything downstream needs to know what “disruption” actually means.\n\nAbout 1 minute. Walk through the figure left to right and explain every box: WP1 builds the mechanism map, WP2 turns it into vulnerability scores for Welsh facilities with a live dashboard, WP3 projects exposure under climate pathways, WP4 optimises preparedness planning. The arrows matter: WP1 supplies the labels and features the models learn from."
+  },
+  {
+    "objectID": "talks/wp1-floods-healthcare/slides/wp1_talk.html#one-taxonomy-three-layers-of-evidence",
+    "href": "talks/wp1-floods-healthcare/slides/wp1_talk.html#one-taxonomy-three-layers-of-evidence",
+    "title": "How floods disrupt healthcare",
+    "section": "One taxonomy, three layers of evidence",
+    "text": "One taxonomy, three layers of evidence\n\nCurated literature: around 70 sources, evidence from more than 20 countries\nOne lens throughout: the WHO health system building blocks, cross-checked against the SOSCHI codebook 1\nA machine-scaled corpus: global multilingual text from news, humanitarian reporting, and the bilingual Senedd Record\nPractitioner interviews with Welsh responders then calibrate the result\n\n\nAbout 1 minute. Three layers, one output. The curated review built the taxonomy. The NLP corpus scales it far beyond what one reader can cover, and the Senedd Record adds an unusual bilingual public source. Interviews come after the pipeline sprint and test the taxonomy against people who managed real floods.\n\nWorld Health Organization, health system building blocks framework."
+  },
+  {
+    "objectID": "talks/wp1-floods-healthcare/slides/wp1_talk.html#where-we-are-1",
+    "href": "talks/wp1-floods-healthcare/slides/wp1_talk.html#where-we-are-1",
+    "title": "How floods disrupt healthcare",
+    "section": "Where we are",
+    "text": "Where we are\n\nThe problem\nBuilding the evidence base\nThe mechanism map\nWales and what comes next"
+  },
+  {
+    "objectID": "talks/wp1-floods-healthcare/slides/wp1_talk.html#disruption-unfolds-as-a-chain-not-a-moment",
+    "href": "talks/wp1-floods-healthcare/slides/wp1_talk.html#disruption-unfolds-as-a-chain-not-a-moment",
+    "title": "How floods disrupt healthcare",
+    "section": "Disruption unfolds as a chain, not a moment",
+    "text": "Disruption unfolds as a chain, not a moment\n\n\n\n\n\nflowchart LR\n  A[\"1&lt;br&gt;Hazard&lt;br&gt;trigger\"] --&gt; B[\"2&lt;br&gt;Infrastructure&lt;br&gt;failures\"] --&gt; C[\"3&lt;br&gt;Facility and&lt;br&gt;workforce&lt;br&gt;disruption\"] --&gt; D[\"4&lt;br&gt;Demand-side&lt;br&gt;disruption\"] --&gt; E[\"5&lt;br&gt;Cascading&lt;br&gt;dynamics\"]\n\n\n\n\n\n\nA facility can stay completely dry and still stop delivering care.\n\nAbout 1 minute. Walk through every box: the hazard itself, then lifelines like power, water, transport and ICT, then what happens inside facilities and to staff, then what happens to patients and demand, and finally how failures feed each other over time. Land on the sentence below the figure: dry buildings still fail."
+  },
+  {
+    "objectID": "talks/wp1-floods-healthcare/slides/wp1_talk.html#the-chain-becomes-a-coding-scheme",
+    "href": "talks/wp1-floods-healthcare/slides/wp1_talk.html#the-chain-becomes-a-coding-scheme",
+    "title": "How floods disrupt healthcare",
+    "section": "The chain becomes a coding scheme",
+    "text": "The chain becomes a coding scheme\n\n\n\n\n\n\n\n\n\nFamily\nWhat it covers\n\n\n\n\nA\nHazard trigger\nfluvial, surface water, coastal, storm surge, sea-level rise\n\n\nB\nInfrastructure failure\npower, water, transport, ICT lifelines\n\n\nC\nFacility and workforce disruption\nclosures, evacuation, staff unable to work\n\n\nD\nDemand-side disruption\naccess barriers, displaced and surging demand\n\n\nX\nCross-cutting cascades\nfailures that propagate between families\n\n\n\n\nEncoded as controlled vocabularies in the WP1 pipeline; cross-checked against the SOSCHI codebook.\n\n\nAbout 1 minute. Same five layers, now as labels a machine can code text against. Families A to D are the chain’s first four layers, X is the cascade layer, and every coded pathway terminates in a health impact category. This is the moment WP1 turns from a qualitative synthesis into a label set: the same scheme lives in the pipeline’s data model as controlled vocabularies, covering services from ambulances and GPs to dialysis and blood supply."
+  },
+  {
+    "objectID": "talks/wp1-floods-healthcare/slides/wp1_talk.html#one-chain-end-to-end",
+    "href": "talks/wp1-floods-healthcare/slides/wp1_talk.html#one-chain-end-to-end",
+    "title": "How floods disrupt healthcare",
+    "section": "One chain, end to end",
+    "text": "One chain, end to end\nHeavy rain falls over the Taff catchment.\n\nA substation floods. Access roads close.\n\n\nThe clinic shuts. Staff cannot travel in.\n\n\nAppointments are cancelled. Demand spills to neighbouring sites.\n\n\nWeeks of backlog and delayed care follow. Most of this chain happens outside the hospital walls.\n\nAbout 1 minute. Reveal step by step, one beat each. This is the taxonomy in motion: a hazard trigger, then family B, then C, then D, then an X cascade in a single story. Pause on the final line."
+  },
+  {
+    "objectID": "talks/wp1-floods-healthcare/slides/wp1_talk.html#where-we-are-2",
+    "href": "talks/wp1-floods-healthcare/slides/wp1_talk.html#where-we-are-2",
+    "title": "How floods disrupt healthcare",
+    "section": "Where we are",
+    "text": "Where we are\n\nThe problem\nBuilding the evidence base\nThe mechanism map\nWales and what comes next"
+  },
+  {
+    "objectID": "talks/wp1-floods-healthcare/slides/wp1_talk.html#wales-gives-the-taxonomy-a-real-world-testbed",
+    "href": "talks/wp1-floods-healthcare/slides/wp1_talk.html#wales-gives-the-taxonomy-a-real-world-testbed",
+    "title": "How floods disrupt healthcare",
+    "section": "Wales gives the taxonomy a real-world testbed",
+    "text": "Wales gives the taxonomy a real-world testbed\n\nRecent floods with documented healthcare impacts: Monmouth, Rhondda Cynon Taf, the Gwent Levels around Newport\nA clear governance frame: the Civil Contingencies Act 2004 defines who must respond, and how\nActive practitioner partnerships: Public Health Wales, Cardiff Public Services Board, Newport City Council, Aneurin Bevan University Health Board\nTheir experience has already reshaped the research design\n\n\nAbout 1 minute. The point: this is not literature-only work. Practitioner input has changed the design, for example moving WP4 from real-time response to scenario-based preparedness planning, because the data needed in a live incident simply is not available."
+  },
+  {
+    "objectID": "talks/wp1-floods-healthcare/slides/wp1_talk.html#the-engine-is-already-in-build",
+    "href": "talks/wp1-floods-healthcare/slides/wp1_talk.html#the-engine-is-already-in-build",
+    "title": "How floods disrupt healthcare",
+    "section": "The engine is already in build",
+    "text": "The engine is already in build\n\nNot a script, an engineered pipeline: tested, versioned data, experiment tracking, one CLI\nThe ingestion layer is built: GDELT global news, ReliefWeb humanitarian reports, the Senedd Record\nRecall-first filtering keeps every plausible flood document, then LLM structured extraction with constrained decoding turns text into coded events\nCross-document event resolution links reports of the same flood; effect sizes come from text, not surveys\nShips as a deployed, auto-updating service feeding the WP2 dashboard\n\n\nAbout 1 minute. Status, honestly stated: the project scaffold and the full ingestion layer are implemented and tested, including syndication detection and the first-stage relevance filter. The extraction, resolution, and quantification stages are the next phases. The end state is infrastructure, not a one-off analysis: a service that keeps updating as new flood reports appear."
+  },
+  {
+    "objectID": "talks/wp1-floods-healthcare/slides/wp1_talk.html#if-you-remember-three-things",
+    "href": "talks/wp1-floods-healthcare/slides/wp1_talk.html#if-you-remember-three-things",
+    "title": "How floods disrupt healthcare",
+    "section": "If you remember three things",
+    "text": "If you remember three things\n\nFloods disrupt healthcare through chains of mechanisms, and most links sit outside the hospital walls\nWP1 turns scattered global evidence into a structured, codeable taxonomy, grounded in Wales\nThat taxonomy becomes the label set for everything downstream: vulnerability scores, climate scenarios, preparedness planning\n\n\nAbout 30 seconds. Slow down. These three sentences are the talk."
+  },
+  {
+    "objectID": "talks/wp1-floods-healthcare/slides/wp1_talk.html#thank-you",
+    "href": "talks/wp1-floods-healthcare/slides/wp1_talk.html#thank-you",
+    "title": "How floods disrupt healthcare",
+    "section": "Thank you 💬",
+    "text": "Thank you 💬\nQuestions and challenges welcome.\nAmirhossein Ghadiri\nData Lab for Social Good, Cardiff Business School\n GhadiriA@cardiff.ac.uk\n amirhosseinghdv |  amirhossein-ghadiri | 🌐 amirhosseinghdv.github.io\n\nSlides available at: amirhosseinghdv.github.io\n\n\nFinish under time. If a question goes deep, the extra slides at the end cover the pipeline, the layers, the data gap, and the WHO lens."
+  },
+  {
+    "objectID": "talks/wp1-floods-healthcare/slides/wp1_talk.html#the-pipeline-at-a-glance",
+    "href": "talks/wp1-floods-healthcare/slides/wp1_talk.html#the-pipeline-at-a-glance",
+    "title": "How floods disrupt healthcare",
+    "section": "The pipeline at a glance",
+    "text": "The pipeline at a glance\n\n\n\n\n\nflowchart LR\n  A[\"Ingest&lt;br&gt;GDELT, ReliefWeb,&lt;br&gt;Senedd Record\"] --&gt; B[\"Filter&lt;br&gt;recall-first,&lt;br&gt;then semantic\"] --&gt; C[\"Extract&lt;br&gt;structured LLM,&lt;br&gt;constrained decoding\"] --&gt; D[\"Resolve&lt;br&gt;cross-document&lt;br&gt;events\"] --&gt; E[\"Quantify&lt;br&gt;text-native&lt;br&gt;effect sizes\"] --&gt; F[\"Serve&lt;br&gt;auto-updating,&lt;br&gt;feeds WP2\"]\n\n\n\n\n\n\nEvery stage is one command in a single tested CLI, with versioned data end to end."
+  },
+  {
+    "objectID": "talks/wp1-floods-healthcare/slides/wp1_talk.html#the-five-layers-defined",
+    "href": "talks/wp1-floods-healthcare/slides/wp1_talk.html#the-five-layers-defined",
+    "title": "How floods disrupt healthcare",
+    "section": "The five layers, defined",
+    "text": "The five layers, defined\n\n\n\n\n\n\n\nLayer\nDefinition\n\n\n\n\n1. Hazard trigger\nThe flood event itself: fluvial, surface water, coastal, groundwater, or storm surge\n\n\n2. Infrastructure failures\nLifelines lost: power, water, transport, ICT\n\n\n3. Facility and workforce disruption\nClosures, evacuations, staff unable to reach or perform work\n\n\n4. Demand-side disruption\nPatients blocked from care; displaced and surging demand\n\n\n5. Cascading dynamics\nFailures propagating across services, space, and time\n\n\n\nEvery coded pathway terminates in a health impact category."
+  },
+  {
+    "objectID": "talks/wp1-floods-healthcare/slides/wp1_talk.html#why-text-mining-not-surveys",
+    "href": "talks/wp1-floods-healthcare/slides/wp1_talk.html#why-text-mining-not-surveys",
+    "title": "How floods disrupt healthcare",
+    "section": "Why text mining, not surveys",
+    "text": "Why text mining, not surveys\n\nNo central dataset records healthcare disruption in Wales: closures and cancellations sit behind fragmented FOI requests\nAggregated NHS activity data exists, but nothing links it to flood events\nThe evidence does exist, written down in reports, papers, news, and public proceedings\nWales adds a bilingual public record: Senedd proceedings in English and Welsh\nText-native extraction recovers it at scale, and keeps recovering it as new events are documented"
+  },
+  {
+    "objectID": "talks/wp1-floods-healthcare/slides/wp1_talk.html#the-who-building-blocks-lens",
+    "href": "talks/wp1-floods-healthcare/slides/wp1_talk.html#the-who-building-blocks-lens",
+    "title": "How floods disrupt healthcare",
+    "section": "The WHO building blocks lens",
+    "text": "The WHO building blocks lens\nEach study in the corpus is coded against the six building blocks of a health system:\n\nService delivery\nHealth workforce\nHealth information systems\nAccess to essential medicines\nFinancing\nLeadership and governance\n\nThis keeps the taxonomy about the health system as a whole, not only about wet buildings."
+  },
+  {
+    "objectID": "talks/wp1-floods-healthcare/index.html",
+    "href": "talks/wp1-floods-healthcare/index.html",
+    "title": "How floods disrupt healthcare",
+    "section": "",
+    "text": "Open slides\n  \n\nThis is the first work package talk from my PhD at the Data Lab for Social Good. It makes the case for a question that flood maps cannot answer: not where the water goes, but which health services stop, for whom, and for how long.\nThe talk walks through the problem, the way I am building the evidence base from curated literature and a machine-scaled text corpus, the mechanism map that comes out of it, and why Wales is the right place to ground all of it. It closes on the pipeline I am building to read disaster reporting at scale and turn it into coded events.\nPresented with my supervisors Bahman Rostami-Tabar, Thomas Woolley, and William Bennett. The deck runs in the browser. Press S for speaker notes and F for fullscreen."
+  },
+  {
+    "objectID": "talks/2025-2-or62/index.html",
+    "href": "talks/2025-2-or62/index.html",
+    "title": "First Post",
+    "section": "",
+    "text": "Slides\n  \n\nSed risus ultricies tristique nulla aliquet. Neque volutpat ac tincidunt vitae semper quis lectus nulla.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim sed faucibus turpis in eu mi bibendum neque. Ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Velit sed ullamcorper morbi tincidunt ornare massa. Sagittis id consectetur purus ut faucibus pulvinar elementum integer. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero. Lobortis feugiat vivamus at augue eget arcu. Aliquam ut porttitor leo a diam sollicitudin tempor id eu. Mauris a diam maecenas sed enim ut sem viverra aliquet. Enim ut tellus elementum sagittis vitae et leo duis. Molestie at elementum eu facilisis sed odio morbi quis commodo. Sapien pellentesque habitant morbi tristique senectus. Quam vulputate dignissim suspendisse in est. Nulla pellentesque dignissim enim sit amet venenatis urna cursus eget.\nVelit aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Viverra mauris in aliquam sem fringilla ut morbi tincidunt augue. Tortor at auctor urna nunc id. Sit amet consectetur adipiscing elit duis tristique sollicitudin. Aliquet nibh praesent tristique magna sit amet purus. Tristique senectus et netus et malesuada fames ac turpis. Hac habitasse platea dictumst quisque. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Iaculis at erat pellentesque adipiscing. Cras tincidunt lobortis feugiat vivamus. Nisi est sit amet facilisis magna etiam. Pharetra pharetra massa massa ultricies mi quis hendrerit. Vitae sapien pellentesque habitant morbi tristique senectus. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae."
+  },
+  {
+    "objectID": "cv/index.html",
+    "href": "cv/index.html",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "Amirhossein Ghadiri\n      PhD Researcher, Data Lab for Social Good, Cardiff Business School\n    \n    \n      Download PDF\n      Email\n      GitHub\n      LinkedIn\n      Scholar\n    \n  \n\n  \n    Education and experience\n\n    \n      \n        PhD, Business Management (Data Lab for Social Good)\n        Oct 2025 – present\n      \n      Cardiff Business School, Cardiff University\n      Building methods to make healthcare service delivery in Wales resilient to floods and rising seas, using machine learning, NLP, forecasting, and operations research. Supervised by Prof. Bahman Rostami-Tabar, Dr Thomas Woolley, and Dr William Bennett. Funded by an ESRC studentship through the Wales Graduate School for the Social Sciences.\n    \n\n    \n      \n        Visiting Researcher\n        Sep 2023 – Sep 2025\n      \n      Purdue University, with Dr Sogand Hasanzadeh\n      Applied machine learning and large language models to assess the risk of vehicle intrusions into construction work zones, a leading cause of roadwork fatalities.\n    \n\n    \n      \n        MSc, Construction Engineering and Management\n        Sep 2019 – Oct 2022\n      \n      Amirkabir University of Technology, Tehran · GPA 18.62/20, ranked 2nd in cohort\n      Thesis: a computer vision and fuzzy logic system for real-time evaluation of personal protective equipment compliance on construction sites. Supervised by Dr Vahid Shahhosseini.\n    \n\n    \n      \n        BSc, Civil Engineering\n        2015 – 2019\n      \n      Amirkabir University of Technology, Tehran · GPA 15.01/20\n    \n  \n\n  \n    Research interests\n    \n      Machine learningDeep learningComputer vision\n      NLP and LLMsGenerative AIForecasting\n      Operations researchOptimisationSimulation\n      Statistical learningReinforcement learning\n    \n  \n\n  \n    Publications\n    \n      \n        Ghadiri, A. and Hasanzadeh, S. Leveraging Large Language Models and Deep Learning for Construction Work Zone Intrusion Risk Assessment. Proceedings of the ASCE International Conference on Computing in Civil Engineering (I3CE 2025).\n        Link\n      \n      \n        Ghadiri, A. and Shahhosseini, V. Combining Computer Vision with Fuzzy Logic for Real-time Evaluation of Personal Protective Equipment Compliance. Under review, International Journal of Occupational Safety and Ergonomics.\n        Code\n      \n    \n  \n\n  \n    Technical skills\n\n    \n      Languages and tools\n      \n        PythonRPyTorchTensorFlowGit\n      \n    \n\n    \n      Methods\n      \n        Machine learningDeep learningComputer vision\n        NLP and LLMsGenerative AIForecasting\n        Statistical learningOperations researchOptimisation\n        GANsRNNsSignal processingRobotics and ROS\n        Reinforcement learning\n      \n    \n\n    \n      Software\n      \n        MS ProjectAutoCAD 2DMS Office\n      \n    \n\n    \n      Languages\n      \n        Persian (native)English (TOEFL 110/120)\n      \n    \n  \n\n  \n    Honours and standardised tests\n    \n      ESRC Doctoral Studentship (UKRI), Wales Graduate School for the Social Sciences.\n      Ranked 2nd of 17 students in the MSc Construction Engineering and Management cohort.\n      Ranked 591st among more than 200,000 candidates in the national MSc entrance exam.\n      Ranked 75th among more than 30,000 candidates in the civil engineering MSc entrance exam.\n      Ranked in the top 30 of 107 peers in the BSc Civil Engineering programme.\n      GRE 328/340 (Nov 2022) · TOEFL iBT 110/120 (Jul 2025)."
+  },
+  {
+    "objectID": "blog/reading-disasters-with-llms/index.html",
+    "href": "blog/reading-disasters-with-llms/index.html",
+    "title": "Reading twenty years of disasters with a language model",
+    "section": "",
+    "text": "When I started the first work package of my PhD, I assumed the hard part would be the analysis. It was not. The hard part was that the data I needed did not exist in any usable form.\nI wanted to know how floods disrupt healthcare delivery: which services fail, through which mechanisms, and how badly. There is no table for that. No central register records hospital closures or cancelled clinics against the floods that caused them. Aggregated NHS activity data exists, but nothing links it to flood events. The evidence is real, it is just locked inside text, scattered across news articles, humanitarian reports, academic papers, and the bilingual record of the Senedd.\nSo the project became, in large part, a text problem. The question I have been working on is how to read twenty years of disaster reporting without reading it by hand, and to come out the other side with structured, coded events I can actually count.\nThis is the part of my work that is closest to the applied science and ML engineering jobs I want after the PhD, so I have tried to build it the way those teams would, as a pipeline rather than a notebook."
+  },
+  {
+    "objectID": "blog/reading-disasters-with-llms/index.html#not-a-script-a-pipeline",
+    "href": "blog/reading-disasters-with-llms/index.html#not-a-script-a-pipeline",
+    "title": "Reading twenty years of disasters with a language model",
+    "section": "Not a script, a pipeline",
+    "text": "Not a script, a pipeline\nI want to be precise about that distinction, because it matters to me. A script runs once on my laptop and produces a number I can no longer reproduce six months later. A pipeline has tested components, versioned data at every stage, experiment tracking, and a single command-line entry point so anyone can run it end to end. New flood reports appear all the time, so the system has to keep ingesting and stay current. That requirement alone rules out the one-off approach.\nThe flow has five stages. Each one earns its place."
+  },
+  {
+    "objectID": "blog/reading-disasters-with-llms/index.html#ingest",
+    "href": "blog/reading-disasters-with-llms/index.html#ingest",
+    "title": "Reading twenty years of disasters with a language model",
+    "section": "Ingest",
+    "text": "Ingest\nThe first stage pulls documents from sources that actually cover flood events: GDELT for global news, ReliefWeb for humanitarian reporting, and the Senedd record for Welsh parliamentary proceedings. The Senedd is an unusual and valuable source here, partly because it is bilingual in English and Welsh, and partly because it captures political and operational detail about real Welsh incidents that news coverage skips.\nThis stage is built and tested, including the unglamorous parts: detecting when fifty outlets have syndicated the same wire story so I am not counting one flood fifty times."
+  },
+  {
+    "objectID": "blog/reading-disasters-with-llms/index.html#filter-recall-first",
+    "href": "blog/reading-disasters-with-llms/index.html#filter-recall-first",
+    "title": "Reading twenty years of disasters with a language model",
+    "section": "Filter, recall first",
+    "text": "Filter, recall first\nMost documents that mention flooding are irrelevant to healthcare. But I would rather keep junk than throw away a real signal, so the first filter is deliberately tuned for recall. It keeps every plausibly relevant flood document and accepts that a lot of those will be false positives. A second, semantic pass then tightens the set. Getting this order right matters: if you optimise the first stage for precision, you quietly lose the rare, important reports, and you never find out what you missed."
+  },
+  {
+    "objectID": "blog/reading-disasters-with-llms/index.html#extract-with-the-model-on-a-leash",
+    "href": "blog/reading-disasters-with-llms/index.html#extract-with-the-model-on-a-leash",
+    "title": "Reading twenty years of disasters with a language model",
+    "section": "Extract, with the model on a leash",
+    "text": "Extract, with the model on a leash\nThis is where the language model does its work. Rather than asking it for free text, I use structured extraction with constrained decoding, so the output has to conform to a schema I defined: the mechanism families, the affected services, the health impacts. The model reads a messy paragraph and returns a coded event, not a paragraph of its own. Constrained decoding is the difference between a model that mostly returns valid data and one that always does, which is the difference between a pipeline that runs unattended and one I have to babysit."
+  },
+  {
+    "objectID": "blog/reading-disasters-with-llms/index.html#resolve-across-documents",
+    "href": "blog/reading-disasters-with-llms/index.html#resolve-across-documents",
+    "title": "Reading twenty years of disasters with a language model",
+    "section": "Resolve across documents",
+    "text": "Resolve across documents\nFive reports about the same flood are five descriptions of one event, not five events. So the next stage links documents that refer to the same incident and reconciles what they say. Without this, every count is inflated by however many outlets happened to cover a given flood."
+  },
+  {
+    "objectID": "blog/reading-disasters-with-llms/index.html#quantify-and-serve",
+    "href": "blog/reading-disasters-with-llms/index.html#quantify-and-serve",
+    "title": "Reading twenty years of disasters with a language model",
+    "section": "Quantify and serve",
+    "text": "Quantify and serve\nThe last stage turns coded events into effect sizes drawn from the text itself, rather than from surveys that were never run. The output is then served as an auto-updating feed that flows into the next work package, where it becomes the basis for scoring how vulnerable Welsh facilities are."
+  },
+  {
+    "objectID": "blog/reading-disasters-with-llms/index.html#what-i-take-from-building-it",
+    "href": "blog/reading-disasters-with-llms/index.html#what-i-take-from-building-it",
+    "title": "Reading twenty years of disasters with a language model",
+    "section": "What I take from building it",
+    "text": "What I take from building it\nThe honest status is that the scaffold and the full ingestion layer are implemented and tested, and the extraction, resolution, and quantification stages are the work in front of me. But the shape of it is what I care about. The end state is infrastructure, a service that keeps recovering evidence as new floods are documented, not a single analysis with an expiry date.\nThe research reason for all this is that you cannot make healthcare resilient to floods if you cannot first see how it fails. The career reason is that this is exactly the kind of system applied scientists are paid to build: messy real-world input, a model doing one well-scoped job in the middle, and engineering around it that makes the whole thing trustworthy and repeatable."
+  },
+  {
+    "objectID": "about/index.html",
+    "href": "about/index.html",
+    "title": "Who am I",
+    "section": "",
+    "text": "I’m a first-year PhD researcher at the Data Lab for Social Good in Cardiff Business School. My background is in civil and construction engineering, but most of my research has been about teaching computers to see and read: computer vision for safety on building sites, and more recently language models for risk assessment. Now I’m pointing those tools at a different kind of problem, which is how a changing climate is going to affect the way health and care services get delivered."
+  },
+  {
+    "objectID": "about/index.html#what-my-phd-is-about",
+    "href": "about/index.html#what-my-phd-is-about",
+    "title": "Who am I",
+    "section": "What my PhD is about",
+    "text": "What my PhD is about\nWales floods. Roughly one in eight properties here is at some risk of it, and the climate signal points to wetter winters and higher seas. Hospitals and clinics can’t simply shut their doors when the water rises, which makes the failure modes the interesting part: how services break, who loses access, and for how long.\nThat is harder to pin down than it sounds. Flood maps tell you which buildings get wet. They don’t tell you that a flooded substation three streets away has knocked out a dialysis unit, or that staff couldn’t reach a ward because the roads were under water. A hospital can stay completely dry and still stop delivering care.\nMy research builds the layer that is missing. The first part maps the mechanisms through which floods disrupt healthcare, turning scattered evidence from reports, academic papers, news, and the Senedd record into a structured picture of what actually fails. From there the project moves toward scoring which Welsh facilities are most exposed, projecting how that exposure shifts under different climate futures, and helping planners decide where to put resources before the next flood rather than during it. A good chunk of this runs on a text-mining pipeline I’m building, which uses large language models to pull coded events out of messy documents at a scale no single reader could keep up with.\nThe work is grounded in Wales, but the methods are meant to travel."
+  },
+  {
+    "objectID": "about/index.html#supervision-team",
+    "href": "about/index.html#supervision-team",
+    "title": "Who am I",
+    "section": "Supervision team",
+    "text": "Supervision team\n\nLead: Prof Bahman Rostami-Tabar, Data Lab for Social Good, Cardiff Business School\nCo-supervisor: Dr Thomas Woolley, School of Mathematics, Cardiff University\nCo-supervisor: Dr William Bennett, School of Engineering, Swansea University"
+  },
+  {
+    "objectID": "about/index.html#funding-and-partners",
+    "href": "about/index.html#funding-and-partners",
+    "title": "Who am I",
+    "section": "Funding and partners",
+    "text": "Funding and partners\nThe PhD is funded by an ESRC studentship through the Wales Graduate School for the Social Sciences (WGSSS). It is shaped by working with people who handle this problem directly: Public Health Wales, the Future Generations Commissioner for Wales, Natural Resources Wales, and the Office for National Statistics. Their experience has already changed how I framed the project, including a shift away from real-time response toward longer-term preparedness planning, because the data you would need during a live incident mostly isn’t there."
+  },
+  {
+    "objectID": "about/index.html#before-cardiff",
+    "href": "about/index.html#before-cardiff",
+    "title": "Who am I",
+    "section": "Before Cardiff",
+    "text": "Before Cardiff\nI did both my BSc in Civil Engineering and my MSc in Construction Engineering and Management at Amirkabir University of Technology in Tehran, finishing second in my master’s cohort. My thesis built a computer vision system to check whether construction workers were wearing their protective equipment, combining object detection, image classification, and fuzzy logic. After that I spent two years as a visiting researcher at Purdue University, working with Dr Sogand Hasanzadeh on machine learning and language models for assessing the risk of vehicles intruding into roadwork zones."
+  },
+  {
+    "objectID": "about/index.html#what-i-work-with",
+    "href": "about/index.html#what-i-work-with",
+    "title": "Who am I",
+    "section": "What I work with",
+    "text": "What I work with\nMost of my day to day is in Python: PyTorch and TensorFlow for deep learning, the usual data and ML stack, and increasingly the tooling that sits around large language models. I also work in R, mainly for forecasting and statistics. My interests sit where machine learning, computer vision, NLP, forecasting, operations research, and optimisation overlap, which is a roundabout way of saying I like problems that need both a model and a reason to trust what it tells you.\nA quick rundown:\n\nLanguages and tools: Python, R, PyTorch, TensorFlow, Git\nMethods: machine learning, deep learning, computer vision, NLP and large language models, forecasting, statistics, operations research, optimisation, simulation\nSpoken languages: Persian (native), English (TOEFL 110)"
+  },
+  {
+    "objectID": "about/index.html#where-im-headed",
+    "href": "about/index.html#where-im-headed",
+    "title": "Who am I",
+    "section": "Where I’m headed",
+    "text": "Where I’m headed\nAfter the PhD I want to work as an applied scientist, machine learning engineer, or data scientist, ideally in London. So alongside the research I’m deliberately building the engineering side of the job: putting models into pipelines other people can actually run, instead of notebooks that only work once on my own laptop."
+  },
+  {
+    "objectID": "projects/data_science/third-post/index.html",
+    "href": "projects/data_science/third-post/index.html",
+    "title": "Third Blog Post",
+    "section": "",
+    "text": "The source for any page in your website could also be a Jupyter Notebook. This one is third-post/index.ipynb.\nHere’s an example I borrowed from the Seaborn docs:\n\nimport seaborn as sns\n\nsns.set_theme(style=\"whitegrid\")\n\n# Load the diamonds dataset\ndiamonds = sns.load_dataset(\"diamonds\")\n\n# Plot the distribution of clarity ratings, conditional on carat\nsns.displot(\n    data=diamonds,\n    x=\"carat\", hue=\"cut\",\n    kind=\"kde\", height=4, aspect=1.5,\n    multiple=\"fill\", clip=(0, None),\n    palette=\"ch:rot=-.25,hue=1,light=.75\",   \n)"
+  },
+  {
+    "objectID": "projects/data_science/first-post/index.html",
+    "href": "projects/data_science/first-post/index.html",
+    "title": "First Post",
+    "section": "",
+    "text": "Sed risus ultricies tristique nulla aliquet. Neque volutpat ac tincidunt vitae semper quis lectus nulla.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim sed faucibus turpis in eu mi bibendum neque. Ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Velit sed ullamcorper morbi tincidunt ornare massa. Sagittis id consectetur purus ut faucibus pulvinar elementum integer. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero. Lobortis feugiat vivamus at augue eget arcu. Aliquam ut porttitor leo a diam sollicitudin tempor id eu. Mauris a diam maecenas sed enim ut sem viverra aliquet. Enim ut tellus elementum sagittis vitae et leo duis. Molestie at elementum eu facilisis sed odio morbi quis commodo. Sapien pellentesque habitant morbi tristique senectus. Quam vulputate dignissim suspendisse in est. Nulla pellentesque dignissim enim sit amet venenatis urna cursus eget.\nVelit aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Viverra mauris in aliquam sem fringilla ut morbi tincidunt augue. Tortor at auctor urna nunc id. Sit amet consectetur adipiscing elit duis tristique sollicitudin. Aliquet nibh praesent tristique magna sit amet purus. Tristique senectus et netus et malesuada fames ac turpis. Hac habitasse platea dictumst quisque. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Iaculis at erat pellentesque adipiscing. Cras tincidunt lobortis feugiat vivamus. Nisi est sit amet facilisis magna etiam. Pharetra pharetra massa massa ultricies mi quis hendrerit. Vitae sapien pellentesque habitant morbi tristique senectus. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae."
+  },
+  {
+    "objectID": "projects/sustainability/first-post/index.html",
+    "href": "projects/sustainability/first-post/index.html",
+    "title": "First Post",
+    "section": "",
+    "text": "Sed risus ultricies tristique nulla aliquet. Neque volutpat ac tincidunt vitae semper quis lectus nulla.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim sed faucibus turpis in eu mi bibendum neque. Ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Velit sed ullamcorper morbi tincidunt ornare massa. Sagittis id consectetur purus ut faucibus pulvinar elementum integer. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero. Lobortis feugiat vivamus at augue eget arcu. Aliquam ut porttitor leo a diam sollicitudin tempor id eu. Mauris a diam maecenas sed enim ut sem viverra aliquet. Enim ut tellus elementum sagittis vitae et leo duis. Molestie at elementum eu facilisis sed odio morbi quis commodo. Sapien pellentesque habitant morbi tristique senectus. Quam vulputate dignissim suspendisse in est. Nulla pellentesque dignissim enim sit amet venenatis urna cursus eget.\nVelit aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Viverra mauris in aliquam sem fringilla ut morbi tincidunt augue. Tortor at auctor urna nunc id. Sit amet consectetur adipiscing elit duis tristique sollicitudin. Aliquet nibh praesent tristique magna sit amet purus. Tristique senectus et netus et malesuada fames ac turpis. Hac habitasse platea dictumst quisque. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Iaculis at erat pellentesque adipiscing. Cras tincidunt lobortis feugiat vivamus. Nisi est sit amet facilisis magna etiam. Pharetra pharetra massa massa ultricies mi quis hendrerit. Vitae sapien pellentesque habitant morbi tristique senectus. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae."
+  },
+  {
+    "objectID": "projects/forecasting/first-post/index.html",
+    "href": "projects/forecasting/first-post/index.html",
+    "title": "First Post",
+    "section": "",
+    "text": "Sed risus ultricies tristique nulla aliquet. Neque volutpat ac tincidunt vitae semper quis lectus nulla.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim sed faucibus turpis in eu mi bibendum neque. Ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Velit sed ullamcorper morbi tincidunt ornare massa. Sagittis id consectetur purus ut faucibus pulvinar elementum integer. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero. Lobortis feugiat vivamus at augue eget arcu. Aliquam ut porttitor leo a diam sollicitudin tempor id eu. Mauris a diam maecenas sed enim ut sem viverra aliquet. Enim ut tellus elementum sagittis vitae et leo duis. Molestie at elementum eu facilisis sed odio morbi quis commodo. Sapien pellentesque habitant morbi tristique senectus. Quam vulputate dignissim suspendisse in est. Nulla pellentesque dignissim enim sit amet venenatis urna cursus eget.\nVelit aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Viverra mauris in aliquam sem fringilla ut morbi tincidunt augue. Tortor at auctor urna nunc id. Sit amet consectetur adipiscing elit duis tristique sollicitudin. Aliquet nibh praesent tristique magna sit amet purus. Tristique senectus et netus et malesuada fames ac turpis. Hac habitasse platea dictumst quisque. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Iaculis at erat pellentesque adipiscing. Cras tincidunt lobortis feugiat vivamus. Nisi est sit amet facilisis magna etiam. Pharetra pharetra massa massa ultricies mi quis hendrerit. Vitae sapien pellentesque habitant morbi tristique senectus. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae."
+  },
+  {
+    "objectID": "publications/working_papers/index.html",
+    "href": "publications/working_papers/index.html",
+    "title": "Working Papers",
+    "section": "",
+    "text": "Title\n\n\n\nAuthors\n\n\n\nKeywords\n\n\n\n\n\n\n\n\nCombining Computer Vision with Fuzzy Logic for Real-time Evaluation of Personal Protective Equipment Compliance\n\n\nAmirhossein Ghadiri, Vahid Shahhosseini\n\n\nComputer Vision, Fuzzy Logic, Deep Learning, Under review\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "publications/book_chapters/index.html",
+    "href": "publications/book_chapters/index.html",
+    "title": "Conference Papers",
+    "section": "",
+    "text": "Title\n\n\n\nAuthors\n\n\n\nKeywords\n\n\n\n\n\n\n\n\nLeveraging Large Language Models and Deep Learning for Construction Work Zone Intrusion Risk Assessment\n\n\nAmirhossein Ghadiri, Sogand Hasanzadeh\n\n\nLLMs, Deep Learning, NLP, Construction Safety\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "publications/journal_articles/index.html",
     "href": "publications/journal_articles/index.html",
     "title": "Journal Articles",
     "section": "",
-    "text": "Author/(s)\n\n\n\nTitle\n\n\n\nKeywords\n\n\n\n\n\n\n\n\nHarsha Chamara Hewage, H. Niles Perera, Shari De Baets\n\n\nForecast adjustments during post-promotional periods, European Journal of Operational Research.\n\n\nPython, Machine Learning, Data Cleaning\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "publications/technical_reports/index.html",
-    "href": "publications/technical_reports/index.html",
-    "title": "Technical Reports",
-    "section": "",
-    "text": "Title\n\n\n\nDescription\n\n\n\nKeywords\n\n\n\n\n\n\n\n\nHarsha Chamara Hewage, H. Niles Perera, Shari De Baets, Forecast adjustments during post-promotional periods, European Journal of Operational Research.\n\n\nWe study judgmental forecast adjustments in pre-promotional (normal), promotional and post-promotional periods via behavioral experiments. Forecasters need structured support to make effective adjustments during post-promotional periods. The…\n\n\nPython, Machine Learning, Data Cleaning\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "talks/index.html",
-    "href": "talks/index.html",
-    "title": "",
-    "section": "",
-    "text": "First Post\n\n\nPost description for first post\n\n\n\n\n\nMay 22, 2021\n\n\nHarsha\n\n\n\n\n\n\n\n\n\n\n\n\nFirst Post\n\n\nPost description for first post\n\n\n\n\n\nMay 22, 2021\n\n\nHarsha\n\n\n\n\n\nNo matching items"
+    "text": "Author/(s)\nTitle\nKeywords\n\n\n\n\n\nNo matching items"
   }
 ]

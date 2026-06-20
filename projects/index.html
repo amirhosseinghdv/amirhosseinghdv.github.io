@@ -2,14 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Overview of forecasting and data science projects.">
 
-<title>Projects</title>
+<title>Projects | Amirhossein Ghadiri</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -31,19 +33,16 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-b972555d5544c697ac4899f3ede017b3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-0e197cfbf1ff2b3456a6d9b869e905d4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,69 +70,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<meta property="og:title" content="Projects">
-<meta property="og:description" content="Overview of forecasting and data science projects.">
-<meta property="og:image" content="https://amirhosseinghdv.github.io/projects/data_science/cover.jpg">
+<meta property="og:title" content="Projects | Amirhossein Ghadiri">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -177,20 +116,12 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-publications">    
         <li>
-    <a class="dropdown-item" href="../publications/journal_articles/index.html">
- <span class="dropdown-text">Journal Publications</span></a>
-  </li>  
-        <li>
     <a class="dropdown-item" href="../publications/book_chapters/index.html">
- <span class="dropdown-text">Book Chapters</span></a>
+ <span class="dropdown-text">Conference Papers</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../publications/working_papers/index.html">
  <span class="dropdown-text">Working Papers</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../publications/technical_reports/index.html">
- <span class="dropdown-text">Technical Reports</span></a>
   </li>  
     </ul>
   </li>
@@ -200,9 +131,10 @@ window.Quarto = {
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools tools-wide">
     <a href="https://github.com/amirhosseinghdv" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
     <a href="https://www.linkedin.com/in/amirhossein-ghadiri-8296781a6/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-linkedin"></i></a>
+    <a href="https://scholar.google.com/citations?user=e2vu41AAAAAJ&amp;hl=en" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-mortarboard-fill"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -220,11 +152,6 @@ window.Quarto = {
 <h1 class="title">Projects</h1>
 </div>
 
-<div>
-  <div class="description">
-    Overview of forecasting and data science projects.
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
@@ -239,84 +166,77 @@ window.Quarto = {
 </header>
 
 
+<style>
+  .pj-wrap { max-width: 900px; }
+  .pj-intro { color: rgb(55,58,60); margin-bottom: 1.6rem; }
+  .pj-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.1rem; }
+  .pj-card {
+    border: 1px solid #e2e9f0; border-radius: 10px; padding: 1.1rem 1.2rem;
+    background: #fff; display: flex; flex-direction: column;
+    transition: box-shadow 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+  }
+  .pj-card:hover { box-shadow: 0 6px 22px rgba(2,76,134,0.10); border-color: #b9d2e8; transform: translateY(-2px); }
+  .pj-card h3 { margin: 0 0 0.2rem 0; font-size: 1.12rem; }
+  .pj-card h3 a { color: #024c86; text-decoration: none; }
+  .pj-card h3 a:hover { text-decoration: underline; }
+  .pj-tag { font-size: 0.78rem; color: #fff; background: #0066b2; border-radius: 4px; padding: 0.1rem 0.45rem; vertical-align: middle; margin-left: 0.4rem; }
+  .pj-tag.review { background: #b9772b; }
+  .pj-card p { color: rgb(55,58,60); margin: 0.5rem 0 0.8rem 0; font-size: 0.95rem; }
+  .pj-chips { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: auto; }
+  .pj-chips span { background: #eef4fa; color: #024c86; border: 1px solid #dce8f3; border-radius: 999px; padding: 0.18rem 0.6rem; font-size: 0.8rem; }
+  .pj-link { margin-top: 0.8rem; font-size: 0.88rem; }
+  .pj-link a { color: #0066b2; text-decoration: none; }
+  .pj-link a:hover { text-decoration: underline; }
+  .pj-foot { margin-top: 1.8rem; padding-top: 1.1rem; border-top: 1px solid #e4ebf1; color: rgb(55,58,60); }
+  .pj-allbtn { display: inline-block; margin-top: 0.6rem; background: #0066b2; color: #fff; text-decoration: none; padding: 0.45rem 0.9rem; border-radius: 6px; font-size: 0.9rem; font-weight: 600; }
+  .pj-allbtn:hover { background: #024c86; }
+</style>
 
+<div class="pj-wrap">
 
+  <p class="pj-intro">A mix of computer vision, deep learning, and applied machine learning work, most of it from before I started the PhD. The code lives on GitHub.</p>
 
+  <div class="pj-grid">
 
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="listing-actions-group">
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
+    <div class="pj-card">
+      <h3 class="anchored"><a href="https://github.com/amirhosseinghdv/PPE-Noncompliance-Evaluation" target="_blank" rel="noopener">PPE non-compliance evaluation</a><span class="pj-tag review">Under review</span></h3>
+      <p>The system from my master's thesis. YOLOX detects workers and their protective equipment, three classifiers check hats, vests, and gloves, and a set of fuzzy inference systems turn those outputs into a danger score for each worker, so a safety manager gets a judgement rather than a raw detection. The associated paper is under review at the International Journal of Occupational Safety and Ergonomics.</p>
+      <div class="pj-chips"><span>Computer vision</span><span>YOLOX</span><span>Fuzzy logic</span><span>Python</span></div>
     </div>
-</div>
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="UiUyQ1B5dGhvbiUyQ1F1YXJ0byUyQ1Bvc3Ryb24lMkNNYWNoaW5lJTIwTGVhcm5pbmc=" data-listing-file-modified-sort="1764171774763" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="../projects/data_science/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../projects/data_science/cover.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Data Science
-</h5>
-<div class="card-text listing-description delink">
-<p>My data sceince projects.</p>
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
+
+    <div class="pj-card">
+      <h3 class="anchored">Asphalt crack segmentation</h3>
+      <p>A deep learning model in PyTorch that segments cracks in road surface images at the pixel level, separating the crack from the pavement so the damage can be measured rather than just flagged.</p>
+      <div class="pj-chips"><span>Semantic segmentation</span><span>PyTorch</span><span>Deep learning</span></div>
+      <div class="pj-link">See this and more on <a href="https://github.com/amirhosseinghdv" target="_blank" rel="noopener">my GitHub</a></div>
+    </div>
+
+    <div class="pj-card">
+      <h3 class="anchored">Covid-19 vaccination prediction</h3>
+      <p>A regression project predicting vaccination uptake from demographic and regional features, built with PyCaret to compare a wide set of models quickly before settling on one.</p>
+      <div class="pj-chips"><span>Regression</span><span>PyCaret</span><span>Machine learning</span></div>
+      <div class="pj-link">See this and more on <a href="https://github.com/amirhosseinghdv" target="_blank" rel="noopener">my GitHub</a></div>
+    </div>
+
+    <div class="pj-card">
+      <h3 class="anchored">Customer churn classification</h3>
+      <p>A classification model that flags which customers are likely to leave, again using PyCaret to benchmark algorithms and handle the class imbalance that comes with churn data.</p>
+      <div class="pj-chips"><span>Classification</span><span>PyCaret</span><span>Machine learning</span></div>
+      <div class="pj-link">See this and more on <a href="https://github.com/amirhosseinghdv" target="_blank" rel="noopener">my GitHub</a></div>
+    </div>
+
+  </div>
+
+  <div class="pj-foot">
+    <p>My current work is the PhD itself, a four-part project on making Welsh healthcare resilient to floods. The first part, building a text-mining pipeline that reads disaster reporting and extracts coded events, is described on the <a href="../talks/wp1-floods-healthcare/index.html">talks</a> and <a href="../blog/index.html">blog</a> pages.</p>
+    <a class="pj-allbtn" href="https://github.com/amirhosseinghdv" target="_blank" rel="noopener">Browse all repositories</a>
+  </div>
 
 </div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="TENBJTJDR3JlZW4lMjBUZWNoJTJDUmVjeWNsZQ==" data-listing-file-modified-sort="1764171774776" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="../projects/sustainability/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../projects/sustainability/cover.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Sustainability
-</h5>
-<div class="card-text listing-description delink">
-<p>My sustainability projects.</p>
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
 
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="UiUyQ1B5dGhvbiUyQ1F1YXJ0byUyQ1Bvc3Ryb24lMkNNYWNoaW5lJTIwTGVhcm5pbmc=" data-listing-file-modified-sort="1764171774772" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="../projects/forecasting/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../projects/forecasting/cover.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Time Series Forecasting
-</h5>
-<div class="card-text listing-description delink">
-<p>My forecasting projects.</p>
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
 
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
