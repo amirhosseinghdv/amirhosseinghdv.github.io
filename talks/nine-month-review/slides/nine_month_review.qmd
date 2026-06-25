@@ -1,0 +1,693 @@
+---
+title: "Climate change and the future of healthcare delivery in Wales"
+subtitle: "Nine-month review | Building resilience to flooding and rising sea levels"
+author:
+  - Amirhossein Ghadiri, PhD Student
+  - Bahman Rostami-Tabar, Lead supervisor
+  - Thomas Woolley, Co-supervisor
+  - William Bennett, Co-supervisor
+institute:
+  - Data Lab for Social Good, Cardiff Business School, Cardiff University
+  - Data Lab for Social Good, Cardiff Business School, Cardiff University
+  - School of Mathematics, Cardiff University
+  - School of Engineering, University of Swansea
+execute:
+  cache: true
+  warning: false
+  message: false
+  echo: false
+format:
+  revealjs:
+    multiplex: false
+    footer: "<i class='fa-brands fa-github'></i> [amirhosseinghdv](https://github.com/amirhosseinghdv) <i class='fa-brands fa-linkedin'></i> [amirhossein-ghadiri](https://www.linkedin.com/in/amirhossein-ghadiri-8296781a6/) 🌐 [amirhosseinghdv.github.io](https://amirhosseinghdv.github.io/)"
+    theme: ["default", "pp.scss"]
+    slide-number: c/t
+    progress: true
+    transition: none
+    incremental: false
+    menu: false
+    html-math-method: mathjax
+    include-in-header:
+      - text: |
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    chalkboard:
+      theme: chalkboard
+      toggleNotesButton: true
+---
+
+## Monmouth, November 2024
+
+A community hospital takes on water. Staff move every patient up to the first floor and wait there, cut off, until the river drops.
+
+. . .
+
+On the high street, a pharmacy, a dentist, and a GP surgery all flood at once.
+
+. . .
+
+The water never reaches the substations, but they fail anyway. Power is gone for up to 48 hours, and people on home oxygen and dialysis machines, well outside the flooded streets, are suddenly at risk.
+
+. . .
+
+[This is what disruption to healthcare actually looks like. My PhD is about understanding it, measuring it, and planning for it.]{.remember}
+
+::: {.notes}
+About 75 seconds. Open slowly, tell it as a story. This is a real Welsh case (Storm Bert, Monmouth) from Huw Williams at Public Health Wales. The point to land: the damage is rarely just the flooded building. It is the cascade. Hold the last line, then move to the agenda.
+:::
+
+## What I will cover
+
+1. [**The project**]{.remember}
+2. [Collaborators and stakeholders]{.graylight}
+3. [The three work packages]{.graylight}
+4. [Work package 1 in detail]{.graylight}
+5. [Activities and achievements]{.graylight}
+6. [Plan for the next six months]{.graylight}
+
+::: {.notes}
+15 seconds. One line each, then move. I will bring this agenda back at each transition so the panel always knows where we are.
+:::
+
+# 1. The project {.graylight}
+
+## The question behind everything
+
+Floods and rising seas keep disrupting how care is delivered in Wales. We map where the water goes. We do not map what stops working.
+
+- Roughly one in eight properties in Wales sits at flood risk, and the climate signal points to wetter winters and higher seas [^1]
+- NHS bodies cannot simply close: they are Category 1 responders under the Civil Contingencies Act 2004
+- There is no central record of how floods disrupt healthcare delivery, who it hits, or for how long
+
+[How do floods disrupt healthcare service delivery, and what can we do about it?]{.remember}
+
+[^1]: Natural Resources Wales, Flood Risk Assessment Wales.
+
+::: {.notes}
+About 1 minute. Establish the gap clearly. Flood maps tell us which buildings get wet. They say nothing about which services fail and for whom. That blind spot is the service layer, and that is where the whole PhD sits. Read the research question out loud.
+:::
+
+## The themes I work across
+
+This is a climate and health problem solved with operational research and machine learning.
+
+:::: {.columns}
+::: {.column width="50%"}
+**The domain**
+
+- Flooding and rising sea levels
+- Climate change and adaptation
+- Healthcare service delivery and resilience
+:::
+::: {.column width="50%"}
+**The methods**
+
+- NLP and large language models
+- Causal machine learning
+- Forecasting, simulation, and optimisation under uncertainty
+:::
+::::
+
+::: {.notes}
+About 45 seconds. I want the panel to see both halves at once: a real Welsh climate-and-health problem, and a serious methods toolkit from operational research and machine learning. The training I have done this year maps directly onto these methods, and I will show that later.
+:::
+
+## Three connected packages, one thread
+
+<svg viewBox="0 0 1680 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="WP1 leads to WP2 leads to WP3" style="width:100%;max-width:1200px;height:auto;display:block;margin:0 auto;">
+  <g fill="#e3edf9" stroke="#7ba3d4" stroke-width="1.5">
+    <rect x="15" y="50" width="350" height="130" rx="6"/>
+    <rect x="665" y="50" width="350" height="130" rx="6"/>
+    <rect x="1315" y="50" width="350" height="130" rx="6"/>
+  </g>
+  <g stroke="#8a97a6" stroke-width="2" fill="none">
+    <line x1="365" y1="115" x2="665" y2="115"/>
+    <line x1="1015" y1="115" x2="1315" y2="115"/>
+  </g>
+  <g fill="#8a97a6">
+    <path d="M665 115 L653 109 L653 121 Z"/>
+    <path d="M1315 115 L1303 109 L1303 121 Z"/>
+  </g>
+  <g fill="#eef1f4" stroke="none">
+    <rect x="395" y="92" width="240" height="46"/>
+    <rect x="1045" y="92" width="240" height="46"/>
+  </g>
+  <g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="22" fill="#33495d" text-anchor="middle">
+    <text x="515" y="104" dominant-baseline="central">reveals</text>
+    <text x="515" y="126" dominant-baseline="central">labels and features</text>
+    <text x="1165" y="104" dominant-baseline="central">today's vulnerability</text>
+    <text x="1165" y="126" dominant-baseline="central">is the baseline</text>
+  </g>
+  <g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="25" fill="#1f6db4" text-anchor="middle">
+    <text x="190" y="82" dominant-baseline="central">WP1</text>
+    <text x="190" y="115" dominant-baseline="central">How floods disrupt</text>
+    <text x="190" y="148" dominant-baseline="central">healthcare delivery</text>
+    <text x="840" y="82" dominant-baseline="central">WP2</text>
+    <text x="840" y="115" dominant-baseline="central">Which facilities fail,</text>
+    <text x="840" y="148" dominant-baseline="central">and how demand shifts</text>
+    <text x="1490" y="82" dominant-baseline="central">WP3</text>
+    <text x="1490" y="115" dominant-baseline="central">Planning resilience</text>
+    <text x="1490" y="148" dominant-baseline="central">under uncertainty</text>
+  </g>
+</svg>
+
+Each package feeds the next. The wp1 defines what the models measure, and the current picture defines what the future planning adapts.
+
+::: {.notes}
+About 1 minute. This is the spine of the talk. WP1 surfaces the drivers of disruption and grounds everything in real Welsh cases. WP2 turns those drivers into a spatio-temporal model of vulnerability and changing demand. WP3 takes the current picture and plans future resilience under uncertainty. The arrows are the argument: you cannot model vulnerability well until the qualitative work tells you what to model.
+:::
+
+# 2. Collaborators and stakeholders {.graylight}
+
+## The team and the funding
+
+:::: {.columns}
+::: {.column width="58%"}
+**Supervisory team**
+
+- Prof. Bahman Rostami-Tabar, lead, Data Lab for Social Good
+- Dr. Thomas Woolley, School of Mathematics
+- Dr. William Bennett, School of Engineering, Swansea
+
+**Research group**
+
+- Data Lab for Social Good (DL4SG), Cardiff Business School
+:::
+::: {.column width="42%"}
+**Funding**
+
+- Fully funded by WGSSS (ESRC)
+- Includes a three-month UK placement and a three-month overseas visit
+:::
+::::
+
+::: {.notes}
+About 40 seconds. The supervisory mix is deliberate: operational research, mathematics, and engineering, which matches the cross-disciplinary nature of the work. The WGSSS funding also gives me a placement and an overseas visit, which I will return to in the plan.
+:::
+
+## A live network of partners
+
+Over the past nine months I have engaged more than 18 organisations. The most active:
+
+:::: {.columns}
+::: {.column width="50%"}
+- **Public Health Wales**: Rosemary Walmsley, Huw Williams (emergency preparedness), Tracy Evans, Behrooz Behbood
+- **Office for Natoinal Statistics**: Myer Glickman
+- **Cardiff and Vale UHB**: Arjun Padmavathy (climate response lead)
+- **Welsh Gov**: Simon Dooley
+:::
+::: {.column width="50%"}
+- **Natural Resources Wales**: Luke Maggs
+- **The Office of the Future Generations Commissioner for Wales**: Petranka Malcheva
+- **Cardiff Public Services Board**: Abigail Streeter, on planning data and risk
+:::
+::::
+
+::: {.notes}
+About 1 minute. The point is that this is not a literature-only project. These partners shape the design and open doors to data and interviewees. Huw gave me a ready-made set of case studies. Arjun has a flood survey of NHS staff and climate modelling work he can share under a collaboration. Tracy has mapped flood risk to PHW sites. Their feedback has already changed the research, which I will show on the next slides.
+:::
+
+# 3. The three work packages {.graylight}
+
+## From six directions to three
+
+Scoping with partners surfaced six possible directions. We consolidated them into three connected packages.
+
+| Final package | Brings together | Core methods |
+|---|---|---|
+| [**WP1**]{.strong-blue} | Disruption drivers and taxonomy | NLP, LLMs, interviews, case studies |
+| [**WP2**]{.strong-blue} | Facility vulnerability and changing demand | Causal machine learning, forecasting |
+| [**WP3**]{.strong-blue} | Future exposure and preparedness | Simulation, optimisation under uncertainty |
+
+[The three answer one question end to end: understand the disruption, measure it, then plan for it.]{.remember}
+
+::: {.notes}
+About 1 minute. A large part of the first six months went into scoping these directions with partners and pressure-testing feasibility. WP2 unites the original vulnerability and demand ideas, since both quantify impact on facilities. WP3 unites future sea-level adaptation and resource allocation, since both are scenario-based planning under uncertainty. The three are sequential and cumulative: WP1 defines what disruption means, WP2 measures it for Welsh facilities today, and WP3 plans for it under future climate. That end-to-end logic is how they contribute to the overall objective of making healthcare delivery resilient, and the consolidation itself is a genuine feasibility decision, not cosmetic tidying.
+:::
+
+## WP2: which facilities fail, and how demand shifts
+
+A spatio-temporal model that scores healthcare facilities and tracks how floods change demand.
+
+- Inputs: flood hazard, road accessibility, facility characteristics, population context
+- A vulnerability score for each facility, changing across space and time
+- How demand moves during and after a flood, using interrupted time series
+- Causal machine learning to estimate effect sizes rather than mere correlation
+
+::: {.footer}
+Partners are clear that the drivers of vulnerability matter more than the score itself.
+:::
+
+::: {.notes}
+About 1 minute. WP2 is a prediction model, not just an explanatory regression, and it is spatial and temporal. The most actionable output, partners told me repeatedly, is understanding which specific factors drive vulnerability, for example a single access road, rather than a single composite number. The double machine learning here comes straight from the causal inference course I took in January.
+:::
+
+## WP3: planning resilience under deep uncertainty
+
+How healthcare delivery stays functional as the climate shifts, and how scarce resources are planned for floods.
+
+- Scenario-based exposure of Welsh healthcare assets under RCP 4.5, RCP 8.5, 2 and 4 degrees of warming
+- Adaptation woven into routine investment, not separate adaptation investment
+- Stochastic and robust optimisation, since the future is uncertain by nature
+
+::: {.footer}
+Reframed with partners: scenario planning, not real-time dispatch; adaptation, not relocation.
+:::
+
+::: {.notes}
+About 1 minute. WP3 was reshaped heavily by partner input. Arjun and others showed that a single all-Wales optimisation is unrealistic, so the exposure analysis across climate scenarios is the achievable, high-impact version. Huw made clear a real-time resource model has no live data to run on, so the viable version is offline scenario planning, which also fits the Civil Contingencies Act duty to plan ahead. The optimisation methods come from the NATCOR course I finished last week.
+:::
+
+## Where we are
+
+1. [The project]{.graylight}
+2. [Collaborators and stakeholders]{.graylight}
+3. [The three work packages]{.graylight}
+4. [**Work package 1 in detail**]{.remember}
+5. [Activities and achievements]{.graylight}
+6. [Plan for the next six months]{.graylight}
+
+::: {.notes}
+10 seconds. This is where most of the progress sits, so it gets the most time.
+:::
+
+# 4. Work package 1 in detail {.graylight}
+
+## What WP1 sets out to do
+
+Understand, in concrete Welsh cases, how floods disrupt healthcare service delivery, and build a structure others can reuse.
+
+- Identify the drivers of disruption, including the cascading ones that no single dataset records
+- Build a taxonomy that turns scattered evidence into something codeable
+- Ground it in real cases: Monmouth, Rhondda Cynon Taf, Newport
+- Define what WP2 should later measure
+
+::: {.notes}
+About 1 minute. WP1 is now fixed. Its job is to capture what the literature and the datasets miss, especially the compound effects, and to produce a structure the rest of the PhD depends on. Several partners who have done PhDs warned this alone is a large piece of work, which is why the scope is deliberately bounded to Welsh healthcare delivery.
+:::
+
+## Disruption is a chain, not a single moment
+
+<svg viewBox="0 0 1360 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Five-layer disruption chain" style="width:100%;max-width:1200px;height:auto;display:block;margin:0 auto;">
+  <g fill="#e3edf9" stroke="#7ba3d4" stroke-width="1.5">
+    <rect x="10" y="28" width="220" height="144" rx="6"/>
+    <rect x="290" y="28" width="220" height="144" rx="6"/>
+    <rect x="570" y="28" width="220" height="144" rx="6"/>
+    <rect x="850" y="28" width="220" height="144" rx="6"/>
+    <rect x="1130" y="28" width="220" height="144" rx="6"/>
+  </g>
+  <g stroke="#8a97a6" stroke-width="2" fill="none">
+    <line x1="230" y1="100" x2="290" y2="100"/>
+    <line x1="510" y1="100" x2="570" y2="100"/>
+    <line x1="790" y1="100" x2="850" y2="100"/>
+    <line x1="1070" y1="100" x2="1130" y2="100"/>
+  </g>
+  <g fill="#8a97a6">
+    <path d="M290 100 L278 94 L278 106 Z"/>
+    <path d="M570 100 L558 94 L558 106 Z"/>
+    <path d="M850 100 L838 94 L838 106 Z"/>
+    <path d="M1130 100 L1118 94 L1118 106 Z"/>
+  </g>
+  <g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="25" fill="#1f6db4" text-anchor="middle">
+    <text x="120" y="70" dominant-baseline="central">1</text>
+    <text x="120" y="100" dominant-baseline="central">Hazard</text>
+    <text x="120" y="130" dominant-baseline="central">trigger</text>
+    <text x="400" y="70" dominant-baseline="central">2</text>
+    <text x="400" y="100" dominant-baseline="central">Infrastructure</text>
+    <text x="400" y="130" dominant-baseline="central">failure</text>
+    <text x="680" y="55" dominant-baseline="central">3</text>
+    <text x="680" y="85" dominant-baseline="central">Facility and</text>
+    <text x="680" y="115" dominant-baseline="central">workforce</text>
+    <text x="680" y="145" dominant-baseline="central">disruption</text>
+    <text x="960" y="70" dominant-baseline="central">4</text>
+    <text x="960" y="100" dominant-baseline="central">Demand-side</text>
+    <text x="960" y="130" dominant-baseline="central">disruption</text>
+    <text x="1240" y="70" dominant-baseline="central">5</text>
+    <text x="1240" y="100" dominant-baseline="central">Cascading</text>
+    <text x="1240" y="130" dominant-baseline="central">dynamics</text>
+  </g>
+</svg>
+
+A facility can stay completely dry and still stop delivering care. Monmouth proved it.
+
+::: {.notes}
+About 1 minute. Walk the chain. The hazard, then lifelines like power, water, transport, and ICT, then what happens inside facilities and to staff, then what happens to patients and demand, then how failures feed each other. The Monmouth substation example is exactly layer 2 cascading into the community. Land on the dry-building line.
+:::
+
+## The chain becomes a coding scheme
+
+| | Family | What it covers |
+|---|---|---|
+| [A]{.strong-blue} | Hazard trigger | fluvial, surface, or coastal water, storm surge, sea-level rise |
+| [B]{.strong-blue} | Infrastructure failure | power, water, transport |
+| [C]{.strong-blue} | Facility and workforce disruption | closures, evacuation, staff unable to work |
+| [D]{.strong-blue} | Demand-side disruption | access barriers, displaced and surging demand |
+| [X]{.remember} | Cross-cutting cascades | failures that jump between families |
+
+::: {.notes}
+About 1 minute. This is the core output of WP1 so far. The five layers become labels a machine and a human can both code text against. Families A to D are the chain's first four layers, X is the cascade layer, and every coded pathway ends in a health-impact category. The same scheme lives in the pipeline's data model as controlled vocabularies. SOSCHI is the Ghana and ONS codebook I cross-checked against; the WHO building blocks keep it about the health system as a whole.
+:::
+
+## Two methods, one picture
+
+WP1 combines computational reach with qualitative depth.
+
+<svg viewBox="0 0 1000 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="NLP and interviews feed a disruption taxonomy and then effect sizes" style="width:100%;max-width:800px;height:auto;display:block;margin:0 auto;">
+  <g fill="#e3edf9" stroke="#7ba3d4" stroke-width="1.5">
+    <rect x="30" y="40" width="270" height="120" rx="6"/>
+    <rect x="30" y="260" width="270" height="120" rx="6"/>
+    <rect x="410" y="150" width="210" height="120" rx="6"/>
+    <rect x="730" y="150" width="240" height="120" rx="6"/>
+  </g>
+  <g stroke="#8a97a6" stroke-width="2" fill="none">
+    <path d="M300 100 C 360 100, 360 188, 410 188"/>
+    <path d="M300 320 C 360 320, 360 232, 410 232"/>
+    <line x1="620" y1="210" x2="730" y2="210"/>
+  </g>
+  <g fill="#8a97a6">
+    <path d="M410 188 L398 182 L398 194 Z"/>
+    <path d="M410 232 L398 226 L398 238 Z"/>
+    <path d="M730 210 L718 204 L718 216 Z"/>
+  </g>
+  <g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="25" fill="#1f6db4" text-anchor="middle">
+    <text x="165" y="70" dominant-baseline="central">Large-scale NLP</text>
+    <text x="165" y="100" dominant-baseline="central">news, reports,</text>
+    <text x="165" y="130" dominant-baseline="central">Senedd record</text>
+    <text x="165" y="305" dominant-baseline="central">Case studies and</text>
+    <text x="165" y="335" dominant-baseline="central">interviews in Wales</text>
+    <text x="515" y="195" dominant-baseline="central">Disruption</text>
+    <text x="515" y="225" dominant-baseline="central">taxonomy</text>
+    <text x="850" y="195" dominant-baseline="central">Quantified</text>
+    <text x="850" y="225" dominant-baseline="central">effect sizes</text>
+  </g>
+</svg>
+
+The text gives breadth and the what. The interviews give the why and the cascades. Together they triangulate.
+
+::: {.notes}
+About 1 minute. This is the design that emerged from every meeting. Newspapers and social media tell you what happened but not why; cascading effects only surface in interviews. So the NLP is one input into a case-study design, not the work package on its own. The final step quantifies effect sizes, anchored where possible in historical utilisation data rather than expert opinion alone.
+:::
+
+## Progress: the evidence base is built
+
+A review of roughly 70 sources.
+
+- Evidence from more than 20 countries, with Wales as the deep-dive case
+- Synthesised into the five-layer chain and the coding taxonomy
+- Cross-checked against the SOSCHI codebook for completeness
+
+::: {.notes}
+About 45 seconds. This is done. It is a structured synthesis, not a casual literature scan, and it is what produced the taxonomy. It also positions the work: the literature itself admits it lacks evidence on the drivers of vulnerability, which is the strongest justification for doing WP1 before any modelling.
+:::
+
+## Progress: the NLP pipeline is being built
+
+A text pipeline.
+
+- Three connectors built: GDELT global news, ReliefWeb humanitarian reports, the Senedd records
+- Full-text extraction and language identification are all working
+- A clean Storm Dennis corpus of around 294 documents as the first analysis-ready set is extracted
+
+::: {.footer}
+Built and tested locally first, ready to scale once the supercomputer is available.
+:::
+
+::: {.notes}
+About 1 minute. This is a major chunk of the nine months and a deliberate career investment in building real, maintainable systems. The ingestion layer is done and tested; the Storm Dennis corpus is the first analysis-ready output. The next stages, embeddings and LLM extraction, are scaffolded and waiting on compute. The bilingual Senedd record is a genuinely unusual source that few have mined.
+:::
+
+## Progress: cases and interviews are being identified
+
+The qualitative side is ready to start after the ethics application is approved.
+
+- Four contrasting cases, each a different flood mechanism and population: Monmouth (river), RCT (river, residential), Newport and the Gwent Levels (coastal), Tenby (cut-off)
+- Some Interview contacts secured through Huw
+- Two analytical threads to carry through: cascading infrastructure failure, and inequality in who is affected
+
+::: {.notes}
+About 1 minute. Huw gave me these four cases and offered to write to the people who actually ran the responses, including Wendy Warren and Mo on the Monmouth side and Shireen in public health. The variation across cases, different mechanisms and demographics, is what makes a comparative study strong. The two threads, cascades and inequality, came up again and again and will shape the interview guide.
+:::
+
+## What the engagement taught me
+
+The most valuable insights came from people, not papers.
+
+- The real story is the indirect effect: a flooded GP surgery displaces a screening service, which displaces something else
+- A hospital can be unreachable without being flooded, when its access road or power goes
+- Vulnerability is uneven: uninsured and isolated people, and those on home medical equipment, carry the most risk
+
+[These are exactly the mechanisms a flood map cannot show, and the reason WP1 has to come first.]{.remember}
+
+::: {.notes}
+About 1 minute. This is the payoff of the stakeholder work. The Monmouth cascade, the hospital-as-island examples from Gwent and Swansea, the power-cut risk to home-care patients. None of it shows up in a hazard overlay. This is the heart of why the qualitative package grounds the whole PhD, and why partners said they would not trust the later models without it.
+:::
+
+## Honest blockers
+
+Two things gate the next phase, and both are in motion.
+
+- Ethics approval is in progress. Application submitted, waiting for approval
+- Supercomputer access is approved and being finalised. The pipeline is built to run the moment it is accessible
+
+::: {.notes}
+About 45 seconds. Be candid here. These are the two real constraints. Both are progressing, and the work has been deliberately structured so that waiting on them does not stall everything else. As soon as ethics clears, interviews start; as soon as compute lands, the corpus scales and extraction runs.
+:::
+
+# 5. Activities and achievements {.graylight}
+
+## Training that maps onto the research
+
+Every course was chosen to serve a work package or a career goal.
+
+- Causal inference with machine learning, South Coast DTP winter school, with double machine learning and difference-in-differences. I then co-designed and co-delivered a follow-up workshop to the DL4SG group
+- Optimisation under uncertainty, NATCOR, Edinburgh, covering stochastic and robust and distributionally robust optimization
+- Research reproducibility with Quarto, Cardiff Doctoral Academy
+- PhD Foundations
+
+::: {.footer}
+Causal ML feeds WP2. Optimisation under uncertainty feeds WP3. Reproducibility and qualitative methods support all of it.
+:::
+
+::: {.notes}
+About 75 seconds. The thread to draw out: the training is not scattered. Causal inference with ML gives me the double machine learning for WP2. NATCOR, which I finished last week, gives me the stochastic and robust optimisation for WP3. And teaching the causal inference material back to the group was both a development exercise and good interview preparation. Reproducibility and social research methods support the whole project.
+:::
+
+## Seminars, engagement, and outputs
+
+Beyond courses, the nine months produced real activity.
+
+:::: {.columns}
+::: {.column width="50%"}
+**Engagement and dissemination**
+
+- Presented the project to the DL4SG group for critical review
+- PHW workshop on health inequalities in emergencies
+- Bi-weekly supervisory progress talks
+:::
+::: {.column width="50%"}
+**Outputs and service**
+
+- Built and validated the WP1 NLP text extraction pipeline
+- A 70-source evidence synthesis
+- Completed a journal peer review as a development exercise
+:::
+::::
+
+::: {.notes}
+About 1 minute. This rounds out the professional development picture: presenting to a critical internal audience, attending and contributing to two practitioner workshops, engaging 18-plus organisations, and producing tangible outputs including the pipeline, the synthesis, and a completed peer review. The two abstracts lead into the plan.
+:::
+
+# 6. Plan for the next six months {.graylight}
+
+## Research milestones
+
+The next six months are about finishing WP1 and opening WP2.
+
+```{mermaid}
+%%| fig-width: 11
+%%| fig-align: center
+gantt
+    dateFormat YYYY-MM-DD
+    axisFormat %b
+    section WP1 paper
+    Scale corpus and LLM extraction :2026-07-01, 60d
+    Interviews and case studies     :2026-07-01, 60d
+    Write WP1 paper      :2026-09-01, 30d
+    Submit WP1 paper                :milestone, 2026-09-30, 0d
+    section WP2
+    Begin WP2                       :2026-10-01, 90d
+    section Product
+    section Conferences
+    OR68 Nottingham                 :milestone, 2026-09-09, 0d
+    WSC Glasgow                     :milestone, 2026-12-07, 0d
+```
+
+[Target: submit the WP1 paper by the end of September, then start WP2 immediately.]{.remember}
+
+::: {.notes}
+About 1 minute. The headline milestone is the WP1 paper by end of September. That means scaling the corpus, running extraction, doing the interviews, and quantifying effect sizes over the summer. WP2 starts straight after. In parallel I want to build the live-updating map as a deployed product, which is both a research output and a deliberate demonstration of industry-scale building for my career goal.
+:::
+
+## Training and development needs
+
+- DL4SG Summer School, "The Art and Science of Uncertainty and the Future", Cardiff, July
+- Planning the WGSSS placement (UK, year two) and the overseas institutional visit (year three)
+
+::: {.notes}
+About 1 minute. The summer school theme, uncertainty and the future, is the conceptual core of my whole PhD, so it is well placed. Alongside the research training, I am deliberately building the production engineering skills, MLOps, Docker, cloud, SQL, that an applied scientist role in London expects, and the deployed map is where I will practise them. The placement and visit are the bigger development decisions ahead, and DHIS2 in Oslo is one candidate for the visit.
+:::
+
+## Conferences
+
+Getting the work out, staying connected, and feeding it back into practice.
+
+- OR68, "From Data to Decisions", University of Nottingham, 8 to 10 September. Abstract submitted, presenting WP1
+- Winter Simulation Conference, Glasgow, 6 to 9 December. Theme: Simulation for Climate Resilience, a direct fit for WP3
+
+::: {.notes}
+About 1 minute. OR68 has health systems, AI, and simulation streams, so WP1 fits well, and the abstract is in. The Winter Simulation Conference theme this year is literally simulation for climate resilience, with healthcare and flooding named in the call, which is a perfect home for the WP3 simulation work. Both are in the UK, so no visa and low cost. Beyond conferences, I stay active in the health board climate collaboration group and the public services board workshops, and the late-September partners meeting both closes the loop on WP1 and feeds the work into the Cardiff joint risk register, which is a concrete route to impact that ESRC and WGSSS both care about.
+:::
+
+## If you take three things away
+
+1. WP1 is the foundation, and it is being carried out
+2. The work is [grounded in real Welsh cases and a live partner network]{.remember}, not in the literature alone
+3. The next six months deliver a [paper and the start of WP2]{.remember}
+
+::: {.notes}
+About 40 seconds. Slow down for these three. This is the talk in one slide: a strong, well-grounded foundation; real-world grounding through partners and cases; and a concrete six-month delivery plan. Then hand over for questions.
+:::
+
+## Thank you 💬
+
+Questions and discussion welcome.
+
+**Amirhossein Ghadiri**
+
+Data Lab for Social Good, Cardiff Business School
+
+<i class='fa-solid fa-envelope'></i> GhadiriA@cardiff.ac.uk
+
+<i class='fa-brands fa-github'></i> [amirhosseinghdv](https://github.com/amirhosseinghdv) | <i class='fa-brands fa-linkedin'></i> [amirhossein-ghadiri](https://www.linkedin.com/in/amirhossein-ghadiri-8296781a6/) | 🌐 [amirhosseinghdv.github.io](https://amirhosseinghdv.github.io/)
+
+::: {.footnote}
+Slides available at: amirhosseinghdv.github.io
+:::
+
+::: {.notes}
+Finish under time. The backup slides cover the pipeline detail, the WHO lens, the full stakeholder list, the WP2 and WP3 methods, and the data landscape, in case questions go deep.
+:::
+
+## The pipeline, end to end {visibility="uncounted"}
+
+<svg viewBox="0 0 2050 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Six-stage pipeline from ingest to serve" style="width:100%;max-width:1200px;height:auto;display:block;margin:0 auto;">
+  <g fill="#e3edf9" stroke="#7ba3d4" stroke-width="1.5">
+    <rect x="15" y="30" width="295" height="130" rx="6"/>
+    <rect x="360" y="30" width="295" height="130" rx="6"/>
+    <rect x="705" y="30" width="295" height="130" rx="6"/>
+    <rect x="1050" y="30" width="295" height="130" rx="6"/>
+    <rect x="1395" y="30" width="295" height="130" rx="6"/>
+    <rect x="1740" y="30" width="295" height="130" rx="6"/>
+  </g>
+  <g stroke="#8a97a6" stroke-width="2" fill="none">
+    <line x1="310" y1="95" x2="360" y2="95"/>
+    <line x1="655" y1="95" x2="705" y2="95"/>
+    <line x1="1000" y1="95" x2="1050" y2="95"/>
+    <line x1="1345" y1="95" x2="1395" y2="95"/>
+    <line x1="1690" y1="95" x2="1740" y2="95"/>
+  </g>
+  <g fill="#8a97a6">
+    <path d="M360 95 L348 89 L348 101 Z"/>
+    <path d="M705 95 L693 89 L693 101 Z"/>
+    <path d="M1050 95 L1038 89 L1038 101 Z"/>
+    <path d="M1395 95 L1383 89 L1383 101 Z"/>
+    <path d="M1740 95 L1728 89 L1728 101 Z"/>
+  </g>
+  <g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="25" fill="#1f6db4" text-anchor="middle">
+    <text x="162.5" y="65" dominant-baseline="central">Ingest</text>
+    <text x="162.5" y="95" dominant-baseline="central">GDELT, ReliefWeb,</text>
+    <text x="162.5" y="125" dominant-baseline="central">Senedd</text>
+    <text x="507.5" y="65" dominant-baseline="central">Filter</text>
+    <text x="507.5" y="95" dominant-baseline="central">recall-first,</text>
+    <text x="507.5" y="125" dominant-baseline="central">then semantic</text>
+    <text x="852.5" y="65" dominant-baseline="central">Extract</text>
+    <text x="852.5" y="95" dominant-baseline="central">structured LLM,</text>
+    <text x="852.5" y="125" dominant-baseline="central">constrained decoding</text>
+    <text x="1197.5" y="65" dominant-baseline="central">Resolve</text>
+    <text x="1197.5" y="95" dominant-baseline="central">cross-document</text>
+    <text x="1197.5" y="125" dominant-baseline="central">events</text>
+    <text x="1542.5" y="80" dominant-baseline="central">Quantify</text>
+    <text x="1542.5" y="110" dominant-baseline="central">effect sizes</text>
+    <text x="1887.5" y="65" dominant-baseline="central">Serve</text>
+    <text x="1887.5" y="95" dominant-baseline="central">auto-updating,</text>
+    <text x="1887.5" y="125" dominant-baseline="central">feeds WP2</text>
+  </g>
+</svg>
+
+Every stage is one command in a single tested tool, with versioned data throughout. Stages A and B are built; the rest are scaffolded and waiting on compute.
+
+## The five layers, defined {visibility="uncounted"}
+
+| Layer | Definition |
+|---|---|
+| 1. Hazard trigger | The flood itself: fluvial, surface water, coastal, groundwater, storm surge |
+| 2. Infrastructure failure | Lifelines lost: power, water, transport, ICT |
+| 3. Facility and workforce disruption | Closures, evacuations, staff unable to reach or do their work |
+| 4. Demand-side disruption | Patients blocked from care; displaced and surging demand |
+| 5. Cascading dynamics | Failures propagating across services, space, and time |
+
+Every coded pathway ends in a health-impact category.
+
+## The WHO building blocks lens {visibility="uncounted"}
+
+Each study is coded against the six building blocks of a health system:
+
+1. Service delivery
+2. Health workforce
+3. Health information systems
+4. Access to essential medicines
+5. Financing
+6. Leadership and governance
+
+This keeps the focus on the whole health system, beyond the buildings that flood.
+
+## Full partner network {visibility="uncounted"}
+
+| Organisation | Contacts | Contribution |
+|---|---|---|
+| Public Health Wales | Huw Williams, Tracy Evans, Behrooz Behbood, Jessica Stone, Alice Munro | Cases, risk data, surveillance routes, EPRR introductions |
+| Cardiff and Vale UHB | Arjun Padmavathy | Staff flood survey, climate modelling, scenario data |
+| Aneurin Bevan UHB, Gwent | Wendy Warren, Mo, Shireen | Monmouth response access and interviews |
+| Natural Resources Wales | Luke | Flood layers, lived-experience route |
+| Cardiff PSB and Council | Abigail Streeter, Simon Douly | Planning data, climate risk assessment |
+| Other health boards | Haley Barrow (Swansea Bay), Gemma Hobson (Cwm Taf Morgannwg) | EPRR links, scope guidance |
+| Local authorities and LRFs | Emergency planning leads, Monmouth, Newport, RCT | Local response and coordination |
+
+## WP2 in more depth {visibility="uncounted"}
+
+A prediction model, spatial and temporal, for healthcare facility vulnerability.
+
+- Input drivers: flood depth and probability, road accessibility and flooded segments, facility type and capacity, surrounding population and deprivation
+- Outcome: service disruption, measured through proxies such as activity drops, since direct closure data does not exist centrally
+- Double machine learning to estimate effect sizes and handle confounders
+- Building and drainage archetypes added as variables, on partner advice
+- Demand change modelled with interrupted time series, flood as the interruption
+
+## WP3 in more depth {visibility="uncounted"}
+
+Scenario-based planning where the future is uncertain by nature.
+
+- Asset exposure of Welsh healthcare facilities under RCP 4.5, RCP 8.5, and 2 and 4 degrees of warming
+- Adaptation framed as resilience woven into routine investment, not relocation
+- Resource and preparedness planning run offline across scenarios, aligned with the Civil Contingencies Act duty to plan ahead
+- Two-stage and multi-stage stochastic programming, plus robust optimisation, from the NATCOR course
+- Communicating uncertainty to decision-makers as a first-class output
+
+## The Welsh data landscape {visibility="uncounted"}
+
+Why proxies and text mining, not a single clean dataset.
+
+- No central record of healthcare disruption from flooding: closures and cancellations sit behind fragmented FOI requests
+- Rich but restricted health data in SAIL, costly and slow to access
+- Strong open data for flood hazard (NRW), population (ONS), and transport (OS, OSM)
+- The Senedd record and council transcripts add an unusual public, bilingual text source
+- Activity drops and prescribing data serve as practical proxies for disruption

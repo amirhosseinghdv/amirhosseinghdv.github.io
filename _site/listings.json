@@ -1,15 +1,33 @@
 [
   {
-    "listing": "/projects/index.html",
+    "listing": "/talks/index.html",
     "items": [
-      "/projects/data_science/index.html",
-      "/projects/sustainability/index.html",
-      "/projects/forecasting/index.html"
+      "/talks/nine-month-review/index.html",
+      "/talks/wp1-floods-healthcare/index.html"
     ]
   },
   {
-    "listing": "/publictions/index.html",
+    "listing": "/publications/working_papers/index.html",
+    "items": [
+      "/publications/working_papers/ppe-fuzzy-vision/index.html"
+    ]
+  },
+  {
+    "listing": "/publications/journal_articles/index.html",
     "items": []
+  },
+  {
+    "listing": "/projects/sustainability/index.html",
+    "items": [
+      "/projects/sustainability/first-post/index.html"
+    ]
+  },
+  {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/reading-disasters-with-llms/index.html",
+      "/blog/floods-and-healthcare/index.html"
+    ]
   },
   {
     "listing": "/projects/data_science/index.html",
@@ -20,54 +38,9 @@
     ]
   },
   {
-    "listing": "/projects/sustainability/index.html",
-    "items": [
-      "/projects/sustainability/first-post/index.html"
-    ]
-  },
-  {
     "listing": "/projects/forecasting/index.html",
     "items": [
       "/projects/forecasting/first-post/index.html"
-    ]
-  },
-  {
-    "listing": "/talks/index.html",
-    "items": [
-      "/talks/wp1-floods-healthcare/index.html"
-    ]
-  },
-  {
-    "listing": "/publictions/journal_articles/index.html",
-    "items": []
-  },
-  {
-    "listing": "/publictions/working_papers/index.html",
-    "items": []
-  },
-  {
-    "listing": "/publictions/book_chapters/index.html",
-    "items": []
-  },
-  {
-    "listing": "/publictions/technical_reports/index.html",
-    "items": []
-  },
-  {
-    "listing": "/blog/index.html",
-    "items": [
-      "/blog/reading-disasters-with-llms/index.html",
-      "/blog/floods-and-healthcare/index.html"
-    ]
-  },
-  {
-    "listing": "/publications/journal_articles/index.html",
-    "items": []
-  },
-  {
-    "listing": "/publications/working_papers/index.html",
-    "items": [
-      "/publications/working_papers/ppe-fuzzy-vision/index.html"
     ]
   },
   {

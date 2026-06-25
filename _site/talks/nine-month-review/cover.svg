@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="The three connected work packages of the PhD over a Welsh landscape of hills and water">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#eef4fa"/>
+      <stop offset="1" stop-color="#dbe8f3"/>
+    </linearGradient>
+    <linearGradient id="node" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a86c8"/>
+      <stop offset="1" stop-color="#0066b2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#sky)"/>
+
+  <!-- rolling welsh hills -->
+  <path d="M0 470 C 180 420, 320 470, 480 452 C 640 434, 760 472, 1200 446 L 1200 630 L 0 630 Z" fill="#d2e0ec"/>
+  <path d="M0 520 C 220 482, 420 524, 640 508 C 820 494, 980 520, 1200 500 L 1200 630 L 0 630 Z" fill="#bcd2e6"/>
+
+  <!-- water band -->
+  <path d="M0 566 C 240 548, 480 580, 720 566 C 920 554, 1040 578, 1200 562 L 1200 630 L 0 630 Z" fill="#0066b2"/>
+  <g stroke="#bcdcf2" stroke-width="3" fill="none" opacity="0.5" stroke-linecap="round">
+    <path d="M160 592 q 28 -10 56 0 t 56 0"/>
+    <path d="M760 592 q 28 -10 56 0 t 56 0"/>
+  </g>
+
+  <!-- rain -->
+  <g stroke="#9cc0e0" stroke-width="3" stroke-linecap="round" opacity="0.7">
+    <line x1="150" y1="70" x2="138" y2="104"/>
+    <line x1="220" y1="58" x2="208" y2="92"/>
+    <line x1="300" y1="74" x2="288" y2="108"/>
+    <line x1="980" y1="64" x2="968" y2="98"/>
+    <line x1="1050" y1="78" x2="1038" y2="112"/>
+  </g>
+
+  <!-- small medical cross marker -->
+  <g transform="translate(600 150)">
+    <circle r="30" fill="#ffffff" stroke="#0066b2" stroke-width="3"/>
+    <rect x="-5" y="-16" width="10" height="32" fill="#0066b2"/>
+    <rect x="-16" y="-5" width="32" height="10" fill="#0066b2"/>
+  </g>
+
+  <!-- three connected work packages -->
+  <g font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" text-anchor="middle">
+    <line x1="300" y1="310" x2="900" y2="310" stroke="#7a8387" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- WP1 -->
+    <circle cx="300" cy="310" r="76" fill="url(#node)"/>
+    <text x="300" y="324" font-size="44" font-weight="700" fill="#ffffff">WP1</text>
+    <text x="300" y="422" font-size="22" font-weight="600" fill="#37393c">drivers and</text>
+    <text x="300" y="448" font-size="22" font-weight="600" fill="#37393c">taxonomy</text>
+
+    <!-- WP2 -->
+    <circle cx="600" cy="310" r="76" fill="url(#node)"/>
+    <text x="600" y="324" font-size="44" font-weight="700" fill="#ffffff">WP2</text>
+    <text x="600" y="422" font-size="22" font-weight="600" fill="#37393c">vulnerability</text>
+    <text x="600" y="448" font-size="22" font-weight="600" fill="#37393c">and demand</text>
+
+    <!-- WP3 -->
+    <circle cx="900" cy="310" r="76" fill="#024c86"/>
+    <text x="900" y="324" font-size="44" font-weight="700" fill="#ffffff">WP3</text>
+    <text x="900" y="422" font-size="22" font-weight="600" fill="#024c86">resilience under</text>
+    <text x="900" y="448" font-size="22" font-weight="600" fill="#024c86">uncertainty</text>
+
+    <!-- arrowheads -->
+    <g fill="#5f7488">
+      <path d="M458 310 l-14 -8 v16 z"/>
+      <path d="M758 310 l-14 -8 v16 z"/>
+    </g>
+  </g>
+</svg>
