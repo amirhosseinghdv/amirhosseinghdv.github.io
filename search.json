@@ -116,7 +116,14 @@
     "href": "talks/index.html",
     "title": "Talks",
     "section": "",
-    "text": "How floods disrupt healthcare\n\n\nWP1 progress talk: mapping the mechanisms behind health service failure during floods, grounded in Wales.\n\n\n\n\n\nJun 15, 2026\n\n\nAmirhossein Ghadiri\n\n\n\n\n\nNo matching items"
+    "text": "Nine-month review: Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding\n\n\nThe whole project at nine months: the three work packages, detailed progress on WP1, and the plan for the next six months.\n\n\n\n\n\nJun 25, 2026\n\n\nAmirhossein Ghadiri\n\n\n\n\n\n\n\n\n\n\n\n\nHow floods disrupt healthcare\n\n\nWP1 progress talk: mapping the mechanisms behind health service failure during floods, grounded in Wales.\n\n\n\n\n\nJun 15, 2026\n\n\nAmirhossein Ghadiri\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "talks/nine-month-review/index.html",
+    "href": "talks/nine-month-review/index.html",
+    "title": "Nine-month review: Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding",
+    "section": "",
+    "text": "Open slides\n  \n\nThis is my nine-month review presentation as part of my PhD. It steps back from any single piece of work and lays out the whole PhD: how floods and rising seas disrupt healthcare delivery in Wales, and what I am doing about it.\nThe talk introduces the three connected work packages, then spends most of its time on the first, where the work is furthest along. That part covers the disruption taxonomy, the engineered text-mining pipeline, the Welsh case studies and the partner network behind them, and the two blockers that gate the next phases. It closes on what the past nine months produced and what the next six will deliver: a paper, a deployed product, and the start of work package two."
   },
   {
     "objectID": "talks/2025-1-firsttalk/index.html",
@@ -271,6 +278,244 @@
     "title": "How floods disrupt healthcare",
     "section": "",
     "text": "Open slides\n  \n\nThis is the first work package talk from my PhD at the Data Lab for Social Good. It makes the case for a question that flood maps cannot answer: not where the water goes, but which health services stop, for whom, and for how long.\nThe talk walks through the problem, the way I am building the evidence base from curated literature and a machine-scaled text corpus, the mechanism map that comes out of it, and why Wales is the right place to ground all of it. It closes on the pipeline I am building to read disaster reporting at scale and turn it into coded events.\nPresented with my supervisors Bahman Rostami-Tabar, Thomas Woolley, and William Bennett. The deck runs in the browser. Press S for speaker notes and F for fullscreen."
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#monmouth-november-2024",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#monmouth-november-2024",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "Monmouth, November 2024",
+    "text": "Monmouth, November 2024\nA community hospital takes on water. Staff move every patient up to the first floor and wait there, cut off, until the river drops.\n\nOn the high street, a pharmacy, a dentist, and a GP surgery all flood at once.\n\n\nThe water never reaches the substations, but they fail anyway. Power is gone for up to 48 hours, and people on home oxygen and dialysis machines, well outside the flooded streets, are suddenly at risk.\n\n\nThis is what disruption to healthcare actually looks like. My PhD is about understanding it, measuring it, and planning for it.\n\nAbout 75 seconds. Open slowly, tell it as a story. This is a real Welsh case (Storm Bert, Monmouth) from Huw Williams at Public Health Wales. The point to land: the damage is rarely just the flooded building. It is the cascade. Hold the last line, then move to the agenda."
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#what-i-will-cover",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#what-i-will-cover",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "What I will cover",
+    "text": "What I will cover\n\nThe project\nCollaborators and stakeholders\nThe three work packages\nWork package 1 in detail\nActivities and achievements\nPlan for the next six months\n\n\n15 seconds. One line each, then move. I will bring this agenda back at each transition so the panel always knows where we are."
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#the-question-behind-everything",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#the-question-behind-everything",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "The question behind everything",
+    "text": "The question behind everything\nFloods and rising seas keep disrupting how care is delivered in Wales. We map where the water goes. We do not map what stops working.\n\nRoughly one in eight properties in Wales sits at flood risk, and the climate signal points to wetter winters and higher seas 1\nNHS bodies cannot simply close: they are Category 1 responders under the Civil Contingencies Act 2004\nThere is no central record of how floods disrupt healthcare delivery, who it hits, or for how long\n\nHow do floods disrupt healthcare service delivery, and what can we do about it?\n\nAbout 1 minute. Establish the gap clearly. Flood maps tell us which buildings get wet. They say nothing about which services fail and for whom. That blind spot is the service layer, and that is where the whole PhD sits. Read the research question out loud.\n\nNatural Resources Wales, Flood Risk Assessment Wales."
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#the-themes-i-work-across",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#the-themes-i-work-across",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "The themes I work across",
+    "text": "The themes I work across\nThis is a climate and health problem solved with operational research and machine learning.\n\n\nThe domain\n\nFlooding and rising sea levels\nClimate change and adaptation\nHealthcare service delivery and resilience\n\n\nThe methods\n\nNLP and large language models\nCausal machine learning\nForecasting, simulation, and optimisation under uncertainty\n\n\n\nAbout 45 seconds. I want the panel to see both halves at once: a real Welsh climate-and-health problem, and a serious methods toolkit from operational research and machine learning. The training I have done this year maps directly onto these methods, and I will show that later."
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#three-connected-packages-one-thread",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#three-connected-packages-one-thread",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "Three connected packages, one thread",
+    "text": "Three connected packages, one thread\n\n                  reveals labels and features today’s vulnerability is the baseline   WP1 How floods disrupt healthcare delivery WP2 Which facilities fail, and how demand shifts WP3 Planning resilience under uncertainty \n\nEach package feeds the next. The wp1 defines what the models measure, and the current picture defines what the future planning adapts.\n\nAbout 1 minute. This is the spine of the talk. WP1 surfaces the drivers of disruption and grounds everything in real Welsh cases. WP2 turns those drivers into a spatio-temporal model of vulnerability and changing demand. WP3 takes the current picture and plans future resilience under uncertainty. The arrows are the argument: you cannot model vulnerability well until the qualitative work tells you what to model."
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#the-team-and-the-funding",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#the-team-and-the-funding",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "The team and the funding",
+    "text": "The team and the funding\n\n\nSupervisory team\n\nProf. Bahman Rostami-Tabar, lead, Data Lab for Social Good\nDr. Thomas Woolley, School of Mathematics\nDr. William Bennett, School of Engineering, Swansea\n\nResearch group\n\nData Lab for Social Good (DL4SG), Cardiff Business School\n\n\nFunding\n\nFully funded by WGSSS (ESRC)\nIncludes a three-month UK placement and a three-month overseas visit\n\n\n\nAbout 40 seconds. The supervisory mix is deliberate: operational research, mathematics, and engineering, which matches the cross-disciplinary nature of the work. The WGSSS funding also gives me a placement and an overseas visit, which I will return to in the plan."
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#a-live-network-of-partners",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#a-live-network-of-partners",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "A live network of partners",
+    "text": "A live network of partners\nOver the past nine months I have engaged more than 18 organisations. The most active:\n\n\n\nPublic Health Wales: Rosemary Walmsley, Huw Williams (emergency preparedness), Tracy Evans, Behrooz Behbood\nOffice for Natoinal Statistics: Myer Glickman\nCardiff and Vale UHB: Arjun Padmavathy (climate response lead)\nWelsh Gov: Simon Dooley\n\n\n\nNatural Resources Wales: Luke Maggs\nThe Office of the Future Generations Commissioner for Wales: Petranka Malcheva\nCardiff Public Services Board: Abigail Streeter, on planning data and risk\n\n\n\nAbout 1 minute. The point is that this is not a literature-only project. These partners shape the design and open doors to data and interviewees. Huw gave me a ready-made set of case studies. Arjun has a flood survey of NHS staff and climate modelling work he can share under a collaboration. Tracy has mapped flood risk to PHW sites. Their feedback has already changed the research, which I will show on the next slides."
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#from-six-directions-to-three",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#from-six-directions-to-three",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "From six directions to three",
+    "text": "From six directions to three\nScoping with partners surfaced six possible directions. We consolidated them into three connected packages.\n\n\n\n\n\n\n\n\nFinal package\nBrings together\nCore methods\n\n\n\n\nWP1\nDisruption drivers and taxonomy\nNLP, LLMs, interviews, case studies\n\n\nWP2\nFacility vulnerability and changing demand\nCausal machine learning, forecasting\n\n\nWP3\nFuture exposure and preparedness\nSimulation, optimisation under uncertainty\n\n\n\nThe three answer one question end to end: understand the disruption, measure it, then plan for it.\n\nAbout 1 minute. A large part of the first six months went into scoping these directions with partners and pressure-testing feasibility. WP2 unites the original vulnerability and demand ideas, since both quantify impact on facilities. WP3 unites future sea-level adaptation and resource allocation, since both are scenario-based planning under uncertainty. The three are sequential and cumulative: WP1 defines what disruption means, WP2 measures it for Welsh facilities today, and WP3 plans for it under future climate. That end-to-end logic is how they contribute to the overall objective of making healthcare delivery resilient, and the consolidation itself is a genuine feasibility decision, not cosmetic tidying."
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#wp2-which-facilities-fail-and-how-demand-shifts",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#wp2-which-facilities-fail-and-how-demand-shifts",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "WP2: which facilities fail, and how demand shifts",
+    "text": "WP2: which facilities fail, and how demand shifts\nA spatio-temporal model that scores healthcare facilities and tracks how floods change demand.\n\nInputs: flood hazard, road accessibility, facility characteristics, population context\nA vulnerability score for each facility, changing across space and time\nHow demand moves during and after a flood, using interrupted time series\nCausal machine learning to estimate effect sizes rather than mere correlation\n\n\nPartners are clear that the drivers of vulnerability matter more than the score itself.\n\n\nAbout 1 minute. WP2 is a prediction model, not just an explanatory regression, and it is spatial and temporal. The most actionable output, partners told me repeatedly, is understanding which specific factors drive vulnerability, for example a single access road, rather than a single composite number. The double machine learning here comes straight from the causal inference course I took in January."
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#wp3-planning-resilience-under-deep-uncertainty",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#wp3-planning-resilience-under-deep-uncertainty",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "WP3: planning resilience under deep uncertainty",
+    "text": "WP3: planning resilience under deep uncertainty\nHow healthcare delivery stays functional as the climate shifts, and how scarce resources are planned for floods.\n\nScenario-based exposure of Welsh healthcare assets under RCP 4.5, RCP 8.5, 2 and 4 degrees of warming\nAdaptation woven into routine investment, not separate adaptation investment\nStochastic and robust optimisation, since the future is uncertain by nature\n\n\nReframed with partners: scenario planning, not real-time dispatch; adaptation, not relocation.\n\n\nAbout 1 minute. WP3 was reshaped heavily by partner input. Arjun and others showed that a single all-Wales optimisation is unrealistic, so the exposure analysis across climate scenarios is the achievable, high-impact version. Huw made clear a real-time resource model has no live data to run on, so the viable version is offline scenario planning, which also fits the Civil Contingencies Act duty to plan ahead. The optimisation methods come from the NATCOR course I finished last week."
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#where-we-are",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#where-we-are",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "Where we are",
+    "text": "Where we are\n\nThe project\nCollaborators and stakeholders\nThe three work packages\nWork package 1 in detail\nActivities and achievements\nPlan for the next six months\n\n\n10 seconds. This is where most of the progress sits, so it gets the most time."
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#what-wp1-sets-out-to-do",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#what-wp1-sets-out-to-do",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "What WP1 sets out to do",
+    "text": "What WP1 sets out to do\nUnderstand, in concrete Welsh cases, how floods disrupt healthcare service delivery, and build a structure others can reuse.\n\nIdentify the drivers of disruption, including the cascading ones that no single dataset records\nBuild a taxonomy that turns scattered evidence into something codeable\nGround it in real cases: Monmouth, Rhondda Cynon Taf, Newport\nDefine what WP2 should later measure\n\n\nAbout 1 minute. WP1 is now fixed. Its job is to capture what the literature and the datasets miss, especially the compound effects, and to produce a structure the rest of the PhD depends on. Several partners who have done PhDs warned this alone is a large piece of work, which is why the scope is deliberately bounded to Welsh healthcare delivery."
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#disruption-is-a-chain-not-a-single-moment",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#disruption-is-a-chain-not-a-single-moment",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "Disruption is a chain, not a single moment",
+    "text": "Disruption is a chain, not a single moment\n\n                    1 Hazard trigger 2 Infrastructure failure 3 Facility and workforce disruption 4 Demand-side disruption 5 Cascading dynamics \n\nA facility can stay completely dry and still stop delivering care. Monmouth proved it.\n\nAbout 1 minute. Walk the chain. The hazard, then lifelines like power, water, transport, and ICT, then what happens inside facilities and to staff, then what happens to patients and demand, then how failures feed each other. The Monmouth substation example is exactly layer 2 cascading into the community. Land on the dry-building line."
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#the-chain-becomes-a-coding-scheme",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#the-chain-becomes-a-coding-scheme",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "The chain becomes a coding scheme",
+    "text": "The chain becomes a coding scheme\n\n\n\n\n\n\n\n\n\nFamily\nWhat it covers\n\n\n\n\nA\nHazard trigger\nfluvial, surface, or coastal water, storm surge, sea-level rise\n\n\nB\nInfrastructure failure\npower, water, transport\n\n\nC\nFacility and workforce disruption\nclosures, evacuation, staff unable to work\n\n\nD\nDemand-side disruption\naccess barriers, displaced and surging demand\n\n\nX\nCross-cutting cascades\nfailures that jump between families\n\n\n\n\nAbout 1 minute. This is the core output of WP1 so far. The five layers become labels a machine and a human can both code text against. Families A to D are the chain’s first four layers, X is the cascade layer, and every coded pathway ends in a health-impact category. The same scheme lives in the pipeline’s data model as controlled vocabularies. SOSCHI is the Ghana and ONS codebook I cross-checked against; the WHO building blocks keep it about the health system as a whole."
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#two-methods-one-picture",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#two-methods-one-picture",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "Two methods, one picture",
+    "text": "Two methods, one picture\nWP1 combines computational reach with qualitative depth.\n\n                 Large-scale NLP news, reports, Senedd record Case studies and interviews in Wales Disruption taxonomy Quantified effect sizes \n\nThe text gives breadth and the what. The interviews give the why and the cascades. Together they triangulate.\n\nAbout 1 minute. This is the design that emerged from every meeting. Newspapers and social media tell you what happened but not why; cascading effects only surface in interviews. So the NLP is one input into a case-study design, not the work package on its own. The final step quantifies effect sizes, anchored where possible in historical utilisation data rather than expert opinion alone."
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#progress-the-evidence-base-is-built",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#progress-the-evidence-base-is-built",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "Progress: the evidence base is built",
+    "text": "Progress: the evidence base is built\nA review of roughly 70 sources.\n\nEvidence from more than 20 countries, with Wales as the deep-dive case\nSynthesised into the five-layer chain and the coding taxonomy\nCross-checked against the SOSCHI codebook for completeness\n\n\nAbout 45 seconds. This is done. It is a structured synthesis, not a casual literature scan, and it is what produced the taxonomy. It also positions the work: the literature itself admits it lacks evidence on the drivers of vulnerability, which is the strongest justification for doing WP1 before any modelling."
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#progress-the-nlp-pipeline-is-being-built",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#progress-the-nlp-pipeline-is-being-built",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "Progress: the NLP pipeline is being built",
+    "text": "Progress: the NLP pipeline is being built\nA text pipeline.\n\nThree connectors built: GDELT global news, ReliefWeb humanitarian reports, the Senedd records\nFull-text extraction and language identification are all working\nA clean Storm Dennis corpus of around 294 documents as the first analysis-ready set is extracted\n\n\nBuilt and tested locally first, ready to scale once the supercomputer is available.\n\n\nAbout 1 minute. This is a major chunk of the nine months and a deliberate career investment in building real, maintainable systems. The ingestion layer is done and tested; the Storm Dennis corpus is the first analysis-ready output. The next stages, embeddings and LLM extraction, are scaffolded and waiting on compute. The bilingual Senedd record is a genuinely unusual source that few have mined."
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#progress-cases-and-interviews-are-being-identified",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#progress-cases-and-interviews-are-being-identified",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "Progress: cases and interviews are being identified",
+    "text": "Progress: cases and interviews are being identified\nThe qualitative side is ready to start after the ethics application is approved.\n\nFour contrasting cases, each a different flood mechanism and population: Monmouth (river), RCT (river, residential), Newport and the Gwent Levels (coastal), Tenby (cut-off)\nSome Interview contacts secured through Huw\nTwo analytical threads to carry through: cascading infrastructure failure, and inequality in who is affected\n\n\nAbout 1 minute. Huw gave me these four cases and offered to write to the people who actually ran the responses, including Wendy Warren and Mo on the Monmouth side and Shireen in public health. The variation across cases, different mechanisms and demographics, is what makes a comparative study strong. The two threads, cascades and inequality, came up again and again and will shape the interview guide."
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#what-the-engagement-taught-me",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#what-the-engagement-taught-me",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "What the engagement taught me",
+    "text": "What the engagement taught me\nThe most valuable insights came from people, not papers.\n\nThe real story is the indirect effect: a flooded GP surgery displaces a screening service, which displaces something else\nA hospital can be unreachable without being flooded, when its access road or power goes\nVulnerability is uneven: uninsured and isolated people, and those on home medical equipment, carry the most risk\n\nThese are exactly the mechanisms a flood map cannot show, and the reason WP1 has to come first.\n\nAbout 1 minute. This is the payoff of the stakeholder work. The Monmouth cascade, the hospital-as-island examples from Gwent and Swansea, the power-cut risk to home-care patients. None of it shows up in a hazard overlay. This is the heart of why the qualitative package grounds the whole PhD, and why partners said they would not trust the later models without it."
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#honest-blockers",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#honest-blockers",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "Honest blockers",
+    "text": "Honest blockers\nTwo things gate the next phase, and both are in motion.\n\nEthics approval is in progress. Application submitted, waiting for approval\nSupercomputer access is approved and being finalised. The pipeline is built to run the moment it is accessible\n\n\nAbout 45 seconds. Be candid here. These are the two real constraints. Both are progressing, and the work has been deliberately structured so that waiting on them does not stall everything else. As soon as ethics clears, interviews start; as soon as compute lands, the corpus scales and extraction runs."
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#training-that-maps-onto-the-research",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#training-that-maps-onto-the-research",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "Training that maps onto the research",
+    "text": "Training that maps onto the research\nEvery course was chosen to serve a work package or a career goal.\n\nCausal inference with machine learning, South Coast DTP winter school, with double machine learning and difference-in-differences. I then co-designed and co-delivered a follow-up workshop to the DL4SG group\nOptimisation under uncertainty, NATCOR, Edinburgh, covering stochastic and robust and distributionally robust optimization\nResearch reproducibility with Quarto, Cardiff Doctoral Academy\nPhD Foundations\n\n\nCausal ML feeds WP2. Optimisation under uncertainty feeds WP3. Reproducibility and qualitative methods support all of it.\n\n\nAbout 75 seconds. The thread to draw out: the training is not scattered. Causal inference with ML gives me the double machine learning for WP2. NATCOR, which I finished last week, gives me the stochastic and robust optimisation for WP3. And teaching the causal inference material back to the group was both a development exercise and good interview preparation. Reproducibility and social research methods support the whole project."
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#seminars-engagement-and-outputs",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#seminars-engagement-and-outputs",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "Seminars, engagement, and outputs",
+    "text": "Seminars, engagement, and outputs\nBeyond courses, the nine months produced real activity.\n\n\nEngagement and dissemination\n\nPresented the project to the DL4SG group for critical review\nPHW workshop on health inequalities in emergencies\nBi-weekly supervisory progress talks\n\n\nOutputs and service\n\nBuilt and validated the WP1 NLP text extraction pipeline\nA 70-source evidence synthesis\nCompleted a journal peer review as a development exercise\n\n\n\nAbout 1 minute. This rounds out the professional development picture: presenting to a critical internal audience, attending and contributing to two practitioner workshops, engaging 18-plus organisations, and producing tangible outputs including the pipeline, the synthesis, and a completed peer review. The two abstracts lead into the plan."
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#research-milestones",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#research-milestones",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "Research milestones",
+    "text": "Research milestones\nThe next six months are about finishing WP1 and opening WP2.\n\n\n\n\n\ngantt\n    dateFormat YYYY-MM-DD\n    axisFormat %b\n    section WP1 paper\n    Scale corpus and LLM extraction :2026-07-01, 60d\n    Interviews and case studies     :2026-07-01, 60d\n    Write WP1 paper      :2026-09-01, 30d\n    Submit WP1 paper                :milestone, 2026-09-30, 0d\n    section WP2\n    Begin WP2                       :2026-10-01, 90d\n    section Product\n    section Conferences\n    OR68 Nottingham                 :milestone, 2026-09-09, 0d\n    WSC Glasgow                     :milestone, 2026-12-07, 0d\n\n\n\n\n\n\nTarget: submit the WP1 paper by the end of September, then start WP2 immediately.\n\nAbout 1 minute. The headline milestone is the WP1 paper by end of September. That means scaling the corpus, running extraction, doing the interviews, and quantifying effect sizes over the summer. WP2 starts straight after. In parallel I want to build the live-updating map as a deployed product, which is both a research output and a deliberate demonstration of industry-scale building for my career goal."
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#training-and-development-needs",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#training-and-development-needs",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "Training and development needs",
+    "text": "Training and development needs\n\nDL4SG Summer School, “The Art and Science of Uncertainty and the Future”, Cardiff, July\nPlanning the WGSSS placement (UK, year two) and the overseas institutional visit (year three)\n\n\nAbout 1 minute. The summer school theme, uncertainty and the future, is the conceptual core of my whole PhD, so it is well placed. Alongside the research training, I am deliberately building the production engineering skills, MLOps, Docker, cloud, SQL, that an applied scientist role in London expects, and the deployed map is where I will practise them. The placement and visit are the bigger development decisions ahead, and DHIS2 in Oslo is one candidate for the visit."
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#conferences",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#conferences",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "Conferences",
+    "text": "Conferences\nGetting the work out, staying connected, and feeding it back into practice.\n\nOR68, “From Data to Decisions”, University of Nottingham, 8 to 10 September. Abstract submitted, presenting WP1\nWinter Simulation Conference, Glasgow, 6 to 9 December. Theme: Simulation for Climate Resilience, a direct fit for WP3\n\n\nAbout 1 minute. OR68 has health systems, AI, and simulation streams, so WP1 fits well, and the abstract is in. The Winter Simulation Conference theme this year is literally simulation for climate resilience, with healthcare and flooding named in the call, which is a perfect home for the WP3 simulation work. Both are in the UK, so no visa and low cost. Beyond conferences, I stay active in the health board climate collaboration group and the public services board workshops, and the late-September partners meeting both closes the loop on WP1 and feeds the work into the Cardiff joint risk register, which is a concrete route to impact that ESRC and WGSSS both care about."
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#if-you-take-three-things-away",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#if-you-take-three-things-away",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "If you take three things away",
+    "text": "If you take three things away\n\nWP1 is the foundation, and it is being carried out\nThe work is grounded in real Welsh cases and a live partner network, not in the literature alone\nThe next six months deliver a paper and the start of WP2\n\n\nAbout 40 seconds. Slow down for these three. This is the talk in one slide: a strong, well-grounded foundation; real-world grounding through partners and cases; and a concrete six-month delivery plan. Then hand over for questions."
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#thank-you",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#thank-you",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "Thank you 💬",
+    "text": "Thank you 💬\nQuestions and discussion welcome.\nAmirhossein Ghadiri\nData Lab for Social Good, Cardiff Business School\n GhadiriA@cardiff.ac.uk\n amirhosseinghdv |  amirhossein-ghadiri | 🌐 amirhosseinghdv.github.io\n\nSlides available at: amirhosseinghdv.github.io\n\n\nFinish under time. The backup slides cover the pipeline detail, the WHO lens, the full stakeholder list, the WP2 and WP3 methods, and the data landscape, in case questions go deep."
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#the-pipeline-end-to-end",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#the-pipeline-end-to-end",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "The pipeline, end to end",
+    "text": "The pipeline, end to end\n\n                       Ingest GDELT, ReliefWeb, Senedd Filter recall-first, then semantic Extract structured LLM, constrained decoding Resolve cross-document events Quantify effect sizes Serve auto-updating, feeds WP2 \n\nEvery stage is one command in a single tested tool, with versioned data throughout. Stages A and B are built; the rest are scaffolded and waiting on compute."
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#the-five-layers-defined",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#the-five-layers-defined",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "The five layers, defined",
+    "text": "The five layers, defined\n\n\n\n\n\n\n\nLayer\nDefinition\n\n\n\n\n1. Hazard trigger\nThe flood itself: fluvial, surface water, coastal, groundwater, storm surge\n\n\n2. Infrastructure failure\nLifelines lost: power, water, transport, ICT\n\n\n3. Facility and workforce disruption\nClosures, evacuations, staff unable to reach or do their work\n\n\n4. Demand-side disruption\nPatients blocked from care; displaced and surging demand\n\n\n5. Cascading dynamics\nFailures propagating across services, space, and time\n\n\n\nEvery coded pathway ends in a health-impact category."
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#the-who-building-blocks-lens",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#the-who-building-blocks-lens",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "The WHO building blocks lens",
+    "text": "The WHO building blocks lens\nEach study is coded against the six building blocks of a health system:\n\nService delivery\nHealth workforce\nHealth information systems\nAccess to essential medicines\nFinancing\nLeadership and governance\n\nThis keeps the focus on the whole health system, beyond the buildings that flood."
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#full-partner-network",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#full-partner-network",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "Full partner network",
+    "text": "Full partner network\n\n\n\n\n\n\n\n\nOrganisation\nContacts\nContribution\n\n\n\n\nPublic Health Wales\nHuw Williams, Tracy Evans, Behrooz Behbood, Jessica Stone, Alice Munro\nCases, risk data, surveillance routes, EPRR introductions\n\n\nCardiff and Vale UHB\nArjun Padmavathy\nStaff flood survey, climate modelling, scenario data\n\n\nAneurin Bevan UHB, Gwent\nWendy Warren, Mo, Shireen\nMonmouth response access and interviews\n\n\nNatural Resources Wales\nLuke\nFlood layers, lived-experience route\n\n\nCardiff PSB and Council\nAbigail Streeter, Simon Douly\nPlanning data, climate risk assessment\n\n\nOther health boards\nHaley Barrow (Swansea Bay), Gemma Hobson (Cwm Taf Morgannwg)\nEPRR links, scope guidance\n\n\nLocal authorities and LRFs\nEmergency planning leads, Monmouth, Newport, RCT\nLocal response and coordination"
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#wp2-in-more-depth",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#wp2-in-more-depth",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "WP2 in more depth",
+    "text": "WP2 in more depth\nA prediction model, spatial and temporal, for healthcare facility vulnerability.\n\nInput drivers: flood depth and probability, road accessibility and flooded segments, facility type and capacity, surrounding population and deprivation\nOutcome: service disruption, measured through proxies such as activity drops, since direct closure data does not exist centrally\nDouble machine learning to estimate effect sizes and handle confounders\nBuilding and drainage archetypes added as variables, on partner advice\nDemand change modelled with interrupted time series, flood as the interruption"
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#wp3-in-more-depth",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#wp3-in-more-depth",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "WP3 in more depth",
+    "text": "WP3 in more depth\nScenario-based planning where the future is uncertain by nature.\n\nAsset exposure of Welsh healthcare facilities under RCP 4.5, RCP 8.5, and 2 and 4 degrees of warming\nAdaptation framed as resilience woven into routine investment, not relocation\nResource and preparedness planning run offline across scenarios, aligned with the Civil Contingencies Act duty to plan ahead\nTwo-stage and multi-stage stochastic programming, plus robust optimisation, from the NATCOR course\nCommunicating uncertainty to decision-makers as a first-class output"
+  },
+  {
+    "objectID": "talks/nine-month-review/slides/nine_month_review.html#the-welsh-data-landscape",
+    "href": "talks/nine-month-review/slides/nine_month_review.html#the-welsh-data-landscape",
+    "title": "Climate change and the future of healthcare delivery in Wales",
+    "section": "The Welsh data landscape",
+    "text": "The Welsh data landscape\nWhy proxies and text mining, not a single clean dataset.\n\nNo central record of healthcare disruption from flooding: closures and cancellations sit behind fragmented FOI requests\nRich but restricted health data in SAIL, costly and slow to access\nStrong open data for flood hazard (NRW), population (ONS), and transport (OS, OSM)\nThe Senedd record and council transcripts add an unusual public, bilingual text source\nActivity drops and prescribing data serve as practical proxies for disruption"
   },
   {
     "objectID": "talks/2025-2-or62/index.html",
