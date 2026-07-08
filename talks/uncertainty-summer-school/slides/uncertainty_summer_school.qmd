@@ -1,0 +1,440 @@
+---
+title: "Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding"
+subtitle: "The Art and Science of Uncertainty and the Future | DL4SG Summer School, Cardiff, July 2026"
+author:
+  - Amirhossein Ghadiri, PhD Student
+  - Prof. Bahman Rostami-Tabar, Lead supervisor
+  - Dr. Thomas Woolley, Co-supervisor
+  - Dr. William Bennett, Co-supervisor
+institute:
+  - Data Lab for Social Good, Cardiff Business School, Cardiff University
+  - Data Lab for Social Good, Cardiff Business School, Cardiff University
+  - School of Mathematics, Cardiff University
+  - School of Engineering, University of Swansea
+execute:
+  cache: true
+  warning: false
+  message: false
+  echo: false
+format:
+  revealjs:
+    multiplex: false
+    footer: "<i class='fa-brands fa-github'></i> [amirhosseinghdv](https://github.com/amirhosseinghdv) <i class='fa-brands fa-linkedin'></i> [amirhossein-ghadiri](https://www.linkedin.com/in/amirhossein-ghadiri-8296781a6/) 🌐 [amirhosseinghdv.github.io](https://amirhosseinghdv.github.io/)"
+    theme: ["default", "pp.scss"]
+    slide-number: c/t
+    progress: true
+    transition: none
+    incremental: false
+    menu: false
+    html-math-method: mathjax
+    include-in-header:
+      - text: |
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    chalkboard:
+      theme: chalkboard
+      toggleNotesButton: true
+title-slide-attributes:
+  data-background-image: "partner_logos.png"
+  data-background-size: "76%"
+  data-background-position: "center 92%"
+  data-background-repeat: "no-repeat"
+---
+
+## Monmouth, November 2024
+
+A community hospital takes on water. Staff move every patient up to the first floor and wait there. Their access is cut off until the water level drops.
+
+. . .
+
+On the city's main street, a pharmacy, a dentist, and a GP surgery all flood at once.
+
+. . .
+
+The water never reaches the electrical substations, but they fail anyway. Power is gone for up to 48 hours, and people on home oxygen and dialysis machines, well outside the flooded streets, are suddenly at risk.
+
+. . .
+
+[This is what flooding disruption to healthcare actually looks like. My PhD is about understanding it, measuring it, and planning for it.]{.remember}
+
+::: {.notes}
+About 75 seconds. Open slowly, tell it as a story. This is a real Welsh case, Storm Bert in Monmouth, from Public Health Wales. Useful follow-on fact for questions: the GP surgery, Castlegate, was displaced to another site for over six months. The point to land: the damage is rarely just the flooded building, it is the cascade. Hold the last line, then move to the agenda. This audience is here for uncertainty, so the story is the setup for the framing that follows.
+:::
+
+## What I will cover
+
+1. [**The problem**]{.remember}
+2. [Interconnected research directrions]{.graylight}
+3. [WP1: mapping how floods disrupt care]{.graylight}
+4. [WP2 and WP3: measure it, then plan for it]{.graylight}
+5. [Key Takeaways]{.graylight}
+
+::: {.notes}
+15 seconds. One line each, then move. The agenda comes back once, before part four, so the room always knows where we are.
+:::
+
+# 1. The problem {.graylight}
+
+## The question behind everything
+
+Floods and rising sea levels keep disrupting how healthcare is delivered in Wales. We map where the water goes, but we do not map what stops working.
+
+- Roughly one in eight properties in Wales sits at flood risk, and the climate signal points to wetter winters and higher seas [^nrw]
+- There is no central record of how floods disrupt healthcare delivery, who it hits, or for how long [^phw]
+
+[How do floods disrupt healthcare service delivery, and what can we do about it?]{.remember}
+
+[^nrw]: Natural Resources Wales
+[^phw]: Public Health Wales
+
+
+::: {.notes}
+About 1 minute. Establish the gap clearly for a mixed audience: flood maps tell us which buildings get wet, and say nothing about which services fail and for whom. That blind spot is the service layer, and it is where the whole PhD sits. Read the research question out loud.
+:::
+
+
+# 2. Interconnected research directrions {.graylight}
+
+## Three connected packages, one thread
+
+<svg viewBox="0 0 1680 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="WP1 leads to WP2 leads to WP3" style="width:100%;max-width:1200px;height:auto;display:block;margin:0 auto;">
+  <g fill="#e3edf9" stroke="#7ba3d4" stroke-width="1.5">
+    <rect x="15" y="50" width="350" height="130" rx="6"/>
+    <rect x="665" y="50" width="350" height="130" rx="6"/>
+    <rect x="1315" y="50" width="350" height="130" rx="6"/>
+  </g>
+  <g stroke="#8a97a6" stroke-width="2" fill="none">
+    <line x1="365" y1="115" x2="665" y2="115"/>
+    <line x1="1015" y1="115" x2="1315" y2="115"/>
+  </g>
+  <g fill="#8a97a6">
+    <path d="M665 115 L653 109 L653 121 Z"/>
+    <path d="M1315 115 L1303 109 L1303 121 Z"/>
+  </g>
+  <g fill="#eef1f4" stroke="none">
+    <rect x="395" y="92" width="240" height="46"/>
+    <rect x="1045" y="92" width="240" height="46"/>
+  </g>
+  <g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="22" fill="#33495d" text-anchor="middle">
+    <text x="515" y="104" dominant-baseline="central">drivers become labels,</text>
+    <text x="515" y="126" dominant-baseline="central">disruption features</text>
+    <text x="1165" y="104" dominant-baseline="central">today's vulnerability</text>
+    <text x="1165" y="126" dominant-baseline="central">is the baseline</text>
+  </g>
+  <g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="25" fill="#1f6db4" text-anchor="middle">
+    <text x="190" y="82" dominant-baseline="central">WP1</text>
+    <text x="190" y="115" dominant-baseline="central">How floods disrupt</text>
+    <text x="190" y="148" dominant-baseline="central">healthcare delivery</text>
+    <text x="840" y="82" dominant-baseline="central">WP2</text>
+    <text x="840" y="115" dominant-baseline="central">Which facilities are vulnerable, </text>
+    <text x="840" y="148" dominant-baseline="central">what are vulnerability drivers</text>
+    <text x="1490" y="82" dominant-baseline="central">WP3</text>
+    <text x="1490" y="115" dominant-baseline="central">Planning resilience</text>
+    <text x="1490" y="148" dominant-baseline="central">under uncertainty</text>
+  </g>
+</svg>
+
+Each package feeds the next. The wp1 defines what the models need to consider and measure, and the current vulnerability defines what the future planning adapts.
+
+::: {.notes}
+About 1 minute. This is the spine of the talk. WP1 establishes what actually happens, because right now the evidence itself is missing. WP2 turns those mechanisms into measurement: which facilities are vulnerable, and what a flood causally does to demand. WP3 takes today's picture into futures we cannot assign probabilities to, and plans under that. The arrows are the argument: you cannot model vulnerability well until the qualitative work tells you what to model, and you cannot plan for the future without a defensible baseline. I will spend most time on WP1, since it is furthest along, then sketch the other two.
+:::
+
+# 3. WP1: mapping how floods disrupt care {.graylight}
+
+## Disruption propagates, it does not stay put
+
+Healthcare delivery is a system of interdependent parts. A flood is a shock that propagates through them.
+
+<svg viewBox="0 0 1520 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Five-layer disruption cascade" style="width:100%;max-width:1180px;height:auto;display:block;margin:0 auto;">
+  <g fill="#e3edf9" stroke="#7ba3d4" stroke-width="1.5">
+    <rect x="20"   y="20" width="330" height="110" rx="6"/>
+    <rect x="395"  y="20" width="330" height="110" rx="6"/>
+    <rect x="770"  y="20" width="330" height="110" rx="6"/>
+    <rect x="1145" y="20" width="330" height="110" rx="6"/>
+  </g>
+  <g stroke="#8a97a6" stroke-width="2" fill="none">
+    <path d="M352 75 L391 75"/>
+    <path d="M727 75 L766 75"/>
+    <path d="M1102 75 L1141 75"/>
+  </g>
+  <g fill="#8a97a6">
+    <path d="M393 75 L381 69 L381 81 Z"/>
+    <path d="M768 75 L756 69 L756 81 Z"/>
+    <path d="M1143 75 L1131 69 L1131 81 Z"/>
+  </g>
+  <g stroke="#c4d3e6" stroke-width="1.5">
+    <path d="M185 130 L185 168"/>
+    <path d="M560 130 L560 168"/>
+    <path d="M935 130 L935 168"/>
+    <path d="M1310 130 L1310 168"/>
+  </g>
+  <rect x="20" y="170" width="1455" height="86" rx="6" fill="#eef3f9" stroke="#9bb6d6" stroke-width="1.5"/>
+  <g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="middle">
+    <g font-size="24" fill="#1f6db4">
+      <text x="185"  y="62">A · Hazard</text>
+      <text x="560"  y="62">B · Infrastructure</text>
+      <text x="935"  y="62">C · Facility &amp; workforce</text>
+      <text x="1310" y="62">D · Demand</text>
+    </g>
+    <g font-size="18" fill="#33495d">
+      <text x="185"  y="98">the flood itself</text>
+      <text x="560"  y="98">power, water, transport, IT</text>
+      <text x="935"  y="98">closures, staff cannot reach</text>
+      <text x="1310" y="98">can patients still reach care</text>
+    </g>
+  </g>
+  <g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="middle">
+    <text x="747" y="206" font-size="24" fill="#1f6db4">X · Cross-cutting cascades</text>
+    <text x="747" y="236" font-size="18" fill="#33495d">across layers, over time, and reaching facilities that never flood</text>
+  </g>
+</svg>
+
+[A facility can stay completely dry and still stop delivering care. Monmouth proved it.]{.remember}
+
+::: {.notes}
+About 1 minute, and this is the conceptual spine of WP1, distilled from a structured synthesis of about 70 studies across more than 20 countries. Walk it left to right. Layer A is the flood. It knocks out the infrastructure care leans on, B: power, water, transport, IT. That hits the facility and its workforce, C: closures, and staff who cannot get in. That changes demand, D: who needs care and whether they can reach it. The band underneath, X, is the interesting part: failures cascade across layers, evolve over hours to months, and reach facilities that never flood, through a severed road or a lost substation. On current evidence the dominant pathways are access, power, and workforce, not the flooded building. That is exactly the Monmouth story from the opening, and the whole reason this needs more than a flood map.
+:::
+
+## Two methods, one picture
+
+WP1 combines computational reach with qualitative depth.
+
+<svg viewBox="0 0 1000 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="NLP and interviews feed a disruption taxonomy and then effect sizes" style="width:100%;max-width:800px;height:auto;display:block;margin:0 auto;">
+  <g fill="#e3edf9" stroke="#7ba3d4" stroke-width="1.5">
+    <rect x="30" y="40" width="270" height="120" rx="6"/>
+    <rect x="30" y="260" width="270" height="120" rx="6"/>
+    <rect x="410" y="150" width="210" height="120" rx="6"/>
+    <rect x="730" y="150" width="240" height="120" rx="6"/>
+  </g>
+  <g stroke="#8a97a6" stroke-width="2" fill="none">
+    <path d="M300 100 C 360 100, 360 188, 410 188"/>
+    <path d="M300 320 C 360 320, 360 232, 410 232"/>
+    <line x1="620" y1="210" x2="730" y2="210"/>
+  </g>
+  <g fill="#8a97a6">
+    <path d="M410 188 L398 182 L398 194 Z"/>
+    <path d="M410 232 L398 226 L398 238 Z"/>
+    <path d="M730 210 L718 204 L718 216 Z"/>
+  </g>
+  <g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="25" fill="#1f6db4" text-anchor="middle">
+    <text x="165" y="70" dominant-baseline="central">Large-scale NLP</text>
+    <text x="165" y="100" dominant-baseline="central">news, reports,</text>
+    <text x="165" y="130" dominant-baseline="central">Senedd record</text>
+    <text x="165" y="305" dominant-baseline="central">Case studies and</text>
+    <text x="165" y="335" dominant-baseline="central">interviews in Wales</text>
+    <text x="515" y="195" dominant-baseline="central">Disruption</text>
+    <text x="515" y="225" dominant-baseline="central">taxonomy</text>
+    <text x="850" y="195" dominant-baseline="central">Quantified</text>
+    <text x="850" y="225" dominant-baseline="central">effect sizes</text>
+  </g>
+</svg>
+
+The text gives breadth and the what. The interviews give the why and the cascades. Together they triangulate.
+
+::: {.notes}
+About 1 minute. Newspapers, reports, and parliamentary records tell you what happened but rarely why, and cascading effects mostly surface when you talk to the people who ran the response. So the NLP is one input into a case-study design, not the work package on its own. Four contrasting Welsh cases anchor the qualitative side: Monmouth, Rhondda Cynon Taf, Newport and the Gwent Levels, and Tenby, each a different flood mechanism and population. The final step quantifies effect sizes, anchored where possible in records rather than expert opinion alone.
+:::
+
+## The pipeline reads the world's flood record. Getting from raw text to quantified pathways
+
+<svg viewBox="0 0 1520 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="WP1 NLP pipeline stages" style="width:100%;max-width:1260px;height:auto;display:block;margin:0 auto;">
+  <g fill="#e3edf9" stroke="#7ba3d4" stroke-width="1.5">
+    <rect x="20"   y="40" width="190" height="96" rx="6"/>
+    <rect x="230"  y="40" width="190" height="96" rx="6"/>
+    <rect x="440"  y="40" width="190" height="96" rx="6"/>
+    <rect x="650"  y="40" width="190" height="96" rx="6"/>
+    <rect x="1070" y="40" width="190" height="96" rx="6"/>
+    <rect x="1280" y="40" width="190" height="96" rx="6"/>
+  </g>
+  <rect x="860" y="40" width="190" height="96" rx="6" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2" stroke-dasharray="7 5"/>
+  <g stroke="#8a97a6" stroke-width="2" fill="none">
+    <path d="M212 88 L228 88"/>
+    <path d="M422 88 L438 88"/>
+    <path d="M632 88 L648 88"/>
+    <path d="M842 88 L858 88"/>
+    <path d="M1052 88 L1068 88"/>
+    <path d="M1262 88 L1278 88"/>
+  </g>
+  <g fill="#8a97a6">
+    <path d="M230 88 L218 82 L218 94 Z"/>
+    <path d="M440 88 L428 82 L428 94 Z"/>
+    <path d="M650 88 L638 82 L638 94 Z"/>
+    <path d="M860 88 L848 82 L848 94 Z"/>
+    <path d="M1070 88 L1058 82 L1058 94 Z"/>
+    <path d="M1280 88 L1268 82 L1268 94 Z"/>
+  </g>
+  <g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="middle">
+    <g font-size="22" fill="#1f6db4">
+      <text x="115"  y="82">Ingest</text>
+      <text x="325"  y="82">Clean</text>
+      <text x="535"  y="82">Represent</text>
+      <text x="745"  y="82">tokenize</text>
+      <text x="955"  y="82">Extract</text>
+      <text x="1165" y="82">deduplicate</text>
+      <text x="1375" y="82">Quantify</text>
+    </g>
+    <g font-size="14" fill="#33495d">
+      <text x="115"  y="114">news, reports, Senedd</text>
+      <text x="325"  y="114">filtering</text>
+      <text x="535"  y="114">embedding vector</text>
+      <text x="745"  y="114">for relevant LLM</text>
+      <text x="955"  y="114">LLM to pathways</text>
+      <text x="1165" y="114">remove duplicates</text>
+      <text x="1375" y="114">reported effect sizes</text>
+    </g>
+  </g>
+  <text x="955" y="166" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="15" fill="#8a97a6" text-anchor="middle" font-style="italic">dashed = scales on HPC</text>
+</svg>
+
+[Every coded pathway traces back to the sentence it came from.]{.remember}
+
+::: {.notes}
+About 75 seconds. Walk the picture left to right, briefly: ingest the multilingual sources, clean out duplicates and off-topic bleed, chunk and embed everything in one shared space so English and Welsh retrieve each other, reconcile inductive topics against the taxonomy, then the language model codes each passage to the pathway typology, events get resolved across documents, and reported magnitudes are pooled. The dashed box is the one stage that needs serious compute, and it scales to the university supercomputer next. Then the three facts: the corpus, the learned filter, and the first complete run. Every coded pathway traces back to the sentence it came from, which is what makes the whole thing auditable.
+:::
+
+## What the engagement taught me
+
+The most valuable insights came from people, not papers.
+
+- The damage travels: a flooded GP surgery displaces a screening service, which then displaces something else
+- A hospital can be unreachable without being flooded, when its access road or power goes
+- Vulnerability is uneven: isolated people, and those on home medical equipment, carry the most risk
+
+[These are exactly the mechanisms a flood map cannot show, and the reason WP1 comes first.]{.remember}
+
+::: {.notes}
+About 1 minute. Over nine months I have engaged more than 18 Welsh organisations: Public Health Wales, health boards, Natural Resources Wales, councils and Public Services Boards. This slide is the payoff. The Monmouth cascade, the hospital-as-island examples, the power-cut risk to home-care patients. None of it shows up in a hazard overlay. It is why partners said they would not trust models that skipped this step, and why the qualitative package grounds the whole PhD.
+:::
+
+## Where we are
+
+1. [The problem]{.graylight}
+2. [Interconnected research directrions]{.graylight}
+3. [WP1: mapping how floods disrupt care]{.graylight}
+4. [**WP2 and WP3: measure it, then plan for it**]{.remember}
+5. [Key Takeaways]{.graylight}
+
+::: {.notes}
+10 seconds. WP1 defines the mechanisms. Now, briefly, what the next two packages do with them.
+:::
+
+# 4. WP2 and WP3: measure it, then plan for it {.graylight}
+
+## WP2: which facilities fail, and how demand shifts
+
+A spatio-temporal model that scores healthcare facilities and tracks how floods change demand.
+
+- Inputs: flood hazard, road accessibility, facility characteristics, population context
+- A vulnerability score for each facility that varies across space and time
+- How demand moves during and after a flood, using interrupted time series
+- Causal machine learning to estimate effect sizes rather than mere correlation
+
+::: {.footer}
+Partners are clear that the drivers of vulnerability matter more than the score itself.
+:::
+
+::: {.notes}
+About 1 minute. WP2 is where WP1's mechanisms become measurement. It is a prediction model, spatial and temporal, and the staff dimension came straight from the qualitative work: a facility is only as available as the people who can reach it. The uncertainty here is attribution: a demand spike after a flood is not proof the flood caused it, so the toolkit is causal, interrupted time series and double machine learning, to separate effect from coincidence. Partners repeatedly said the actionable output is which factors drive vulnerability, for example a single access road, more than any composite number.
+:::
+
+## WP3: planning resilience under uncertainty
+
+How healthcare delivery stays functional as the climate shifts, and how scarce resources are planned for floods.
+
+- Scenario-based exposure of Welsh healthcare assets under RCP 4.5, RCP 8.5, 2 and 4 degrees of warming
+- Adaptation woven into routine investment, not separate adaptation investment
+- Stochastic and robust optimisation, since the future is uncertain by nature
+
+::: {.notes}
+About 1 minute. WP3 is the future-facing package and the deepest uncertainty in the project. There is no way to validate a 30-year projection today, so this is closer to foresight than prediction: you plan across plausible futures rather than forecasting one. Stochastic programming handles the uncertainty you can put probabilities on; robust optimisation handles the uncertainty you cannot. The framing was reshaped by partners: a real-time resource model has no live data to run on in a real event, so the viable, useful version is offline scenario-based preparedness, which is also what the Civil Contingencies Act duty to plan actually asks for.
+:::
+
+# 5. Key Takeaways {.graylight}
+
+## If you take three things away
+
+1. WP1 is the foundation, and it is being carried out
+2. The work is [grounded in real Welsh cases]{.remember}, not in the literature alone, with interconnected research directrions: [evidence, cause, and the future]{.remember}
+3. Built with a live network of Welsh partners, so the outputs are [plans and tools health practitioners can actually use]{.remember}
+
+::: {.notes}
+About 40 seconds. Slow down for these three. The gap, the intellectual structure, and the route to practice. Then hand over for questions. The backup slides cover the coding scheme, WP2 and WP3 in depth, the partner network, and the Welsh data landscape.
+:::
+
+## Thank you 💬
+
+Questions and discussion welcome.
+
+**Amirhossein Ghadiri**
+
+Data Lab for Social Good, Cardiff Business School
+
+Supervised by Bahman Rostami-Tabar, Thomas Woolley, and William Bennett | Funded by WGSSS (ESRC)
+
+<i class='fa-solid fa-envelope'></i> GhadiriA@cardiff.ac.uk
+
+<i class='fa-brands fa-github'></i> [amirhosseinghdv](https://github.com/amirhosseinghdv) | <i class='fa-brands fa-linkedin'></i> [amirhossein-ghadiri](https://www.linkedin.com/in/amirhossein-ghadiri-8296781a6/) | 🌐 [amirhosseinghdv.github.io](https://amirhosseinghdv.github.io/)
+
+::: {.footnote}
+Slides available at: amirhosseinghdv.github.io
+:::
+
+::: {.notes}
+Finish under time. Backups: the coding scheme, WP2 depth, WP3 depth, the full partner network, and the Welsh data landscape.
+:::
+
+## The chain becomes a coding scheme {visibility="uncounted"}
+
+| | Family | What it covers |
+|---|---|---|
+| [A]{.strong-blue} | Hazard trigger | fluvial, surface water, coastal, storm surge, sea-level rise |
+| [B]{.strong-blue} | Infrastructure failure | power, water, transport, ICT lifelines |
+| [C]{.strong-blue} | Facility and workforce disruption | closures, evacuation, staff unable to work |
+| [D]{.strong-blue} | Demand-side disruption | access barriers, displaced and surging demand |
+| [X]{.remember} | Cross-cutting cascades | failures that jump between families |
+
+::: {.footer}
+Each disruption carries an anchored severity from 0 to 4 and a perceived-versus-corroborated tag. Cross-checked against the SOSCHI codebook and framed through the WHO six building blocks.
+:::
+
+## WP2 in more depth {visibility="uncounted"}
+
+A spatio-temporal vulnerability score for Welsh healthcare facilities.
+
+- Hazard and exposure drivers from NRW flood extents and the Communities at Risk Register
+- A staff dimension: staff home location and transport access, not just facility characteristics
+- Outcome data (closures, cancellations, attendance drops) is interview and record derived, since it is not held centrally
+- Attribution by interrupted time series: a baseline, then the drop that coincides with the flood
+- Section 19 flood investigation reports as structured post-event inputs
+
+## WP3 in more depth {visibility="uncounted"}
+
+Scenario-based planning where the future is uncertain by nature.
+
+- Asset exposure of Welsh healthcare facilities under RCP 4.5, RCP 8.5, and 2 and 4 degrees of warming
+- Adaptation framed as resilience woven into routine investment, rather than relocation
+- Resource and preparedness planning run offline across scenarios, aligned with the Civil Contingencies Act duty to plan ahead
+- Two-stage and multi-stage stochastic programming, plus robust optimisation
+- Communicating uncertainty to decision-makers as a first-class output
+
+## Full partner network {visibility="uncounted"}
+
+| Organisation | Contacts | Contribution |
+|---|---|---|
+| Public Health Wales | Huw Williams, Tracy Evans, Behrooz Behbood, Jessica Stone | Cases, risk data, EPRR introductions |
+| Cardiff and Vale UHB | Arjun Padmavathy, Tom Porter | Staff flood survey, scenario data, attribution advice |
+| Aneurin Bevan UHB, Gwent | Wendy Warren, Mo, Shireen | Monmouth response access and interviews |
+| Natural Resources Wales | Luke | Flood layers, lived-experience route |
+| Cardiff PSB and Council | Abigail Streeter, Simon Dooley | Climate risk assessment, flood strategy, Section 19 reports |
+| Monmouthshire and Newport | Catrin Maby, Ian Martin | Castlegate case detail, civil contingencies interviews |
+| Other health boards and LRFs | Haley Barrow, Gemma Hobson, LA emergency planning leads | EPRR links, scope guidance, local response |
+
+## Welsh data: what we can and cannot get {visibility="uncounted"}
+
+Why proxies and text mining, not a single clean dataset.
+
+- No central record of healthcare disruption from flooding: closures and cancellations sit behind fragmented FOI requests
+- Detailed but restricted health data in SAIL, costly and slow to access
+- Strong open data for flood hazard (NRW), population (ONS), and transport (OS, OSM)
+- The Senedd record and council transcripts add an unusual public, bilingual text source
+- Activity drops and prescribing data are practical proxies for disruption

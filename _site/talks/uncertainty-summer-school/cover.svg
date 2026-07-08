@@ -1,0 +1,50 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A solid line splitting into diverging dashed paths, an uncertainty fan over Welsh hills and water">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#eef4fa"/>
+      <stop offset="1" stop-color="#dbe8f3"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect x="0" y="0" width="1200" height="630" fill="url(#sky)"/>
+
+  <!-- Rain, top right -->
+  <g stroke="#7ba3d4" stroke-width="3" stroke-linecap="round" opacity="0.5">
+    <line x1="880" y1="70" x2="866" y2="98"/>
+    <line x1="940" y1="55" x2="926" y2="83"/>
+    <line x1="1000" y1="85" x2="986" y2="113"/>
+    <line x1="1060" y1="60" x2="1046" y2="88"/>
+    <line x1="1120" y1="90" x2="1106" y2="118"/>
+    <line x1="975" y1="130" x2="961" y2="158"/>
+    <line x1="1090" y1="140" x2="1076" y2="168"/>
+  </g>
+
+  <!-- Hills -->
+  <path d="M0 505 Q 220 445 430 495 T 830 500 T 1200 470 L 1200 630 L 0 630 Z" fill="#c7dbed"/>
+  <path d="M0 545 Q 260 495 560 540 T 1200 550 L 1200 630 L 0 630 Z" fill="#adc9e4"/>
+
+  <!-- Water -->
+  <path d="M0 560 Q 100 552 200 560 T 400 560 T 600 560 T 800 560 T 1000 560 T 1200 560" fill="none" stroke="#3a86c8" stroke-width="3" opacity="0.7"/>
+  <path d="M0 572 Q 100 564 200 572 T 400 572 T 600 572 T 800 572 T 1000 572 T 1200 572 L 1200 630 L 0 630 Z" fill="#0066b2"/>
+
+  <!-- Uncertainty fan: one known past, many plausible futures -->
+  <path d="M420 350 C 640 350, 830 220, 1060 165 L 1060 442 C 830 415, 640 350, 420 350 Z" fill="#3a86c8" opacity="0.12"/>
+
+  <path d="M130 350 L 420 350" fill="none" stroke="#024c86" stroke-width="6" stroke-linecap="round"/>
+
+  <g fill="none" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="16 12">
+    <path d="M420 350 C 640 350, 830 220, 1060 165" stroke="#024c86"/>
+    <path d="M420 350 C 640 350, 830 292, 1060 258" stroke="#0066b2"/>
+    <path d="M420 350 L 1060 350" stroke="#3a86c8"/>
+    <path d="M420 350 C 640 350, 830 408, 1060 442" stroke="#0066b2"/>
+  </g>
+
+  <circle cx="420" cy="350" r="12" fill="#024c86"/>
+  <g fill="#ffffff" stroke-width="3.5">
+    <circle cx="1060" cy="165" r="10" stroke="#024c86"/>
+    <circle cx="1060" cy="258" r="10" stroke="#0066b2"/>
+    <circle cx="1060" cy="350" r="10" stroke="#3a86c8"/>
+    <circle cx="1060" cy="442" r="10" stroke="#0066b2"/>
+  </g>
+</svg>

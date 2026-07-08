@@ -389,7 +389,7 @@
     "href": "talks/index.html",
     "title": "Talks",
     "section": "",
-    "text": "Nine-month review: Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding\n\n\nThe whole project at nine months: the three work packages, detailed progress on WP1, and the plan for the next six months.\n\n\n\n\n\nJun 25, 2026\n\n\nAmirhossein Ghadiri\n\n\n\n\n\n\n\n\n\n\n\n\nHow floods disrupt healthcare\n\n\nWP1 progress talk: mapping the mechanisms behind health service failure during floods, grounded in Wales.\n\n\n\n\n\nJun 15, 2026\n\n\nAmirhossein Ghadiri\n\n\n\n\n\nNo matching items"
+    "text": "Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding\n\n\nPhD presentation for the DL4SG Summer School on uncertainty and the future: the problem, WP1 in depth, and how each work package answers a different kind of uncertainty.\n\n\n\n\n\nJul 9, 2026\n\n\nAmirhossein Ghadiri\n\n\n\n\n\n\n\n\n\n\n\n\nNine-month review: Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding\n\n\nThe whole project at nine months: the three work packages, detailed progress on WP1, and the plan for the next six months.\n\n\n\n\n\nJun 25, 2026\n\n\nAmirhossein Ghadiri\n\n\n\n\n\n\n\n\n\n\n\n\nHow floods disrupt healthcare\n\n\nWP1 progress talk: mapping the mechanisms behind health service failure during floods, grounded in Wales.\n\n\n\n\n\nJun 15, 2026\n\n\nAmirhossein Ghadiri\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "talks/2025-1-firsttalk/index.html",
@@ -719,5 +719,180 @@
     "title": "Climate change and the future of healthcare delivery in Wales",
     "section": "Conferences",
     "text": "Conferences\nGetting the work out, staying connected, and feeding it back into practice.\n\nOR68, “From Data to Decisions”, University of Nottingham, 8 to 10 September. Abstract submitted, presenting WP1\nWinter Simulation Conference, Glasgow, 6 to 9 December. Theme: Simulation for Climate Resilience, a direct fit for WP3\n\n\nAbout 1 minute. OR68 has health systems, AI, and simulation streams, so WP1 fits well, and the abstract is in. The Winter Simulation Conference theme this year is literally simulation for climate resilience, with healthcare and flooding named in the call, which is a perfect home for the WP3 simulation work. Both are in the UK, so no visa and low cost. Beyond conferences, I stay active in the health board climate collaboration group and the public services board workshops, and the late-September partners meeting both closes the loop on WP1 and feeds the work into the Cardiff joint risk register, which is a concrete route to impact that ESRC and WGSSS both care about."
+  },
+  {
+    "objectID": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#monmouth-november-2024",
+    "href": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#monmouth-november-2024",
+    "title": "Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding",
+    "section": "Monmouth, November 2024",
+    "text": "Monmouth, November 2024\nA community hospital takes on water. Staff move every patient up to the first floor and wait there. Their access is cut off until the water level drops.\n\nOn the city’s main street, a pharmacy, a dentist, and a GP surgery all flood at once.\n\n\nThe water never reaches the electrical substations, but they fail anyway. Power is gone for up to 48 hours, and people on home oxygen and dialysis machines, well outside the flooded streets, are suddenly at risk.\n\n\nThis is what flooding disruption to healthcare actually looks like. My PhD is about understanding it, measuring it, and planning for it.\n\nAbout 75 seconds. Open slowly, tell it as a story. This is a real Welsh case, Storm Bert in Monmouth, from Public Health Wales. Useful follow-on fact for questions: the GP surgery, Castlegate, was displaced to another site for over six months. The point to land: the damage is rarely just the flooded building, it is the cascade. Hold the last line, then move to the agenda. This audience is here for uncertainty, so the story is the setup for the framing that follows."
+  },
+  {
+    "objectID": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#what-i-will-cover",
+    "href": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#what-i-will-cover",
+    "title": "Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding",
+    "section": "What I will cover",
+    "text": "What I will cover\n\nThe problem\nInterconnected research directrions\nWP1: mapping how floods disrupt care\nWP2 and WP3: measure it, then plan for it\nKey Takeaways\n\n\n15 seconds. One line each, then move. The agenda comes back once, before part four, so the room always knows where we are."
+  },
+  {
+    "objectID": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#the-question-behind-everything",
+    "href": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#the-question-behind-everything",
+    "title": "Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding",
+    "section": "The question behind everything",
+    "text": "The question behind everything\nFloods and rising sea levels keep disrupting how healthcare is delivered in Wales. We map where the water goes, but we do not map what stops working.\n\nRoughly one in eight properties in Wales sits at flood risk, and the climate signal points to wetter winters and higher seas 1\nThere is no central record of how floods disrupt healthcare delivery, who it hits, or for how long 2\n\nHow do floods disrupt healthcare service delivery, and what can we do about it?\n\nAbout 1 minute. Establish the gap clearly for a mixed audience: flood maps tell us which buildings get wet, and say nothing about which services fail and for whom. That blind spot is the service layer, and it is where the whole PhD sits. Read the research question out loud.\n\nNatural Resources WalesPublic Health Wales"
+  },
+  {
+    "objectID": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#certain-change-uncertain-consequences",
+    "href": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#certain-change-uncertain-consequences",
+    "title": "Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding",
+    "section": "Certain change, uncertain consequences",
+    "text": "Certain change, uncertain consequences\nThe direction of travel is settled. Almost everything that matters for planning is not.\n\nWhat is near certain: wetter winters, higher seas, and more surface water flooding for Wales 1\nWhat is uncertain: which services fail, for whom, and for how long, because no one records it\nWhat is deeply uncertain: emissions, warming, and sea level decades out, where even the probabilities are contested\n\nDifferent kinds of uncertainty need different tools. That is the design principle of this PhD.\n\nAbout 1 minute, and this is the slide that ties the talk to the school’s theme, so give it weight. Three levels. The physical direction is about as close to certain as climate science gets. The consequences for services are uncertain in the ordinary, fixable sense: the evidence simply has not been collected. And the far future is deeply uncertain in the technical sense: there is no agreed probability distribution over emissions pathways, so you cannot just take an expectation. Land the remember line: one project, but the uncertainty is not one thing, and the structure of the PhD follows from that.\n\nUK Climate Projections (UKCP18), Met Office."
+  },
+  {
+    "objectID": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#three-connected-packages-one-thread",
+    "href": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#three-connected-packages-one-thread",
+    "title": "Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding",
+    "section": "Three connected packages, one thread",
+    "text": "Three connected packages, one thread\n\n                  drivers become labels, disruption features today’s vulnerability is the baseline   WP1 How floods disrupt healthcare delivery WP2 Which facilities are vulnerable,  what are vulnerability drivers WP3 Planning resilience under uncertainty \n\nEach package feeds the next. The wp1 defines what the models need to consider and measure, and the current vulnerability defines what the future planning adapts.\n\nAbout 1 minute. This is the spine of the talk. WP1 establishes what actually happens, because right now the evidence itself is missing. WP2 turns those mechanisms into measurement: which facilities are vulnerable, and what a flood causally does to demand. WP3 takes today’s picture into futures we cannot assign probabilities to, and plans under that. The arrows are the argument: you cannot model vulnerability well until the qualitative work tells you what to model, and you cannot plan for the future without a defensible baseline. I will spend most time on WP1, since it is furthest along, then sketch the other two."
+  },
+  {
+    "objectID": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#disruption-propagates-it-does-not-stay-put",
+    "href": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#disruption-propagates-it-does-not-stay-put",
+    "title": "Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding",
+    "section": "Disruption propagates, it does not stay put",
+    "text": "Disruption propagates, it does not stay put\nHealthcare delivery is a system of interdependent parts. A flood is a shock that propagates through them.\n\n                         A · Hazard B · Infrastructure C · Facility & workforce D · Demand   the flood itself power, water, transport, IT closures, staff cannot reach can patients still reach care    X · Cross-cutting cascades across layers, over time, and reaching facilities that never flood \n\nA facility can stay completely dry and still stop delivering care. Monmouth proved it.\n\nAbout 1 minute, and this is the conceptual spine of WP1, distilled from a structured synthesis of about 70 studies across more than 20 countries. Walk it left to right. Layer A is the flood. It knocks out the infrastructure care leans on, B: power, water, transport, IT. That hits the facility and its workforce, C: closures, and staff who cannot get in. That changes demand, D: who needs care and whether they can reach it. The band underneath, X, is the interesting part: failures cascade across layers, evolve over hours to months, and reach facilities that never flood, through a severed road or a lost substation. On current evidence the dominant pathways are access, power, and workforce, not the flooded building. That is exactly the Monmouth story from the opening, and the whole reason this needs more than a flood map."
+  },
+  {
+    "objectID": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#two-methods-one-picture",
+    "href": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#two-methods-one-picture",
+    "title": "Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding",
+    "section": "Two methods, one picture",
+    "text": "Two methods, one picture\nWP1 combines computational reach with qualitative depth.\n\n                 Large-scale NLP news, reports, Senedd record Case studies and interviews in Wales Disruption taxonomy Quantified effect sizes \n\nThe text gives breadth and the what. The interviews give the why and the cascades. Together they triangulate.\n\nAbout 1 minute. Newspapers, reports, and parliamentary records tell you what happened but rarely why, and cascading effects mostly surface when you talk to the people who ran the response. So the NLP is one input into a case-study design, not the work package on its own. Four contrasting Welsh cases anchor the qualitative side: Monmouth, Rhondda Cynon Taf, Newport and the Gwent Levels, and Tenby, each a different flood mechanism and population. The final step quantifies effect sizes, anchored where possible in records rather than expert opinion alone."
+  },
+  {
+    "objectID": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#the-pipeline-is-live-reading-the-worlds-flood-record",
+    "href": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#the-pipeline-is-live-reading-the-worlds-flood-record",
+    "title": "Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding",
+    "section": "The pipeline is live: reading the world’s flood record",
+    "text": "The pipeline is live: reading the world’s flood record\n\n                           Ingest Clean Represent Explore Extract Resolve Quantify   news, reports, Senedd filter + contamination chunk + embed topics to taxonomy LLM to pathways group into floods reported sizes   dashed = scales on HPC\n\n\nAround 7,000 documents harvested from 24 major floods across 17 countries in 9 languages: global news, humanitarian reports, the bilingual Senedd record\nRelevance is learned, not hand-tuned: a supervised filter keeps the signal (ROC-AUC 0.96)\nFirst end-to-end run complete: the model read 15 documents and coded 17 disruption events, which resolved to 13 real-world floods\n\n\nAbout 75 seconds. Walk the picture left to right, briefly: ingest the multilingual sources, clean out duplicates and off-topic bleed, chunk and embed everything in one shared space so English and Welsh retrieve each other, reconcile inductive topics against the taxonomy, then the language model codes each passage to the pathway typology, events get resolved across documents, and reported magnitudes are pooled. The dashed box is the one stage that needs serious compute, and it scales to the university supercomputer next. Then the three facts: the corpus, the learned filter, and the first complete run. Every coded pathway traces back to the sentence it came from, which is what makes the whole thing auditable."
+  },
+  {
+    "objectID": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#how-do-you-trust-a-machines-reading",
+    "href": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#how-do-you-trust-a-machines-reading",
+    "title": "Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding",
+    "section": "How do you trust a machine’s reading?",
+    "text": "How do you trust a machine’s reading?\nThe pipeline is an instrument, and instruments have error. So the error is measured, not assumed.\n\nReliability by construction: test-retest stability, a second model as an independent rater, and agreement across models\nA hand-labelled gold standard: human and machine code the same documents, and I compute a confusion matrix at each stage\nA causal boundary stated up front: text gives reported magnitudes and associational importance; records and interviews supply effect sizes\nI tag perceived and corroborated disruption separately, since routine data rarely records the flood as the cause\n\nQuantify the uncertainty in your own instrument before you trust what it tells you.\n\nAbout 1 minute, and for this audience it may be the most interesting slide: the measurement itself is a source of uncertainty, and the design treats it that way. Reliability comes by construction rather than by a second human coder: test-retest runs, a second model as an independent rater, cross-model agreement, and a human gold standard that produces a confusion matrix at each stage. Just as important are the two honesty boundaries. Text mining yields associational, reporting-aware importance, not causal effect sizes; those come from records and interviews in stage two. And the perceived-versus-corroborated tag exists because routine systems rarely record the flood as the cause, so the gap between what people fear and what is documented is itself a finding."
+  },
+  {
+    "objectID": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#what-the-engagement-taught-me",
+    "href": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#what-the-engagement-taught-me",
+    "title": "Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding",
+    "section": "What the engagement taught me",
+    "text": "What the engagement taught me\nThe most valuable insights came from people, not papers.\n\nThe damage travels: a flooded GP surgery displaces a screening service, which then displaces something else\nA hospital can be unreachable without being flooded, when its access road or power goes\nVulnerability is uneven: isolated people, and those on home medical equipment, carry the most risk\n\nThese are exactly the mechanisms a flood map cannot show, and the reason WP1 comes first.\n\nAbout 1 minute. Over nine months I have engaged more than 18 Welsh organisations: Public Health Wales, health boards, Natural Resources Wales, councils and Public Services Boards. This slide is the payoff. The Monmouth cascade, the hospital-as-island examples, the power-cut risk to home-care patients. None of it shows up in a hazard overlay. It is why partners said they would not trust models that skipped this step, and why the qualitative package grounds the whole PhD."
+  },
+  {
+    "objectID": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#where-we-are",
+    "href": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#where-we-are",
+    "title": "Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding",
+    "section": "Where we are",
+    "text": "Where we are\n\nThe problem\nInterconnected research directrions\nWP1: mapping how floods disrupt care\nWP2 and WP3: measure it, then plan for it\nKey Takeaways\n\n\n10 seconds. WP1 defines the mechanisms. Now, briefly, what the next two packages do with them."
+  },
+  {
+    "objectID": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#wp2-which-facilities-fail-and-how-demand-shifts",
+    "href": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#wp2-which-facilities-fail-and-how-demand-shifts",
+    "title": "Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding",
+    "section": "WP2: which facilities fail, and how demand shifts",
+    "text": "WP2: which facilities fail, and how demand shifts\nA spatio-temporal model that scores healthcare facilities and tracks how floods change demand.\n\nInputs: flood hazard, road accessibility, facility characteristics, population context\nA vulnerability score for each facility that varies across space and time\nHow demand moves during and after a flood, using interrupted time series\nCausal machine learning to estimate effect sizes rather than mere correlation\n\n\nPartners are clear that the drivers of vulnerability matter more than the score itself.\n\n\nAbout 1 minute. WP2 is where WP1’s mechanisms become measurement. It is a prediction model, spatial and temporal, and the staff dimension came straight from the qualitative work: a facility is only as available as the people who can reach it. The uncertainty here is attribution: a demand spike after a flood is not proof the flood caused it, so the toolkit is causal, interrupted time series and double machine learning, to separate effect from coincidence. Partners repeatedly said the actionable output is which factors drive vulnerability, for example a single access road, more than any composite number."
+  },
+  {
+    "objectID": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#wp3-planning-resilience-under-deep-uncertainty",
+    "href": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#wp3-planning-resilience-under-deep-uncertainty",
+    "title": "Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding",
+    "section": "WP3: planning resilience under deep uncertainty",
+    "text": "WP3: planning resilience under deep uncertainty\nHow healthcare delivery stays functional as the climate shifts, and how scarce resources are planned for floods.\n\nScenario-based exposure of Welsh healthcare assets under RCP 4.5, RCP 8.5, 2 and 4 degrees of warming\nAdaptation woven into routine investment, rather than wholesale relocation\nPreparedness and resource planning run offline on scenarios, not as a live response tool\nStochastic and robust optimisation, because for the far future there is no single probability distribution to optimise against\n\n\nReframed with partners: scenario planning over real-time dispatch, adaptation over relocation.\n\n\nAbout 1 minute. WP3 is the future-facing package and the deepest uncertainty in the project. There is no way to validate a 30-year projection today, so this is closer to foresight than prediction: you plan across plausible futures rather than forecasting one. Stochastic programming handles the uncertainty you can put probabilities on; robust optimisation handles the uncertainty you cannot. The framing was reshaped by partners: a real-time resource model has no live data to run on in a real event, so the viable, useful version is offline scenario-based preparedness, which is also what the Civil Contingencies Act duty to plan actually asks for."
+  },
+  {
+    "objectID": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#three-kinds-of-uncertainty-three-toolkits",
+    "href": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#three-kinds-of-uncertainty-three-toolkits",
+    "title": "Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding",
+    "section": "Three kinds of uncertainty, three toolkits",
+    "text": "Three kinds of uncertainty, three toolkits\n\n\n\n\n\n\n\n\n\nThe uncertainty\nThe response\n\n\n\n\nWP1\nThe evidence is missing: we do not yet know what happens\nText mining plus interviews, with a gold standard to measure the instrument’s own error\n\n\nWP2\nAttribution: correlation is not cause\nCausal machine learning and interrupted time series\n\n\nWP3\nDeep uncertainty: many plausible futures, no agreed probabilities\nScenario exposure, stochastic and robust optimisation\n\n\n\nMatch the method to the kind of uncertainty, and say plainly what you still do not know.\n\nAbout 1 minute, and this is the talk’s answer to the summer school theme. The project is one continuous argument about uncertainty. WP1 is epistemic uncertainty at its most basic: the evidence has never been collected, so we build the instrument and quantify its error. WP2 is causal uncertainty: separating what floods do from what merely happens near floods. WP3 is deep uncertainty: futures you cannot average over, so you plan for many rather than predict one. The last line is the practical one: partners told us there is a real gap in how planners are trained to use models under uncertainty, so communicating what the models do not know is a first-class output of this PhD, not an afterthought."
+  },
+  {
+    "objectID": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#if-you-take-three-things-away",
+    "href": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#if-you-take-three-things-away",
+    "title": "Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding",
+    "section": "If you take three things away",
+    "text": "If you take three things away\n\nWP1 is the foundation, and it is being carried out\nThe work is grounded in real Welsh cases, not in the literature alone, with interconnected research directrions: evidence, cause, and the future\nBuilt with a live network of Welsh partners, so the outputs are plans and tools health practitioners can actually use\n\n\nAbout 40 seconds. Slow down for these three. The gap, the intellectual structure, and the route to practice. Then hand over for questions. The backup slides cover the coding scheme, WP2 and WP3 in depth, the partner network, and the Welsh data landscape."
+  },
+  {
+    "objectID": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#thank-you",
+    "href": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#thank-you",
+    "title": "Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding",
+    "section": "Thank you 💬",
+    "text": "Thank you 💬\nQuestions and discussion welcome.\nAmirhossein Ghadiri\nData Lab for Social Good, Cardiff Business School\nSupervised by Bahman Rostami-Tabar, Thomas Woolley, and William Bennett | Funded by WGSSS (ESRC)\n GhadiriA@cardiff.ac.uk\n amirhosseinghdv |  amirhossein-ghadiri | 🌐 amirhosseinghdv.github.io\n\nSlides available at: amirhosseinghdv.github.io\n\n\nFinish under time. Backups: the coding scheme, WP2 depth, WP3 depth, the full partner network, and the Welsh data landscape."
+  },
+  {
+    "objectID": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#the-chain-becomes-a-coding-scheme",
+    "href": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#the-chain-becomes-a-coding-scheme",
+    "title": "Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding",
+    "section": "The chain becomes a coding scheme",
+    "text": "The chain becomes a coding scheme\n\n\n\n\n\n\n\n\n\nFamily\nWhat it covers\n\n\n\n\nA\nHazard trigger\nfluvial, surface water, coastal, storm surge, sea-level rise\n\n\nB\nInfrastructure failure\npower, water, transport, ICT lifelines\n\n\nC\nFacility and workforce disruption\nclosures, evacuation, staff unable to work\n\n\nD\nDemand-side disruption\naccess barriers, displaced and surging demand\n\n\nX\nCross-cutting cascades\nfailures that jump between families\n\n\n\n\nEach disruption carries an anchored severity from 0 to 4 and a perceived-versus-corroborated tag. Cross-checked against the SOSCHI codebook and framed through the WHO six building blocks."
+  },
+  {
+    "objectID": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#wp2-in-more-depth",
+    "href": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#wp2-in-more-depth",
+    "title": "Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding",
+    "section": "WP2 in more depth",
+    "text": "WP2 in more depth\nA spatio-temporal vulnerability score for Welsh healthcare facilities.\n\nHazard and exposure drivers from NRW flood extents and the Communities at Risk Register\nA staff dimension: staff home location and transport access, not just facility characteristics\nOutcome data (closures, cancellations, attendance drops) is interview and record derived, since it is not held centrally\nAttribution by interrupted time series: a baseline, then the drop that coincides with the flood\nSection 19 flood investigation reports as structured post-event inputs"
+  },
+  {
+    "objectID": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#wp3-in-more-depth",
+    "href": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#wp3-in-more-depth",
+    "title": "Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding",
+    "section": "WP3 in more depth",
+    "text": "WP3 in more depth\nScenario-based planning where the future is uncertain by nature.\n\nAsset exposure of Welsh healthcare facilities under RCP 4.5, RCP 8.5, and 2 and 4 degrees of warming\nAdaptation framed as resilience woven into routine investment, rather than relocation\nResource and preparedness planning run offline across scenarios, aligned with the Civil Contingencies Act duty to plan ahead\nTwo-stage and multi-stage stochastic programming, plus robust optimisation\nCommunicating uncertainty to decision-makers as a first-class output"
+  },
+  {
+    "objectID": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#full-partner-network",
+    "href": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#full-partner-network",
+    "title": "Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding",
+    "section": "Full partner network",
+    "text": "Full partner network\n\n\n\n\n\n\n\n\nOrganisation\nContacts\nContribution\n\n\n\n\nPublic Health Wales\nHuw Williams, Tracy Evans, Behrooz Behbood, Jessica Stone\nCases, risk data, EPRR introductions\n\n\nCardiff and Vale UHB\nArjun Padmavathy, Tom Porter\nStaff flood survey, scenario data, attribution advice\n\n\nAneurin Bevan UHB, Gwent\nWendy Warren, Mo, Shireen\nMonmouth response access and interviews\n\n\nNatural Resources Wales\nLuke\nFlood layers, lived-experience route\n\n\nCardiff PSB and Council\nAbigail Streeter, Simon Dooley\nClimate risk assessment, flood strategy, Section 19 reports\n\n\nMonmouthshire and Newport\nCatrin Maby, Ian Martin\nCastlegate case detail, civil contingencies interviews\n\n\nOther health boards and LRFs\nHaley Barrow, Gemma Hobson, LA emergency planning leads\nEPRR links, scope guidance, local response"
+  },
+  {
+    "objectID": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#the-welsh-data-landscape",
+    "href": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#the-welsh-data-landscape",
+    "title": "Floods, healthcare, and three kinds of uncertainty",
+    "section": "The Welsh data landscape",
+    "text": "The Welsh data landscape\nWhy proxies and text mining, not a single clean dataset.\n\nNo central record of healthcare disruption from flooding: closures and cancellations sit behind fragmented FOI requests\nRich but restricted health data in SAIL, costly and slow to access\nStrong open data for flood hazard (NRW), population (ONS), and transport (OS, OSM)\nThe Senedd record and council transcripts add an unusual public, bilingual text source\nActivity drops and prescribing data serve as practical proxies for disruption"
+  },
+  {
+    "objectID": "talks/uncertainty-summer-school/index.html",
+    "href": "talks/uncertainty-summer-school/index.html",
+    "title": "Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding",
+    "section": "",
+    "text": "Open slides\n  \n\nThis talk was prepared for the Data Lab for Social Good Summer School, The Art and Science of Uncertainty and the Future, held in Cardiff in July 2026. It presents the whole PhD in fifteen minutes.\nFloods and rising sea levels keep disrupting how healthcare is delivered in Wales. Yet, we map where the water goes, not what stops working. The talk frames the project as one continuous argument about uncertainty. The first work package builds the missing evidence base with a multilingual text-mining pipeline and Welsh case studies. The second drivers of healthcare vulnerability to floods. The third plans for the uncertain futures using optimisation under uncertainty."
+  },
+  {
+    "objectID": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#welsh-data-what-we-can-and-cannot-get",
+    "href": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#welsh-data-what-we-can-and-cannot-get",
+    "title": "Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding",
+    "section": "Welsh data: what we can and cannot get",
+    "text": "Welsh data: what we can and cannot get\nWhy proxies and text mining, not a single clean dataset.\n\nNo central record of healthcare disruption from flooding: closures and cancellations sit behind fragmented FOI requests\nDetailed but restricted health data in SAIL, costly and slow to access\nStrong open data for flood hazard (NRW), population (ONS), and transport (OS, OSM)\nThe Senedd record and council transcripts add an unusual public, bilingual text source\nActivity drops and prescribing data are practical proxies for disruption"
+  },
+  {
+    "objectID": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#the-pipeline-reads-the-worlds-flood-record.-getting-from-raw-text-to-quantified-pathways",
+    "href": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#the-pipeline-reads-the-worlds-flood-record.-getting-from-raw-text-to-quantified-pathways",
+    "title": "Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding",
+    "section": "The pipeline reads the world’s flood record. Getting from raw text to quantified pathways",
+    "text": "The pipeline reads the world’s flood record. Getting from raw text to quantified pathways\n\n                           Ingest Clean Represent tokenize Extract deduplicate Quantify   news, reports, Senedd filtering embedding vector for relevant LLM LLM to pathways remove duplicates reported effect sizes   dashed = scales on HPC\n\nEvery coded pathway traces back to the sentence it came from.\n\nAbout 75 seconds. Walk the picture left to right, briefly: ingest the multilingual sources, clean out duplicates and off-topic bleed, chunk and embed everything in one shared space so English and Welsh retrieve each other, reconcile inductive topics against the taxonomy, then the language model codes each passage to the pathway typology, events get resolved across documents, and reported magnitudes are pooled. The dashed box is the one stage that needs serious compute, and it scales to the university supercomputer next. Then the three facts: the corpus, the learned filter, and the first complete run. Every coded pathway traces back to the sentence it came from, which is what makes the whole thing auditable."
+  },
+  {
+    "objectID": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#wp3-planning-resilience-under-uncertainty",
+    "href": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#wp3-planning-resilience-under-uncertainty",
+    "title": "Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding",
+    "section": "WP3: planning resilience under uncertainty",
+    "text": "WP3: planning resilience under uncertainty\nHow healthcare delivery stays functional as the climate shifts, and how scarce resources are planned for floods.\n\nScenario-based exposure of Welsh healthcare assets under RCP 4.5, RCP 8.5, 2 and 4 degrees of warming\nAdaptation woven into routine investment, not separate adaptation investment\nStochastic and robust optimisation, since the future is uncertain by nature\n\n\nAbout 1 minute. WP3 is the future-facing package and the deepest uncertainty in the project. There is no way to validate a 30-year projection today, so this is closer to foresight than prediction: you plan across plausible futures rather than forecasting one. Stochastic programming handles the uncertainty you can put probabilities on; robust optimisation handles the uncertainty you cannot. The framing was reshaped by partners: a real-time resource model has no live data to run on in a real event, so the viable, useful version is offline scenario-based preparedness, which is also what the Civil Contingencies Act duty to plan actually asks for."
   }
 ]

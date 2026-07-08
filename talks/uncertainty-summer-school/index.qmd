@@ -1,0 +1,26 @@
+---
+title: "Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding"
+description: "PhD presentation for the DL4SG Summer School on uncertainty and the future: the problem, WP1 in depth, and how each work package answers a different kind of uncertainty."
+author: "Amirhossein Ghadiri"
+date: "2026-07-09"
+image: "cover.svg"
+categories:
+  - Floods
+  - Healthcare
+  - Uncertainty
+  - PhD
+---
+
+```{=html}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<a href="slides/uncertainty_summer_school.html" target="_blank" rel="noopener noreferrer">
+  <button id="journal-article-btn">
+    <i class="fas fa-display"></i> Open slides
+  </button>
+</a>
+```
+
+This talk was prepared for the Data Lab for Social Good Summer School, The Art and Science of Uncertainty and the Future, held in Cardiff in July 2026. It presents the whole PhD in fifteen minutes.
+
+Floods and rising sea levels keep disrupting how healthcare is delivered in Wales. Yet, we map where the water goes, not what stops working. The talk frames the project as one continuous argument about uncertainty. The first work package builds the missing evidence base with a multilingual text-mining pipeline and Welsh case studies. The second drivers of healthcare vulnerability to floods. The third plans for the uncertain futures using optimisation under uncertainty.
