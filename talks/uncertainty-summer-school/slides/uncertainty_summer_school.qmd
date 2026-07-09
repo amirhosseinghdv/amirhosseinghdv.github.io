@@ -115,8 +115,8 @@ About 1 minute. Establish the gap clearly for a mixed audience: flood maps tell 
     <rect x="1045" y="92" width="240" height="46"/>
   </g>
   <g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="22" fill="#33495d" text-anchor="middle">
-    <text x="515" y="104" dominant-baseline="central">drivers become labels,</text>
-    <text x="515" y="126" dominant-baseline="central">disruption features</text>
+    <text x="515" y="104" dominant-baseline="central">drivers become features,</text>
+    <text x="515" y="126" dominant-baseline="central">disruption labels</text>
     <text x="1165" y="104" dominant-baseline="central">today's vulnerability</text>
     <text x="1165" y="126" dominant-baseline="central">is the baseline</text>
   </g>
