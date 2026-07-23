@@ -1,19 +1,20 @@
 [
   {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/reading-disasters-with-llms/index.html",
+      "/blog/floods-and-healthcare/index.html"
+    ]
+  },
+  {
+    "listing": "/publications/working_papers/index.html",
+    "items": [
+      "/publications/working_papers/ppe-fuzzy-vision/index.html"
+    ]
+  },
+  {
     "listing": "/publications/technical_reports/index.html",
     "items": []
-  },
-  {
-    "listing": "/projects/forecasting/index.html",
-    "items": [
-      "/projects/forecasting/first-post/index.html"
-    ]
-  },
-  {
-    "listing": "/projects/sustainability/index.html",
-    "items": [
-      "/projects/sustainability/first-post/index.html"
-    ]
   },
   {
     "listing": "/projects/data_science/index.html",
@@ -24,11 +25,24 @@
     ]
   },
   {
-    "listing": "/blog/index.html",
+    "listing": "/projects/sustainability/index.html",
     "items": [
-      "/blog/reading-disasters-with-llms/index.html",
-      "/blog/floods-and-healthcare/index.html"
+      "/projects/sustainability/first-post/index.html"
     ]
+  },
+  {
+    "listing": "/projects/forecasting/index.html",
+    "items": [
+      "/projects/forecasting/first-post/index.html"
+    ]
+  },
+  {
+    "listing": "/publications/journal_articles/index.html",
+    "items": []
+  },
+  {
+    "listing": "/publications/book_chapters/index.html",
+    "items": []
   },
   {
     "listing": "/talks/index.html",
@@ -37,19 +51,5 @@
       "/talks/nine-month-review/index.html",
       "/talks/wp1-floods-healthcare/index.html"
     ]
-  },
-  {
-    "listing": "/publications/working_papers/index.html",
-    "items": [
-      "/publications/working_papers/ppe-fuzzy-vision/index.html"
-    ]
-  },
-  {
-    "listing": "/publications/book_chapters/index.html",
-    "items": []
-  },
-  {
-    "listing": "/publications/journal_articles/index.html",
-    "items": []
   }
 ]
