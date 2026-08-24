@@ -38,6 +38,3 @@ A quick rundown:
 - Methods: machine learning, deep learning, computer vision, NLP and large language models, forecasting, statistics, operations research, optimisation, simulation
 - Spoken languages: Persian (native), English (TOEFL 110)
 
-## Where I'm headed
-
-After the PhD I want to work as an applied scientist, machine learning engineer, or data scientist, ideally in London. So alongside the research I'm deliberately building the engineering side of the job: putting models into pipelines other people can actually run, instead of notebooks that only work once on my own laptop.
