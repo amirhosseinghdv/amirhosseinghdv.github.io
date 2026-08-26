@@ -5,6 +5,7 @@ listing:
     - "wp1-floods-healthcare/*.qmd"
     - "nine-month-review/*.qmd"
     - "uncertainty-summer-school/*.qmd"
+    - "evm-vaccine-quality/*.qmd"
   type: default # Explore more listing types; default, grid or table
   sort: date desc
   filter-ui: true
