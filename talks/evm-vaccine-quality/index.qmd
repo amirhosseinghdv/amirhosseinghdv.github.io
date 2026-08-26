@@ -1,0 +1,25 @@
+---
+title: "What drives vaccine quality at the last mile? Evidence from WHO EVM assessments in 77 countries"
+description: "The Quality strand of the WHO EVM project: filtering 891 requirements down to a defensible short list, one winning model across all three targets, and the stress tests that make the list trustworthy."
+author: "Amirhossein Ghadiri"
+date: "2026-08-26"
+image: "cover.svg"
+categories:
+  - Vaccine supply chains
+  - Healthcare
+  - PhD
+---
+
+```{=html}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<a href="slides/evm_vaccine_quality.html" target="_blank" rel="noopener noreferrer">
+  <button id="journal-article-btn">
+    <i class="fas fa-display"></i> Open slides
+  </button>
+</a>
+```
+
+This talk presents the Quality strand of our WHO Effective Vaccine Management project. Starting from 4,287 assessment rows and 891 requirements, it walks through the filters that produce one clean matrix of 2,258 last-mile facilities in 77 countries, the triage that sets aside four ceiling-bound targets, and the model comparison that the elastic net wins for the composite quality score and both multi-dose vial components.
+
+The findings come with their own stress tests: a shuffled-outcome calibration that produced zero false positives, agreement across six model families, an exposure check that explains why two requirements point the wrong way, and a complete-case refit that removes every invented value. The talk closes on what a shortened EVM-Lite instrument could keep, and on the causal work that comes next.
