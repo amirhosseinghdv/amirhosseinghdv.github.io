@@ -894,5 +894,194 @@
     "title": "Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding",
     "section": "WP3: planning resilience under uncertainty",
     "text": "WP3: planning resilience under uncertainty\nHow healthcare delivery stays functional as the climate shifts, and how scarce resources are planned for floods.\n\nScenario-based exposure of Welsh healthcare assets under RCP 4.5, RCP 8.5, 2 and 4 degrees of warming\nAdaptation woven into routine investment, not separate adaptation investment\nStochastic and robust optimisation, since the future is uncertain by nature\n\n\nAbout 1 minute. WP3 is the future-facing package and the deepest uncertainty in the project. There is no way to validate a 30-year projection today, so this is closer to foresight than prediction: you plan across plausible futures rather than forecasting one. Stochastic programming handles the uncertainty you can put probabilities on; robust optimisation handles the uncertainty you cannot. The framing was reshaped by partners: a real-time resource model has no live data to run on in a real event, so the viable, useful version is offline scenario-based preparedness, which is also what the Civil Contingencies Act duty to plan actually asks for."
+  },
+  {
+    "objectID": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#a-fridge-in-a-rural-clinic",
+    "href": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#a-fridge-in-a-rural-clinic",
+    "title": "What drives vaccine quality at the last mile?",
+    "section": "A fridge in a rural clinic",
+    "text": "A fridge in a rural clinic\nAn assessor walks into a small health facility. She opens the vaccine fridge.\n\nInside sit opened multi-dose vials. Some carry the date they were opened. Some do not. Past 28 days, every dose in them must be thrown away.\n\n\nThe WHO has run this inspection at thousands of facilities in 77 countries, scoring each one against hundreds of supply-chain requirements.\n\n\nWhich of those requirements actually go with vaccines being in good condition? That is the question this talk answers.\n\nAbout 45 seconds. Tell it slowly, as a scene. The multi-dose vial detail is not decoration: the two component targets in this analysis are exactly about those vials, so this image carries the whole talk. Land the final line, pause, then agenda."
+  },
+  {
+    "objectID": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#what-i-will-cover",
+    "href": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#what-i-will-cover",
+    "title": "What drives vaccine quality at the last mile?",
+    "section": "What I will cover",
+    "text": "What I will cover\n\nThe question\nThe data and its filters\nTargets and models\nWhat drives quality\nStress-testing the answer\nWhat it means and what follows\n\n\n15 seconds. One line each. This agenda comes back at every transition with the current section highlighted, so Bahman always knows where we are."
+  },
+  {
+    "objectID": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#one-assessment-three-strands-and-my-strand-is-quality",
+    "href": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#one-assessment-three-strands-and-my-strand-is-quality",
+    "title": "What drives vaccine quality at the last mile?",
+    "section": "One assessment, three strands, and my strand is quality",
+    "text": "One assessment, three strands, and my strand is quality\nThe WHO Effective Vaccine Management (EVM) assessment scores facilities on hundreds of requirements and on a set of performance outcomes.\n\nOur team splits the outcomes three ways: availability (Bahman), efficiency (Jayeed), and quality, which is mine\nQuality means the composite score QU and its two multi-dose vial components: R0712, vials never used more than 28 days after opening, and R0722, no opened vials in stock beyond 28 days\nThe applied goal is evidence for a shorter instrument, an EVM-Lite: which few requirements would a short checklist keep?\n\n\nAbout 55 seconds. Set the division of labour in one breath, then slow down on the two components: read both definitions out loud, because every later slide leans on them. Close on EVM-Lite as the destination."
+  },
+  {
+    "objectID": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#explanation-not-prediction",
+    "href": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#explanation-not-prediction",
+    "title": "What drives vaccine quality at the last mile?",
+    "section": "Explanation, not prediction",
+    "text": "Explanation, not prediction\nFollowing Shmueli (2010), the question is which requirements go with quality, not how to forecast a facility’s score. 1\n\nThe yardstick is R squared on unseen facilities: no error metrics like RMSE anywhere\nOnly models that carry readable coefficients may report an answer\nEvery claim in the underlying document is produced by visible code in that document, so each number traces back to the cell that made it\n\nThe deliverable is a defensible short list of requirements, not a forecasting engine.\n\nAbout 40 seconds. This slide sets the rules of the game. If a tree model fits better but cannot explain, it does not get to speak; that principle returns in section 3. Read the remember line.\n\nShmueli, G. (2010). To explain or to predict? Statistical Science, 25(3), 289-310."
+  },
+  {
+    "objectID": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#what-i-will-cover-1",
+    "href": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#what-i-will-cover-1",
+    "title": "What drives vaccine quality at the last mile?",
+    "section": "What I will cover",
+    "text": "What I will cover\n\nThe question\nThe data and its filters\nTargets and models\nWhat drives quality\nStress-testing the answer\nWhat it means and what follows\n\n\n5 seconds. Just move the highlight and go."
+  },
+  {
+    "objectID": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#from-4287-rows-to-one-clean-matrix",
+    "href": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#from-4287-rows-to-one-clean-matrix",
+    "title": "What drives vaccine quality at the last mile?",
+    "section": "From 4,287 rows to one clean matrix",
+    "text": "From 4,287 rows to one clean matrix\n\n Facilities Requirements                              4,287 assessment rows 2,290 Service Points 2,258 scored on quality 891 requirements 207 inputs only 171 widely applicable 170 unique 2,258 facilities 172 predictors 77 countries   keep last mile drop unscored children of inputs drop if rarely applicable drop 1 duplicate  \n\nPlus a circularity screen: 0 input requirements share a questionnaire item with the quality scores; 2 outputs do and outputs are excluded anyway.\n\nAbout 70 seconds. Walk the figure fully, top lane first: 4,287 assessment rows across all levels; keep the 2,290 Service Points because that is the last mile where vaccines meet patients; 2,258 of them actually have a quality score. Bottom lane: 891 requirements in the workbook; 207 are input requirements at child level, the actionable ones; 36 go because they are not applicable at ninety percent or more of facilities; one exact duplicate goes. The two lanes meet in the final matrix: 2,258 by 172, the 170 requirements plus assessment year and target population, spread over 77 countries. Then the circularity line: nothing on the predictor side restates the outcome by construction."
+  },
+  {
+    "objectID": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#the-year-column-is-a-country-label-in-disguise",
+    "href": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#the-year-column-is-a-country-label-in-disguise",
+    "title": "What drives vaccine quality at the last mile?",
+    "section": "The year column is a country label in disguise",
+    "text": "The year column is a country label in disguise\nA check on the scored facilities shows that every one of the 77 countries was assessed in exactly one year.\n\nSo the year column separates countries from each other; it carries no within-country change over time\nAny association the year shows means “the countries assessed in some years score better than those assessed in others”\nIt is kept in the matrix but never read as time, and this reading matters twice later in the talk\n\n\nAbout 35 seconds. Small check, big consequence. Flag that it returns in the findings section, where the year comes out conclusive for the components, and that it would be easy to misread as a trend."
+  },
+  {
+    "objectID": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#what-i-will-cover-2",
+    "href": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#what-i-will-cover-2",
+    "title": "What drives vaccine quality at the last mile?",
+    "section": "What I will cover",
+    "text": "What I will cover\n\nThe question\nThe data and its filters\nTargets and models\nWhat drives quality\nStress-testing the answer\nWhat it means and what follows\n\n\n5 seconds."
+  },
+  {
+    "objectID": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#four-of-the-seven-targets-are-already-at-the-ceiling",
+    "href": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#four-of-the-seven-targets-are-already-at-the-ceiling",
+    "title": "What drives vaccine quality at the last mile?",
+    "section": "Four of the seven targets are already at the ceiling",
+    "text": "Four of the seven targets are already at the ceiling\nScreening over five repeated splits, with seven candidate targets: the composite and its six components.\n\n\n\nTarget\nAt full marks\nBest test R²\n\n\n\n\nR0712 multi-dose vials, use window\n54.9%\n0.185\n\n\nR0722 multi-dose vials, stock\n54.5%\n0.174\n\n\nQU composite quality\n58.2%\n0.067\n\n\nR0710 R0711 R0713 R0716\n93 to 97%\nat or below zero\n\n\n\nCarried forward: the composite and the two multi-dose components. TabPFN, a pre-trained transformer with nothing in common with these models, produces the same ordering, and its 0.242 on R0712 is the best figure in the screen.\n\nAbout 55 seconds. Guide through the table row by row. The four set-aside targets cover expired and heat-damaged stock: almost everyone passes, so there is nothing left to explain, and that near-universal pass is itself a finding about the last mile. What separates facilities is multi-dose vial handling. Then the TabPFN sentence: same ordering from a completely different model family means the triage is a property of the data, not of the models chosen first."
+  },
+  {
+    "objectID": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#only-coefficient-models-may-report-and-the-elastic-net-wins-all-three",
+    "href": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#only-coefficient-models-may-report-and-the-elastic-net-wins-all-three",
+    "title": "What drives vaccine quality at the last mile?",
+    "section": "Only coefficient models may report, and the elastic net wins all three",
+    "text": "Only coefficient models may report, and the elastic net wins all three\nTen model families ran over twenty repeated 75/25 splits inside leakage-free pipelines.\n\nTree ensembles fit training facilities almost perfectly (adjusted R² of 1.000 for XGBoost) while a fraction survives on unseen ones: that is memorisation, and they carry no coefficient to report\nAmong eligible models, the elastic net wins every target: 0.062 on QU, 0.192 on R0712, 0.183 on R0722\nThe LASSO ties it to three decimals; the gamma shortfall model is close on the composite only\n\nThe useful signal is sparse: a handful of requirements carrying weight against 172 competitors.\n\nAbout 65 seconds. First bullet is the eligibility rule in action: random forest actually posts the best raw test number on the components, 0.238, but with train-test gaps of 0.65 to 0.80 it cannot explain, so it never becomes the reporting model. Second bullet: same winner three times. Read the remember line: a sparse winner on every target is itself informative about the data."
+  },
+  {
+    "objectID": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#country-matters-and-that-is-exactly-why-it-is-left-out",
+    "href": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#country-matters-and-that-is-exactly-why-it-is-left-out",
+    "title": "What drives vaccine quality at the last mile?",
+    "section": "Country matters, and that is exactly why it is left out",
+    "text": "Country matters, and that is exactly why it is left out\nAdding one column per country to each chosen model:\n\n\n\nTarget\nWithout country\nWith country\nVariance between countries\n\n\n\n\nQU\n0.062\n0.119\n20.7%\n\n\nR0712\n0.192\n0.323\n41.0%\n\n\nR0722\n0.183\n0.305\n41.1%\n\n\n\n\nThe gain is real and it is background: income, infrastructure, everything the assessment never measures, nothing a facility can act on\nWith country in the model, every requirement coefficient becomes a within-country association, hiding how small that signal is\n\n\nAbout 55 seconds. Walk the table left to right: the composite nearly doubles, the components jump by more, and the third column explains why, a fifth to two fifths of variation lies between countries. Then the reasoning: the question is about requirements, so the main specification excludes country and pays a stated price. The stress-testing section measures that price directly."
+  },
+  {
+    "objectID": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#what-i-will-cover-3",
+    "href": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#what-i-will-cover-3",
+    "title": "What drives vaccine quality at the last mile?",
+    "section": "What I will cover",
+    "text": "What I will cover\n\nThe question\nThe data and its filters\nTargets and models\nWhat drives quality\nStress-testing the answer\nWhat it means and what follows\n\n\n5 seconds."
+  },
+  {
+    "objectID": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#four-requirements-drive-the-composite-and-two-point-the-wrong-way",
+    "href": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#four-requirements-drive-the-composite-and-two-point-the-wrong-way",
+    "title": "What drives vaccine quality at the last mile?",
+    "section": "Four requirements drive the composite, and two point the wrong way",
+    "text": "Four requirements drive the composite, and two point the wrong way\n200 bootstrap resamples of the elastic net; conclusive means the 95% interval excludes zero.\n\n\n\n\n\n\n\n\nCode\nRequirement\nEffect\n\n\n\n\nR0290\nStaff know the discard time of multi-dose vials\n+0.0114\n\n\nR0322\nThe facility has multi-dose vial SOPs\n+0.0105\n\n\nR0040\nSufficient positive cold storage capacity\n−0.0121\n\n\nR0156\nThe temperature form is graphical\n−0.0078\n\n\n\n\nMeeting an EVM requirement should not make vaccines worse. Section 5 resolves this puzzle.\n\nAbout 70 seconds. Guide through every row. The two positives are exactly what the instrument intends, and both are about multi-dose vials, echoing the opening story. Then slow down on the two negatives: more cold storage capacity and a nicer-looking form go with lower quality. Pause before revealing the remember line, let the puzzle register, and promise the resolution rather than giving it away."
+  },
+  {
+    "objectID": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#the-components-agree-what-staff-know-moves-the-needle",
+    "href": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#the-components-agree-what-staff-know-moves-the-needle",
+    "title": "What drives vaccine quality at the last mile?",
+    "section": "The components agree: what staff know moves the needle",
+    "text": "The components agree: what staff know moves the needle\nAll conclusive component effects are positive, estimated the same way on each component’s own facilities.\n\n\nR0712 (4 conclusive)\n\nR0290 discard time +0.039\nR0257 trained to monitor performance +0.039\nR0272 storage principles +0.029\nR0037 fire extinguishers +0.028\n\n\nR0722 (5 conclusive)\n\nR0037 fire extinguishers +0.044\nR0293 opened-vial wastage types +0.039\nR0290 discard time +0.035\nR0358 staff paid on time +0.033\nR0129 waste in proper bins +0.030\n\n\nR0290, knowing the discard time, is the only requirement on all three lists.\n\nAbout 70 seconds. Read both columns aloud, then land the thread: staff knowledge and training dominate, and knowing the discard time appears everywhere. Also name the odd ones out now, fire extinguishers and salaries and waste bins have no route to a vial, and say that the next section deals with them. One more note: the assessment year is also conclusive for both components, which is the country label from section 2 showing through, not a change over time."
+  },
+  {
+    "objectID": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#what-i-will-cover-4",
+    "href": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#what-i-will-cover-4",
+    "title": "What drives vaccine quality at the last mile?",
+    "section": "What I will cover",
+    "text": "What I will cover\n\nThe question\nThe data and its filters\nTargets and models\nWhat drives quality\nStress-testing the answer\nWhat it means and what follows\n\n\n5 seconds."
+  },
+  {
+    "objectID": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#thirty-shuffled-outcomes-produced-zero-false-positives",
+    "href": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#thirty-shuffled-outcomes-produced-zero-false-positives",
+    "title": "What drives vaccine quality at the last mile?",
+    "section": "Thirty shuffled outcomes produced zero false positives",
+    "text": "Thirty shuffled outcomes produced zero false positives\nTwo checks on whether the lists can be trusted name by name.\n\nShuffle the outcome, keep everything else: ten shuffles per target under identical settings produced 0 conclusive effects every single time, against real counts of 4, 4 and 5\nRemove every invented value: refitting only on facilities where the leading requirements were actually scored, all 13 effects keep their direction, 9 of 13 stay conclusive\nOne flag: the multi-dose SOP effect on the composite shrinks close to zero without the filled rows, so it leans on the median filling and is held more lightly\n\n\nAbout 55 seconds. First bullet is the calibration: the same machinery that yields the real lists yields nothing at all out of pure noise, so a list of this length cannot be luck. Second bullet addresses the filling compromise: the linear models are handed a median where a requirement did not apply, and the directions all survive without it. Name the R0322 flag honestly."
+  },
+  {
+    "objectID": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#six-different-model-families-point-at-the-same-names",
+    "href": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#six-different-model-families-point-at-the-same-names",
+    "title": "What drives vaccine quality at the last mile?",
+    "section": "Six different model families point at the same names",
+    "text": "Six different model families point at the same names\nPermutation importance, computed identically for ridge, fractional logit, boosted trees, bagged trees, randomised trees and XGBoost.\n\nOn the composite: the graphical form named by 6 of 6 families, cold storage capacity and the discard time by 5 of 6\nOn the components: the top effect of each is named by 6 of 6, discard time for R0712 and opened-vial wastage knowledge for R0722\nTabPFN, allowed only to re-rank, keeps the same names near the top\n\nAgreement across models that fit in genuinely different ways cannot be one algorithm’s artefact.\n\nAbout 50 seconds. The point is independence: families that fill missing values and families that never do, linear and tree-based, all reach for the same columns. Note the design honesty: TabPFN is deliberately not an independent nominator, it can demote candidates but cannot introduce a name of its own."
+  },
+  {
+    "objectID": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#the-negative-effects-are-the-assessment-exposing-itself",
+    "href": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#the-negative-effects-are-the-assessment-exposing-itself",
+    "title": "What drives vaccine quality at the last mile?",
+    "section": "The negative effects are the assessment exposing itself",
+    "text": "The negative effects are the assessment exposing itself\nHalf of the composite’s parts are only scored when the assessor observes a session in progress. Facilities with vaccines actively in circulation face the harder questions.\n\n\nEvery one of the six most-named requirements carries positive extra exposure: meeting it marks a busy facility (+0.04 to +0.11)\nThe only negative quality gaps are exactly the two puzzles: cold storage capacity −0.048 and the graphical form −0.026\nEvery staff-knowledge requirement stays positive despite the penalty, led by the discard time at +0.076\n\nThe rule this feeds: a statistical signal and a route from the requirement to the vial, both required.\n\nAbout 70 seconds. This is the resolution promised in section 4, so take it slowly. First the mechanism: well-equipped facilities are busy facilities, busy facilities get asked the hard questions, so equipment and paperwork requirements pick up a penalty that has nothing to do with the requirement itself. Then the split: the negative gaps land precisely on the equipment and paperwork pair, the positives all on what staff know. Close with the rule, because it is the practical filter for EVM-Lite."
+  },
+  {
+    "objectID": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#take-away-the-country-resemblance-and-see-what-is-left",
+    "href": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#take-away-the-country-resemblance-and-see-what-is-left",
+    "title": "What drives vaccine quality at the last mile?",
+    "section": "Take away the country resemblance and see what is left",
+    "text": "Take away the country resemblance and see what is left\nTwo ways of asking whether the requirement signal travels beyond the assessed countries.\n\n\n\nTarget\nRandom folds\nWhole countries held out\n\n\n\n\nQU\n0.054\n−0.027\n\n\nR0712\n0.178\n0.060\n\n\nR0722\n0.168\n0.039\n\n\n\n\nSubtracting each country’s own average from everything: training 0.139, test −0.154, a collapse\nEvery headline figure is regime-dependent: a shortened checklist used inside the assessed countries can quote the left column; any claim about a new country must quote the right one\n\n\nAbout 55 seconds. Walk the table: random folds describe one more facility in a country the data already covers; grouped folds describe a country never seen, and every figure falls. The demeaning line is the same message from inside a single split. This is the most important caveat in the talk, read the bold sentence exactly as written."
+  },
+  {
+    "objectID": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#what-i-will-cover-5",
+    "href": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#what-i-will-cover-5",
+    "title": "What drives vaccine quality at the last mile?",
+    "section": "What I will cover",
+    "text": "What I will cover\n\nThe question\nThe data and its filters\nTargets and models\nWhat drives quality\nStress-testing the answer\nWhat it means and what follows\n\n\n5 seconds."
+  },
+  {
+    "objectID": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#four-requirements-keep-most-of-what-170-explain",
+    "href": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#four-requirements-keep-most-of-what-170-explain",
+    "title": "What drives vaccine quality at the last mile?",
+    "section": "Four requirements keep most of what 170 explain",
+    "text": "Four requirements keep most of what 170 explain\nRefitting each target’s model on its conclusive requirements alone, same twenty splits:\n\n\n\nTarget\nFull set (172)\nConclusive only\nRetained\n\n\n\n\nQU\n0.062\n0.057 with 4\n~92%\n\n\nR0722\n0.183\n0.146 with 5\n~80%\n\n\nR0712\n0.192\n0.129 with 4\n~67%\n\n\n\n\nWith every calibration clean, the short lists can be defended entry by entry\nOne declared optimism: the lists were chosen on the same facilities the refits split, so these are upper bounds on a list fixed in advance\n\nThat is the sentence an EVM-Lite needs.\n\nAbout 55 seconds. Walk the table: the composite keeps nearly everything on four requirements; the components keep the larger part on four or five. Mention that adding the two context columns lifts R0712 to 0.174, but that recovery is mostly the country label, not something a facility controls. State the optimism caveat plainly, Bahman will ask otherwise."
+  },
+  {
+    "objectID": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#associations-today-causes-next",
+    "href": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#associations-today-causes-next",
+    "title": "What drives vaccine quality at the last mile?",
+    "section": "Associations today, causes next",
+    "text": "Associations today, causes next\nEverything reported is association, and the two confounds found are exactly what causal designs handle.\n\nThe exposure artefact on the composite and the well-run-facility proxy on the components both survive every statistical test, because the pattern in the data is real\nNext step: a causal treatment of the top-ranked requirements, rather than another round of the same modelling\nA literature review to state in advance which requirements should matter, instead of annotating a list the data produced\n\n\nAbout 40 seconds. Keep it forward-looking: the machinery is now trustworthy, so the natural next move is causal identification on the short list, plus the literature grounding. This is the discussion I want to have with Bahman after the talk."
+  },
+  {
+    "objectID": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#the-one-slide-version",
+    "href": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#the-one-slide-version",
+    "title": "What drives vaccine quality at the last mile?",
+    "section": "The one-slide version",
+    "text": "The one-slide version\n\nOut of 170 filtered requirements across 77 countries, quality at the last mile comes down to a handful, led by staff knowing the discard time of multi-dose vials\nThe list survives shuffled outcomes, six model families, an exposure check, and the removal of every invented value\nWhat travels to unseen countries is much smaller than the headline, and saying so is part of the result\n\nThank you. Questions welcome; backup slides follow.\n\nAbout 30 seconds. Three sentences, slow, then stop on time. Do not read the backup slides unless asked."
+  },
+  {
+    "objectID": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#backup-how-the-choice-of-model-was-made",
+    "href": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#backup-how-the-choice-of-model-was-made",
+    "title": "What drives vaccine quality at the last mile?",
+    "section": "Backup: how the choice of model was made",
+    "text": "Backup: how the choice of model was made\n\nAll ten families over the same twenty 75/25 splits: OLS, ridge, LASSO, elastic net, fractional logit, gamma shortfall, boosted trees, bagged trees, randomised trees, XGBoost\nPenalties earn their keep: OLS is the weakest linear model on unseen facilities for every one of the seven targets\nElastic net alphas: 0.012 (QU), 0.054 (R0712), 0.054 (R0722); LASSO ties to three decimals throughout\nAIC and BIC, computed as a supplement, favour the models that do worst on unseen facilities, which is why repeated splits decide\n\n\nFor questions on model selection. The AIC point in one line: an inside-the-sample criterion rewards exactly the hard fitting that the repeated splits exist to discount."
+  },
+  {
+    "objectID": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#backup-two-ways-of-handling-values-that-do-not-exist",
+    "href": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#backup-two-ways-of-handling-values-that-do-not-exist",
+    "title": "What drives vaccine quality at the last mile?",
+    "section": "Backup: two ways of handling values that do not exist",
+    "text": "Backup: two ways of handling values that do not exist\n\nWhere a requirement does not apply, linear models need a number: median filling alone, or median plus not-applicable flags\nFlags fit slightly better, +0.02 to +0.03, about the size of the split-to-split spread, with larger overfit gaps\nMedian alone is kept: half the columns, and a flag coefficient is not something anyone can act on\nThe reassurance: the no-filling families, boosted trees, XGBoost and TabPFN, sort the targets the same way, and the complete-case check in section 5 removes the filling entirely\n\n\nFor questions on missing data. The honest version: flags win narrowly on fit and lose on parsimony and actionability."
+  },
+  {
+    "objectID": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#backup-quality-as-ordered-bands",
+    "href": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#backup-quality-as-ordered-bands",
+    "title": "What drives vaccine quality at the last mile?",
+    "section": "Backup: quality as ordered bands",
+    "text": "Backup: quality as ordered bands\n\nCutting the score into four ordered bands (cut points 0.6, 0.8, 0.95; 58% of facilities in the top band)\nThe ordinal model earns the best weighted kappa, 0.092, still weak agreement by any conventional reading\nAlways naming the largest band beats it on plain accuracy, 0.582 against 0.496\nThe top-twenty requirement list changes (7 of 20 shared with the continuous analysis) while no measure of fit improves: banding buys nothing here\n\n\nFor questions on whether the continuous score is the right framing."
+  },
+  {
+    "objectID": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#backup-tabpfns-role-precisely",
+    "href": "talks/evm-vaccine-quality/slides/evm_vaccine_quality.html#backup-tabpfns-role-precisely",
+    "title": "What drives vaccine quality at the last mile?",
+    "section": "Backup: TabPFN’s role, precisely",
+    "text": "Backup: TabPFN’s role, precisely\n\nA pre-trained tabular transformer (Hollmann et al., 2025, Nature), fitted in one forward pass, no filled values needed\nUsed twice, both times deliberately subordinate: corroborating the target triage, and re-ranking 62 candidate requirements on 250 test facilities\nIt may demote a name but can never introduce one, so the reported lists stay coefficient-backed\nIts top re-ranks: correct storage temperatures, AM and PM temperature fields, packing SOPs, then the discard time and cold storage capacity\n\n\nFor questions on the foundation model. The design principle: the chosen model must carry coefficients; TabPFN is a cross-check, never a nominator."
   }
 ]
