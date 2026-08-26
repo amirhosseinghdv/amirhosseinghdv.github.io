@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Amirhossein Ghadiri">
+<meta name="dcterms.date" content="2026-08-26">
+<meta name="description" content="The Quality strand of the WHO EVM project: filtering 891 requirements down to a defensible short list, one winning model across all three targets, and the stress tests that make the list trustworthy.">
 
-<title>Talks</title>
+<title>What drives vaccine quality at the last mile? Evidence from WHO EVM assessments in 77 countries</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,25 +29,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-f4f2a47db958332b6ed2df30fcdd2e18.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-f4f2a47db958332b6ed2df30fcdd2e18.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,68 +73,11 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<meta property="og:title" content="Talks">
-<meta property="og:image" content="../talks/evm-vaccine-quality/cover.svg">
+<meta property="og:title" content="What drives vaccine quality at the last mile? Evidence from WHO EVM assessments in 77 countries">
+<meta property="og:description" content="The Quality strand of the WHO EVM project: filtering 891 requirements down to a defensible short list, one winning model across all three targets, and the stress tests that make the list trustworthy.">
+<meta property="og:image" content="cover.svg">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -149,26 +93,26 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> <i class="bi bi-house-door-fill" role="img">
+    <a class="nav-link" href="../../index.html"> <i class="bi bi-house-door-fill" role="img">
 </i> 
 <span class="menu-text">Home</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../about/index.html"> 
+    <a class="nav-link" href="../../about/index.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../cv/index.html"> 
+    <a class="nav-link" href="../../cv/index.html"> 
 <span class="menu-text">Resume</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../projects/index.html"> 
+    <a class="nav-link" href="../../projects/index.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../talks/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../talks/index.html"> 
 <span class="menu-text">Talks</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -177,17 +121,17 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-publications">    
         <li>
-    <a class="dropdown-item" href="../publications/book_chapters/index.html">
+    <a class="dropdown-item" href="../../publications/book_chapters/index.html">
  <span class="dropdown-text">Conference Papers</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../publications/working_papers/index.html">
+    <a class="dropdown-item" href="../../publications/working_papers/index.html">
  <span class="dropdown-text">Working Papers</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../blog/index.html"> 
+    <a class="nav-link" href="../../blog/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
@@ -210,14 +154,36 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Talks</h1>
-</div>
+<h1 class="title">What drives vaccine quality at the last mile? Evidence from WHO EVM assessments in 77 countries</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Vaccine supply chains</div>
+    <div class="quarto-category">Healthcare</div>
+    <div class="quarto-category">PhD</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    The Quality strand of the WHO EVM project: filtering 891 requirements down to a defensible short list, one winning model across all three targets, and the stress tests that make the list trustworthy.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Amirhossein Ghadiri </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 26, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -227,121 +193,19 @@ window.Quarto = {
 </header>
 
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="VmFjY2luZSUyMHN1cHBseSUyMGNoYWlucyUyQ0hlYWx0aGNhcmUlMkNQaEQ=" data-listing-date-sort="1787698800000" data-listing-file-modified-sort="1787755221964" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="144">
-<div class="thumbnail"><a href="../talks/evm-vaccine-quality/index.html" class="no-external">
-
-<img loading="lazy" src="../talks/evm-vaccine-quality/cover.svg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../talks/evm-vaccine-quality/index.html" class="no-external">What drives vaccine quality at the last mile? Evidence from WHO EVM assessments in 77 countries</a>
-</h3>
-<div class="delink listing-description"><a href="../talks/evm-vaccine-quality/index.html" class="no-external">
-<p>The Quality strand of the WHO EVM project: filtering 891 requirements down to a defensible short list, one winning model across all three targets, and the stress tests that make the list trustworthy.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../talks/evm-vaccine-quality/index.html" class="no-external">
-<div class="listing-date">
-Aug 26, 2026
-</div>
-<div class="listing-author">
-Amirhossein Ghadiri
-</div>
+<a href="slides/evm_vaccine_quality.html" target="_blank" rel="noopener noreferrer">
+  <button id="journal-article-btn">
+    <i class="fas fa-display"></i> Open slides
+  </button>
 </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Rmxvb2RzJTJDSGVhbHRoY2FyZSUyQ1VuY2VydGFpbnR5JTJDUGhE" data-listing-date-sort="1783551600000" data-listing-file-modified-sort="1783452991970" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="126">
-<div class="thumbnail"><a href="../talks/uncertainty-summer-school/index.html" class="no-external">
+<p>This talk presents the Quality strand of our WHO Effective Vaccine Management project. Starting from 4,287 assessment rows and 891 requirements, it walks through the filters that produce one clean matrix of 2,258 last-mile facilities in 77 countries, the triage that sets aside four ceiling-bound targets, and the model comparison that the elastic net wins for the composite quality score and both multi-dose vial components.</p>
+<p>The findings come with their own stress tests: a shuffled-outcome calibration that produced zero false positives, agreement across six model families, an exposure check that explains why two requirements point the wrong way, and a complete-case refit that removes every invented value. The talk closes on what a shortened EVM-Lite instrument could keep, and on the causal work that comes next.</p>
 
-<img loading="lazy" src="../talks/uncertainty-summer-school/cover.svg" class="thumbnail-image">
 
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../talks/uncertainty-summer-school/index.html" class="no-external">Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels &amp; flooding</a>
-</h3>
-<div class="delink listing-description"><a href="../talks/uncertainty-summer-school/index.html" class="no-external">
-<p>PhD presentation for the DL4SG Summer School on uncertainty and the future: the problem, WP1 in depth, and how each work package answers a different kind of uncertainty.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../talks/uncertainty-summer-school/index.html" class="no-external">
-<div class="listing-date">
-Jul 9, 2026
-</div>
-<div class="listing-author">
-Amirhossein Ghadiri
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Rmxvb2RzJTJDSGVhbHRoY2FyZSUyQ1BoRA==" data-listing-date-sort="1782342000000" data-listing-file-modified-sort="1782324562665" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="141">
-<div class="thumbnail"><a href="../talks/nine-month-review/index.html" class="no-external">
 
-<img loading="lazy" src="../talks/nine-month-review/cover.svg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../talks/nine-month-review/index.html" class="no-external">Nine-month review: Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels &amp; flooding</a>
-</h3>
-<div class="delink listing-description"><a href="../talks/nine-month-review/index.html" class="no-external">
-<p>The whole project at nine months: the three work packages, detailed progress on WP1, and the plan for the next six months.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../talks/nine-month-review/index.html" class="no-external">
-<div class="listing-date">
-Jun 25, 2026
-</div>
-<div class="listing-author">
-Amirhossein Ghadiri
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Rmxvb2RzJTJDSGVhbHRoY2FyZSUyQ05MUA==" data-listing-date-sort="1781478000000" data-listing-file-modified-sort="1781966343023" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="150">
-<div class="thumbnail"><a href="../talks/wp1-floods-healthcare/index.html" class="no-external">
-
-<img loading="lazy" src="../talks/wp1-floods-healthcare/cover.svg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../talks/wp1-floods-healthcare/index.html" class="no-external">How floods disrupt healthcare</a>
-</h3>
-<div class="delink listing-description"><a href="../talks/wp1-floods-healthcare/index.html" class="no-external">
-<p>WP1 progress talk: mapping the mechanisms behind health service failure during floods, grounded in Wales.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../talks/wp1-floods-healthcare/index.html" class="no-external">
-<div class="listing-date">
-Jun 15, 2026
-</div>
-<div class="listing-author">
-Amirhossein Ghadiri
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -429,11 +293,6 @@ Amirhossein Ghadiri
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
-            // target, if specified
-            link.setAttribute("target", "_blank");
-            if (link.getAttribute("rel") === null) {
-              link.setAttribute("rel", "noopener");
-            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
