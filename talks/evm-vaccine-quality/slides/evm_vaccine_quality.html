@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
+
+  <meta name="author" content="Amirhossein Ghadiri, PhD Student">
+  <meta name="author" content="Bahman Rostami-Tabar, Supervisor">
+  <title>What drives vaccine quality at the last mile?</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-5fad44d5386fec81f74364f4f05a861e.css">
+  <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../../../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<meta property="og:title" content="What drives vaccine quality at the last mile?">
+<meta property="og:description" content="WHO EVM assessments across 77 countries | The Quality strand">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">What drives vaccine quality at the last mile?</h1>
+  <p class="subtitle">WHO EVM assessments across 77 countries | The Quality strand</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Amirhossein Ghadiri, PhD Student
+</div>
+        <p class="quarto-title-affiliation">
+            Data Lab for Social Good, Cardiff Business School, Cardiff University
+          </p>
+    </div>
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Bahman Rostami-Tabar, Supervisor
+</div>
+        <p class="quarto-title-affiliation">
+            Data Lab for Social Good, Cardiff Business School, Cardiff University
+          </p>
+    </div>
+</div>
+
+</section>
+<section id="a-fridge-in-a-rural-clinic" class="slide level2">
+<h2>A fridge in a rural clinic</h2>
+<p>An assessor walks into a small health facility. She opens the vaccine fridge.</p>
+<div class="fragment">
+<p>Inside sit opened multi-dose vials. Some carry the date they were opened. Some do not. Past 28 days, every dose in them must be thrown away.</p>
+</div>
+<div class="fragment">
+<p>The WHO has run this inspection at thousands of facilities in 77 countries, scoring each one against hundreds of supply-chain requirements.</p>
+</div>
+<div class="fragment">
+<p><span class="remember">Which of those requirements actually go with vaccines being in good condition? That is the question this talk answers.</span></p>
+<aside class="notes">
+<p>About 45 seconds. Tell it slowly, as a scene. The multi-dose vial detail is not decoration: the two component targets in this analysis are exactly about those vials, so this image carries the whole talk. Land the final line, pause, then agenda.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</div>
+</section>
+<section id="what-i-will-cover" class="slide level2">
+<h2>What I will cover</h2>
+<ol type="1">
+<li><span class="remember"><strong>The question</strong></span></li>
+<li><span class="graylight">The data and its filters</span></li>
+<li><span class="graylight">Targets and models</span></li>
+<li><span class="graylight">What drives quality</span></li>
+<li><span class="graylight">Stress-testing the answer</span></li>
+<li><span class="graylight">What it means and what follows</span></li>
+</ol>
+<aside class="notes">
+<p>15 seconds. One line each. This agenda comes back at every transition with the current section highlighted, so Bahman always knows where we are.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section>
+<section id="the-question" class="title-slide slide level1 graylight center">
+<h1>1. The question</h1>
+
+</section>
+<section id="one-assessment-three-strands-and-my-strand-is-quality" class="slide level2">
+<h2>One assessment, three strands, and my strand is quality</h2>
+<p>The WHO Effective Vaccine Management (EVM) assessment scores facilities on hundreds of requirements and on a set of performance outcomes.</p>
+<ul>
+<li>Our team splits the outcomes three ways: <strong>availability</strong> (Bahman), <strong>efficiency</strong> (Jayeed), and <strong>quality</strong>, which is mine</li>
+<li>Quality means the composite score <code>QU</code> and its two multi-dose vial components: <code>R0712</code>, vials never used more than 28 days after opening, and <code>R0722</code>, no opened vials in stock beyond 28 days</li>
+<li>The applied goal is evidence for a shorter instrument, an <strong>EVM-Lite</strong>: which few requirements would a short checklist keep?</li>
+</ul>
+<aside class="notes">
+<p>About 55 seconds. Set the division of labour in one breath, then slow down on the two components: read both definitions out loud, because every later slide leans on them. Close on EVM-Lite as the destination.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="explanation-not-prediction" class="slide level2">
+<h2>Explanation, not prediction</h2>
+<p>Following Shmueli (2010), the question is which requirements go with quality, not how to forecast a facility’s score. <sup>1</sup></p>
+<ul>
+<li>The yardstick is <strong>R squared on unseen facilities</strong>: no error metrics like RMSE anywhere</li>
+<li>Only models that carry <strong>readable coefficients</strong> may report an answer</li>
+<li>Every claim in the underlying document is produced by visible code in that document, so each number traces back to the cell that made it</li>
+</ul>
+<p><span class="remember">The deliverable is a defensible short list of requirements, not a forecasting engine.</span></p>
+<aside class="notes">
+<p>About 40 seconds. This slide sets the rules of the game. If a tree model fits better but cannot explain, it does not get to speak; that principle returns in section 3. Read the remember line.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Shmueli, G. (2010). To explain or to predict? <em>Statistical Science</em>, 25(3), 289-310.</p></li></ol></aside></section>
+<section id="what-i-will-cover-1" class="slide level2">
+<h2>What I will cover</h2>
+<ol type="1">
+<li><span class="graylight">The question</span></li>
+<li><span class="remember"><strong>The data and its filters</strong></span></li>
+<li><span class="graylight">Targets and models</span></li>
+<li><span class="graylight">What drives quality</span></li>
+<li><span class="graylight">Stress-testing the answer</span></li>
+<li><span class="graylight">What it means and what follows</span></li>
+</ol>
+<aside class="notes">
+<p>5 seconds. Just move the highlight and go.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="the-data-and-its-filters" class="title-slide slide level1 graylight center">
+<h1>2. The data and its filters</h1>
+
+</section>
+<section id="from-4287-rows-to-one-clean-matrix" class="slide level2">
+<h2>From 4,287 rows to one clean matrix</h2>
+<svg viewbox="0 0 1680 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Filtering funnel for facilities and requirements" style="width:100%;max-width:1250px;height:auto;display:block;margin:0 auto;">
+<g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif"> <text x="20" y="95" font-size="24" fill="#33495d">Facilities</text> <text x="20" y="285" font-size="24" fill="#33495d">Requirements</text> <g fill="#e3edf9" stroke="#7ba3d4" stroke-width="1.5"> <rect x="170" y="45" width="255" height="95" rx="6"></rect> <rect x="545" y="45" width="255" height="95" rx="6"></rect> <rect x="920" y="45" width="255" height="95" rx="6"></rect> <rect x="170" y="235" width="215" height="95" rx="6"></rect> <rect x="480" y="235" width="215" height="95" rx="6"></rect> <rect x="790" y="235" width="215" height="95" rx="6"></rect> <rect x="1100" y="235" width="180" height="95" rx="6"></rect> <rect x="1370" y="105" width="290" height="200" rx="6"></rect> </g> <g stroke="#8a97a6" stroke-width="2" fill="none"> <line x1="425" y1="92" x2="545" y2="92"></line> <line x1="800" y1="92" x2="920" y2="92"></line> <line x1="385" y1="282" x2="480" y2="282"></line> <line x1="695" y1="282" x2="790" y2="282"></line> <line x1="1005" y1="282" x2="1100" y2="282"></line> <line x1="1175" y1="120" x2="1370" y2="160"></line> <line x1="1280" y1="282" x2="1370" y2="250"></line> </g> <g fill="#8a97a6"> <path d="M545 92 L533 86 L533 98 Z"></path> <path d="M920 92 L908 86 L908 98 Z"></path> <path d="M480 282 L468 276 L468 288 Z"></path> <path d="M790 282 L778 276 L778 288 Z"></path> <path d="M1100 282 L1088 276 L1088 288 Z"></path> <path d="M1370 160 L1356 158 L1360 169 Z"></path> <path d="M1370 250 L1358 244 L1360 256 Z"></path> </g> <g font-size="25" fill="#1f6db4" text-anchor="middle"> <text x="297" y="83">4,287</text> <text x="297" y="113">assessment rows</text> <text x="672" y="83">2,290</text> <text x="672" y="113">Service Points</text> <text x="1047" y="83">2,258</text> <text x="1047" y="113">scored on quality</text> <text x="277" y="273">891</text> <text x="277" y="303">requirements</text> <text x="587" y="273">207</text> <text x="587" y="303">inputs only</text> <text x="897" y="273">171</text> <text x="897" y="303">widely applicable</text> <text x="1190" y="273">170</text> <text x="1190" y="303">unique</text> <text x="1515" y="175">2,258 facilities</text> <text x="1515" y="210">172 predictors</text> <text x="1515" y="245">77 countries</text> </g> <g font-size="19" fill="#33495d" text-anchor="middle"> <text x="485" y="70">keep last mile</text> <text x="860" y="70">drop unscored</text> <text x="432" y="260">children of inputs</text> <text x="742" y="245">drop if rarely</text> <text x="742" y="266">applicable</text> <text x="1052" y="260">drop 1 duplicate</text> </g> </g>
+</svg>
+<p>Plus a circularity screen: <strong>0 input requirements</strong> share a questionnaire item with the quality scores; 2 outputs do and outputs are excluded anyway.</p>
+<aside class="notes">
+<p>About 70 seconds. Walk the figure fully, top lane first: 4,287 assessment rows across all levels; keep the 2,290 Service Points because that is the last mile where vaccines meet patients; 2,258 of them actually have a quality score. Bottom lane: 891 requirements in the workbook; 207 are input requirements at child level, the actionable ones; 36 go because they are not applicable at ninety percent or more of facilities; one exact duplicate goes. The two lanes meet in the final matrix: 2,258 by 172, the 170 requirements plus assessment year and target population, spread over 77 countries. Then the circularity line: nothing on the predictor side restates the outcome by construction.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-year-column-is-a-country-label-in-disguise" class="slide level2">
+<h2>The year column is a country label in disguise</h2>
+<p>A check on the scored facilities shows that <strong>every one of the 77 countries was assessed in exactly one year</strong>.</p>
+<ul>
+<li>So the year column separates countries from each other; it carries no within-country change over time</li>
+<li>Any association the year shows means “the countries assessed in some years score better than those assessed in others”</li>
+<li>It is kept in the matrix but never read as time, and this reading matters twice later in the talk</li>
+</ul>
+<aside class="notes">
+<p>About 35 seconds. Small check, big consequence. Flag that it returns in the findings section, where the year comes out conclusive for the components, and that it would be easy to misread as a trend.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-i-will-cover-2" class="slide level2">
+<h2>What I will cover</h2>
+<ol type="1">
+<li><span class="graylight">The question</span></li>
+<li><span class="graylight">The data and its filters</span></li>
+<li><span class="remember"><strong>Targets and models</strong></span></li>
+<li><span class="graylight">What drives quality</span></li>
+<li><span class="graylight">Stress-testing the answer</span></li>
+<li><span class="graylight">What it means and what follows</span></li>
+</ol>
+<aside class="notes">
+<p>5 seconds.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="targets-and-models" class="title-slide slide level1 graylight center">
+<h1>3. Targets and models</h1>
+
+</section>
+<section id="four-of-the-seven-targets-are-already-at-the-ceiling" class="slide level2">
+<h2>Four of the seven targets are already at the ceiling</h2>
+<p>Screening over five repeated splits, with seven candidate targets: the composite and its six components.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Target</th>
+<th>At full marks</th>
+<th>Best test R²</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>R0712</code> multi-dose vials, use window</td>
+<td>54.9%</td>
+<td>0.185</td>
+</tr>
+<tr class="even">
+<td><code>R0722</code> multi-dose vials, stock</td>
+<td>54.5%</td>
+<td>0.174</td>
+</tr>
+<tr class="odd">
+<td><code>QU</code> composite quality</td>
+<td>58.2%</td>
+<td>0.067</td>
+</tr>
+<tr class="even">
+<td><code>R0710</code> <code>R0711</code> <code>R0713</code> <code>R0716</code></td>
+<td>93 to 97%</td>
+<td>at or below zero</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Carried forward: the composite and the two multi-dose components.</strong> TabPFN, a pre-trained transformer with nothing in common with these models, produces the same ordering, and its 0.242 on <code>R0712</code> is the best figure in the screen.</p>
+<aside class="notes">
+<p>About 55 seconds. Guide through the table row by row. The four set-aside targets cover expired and heat-damaged stock: almost everyone passes, so there is nothing left to explain, and that near-universal pass is itself a finding about the last mile. What separates facilities is multi-dose vial handling. Then the TabPFN sentence: same ordering from a completely different model family means the triage is a property of the data, not of the models chosen first.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="only-coefficient-models-may-report-and-the-elastic-net-wins-all-three" class="slide level2">
+<h2>Only coefficient models may report, and the elastic net wins all three</h2>
+<p>Ten model families ran over twenty repeated 75/25 splits inside leakage-free pipelines.</p>
+<ul>
+<li>Tree ensembles fit training facilities almost perfectly (adjusted R² of 1.000 for XGBoost) while a fraction survives on unseen ones: that is memorisation, and they carry no coefficient to report</li>
+<li>Among eligible models, <strong>the elastic net wins every target</strong>: <span class="strong-blue">0.062</span> on <code>QU</code>, <span class="strong-blue">0.192</span> on <code>R0712</code>, <span class="strong-blue">0.183</span> on <code>R0722</code></li>
+<li>The LASSO ties it to three decimals; the gamma shortfall model is close on the composite only</li>
+</ul>
+<p><span class="remember">The useful signal is sparse: a handful of requirements carrying weight against 172 competitors.</span></p>
+<aside class="notes">
+<p>About 65 seconds. First bullet is the eligibility rule in action: random forest actually posts the best raw test number on the components, 0.238, but with train-test gaps of 0.65 to 0.80 it cannot explain, so it never becomes the reporting model. Second bullet: same winner three times. Read the remember line: a sparse winner on every target is itself informative about the data.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="country-matters-and-that-is-exactly-why-it-is-left-out" class="slide level2">
+<h2>Country matters, and that is exactly why it is left out</h2>
+<p>Adding one column per country to each chosen model:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Target</th>
+<th>Without country</th>
+<th>With country</th>
+<th>Variance between countries</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>QU</code></td>
+<td>0.062</td>
+<td>0.119</td>
+<td>20.7%</td>
+</tr>
+<tr class="even">
+<td><code>R0712</code></td>
+<td>0.192</td>
+<td>0.323</td>
+<td>41.0%</td>
+</tr>
+<tr class="odd">
+<td><code>R0722</code></td>
+<td>0.183</td>
+<td>0.305</td>
+<td>41.1%</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The gain is real and it is <strong>background</strong>: income, infrastructure, everything the assessment never measures, nothing a facility can act on</li>
+<li>With country in the model, every requirement coefficient becomes a within-country association, hiding how small that signal is</li>
+</ul>
+<aside class="notes">
+<p>About 55 seconds. Walk the table left to right: the composite nearly doubles, the components jump by more, and the third column explains why, a fifth to two fifths of variation lies between countries. Then the reasoning: the question is about requirements, so the main specification excludes country and pays a stated price. The stress-testing section measures that price directly.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-i-will-cover-3" class="slide level2">
+<h2>What I will cover</h2>
+<ol type="1">
+<li><span class="graylight">The question</span></li>
+<li><span class="graylight">The data and its filters</span></li>
+<li><span class="graylight">Targets and models</span></li>
+<li><span class="remember"><strong>What drives quality</strong></span></li>
+<li><span class="graylight">Stress-testing the answer</span></li>
+<li><span class="graylight">What it means and what follows</span></li>
+</ol>
+<aside class="notes">
+<p>5 seconds.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="what-drives-quality" class="title-slide slide level1 graylight center">
+<h1>4. What drives quality</h1>
+
+</section>
+<section id="four-requirements-drive-the-composite-and-two-point-the-wrong-way" class="slide level2">
+<h2>Four requirements drive the composite, and two point the wrong way</h2>
+<p>200 bootstrap resamples of the elastic net; conclusive means the 95% interval excludes zero.</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Code</th>
+<th>Requirement</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>R0290</code></td>
+<td>Staff know the discard time of multi-dose vials</td>
+<td><span class="strong-blue">+0.0114</span></td>
+</tr>
+<tr class="even">
+<td><code>R0322</code></td>
+<td>The facility has multi-dose vial SOPs</td>
+<td><span class="strong-blue">+0.0105</span></td>
+</tr>
+<tr class="odd">
+<td><code>R0040</code></td>
+<td>Sufficient positive cold storage capacity</td>
+<td><span class="orange">−0.0121</span></td>
+</tr>
+<tr class="even">
+<td><code>R0156</code></td>
+<td>The temperature form is graphical</td>
+<td><span class="orange">−0.0078</span></td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p><span class="remember">Meeting an EVM requirement should not make vaccines worse. Section 5 resolves this puzzle.</span></p>
+<aside class="notes">
+<p>About 70 seconds. Guide through every row. The two positives are exactly what the instrument intends, and both are about multi-dose vials, echoing the opening story. Then slow down on the two negatives: more cold storage capacity and a nicer-looking form go with lower quality. Pause before revealing the remember line, let the puzzle register, and promise the resolution rather than giving it away.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</div>
+</section>
+<section id="the-components-agree-what-staff-know-moves-the-needle" class="slide level2">
+<h2>The components agree: what staff know moves the needle</h2>
+<p>All conclusive component effects are positive, estimated the same way on each component’s own facilities.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong><code>R0712</code> (4 conclusive)</strong></p>
+<ul>
+<li><code>R0290</code> discard time <span class="strong-blue">+0.039</span></li>
+<li><code>R0257</code> trained to monitor performance <span class="strong-blue">+0.039</span></li>
+<li><code>R0272</code> storage principles <span class="strong-blue">+0.029</span></li>
+<li><code>R0037</code> fire extinguishers <span class="strong-blue">+0.028</span></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong><code>R0722</code> (5 conclusive)</strong></p>
+<ul>
+<li><code>R0037</code> fire extinguishers <span class="strong-blue">+0.044</span></li>
+<li><code>R0293</code> opened-vial wastage types <span class="strong-blue">+0.039</span></li>
+<li><code>R0290</code> discard time <span class="strong-blue">+0.035</span></li>
+<li><code>R0358</code> staff paid on time <span class="strong-blue">+0.033</span></li>
+<li><code>R0129</code> waste in proper bins <span class="strong-blue">+0.030</span></li>
+</ul>
+</div></div>
+<p><span class="remember"><code>R0290</code>, knowing the discard time, is the only requirement on all three lists.</span></p>
+<aside class="notes">
+<p>About 70 seconds. Read both columns aloud, then land the thread: staff knowledge and training dominate, and knowing the discard time appears everywhere. Also name the odd ones out now, fire extinguishers and salaries and waste bins have no route to a vial, and say that the next section deals with them. One more note: the assessment year is also conclusive for both components, which is the country label from section 2 showing through, not a change over time.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-i-will-cover-4" class="slide level2">
+<h2>What I will cover</h2>
+<ol type="1">
+<li><span class="graylight">The question</span></li>
+<li><span class="graylight">The data and its filters</span></li>
+<li><span class="graylight">Targets and models</span></li>
+<li><span class="graylight">What drives quality</span></li>
+<li><span class="remember"><strong>Stress-testing the answer</strong></span></li>
+<li><span class="graylight">What it means and what follows</span></li>
+</ol>
+<aside class="notes">
+<p>5 seconds.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="stress-testing-the-answer" class="title-slide slide level1 graylight center">
+<h1>5. Stress-testing the answer</h1>
+
+</section>
+<section id="thirty-shuffled-outcomes-produced-zero-false-positives" class="slide level2">
+<h2>Thirty shuffled outcomes produced zero false positives</h2>
+<p>Two checks on whether the lists can be trusted name by name.</p>
+<ul>
+<li><strong>Shuffle the outcome, keep everything else</strong>: ten shuffles per target under identical settings produced 0 conclusive effects every single time, against real counts of 4, 4 and 5</li>
+<li><strong>Remove every invented value</strong>: refitting only on facilities where the leading requirements were actually scored, all 13 effects keep their direction, 9 of 13 stay conclusive</li>
+<li>One flag: the multi-dose SOP effect on the composite shrinks close to zero without the filled rows, so it leans on the median filling and is held more lightly</li>
+</ul>
+<aside class="notes">
+<p>About 55 seconds. First bullet is the calibration: the same machinery that yields the real lists yields nothing at all out of pure noise, so a list of this length cannot be luck. Second bullet addresses the filling compromise: the linear models are handed a median where a requirement did not apply, and the directions all survive without it. Name the R0322 flag honestly.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="six-different-model-families-point-at-the-same-names" class="slide level2">
+<h2>Six different model families point at the same names</h2>
+<p>Permutation importance, computed identically for ridge, fractional logit, boosted trees, bagged trees, randomised trees and XGBoost.</p>
+<ul>
+<li>On the composite: the graphical form named by <strong>6 of 6</strong> families, cold storage capacity and the discard time by <strong>5 of 6</strong></li>
+<li>On the components: the top effect of each is named by <strong>6 of 6</strong>, discard time for <code>R0712</code> and opened-vial wastage knowledge for <code>R0722</code></li>
+<li>TabPFN, allowed only to re-rank, keeps the same names near the top</li>
+</ul>
+<p><span class="remember">Agreement across models that fit in genuinely different ways cannot be one algorithm’s artefact.</span></p>
+<aside class="notes">
+<p>About 50 seconds. The point is independence: families that fill missing values and families that never do, linear and tree-based, all reach for the same columns. Note the design honesty: TabPFN is deliberately not an independent nominator, it can demote candidates but cannot introduce a name of its own.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-negative-effects-are-the-assessment-exposing-itself" class="slide level2">
+<h2>The negative effects are the assessment exposing itself</h2>
+<p>Half of the composite’s parts are only scored when the assessor observes a session in progress. Facilities with vaccines actively in circulation face the harder questions.</p>
+<div class="fragment">
+<ul>
+<li>Every one of the six most-named requirements carries <strong>positive extra exposure</strong>: meeting it marks a busy facility (+0.04 to +0.11)</li>
+<li>The only <strong>negative</strong> quality gaps are exactly the two puzzles: cold storage capacity <span class="orange">−0.048</span> and the graphical form <span class="orange">−0.026</span></li>
+<li>Every staff-knowledge requirement stays <strong>positive despite the penalty</strong>, led by the discard time at <span class="strong-blue">+0.076</span></li>
+</ul>
+<p><span class="remember">The rule this feeds: a statistical signal and a route from the requirement to the vial, both required.</span></p>
+<aside class="notes">
+<p>About 70 seconds. This is the resolution promised in section 4, so take it slowly. First the mechanism: well-equipped facilities are busy facilities, busy facilities get asked the hard questions, so equipment and paperwork requirements pick up a penalty that has nothing to do with the requirement itself. Then the split: the negative gaps land precisely on the equipment and paperwork pair, the positives all on what staff know. Close with the rule, because it is the practical filter for EVM-Lite.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</div>
+</section>
+<section id="take-away-the-country-resemblance-and-see-what-is-left" class="slide level2">
+<h2>Take away the country resemblance and see what is left</h2>
+<p>Two ways of asking whether the requirement signal travels beyond the assessed countries.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Target</th>
+<th>Random folds</th>
+<th>Whole countries held out</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>QU</code></td>
+<td>0.054</td>
+<td><span class="orange">−0.027</span></td>
+</tr>
+<tr class="even">
+<td><code>R0712</code></td>
+<td>0.178</td>
+<td>0.060</td>
+</tr>
+<tr class="odd">
+<td><code>R0722</code></td>
+<td>0.168</td>
+<td>0.039</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Subtracting each country’s own average from everything: training 0.139, test <span class="orange">−0.154</span>, a collapse</li>
+<li><strong>Every headline figure is regime-dependent</strong>: a shortened checklist used inside the assessed countries can quote the left column; any claim about a new country must quote the right one</li>
+</ul>
+<aside class="notes">
+<p>About 55 seconds. Walk the table: random folds describe one more facility in a country the data already covers; grouped folds describe a country never seen, and every figure falls. The demeaning line is the same message from inside a single split. This is the most important caveat in the talk, read the bold sentence exactly as written.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-i-will-cover-5" class="slide level2">
+<h2>What I will cover</h2>
+<ol type="1">
+<li><span class="graylight">The question</span></li>
+<li><span class="graylight">The data and its filters</span></li>
+<li><span class="graylight">Targets and models</span></li>
+<li><span class="graylight">What drives quality</span></li>
+<li><span class="graylight">Stress-testing the answer</span></li>
+<li><span class="remember"><strong>What it means and what follows</strong></span></li>
+</ol>
+<aside class="notes">
+<p>5 seconds.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="what-it-means-and-what-follows" class="title-slide slide level1 graylight center">
+<h1>6. What it means and what follows</h1>
+
+</section>
+<section id="four-requirements-keep-most-of-what-170-explain" class="slide level2">
+<h2>Four requirements keep most of what 170 explain</h2>
+<p>Refitting each target’s model on its conclusive requirements alone, same twenty splits:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Target</th>
+<th>Full set (172)</th>
+<th>Conclusive only</th>
+<th>Retained</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>QU</code></td>
+<td>0.062</td>
+<td>0.057 with 4</td>
+<td>~92%</td>
+</tr>
+<tr class="even">
+<td><code>R0722</code></td>
+<td>0.183</td>
+<td>0.146 with 5</td>
+<td>~80%</td>
+</tr>
+<tr class="odd">
+<td><code>R0712</code></td>
+<td>0.192</td>
+<td>0.129 with 4</td>
+<td>~67%</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>With every calibration clean, the short lists can be defended entry by entry</li>
+<li>One declared optimism: the lists were chosen on the same facilities the refits split, so these are upper bounds on a list fixed in advance</li>
+</ul>
+<p><span class="remember">That is the sentence an EVM-Lite needs.</span></p>
+<aside class="notes">
+<p>About 55 seconds. Walk the table: the composite keeps nearly everything on four requirements; the components keep the larger part on four or five. Mention that adding the two context columns lifts R0712 to 0.174, but that recovery is mostly the country label, not something a facility controls. State the optimism caveat plainly, Bahman will ask otherwise.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="associations-today-causes-next" class="slide level2">
+<h2>Associations today, causes next</h2>
+<p>Everything reported is association, and the two confounds found are exactly what causal designs handle.</p>
+<ul>
+<li>The <strong>exposure artefact</strong> on the composite and the <strong>well-run-facility proxy</strong> on the components both survive every statistical test, because the pattern in the data is real</li>
+<li>Next step: a causal treatment of the top-ranked requirements, rather than another round of the same modelling</li>
+<li>A literature review to state in advance which requirements should matter, instead of annotating a list the data produced</li>
+</ul>
+<aside class="notes">
+<p>About 40 seconds. Keep it forward-looking: the machinery is now trustworthy, so the natural next move is causal identification on the short list, plus the literature grounding. This is the discussion I want to have with Bahman after the talk.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-one-slide-version" class="slide level2">
+<h2>The one-slide version</h2>
+<ul>
+<li>Out of <strong>170</strong> filtered requirements across <strong>77</strong> countries, quality at the last mile comes down to a handful, led by <strong>staff knowing the discard time of multi-dose vials</strong></li>
+<li>The list survives shuffled outcomes, six model families, an exposure check, and the removal of every invented value</li>
+<li>What travels to unseen countries is much smaller than the headline, and saying so is part of the result</li>
+</ul>
+<p><strong>Thank you.</strong> Questions welcome; backup slides follow.</p>
+<aside class="notes">
+<p>About 30 seconds. Three sentences, slow, then stop on time. Do not read the backup slides unless asked.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="backup" class="title-slide slide level1 graylight center">
+<h1>Backup</h1>
+
+</section>
+<section id="backup-how-the-choice-of-model-was-made" class="slide level2">
+<h2>Backup: how the choice of model was made</h2>
+<ul>
+<li>All ten families over the same twenty 75/25 splits: OLS, ridge, LASSO, elastic net, fractional logit, gamma shortfall, boosted trees, bagged trees, randomised trees, XGBoost</li>
+<li>Penalties earn their keep: OLS is the weakest linear model on unseen facilities for every one of the seven targets</li>
+<li>Elastic net alphas: 0.012 (<code>QU</code>), 0.054 (<code>R0712</code>), 0.054 (<code>R0722</code>); LASSO ties to three decimals throughout</li>
+<li>AIC and BIC, computed as a supplement, favour the models that do worst on unseen facilities, which is why repeated splits decide</li>
+</ul>
+<aside class="notes">
+<p>For questions on model selection. The AIC point in one line: an inside-the-sample criterion rewards exactly the hard fitting that the repeated splits exist to discount.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="backup-two-ways-of-handling-values-that-do-not-exist" class="slide level2">
+<h2>Backup: two ways of handling values that do not exist</h2>
+<ul>
+<li>Where a requirement does not apply, linear models need a number: median filling alone, or median plus not-applicable flags</li>
+<li>Flags fit slightly better, +0.02 to +0.03, about the size of the split-to-split spread, with larger overfit gaps</li>
+<li>Median alone is kept: half the columns, and a flag coefficient is not something anyone can act on</li>
+<li>The reassurance: the no-filling families, boosted trees, XGBoost and TabPFN, sort the targets the same way, and the complete-case check in section 5 removes the filling entirely</li>
+</ul>
+<aside class="notes">
+<p>For questions on missing data. The honest version: flags win narrowly on fit and lose on parsimony and actionability.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="backup-quality-as-ordered-bands" class="slide level2">
+<h2>Backup: quality as ordered bands</h2>
+<ul>
+<li>Cutting the score into four ordered bands (cut points 0.6, 0.8, 0.95; 58% of facilities in the top band)</li>
+<li>The ordinal model earns the best weighted kappa, 0.092, still weak agreement by any conventional reading</li>
+<li>Always naming the largest band beats it on plain accuracy, 0.582 against 0.496</li>
+<li>The top-twenty requirement list changes (7 of 20 shared with the continuous analysis) while no measure of fit improves: banding buys nothing here</li>
+</ul>
+<aside class="notes">
+<p>For questions on whether the continuous score is the right framing.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="backup-tabpfns-role-precisely" class="slide level2">
+<h2>Backup: TabPFN’s role, precisely</h2>
+<ul>
+<li>A pre-trained tabular transformer (Hollmann et al., 2025, <em>Nature</em>), fitted in one forward pass, no filled values needed</li>
+<li>Used twice, both times deliberately subordinate: corroborating the target triage, and re-ranking 62 candidate requirements on 250 test facilities</li>
+<li>It may demote a name but can never introduce one, so the reported lists stay coefficient-backed</li>
+<li>Its top re-ranks: correct storage temperatures, AM and PM temperature fields, packing SOPs, then the discard time and cold storage capacity</li>
+</ul>
+<aside class="notes">
+<p>For questions on the foundation model. The design principle: the chosen model must carry coefficients; TabPFN is a cross-check, never a nominator.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+
+
+</section></section>
+
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p><i class="fa-brands fa-github"></i> <a href="https://github.com/amirhosseinghdv">amirhosseinghdv</a> <i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/amirhossein-ghadiri-8296781a6/">amirhossein-ghadiri</a> 🌐 <a href="https://amirhosseinghdv.github.io/">amirhosseinghdv.github.io</a></p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
+'chalkboard': {"buttons":true,"theme":"chalkboard","toggleNotesButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/amirhosseinghdv\.github\.io\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

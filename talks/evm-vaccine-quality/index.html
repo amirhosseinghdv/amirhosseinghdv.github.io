@@ -6,9 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="My data sceince projects.">
+<meta name="author" content="Amirhossein Ghadiri">
+<meta name="dcterms.date" content="2026-08-26">
+<meta name="description" content="The Quality strand of the WHO EVM project: filtering 891 requirements down to a defensible short list, one winning model across all three targets, and the stress tests that make the list trustworthy.">
 
-<title>Data Science</title>
+<title>What drives vaccine quality at the last mile? Evidence from WHO EVM assessments in 77 countries</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,8 +39,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-listing/list.min.js"></script>
-<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -76,69 +76,11 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<meta property="og:title" content="Data Science">
-<meta property="og:description" content="My data sceince projects.">
-<meta property="og:image" content="https://amirhosseinghdv.github.io/projects/data_science/cover.jpg">
+<meta property="og:title" content="What drives vaccine quality at the last mile? Evidence from WHO EVM assessments in 77 countries">
+<meta property="og:description" content="The Quality strand of the WHO EVM project: filtering 891 requirements down to a defensible short list, one winning model across all three targets, and the stress tests that make the list trustworthy.">
+<meta property="og:image" content="https://amirhosseinghdv.github.io/talks/evm-vaccine-quality/cover.svg">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -215,26 +157,36 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Data Science</h1>
+<h1 class="title">What drives vaccine quality at the last mile? Evidence from WHO EVM assessments in 77 countries</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">R</div>
-    <div class="quarto-category">Python</div>
-    <div class="quarto-category">Quarto</div>
-    <div class="quarto-category">Postron</div>
-    <div class="quarto-category">Machine Learning</div>
+    <div class="quarto-category">Vaccine supply chains</div>
+    <div class="quarto-category">Healthcare</div>
+    <div class="quarto-category">PhD</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    My data sceince projects.
+    The Quality strand of the WHO EVM project: filtering 891 requirements down to a defensible short list, one winning model across all three targets, and the stress tests that make the list trustworthy.
   </div>
 </div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Amirhossein Ghadiri </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 26, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -244,96 +196,19 @@ window.Quarto = {
 </header>
 
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="U2NpZW5jZSUyQ1RlY2hub2xvZ3k=" data-listing-date-sort="1621641600000" data-listing-file-modified-sort="1787755941521" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="260">
-<div class="thumbnail"><a href="../../projects/data_science/first-post/index.html" class="no-external">
-
-<img loading="lazy" src="../../projects/data_science/first-post/cover.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../../projects/data_science/first-post/index.html" class="no-external">First Post</a>
-</h3>
-<div class="delink listing-description"><a href="../../projects/data_science/first-post/index.html" class="no-external">
-<p>Post description for first post</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../../projects/data_science/first-post/index.html" class="no-external">
-<div class="listing-date">
-May 22, 2021
-</div>
-<div class="listing-author">
-Harsha
-</div>
+<a href="slides/evm_vaccine_quality.html" target="_blank" rel="noopener noreferrer">
+  <button id="journal-article-btn">
+    <i class="fas fa-display"></i> Open slides
+  </button>
 </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="U2NpZW5jZSUyQ0RhdGE=" data-listing-date-sort="1621728000000" data-listing-file-modified-sort="1787755941524" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="263">
-<div class="thumbnail"><a href="../../projects/data_science/scond-post/index.html" class="no-external">
+<p>This talk presents the Quality strand of our WHO Effective Vaccine Management project. Starting from 4,287 assessment rows and 891 requirements, it walks through the filters that produce one clean matrix of 2,258 last-mile facilities in 77 countries, the triage that sets aside four ceiling-bound targets, and the model comparison that the elastic net wins for the composite quality score and both multi-dose vial components.</p>
+<p>The findings come with their own stress tests: a shuffled-outcome calibration that produced zero false positives, agreement across six model families, an exposure check that explains why two requirements point the wrong way, and a complete-case refit that removes every invented value. The talk closes on what a shortened EVM-Lite instrument could keep, and on the causal work that comes next.</p>
 
-<img loading="lazy" src="../../projects/data_science/scond-post/cover.jpg" class="thumbnail-image">
 
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../../projects/data_science/scond-post/index.html" class="no-external">Second Post</a>
-</h3>
-<div class="delink listing-description"><a href="../../projects/data_science/scond-post/index.html" class="no-external">
-<p>Post description for second post</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../../projects/data_science/scond-post/index.html" class="no-external">
-<div class="listing-date">
-May 23, 2021
-</div>
-<div class="listing-author">
-Alicia
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="U2NpZW5jZSUyQ0RhdGE=" data-listing-date-sort="1621814400000" data-listing-file-modified-sort="1787755941524" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26">
-<div class="thumbnail"><a href="../../projects/data_science/third-post/index.html" class="no-external">
 
-<p class="card-img-top"><img loading='lazy' src="third-post/index_files/figure-html/cell-2-output-1.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../../projects/data_science/third-post/index.html" class="no-external">Third Blog Post</a>
-</h3>
-<div class="delink listing-description"><a href="../../projects/data_science/third-post/index.html" class="no-external">
-<p>An example post where the source document is a Jupyter Notebook</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../../projects/data_science/third-post/index.html" class="no-external">
-<div class="listing-date">
-May 24, 2021
-</div>
-<div class="listing-author">
-Harsha
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -421,11 +296,6 @@ Harsha
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
-            // target, if specified
-            link.setAttribute("target", "_blank");
-            if (link.getAttribute("rel") === null) {
-              link.setAttribute("rel", "noopener");
-            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
