@@ -162,6 +162,7 @@ $selectionColor: #fff;
 // start using css here
 #title-slide > h1 {
   color: black;
+  font-size: 1.8em;   /* smaller title on the first slide only; theme default is 2.6em. Lower this number to shrink further, raise it to grow */
 }
 
 #title-slide .author {

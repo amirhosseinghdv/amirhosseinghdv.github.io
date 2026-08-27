@@ -1,11 +1,13 @@
 ---
 title: "What drives vaccine quality at the last mile?"
-subtitle: "WHO EVM assessments across 77 countries | The Quality strand"
+subtitle: "WHO EVM assessments across 77 countries | The Quality component"
 author:
   - Amirhossein Ghadiri, PhD Student
+  - Jayeed Bin Kibria, MSc Student
   - Bahman Rostami-Tabar, Supervisor
 institute:
   - Data Lab for Social Good, Cardiff Business School, Cardiff University
+  - Cardiff Business School, Cardiff University
   - Data Lab for Social Good, Cardiff Business School, Cardiff University
 format:
   revealjs:
@@ -26,90 +28,195 @@ format:
       toggleNotesButton: true
 ---
 
-## A fridge in a rural clinic
+## A fridge in a small clinic
 
-An assessor walks into a small health facility. She opens the vaccine fridge.
+<svg viewBox="0 0 1300 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A vaccine fridge and three opened vials, one dated, one undated, one expired" style="width:100%;max-width:1080px;height:auto;display:block;margin:0 auto;">
+  <g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif">
+  <rect x="40" y="30" width="300" height="330" rx="14" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2.5"/>
+  <line x1="40" y1="112" x2="340" y2="112" stroke="#7ba3d4" stroke-width="2.5"/>
+  <rect x="312" y="150" width="13" height="80" rx="6" fill="#7ba3d4"/>
+  <line x1="62" y1="205" x2="300" y2="205" stroke="#7ba3d4" stroke-width="1.5"/>
+  <line x1="62" y1="285" x2="300" y2="285" stroke="#7ba3d4" stroke-width="1.5"/>
+  <g fill="#1f6db4">
+    <rect x="76" y="163" width="15" height="40" rx="4"/>
+    <rect x="100" y="163" width="15" height="40" rx="4"/>
+    <rect x="124" y="163" width="15" height="40" rx="4"/>
+    <rect x="148" y="163" width="15" height="40" rx="4"/>
+    <rect x="76" y="243" width="15" height="40" rx="4"/>
+    <rect x="100" y="243" width="15" height="40" rx="4"/>
+    <rect x="124" y="243" width="15" height="40" rx="4"/>
+  </g>
+  <line x1="380" y1="195" x2="470" y2="195" stroke="#8a97a6" stroke-width="2.5"/>
+  <path d="M478 195 L462 187 L462 203 Z" fill="#8a97a6"/>
+  <g stroke-width="2.5" fill="#ffffff">
+    <rect x="558" y="110" width="64" height="150" rx="10" stroke="#1f6db4"/>
+    <rect x="768" y="110" width="64" height="150" rx="10" stroke="#D55E00"/>
+    <rect x="978" y="110" width="64" height="150" rx="10" stroke="#D55E00"/>
+  </g>
+  <g>
+    <rect x="561" y="192" width="58" height="62" rx="8" fill="#e3edf9"/>
+    <rect x="771" y="192" width="58" height="62" rx="8" fill="#e3edf9"/>
+    <rect x="981" y="192" width="58" height="62" rx="8" fill="#e3edf9"/>
+    <rect x="568" y="84" width="44" height="28" rx="5" fill="#1f6db4"/>
+    <rect x="778" y="84" width="44" height="28" rx="5" fill="#D55E00"/>
+    <rect x="988" y="84" width="44" height="28" rx="5" fill="#D55E00"/>
+  </g>
+  <g font-size="25" text-anchor="middle">
+    <text x="590" y="305" fill="#1f6db4">Opened 3 Aug</text>
+    <text x="590" y="340" fill="#33495d">day 23, still fine</text>
+    <text x="800" y="305" fill="#D55E00">No date written</text>
+    <text x="800" y="340" fill="#33495d">Can't tell</text>
+    <text x="1010" y="305" fill="#D55E00">Opened 12 Jul</text>
+    <text x="1010" y="340" fill="#33495d">day 45, must be binned</text>
+  </g>
+  </g>
+</svg>
 
 . . .
 
-Inside sit opened multi-dose vials. Some carry the date they were opened. Some do not. Past 28 days, every dose in them must be thrown away.
+Infrastructure, Equipment, IT, HR, Policies & procedures, and Financial resources checks have been conducted in thousands of facilities across 77 countries, scoring each against hundreds of supply chain checks.
 
 . . .
 
-The WHO has run this inspection at thousands of facilities in 77 countries, scoring each one against hundreds of supply-chain requirements.
-
-. . .
-
-[Which of those requirements actually go with vaccines being in good condition? That is the question this talk answers.]{.remember}
+[Which of those checks actually go with vaccines being in good condition? That is what I set out to answer.]{.remember}
 
 ::: {.notes}
-About 45 seconds. Tell it slowly, as a scene. The multi-dose vial detail is not decoration: the two component targets in this analysis are exactly about those vials, so this image carries the whole talk. Land the final line, pause, then agenda.
+About 60 seconds. Start with the picture and talk through it: the fridge on the left is what an assessor sees; on the right are three opened vials from that fridge. One was dated when it was opened and is still inside its window. One has no date at all, so nobody in that clinic can say whether it is safe. One is past the window and should already have been thrown away. Then the scale line, then read the question and pause.
 :::
 
 ## What I will cover
 
 1. [**The question**]{.remember}
-2. [The data and its filters]{.graylight}
+2. [The data and the filters]{.graylight}
 3. [Targets and models]{.graylight}
 4. [What drives quality]{.graylight}
 5. [Stress-testing the answer]{.graylight}
-6. [What it means and what follows]{.graylight}
+6. [What it means and what comes next]{.graylight}
 
 ::: {.notes}
-15 seconds. One line each. This agenda comes back at every transition with the current section highlighted, so Bahman always knows where we are.
+15 seconds. One line each. This slide comes back at every transition with the highlight moved, so you always know where we are.
 :::
 
-# 1. The question {.graylight}
+## One assessment, three components, and this is about Quality
 
-## One assessment, three strands, and my strand is quality
+The WHO Effective Vaccine Management assessment scores a facility against hundreds of checks, each with a code like `R0290` called requirements. It also scores a set of outcomes.
 
-The WHO Effective Vaccine Management (EVM) assessment scores facilities on hundreds of requirements and on a set of performance outcomes.
-
-- Our team splits the outcomes three ways: **availability** (Bahman), **efficiency** (Jayeed), and **quality**, which is mine
-- Quality means the composite score `QU` and its two multi-dose vial components: `R0712`, vials never used more than 28 days after opening, and `R0722`, no opened vials in stock beyond 28 days
-- The applied goal is evidence for a shorter instrument, an **EVM-Lite**: which few requirements would a short checklist keep?
+- Outcomes are **availability**, **efficiency**, and **quality**. This analysis is about **quality**.
+- The applied goal is a shorter instrument, an **EVM-Lite**. If a short checklist could check only a few things, which ones should they be?
 
 ::: {.notes}
-About 55 seconds. Set the division of labour in one breath, then slow down on the two components: read both definitions out loud, because every later slide leans on them. Close on EVM-Lite as the destination.
+About 45 seconds. Define requirement once, out loud, because every later slide uses the word. Then the division of labour in one breath. Land on EVM-Lite as the destination: that is what the whole talk is walking towards.
 :::
 
-## Explanation, not prediction
+## Quality is six checks: three during a session, three in the fridge
 
-Following Shmueli (2010), the question is which requirements go with quality, not how to forecast a facility's score. [^1]
+<svg viewBox="0 0 1300 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The 28 day window, and a grid of the six requirements that make up the quality score" style="width:100%;max-width:1040px;height:auto;display:block;margin:0 auto;">
+  <g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif">
+  <rect x="120" y="70" width="740" height="46" rx="6" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"/>
+  <rect x="860" y="70" width="300" height="46" rx="6" fill="#f7e3d6" stroke="#D55E00" stroke-width="2"/>
+  <line x1="120" y1="56" x2="120" y2="130" stroke="#33495d" stroke-width="2.5"/>
+  <line x1="860" y1="56" x2="860" y2="130" stroke="#33495d" stroke-width="2.5"/>
+  <g font-size="25" fill="#33495d">
+    <text x="120" y="42" text-anchor="middle">vial opened</text>
+    <text x="860" y="42" text-anchor="middle">28 days later</text>
+    <text x="490" y="101" text-anchor="middle" fill="#1f6db4">doses may still be given</text>
+    <text x="1010" y="101" text-anchor="middle" fill="#D55E00">every dose left is waste</text>
+  </g>
+  <g font-size="25" fill="#33495d" text-anchor="middle">
+    <text x="575" y="192">When a session is observed</text>
+    <text x="1045" y="192">When stock is inspected</text>
+  </g>
+  <g fill="#f4f6f8" stroke="#cfd6de" stroke-width="1.5">
+    <rect x="350" y="210" width="450" height="100" rx="8"/>
+    <rect x="820" y="210" width="450" height="100" rx="8"/>
+    <rect x="350" y="322" width="450" height="100" rx="8"/>
+    <rect x="820" y="322" width="450" height="100" rx="8"/>
+  </g>
+  <g fill="#e3edf9" stroke="#7ba3d4" stroke-width="2.5">
+    <rect x="350" y="434" width="450" height="100" rx="8"/>
+    <rect x="820" y="434" width="450" height="100" rx="8"/>
+  </g>
+  <g font-size="24" fill="#8a97a6">
+    <text x="374" y="244">R0710</text>
+    <text x="374" y="276">Expired vaccines are</text>
+    <text x="374" y="302">never administered</text>
+    <text x="844" y="244">R0713</text>
+    <text x="844" y="276">There are no expired</text>
+    <text x="844" y="302">vaccines in stock</text>
+    <text x="374" y="356">R0711</text>
+    <text x="374" y="388">Heat damaged vaccines</text>
+    <text x="374" y="414">are never administered</text>
+    <text x="844" y="356">R0716</text>
+    <text x="844" y="388">There are no heat damaged</text>
+    <text x="844" y="414">vaccines in stock</text>
+  </g>
+  <g font-size="24" fill="#33495d">
+    <text x="374" y="468" fill="#1f6db4">R0712</text>
+    <text x="374" y="500">No vial is used more than</text>
+    <text x="374" y="526">28 days after opening</text>
+    <text x="844" y="468" fill="#1f6db4">R0722</text>
+    <text x="844" y="500">No opened vial older than</text>
+    <text x="844" y="526">28 days is in stock</text>
+  </g>
+  <g font-size="25" fill="#33495d">
+    <text x="20" y="270">Expired</text>
+    <text x="20" y="380">Heat damaged</text>
+    <text x="20" y="472">Opened more than</text>
+    <text x="20" y="502">28 days ago</text>
+  </g>
+  </g>
+</svg>
 
-- The yardstick is **R squared on unseen facilities**: no error metrics like RMSE anywhere
-- Only models that carry **readable coefficients** may report an answer
-- Every claim in the underlying document is produced by visible code in that document, so each number traces back to the cell that made it
+The composite score `QU` is the combination of them all.
 
-[The deliverable is a defensible short list of requirements, not a forecasting engine.]{.remember}
+::: {.notes}
+About 70 seconds, and it earns the time because everything later refers back to this grid. Take the timeline first: a vial is opened at the left mark, doses can be given for 28 days, and anything left after the right mark is waste. Then read the grid as a table. Down the left are the three ways a vaccine goes bad: it expires, it gets too hot, which the vial monitor shows by darkening past its discard point, or it sits opened for too long. Across the top is where the assessor catches it, either watching a real immunisation session or inspecting what is in the fridge. Each failure is checked both ways, which gives six requirements, and the composite QU pools all six. Say that the two in blue are the ones I follow, and that the reason the other four fade out is coming in a couple of slides. Worth flagging now that the left column can only be scored when a session is running, because that fact comes back later to explain a strange result.
+:::
+
+## The aim here is to explain, not to predict or forecast 
+
+Following Shmueli (2010), the question here is which requirements go with quality and explain the variations in qualituy, not how to predict a facility's score. [^1]
+
+- Error metrics such as RMSE will not be reported because a small error would not tell me which requirement matters
+- Only models that hand back a **readable number per requirement** are allowed to give the answer
 
 [^1]: Shmueli, G. (2010). To explain or to predict? *Statistical Science*, 25(3), 289-310.
 
 ::: {.notes}
-About 40 seconds. This slide sets the rules of the game. If a tree model fits better but cannot explain, it does not get to speak; that principle returns in section 3. Read the remember line.
+About 40 seconds. Say why the distinction bites: a model can be excellent at guessing scores and still tell you nothing you could act on. That rule disqualifies a model later that fits better than the one I use, and I want the panel to see the rule before they see the casualty.
+:::
+
+## How to read every number I show
+
+Three things:
+
+- **R squared on unseen facilities.** Facilities differ in quality. R squared is the share of that difference the fitted model accounts for, from 0 for none to 1 for all. It will always be measured on facilities the model was never fitted on.
+- **Conclusive.**  Each model is fitted on 200 resamples of the facilities. A requirement counts as conclusive only if 95% of those runs put it on the same side of zero
+- **Size.** The quality score runs from 0 to 1, so an effect of 0.04 is about four points on a 100-point scale
+
+::: {.notes}
+About 55 seconds. This slide buys back time everywhere else, so do not rush it. The 200 resamples idea is worth a sentence in plain speech: shuffle which facilities you happen to look at, refit, and see whether the answer keeps pointing the same way.
 :::
 
 ## What I will cover
 
 1. [The question]{.graylight}
-2. [**The data and its filters**]{.remember}
+2. [**The data and the filters**]{.remember}
 3. [Targets and models]{.graylight}
 4. [What drives quality]{.graylight}
 5. [Stress-testing the answer]{.graylight}
-6. [What it means and what follows]{.graylight}
+6. [What it means and what comes next]{.graylight}
 
 ::: {.notes}
-5 seconds. Just move the highlight and go.
+5 seconds. Move the highlight and go.
 :::
 
-# 2. The data and its filters {.graylight}
+## From 4,287 rows down to one clean table
 
-## From 4,287 rows to one clean matrix
-
-<svg viewBox="0 0 1680 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Filtering funnel for facilities and requirements" style="width:100%;max-width:1250px;height:auto;display:block;margin:0 auto;">
+<svg viewBox="0 0 1680 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Filtering funnel for facilities and requirements" style="width:100%;max-width:1230px;height:auto;display:block;margin:0 auto;">
   <g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif">
-  <text x="20" y="95" font-size="24" fill="#33495d">Facilities</text>
-  <text x="20" y="285" font-size="24" fill="#33495d">Requirements</text>
+  <text x="20" y="95" font-size="22" fill="#33495d">Facilities</text>
+  <text x="20" y="285" font-size="22" fill="#33495d">Requirements</text>
   <g fill="#e3edf9" stroke="#7ba3d4" stroke-width="1.5">
     <rect x="170" y="45" width="255" height="95" rx="6"/>
     <rect x="545" y="45" width="255" height="95" rx="6"/>
@@ -138,7 +245,7 @@ About 40 seconds. This slide sets the rules of the game. If a tree model fits be
     <path d="M1370 160 L1356 158 L1360 169 Z"/>
     <path d="M1370 250 L1358 244 L1360 256 Z"/>
   </g>
-  <g font-size="25" fill="#1f6db4" text-anchor="middle">
+  <g font-size="23" fill="#1f6db4" text-anchor="middle">
     <text x="297" y="83">4,287</text>
     <text x="297" y="113">assessment rows</text>
     <text x="672" y="83">2,290</text>
@@ -154,339 +261,539 @@ About 40 seconds. This slide sets the rules of the game. If a tree model fits be
     <text x="1190" y="273">170</text>
     <text x="1190" y="303">unique</text>
     <text x="1515" y="175">2,258 facilities</text>
-    <text x="1515" y="210">172 predictors</text>
+    <text x="1515" y="210">172 columns</text>
     <text x="1515" y="245">77 countries</text>
   </g>
-  <g font-size="19" fill="#33495d" text-anchor="middle">
-    <text x="485" y="70">keep last mile</text>
-    <text x="860" y="70">drop unscored</text>
-    <text x="432" y="260">children of inputs</text>
-    <text x="742" y="245">drop if rarely</text>
-    <text x="742" y="266">applicable</text>
-    <text x="1052" y="260">drop 1 duplicate</text>
+  <g font-size="20" fill="#33495d" text-anchor="middle">
+    <text x="485" y="30">keep the last mile</text>
+    <text x="860" y="30">drop the unscored</text>
+    <text x="432" y="372">keep the actionable</text>
+    <text x="432" y="396">input requirements</text>
+    <text x="742" y="372">drop if rarely</text>
+    <text x="742" y="396">applicable</text>
+    <text x="1052" y="372">drop 1 duplicate</text>
   </g>
   </g>
 </svg>
 
-Plus a circularity screen: **0 input requirements** share a questionnaire item with the quality scores; 2 outputs do and outputs are excluded anyway.
+No input requirement shares a questionnaire item with the quality scores, so nothing on the left hand-side restates the answer.
 
 ::: {.notes}
-About 70 seconds. Walk the figure fully, top lane first: 4,287 assessment rows across all levels; keep the 2,290 Service Points because that is the last mile where vaccines meet patients; 2,258 of them actually have a quality score. Bottom lane: 891 requirements in the workbook; 207 are input requirements at child level, the actionable ones; 36 go because they are not applicable at ninety percent or more of facilities; one exact duplicate goes. The two lanes meet in the final matrix: 2,258 by 172, the 170 requirements plus assessment year and target population, spread over 77 countries. Then the circularity line: nothing on the predictor side restates the outcome by construction.
+About 75 seconds, the longest single slide, so guide it properly. Top row, left to right: 4,287 rows cover every level of the supply chain; I keep the 2,290 Service Points because that is the last mile, the fridge in the story; 2,258 of those have a quality score. Bottom row: 891 requirements in the workbook; 207 are the input requirements a manager can actually act on; 36 go because they apply to fewer than one facility in ten; one is an exact duplicate of another. The two rows meet on the right: 2,258 facilities, 172 columns, which is the 170 requirements plus assessment year and target population, across 77 countries. Then the line underneath: I checked that no requirement is scored from the same questionnaire item as the outcome, which would have made the whole thing circular.
 :::
 
-## The year column is a country label in disguise
+## The year column is really a country label
 
-A check on the scored facilities shows that **every one of the 77 countries was assessed in exactly one year**.
+Every one of the 77 countries was assessed in exactly one year. Not one country appears in two different years.
 
-- So the year column separates countries from each other; it carries no within-country change over time
-- Any association the year shows means "the countries assessed in some years score better than those assessed in others"
-- It is kept in the matrix but never read as time, and this reading matters twice later in the talk
+- So the year tells which group of countries a facility belongs to, and nothing about change over time
+- If the year looks important later, it means countries assessed in some years score better than countries assessed in others
 
 ::: {.notes}
-About 35 seconds. Small check, big consequence. Flag that it returns in the findings section, where the year comes out conclusive for the components, and that it would be easy to misread as a trend.
+- I keep the column, but I never read it as a trend, and this comes back twice
+::: 
+
+::: {.notes}
+About 35 seconds. Small check, large consequence. Flag now that the year turns out to matter for both components, so when it appears the panel already knows how to read it. Without this slide that result looks like a story about improvement over time, which would be wrong.
 :::
 
 ## What I will cover
 
 1. [The question]{.graylight}
-2. [The data and its filters]{.graylight}
+2. [The data and the filters]{.graylight}
 3. [**Targets and models**]{.remember}
 4. [What drives quality]{.graylight}
 5. [Stress-testing the answer]{.graylight}
-6. [What it means and what follows]{.graylight}
+6. [What it means and what comes next]{.graylight}
 
 ::: {.notes}
 5 seconds.
 :::
 
-# 3. Targets and models {.graylight}
+## Four of the seven targets have not much to explain
 
-## Four of the seven targets are already at the ceiling
-
-Screening over five repeated splits, with seven candidate targets: the composite and its six components.
-
-| Target | At full marks | Best test R² |
+| Target | Facilities at full marks | Best R² on unseen facilities |
 |---|---|---|
-| `R0712` multi-dose vials, use window | 54.9% | 0.185 |
-| `R0722` multi-dose vials, stock | 54.5% | 0.174 |
+| `R0712` vials, use within 28 days | 54.9% | 0.185 |
+| `R0722` vials, none left past 28 days | 54.5% | 0.174 |
 | `QU` composite quality | 58.2% | 0.067 |
-| `R0710` `R0711` `R0713` `R0716` | 93 to 97% | at or below zero |
+| `R0710` `R0711` `R0713` `R0716` | 93 to 97% | zero or below |
 
-**Carried forward: the composite and the two multi-dose components.** TabPFN, a pre-trained transformer with nothing in common with these models, produces the same ordering, and its 0.242 on `R0712` is the best figure in the screen.
+**The composite and the two vial components are carried forward.** TabPFN, a model that works in a completely different way, ranks the seven targets the same way, which reassures that this is about the data rather than the choice of model.
 
 ::: {.notes}
-About 55 seconds. Guide through the table row by row. The four set-aside targets cover expired and heat-damaged stock: almost everyone passes, so there is nothing left to explain, and that near-universal pass is itself a finding about the last mile. What separates facilities is multi-dose vial handling. Then the TabPFN sentence: same ordering from a completely different model family means the triage is a property of the data, not of the models chosen first.
+About 60 seconds. Read the table row by row. The four targets I set aside cover expired stock and heat damage, and almost every facility already passes them, so there is no variation left to explain. That near-universal pass is a finding in itself about the last mile. What still separates facilities is multi-dose vial handling. Then the TabPFN line: same ordering from a model with nothing in common with mine.
 :::
 
-## Only coefficient models may report, and the elastic net wins all three
+## The best-fitting model is not useful
 
-Ten model families ran over twenty repeated 75/25 splits inside leakage-free pipelines.
+Ten model families, each run over twenty repeated splits of the facilities into 75% for fitting and 25% for testing.
 
-- Tree ensembles fit training facilities almost perfectly (adjusted R² of 1.000 for XGBoost) while a fraction survives on unseen ones: that is memorisation, and they carry no coefficient to report
-- Among eligible models, **the elastic net wins every target**: [0.062]{.strong-blue} on `QU`, [0.192]{.strong-blue} on `R0712`, [0.183]{.strong-blue} on `R0722`
-- The LASSO ties it to three decimals; the gamma shortfall model is close on the composite only
-
-[The useful signal is sparse: a handful of requirements carrying weight against 172 competitors.]{.remember}
+- Random forest achieves the best raw test score on the three targets, 0.238, but it scores about 0.7 higher on the facilities it was fitted on. Huge overfit
+- XGBoost fits its training facilities perfectly, 1.000. Tre-based models are not useful for this problem
+- Among the models that can explain and have a low overfit gap, **the elastic net wins all three targets**: [0.062]{.strong-blue} for `QU`, [0.192]{.strong-blue} for `R0712`, [0.183]{.strong-blue} for `R0722`
 
 ::: {.notes}
-About 65 seconds. First bullet is the eligibility rule in action: random forest actually posts the best raw test number on the components, 0.238, but with train-test gaps of 0.65 to 0.80 it cannot explain, so it never becomes the reporting model. Second bullet: same winner three times. Read the remember line: a sparse winner on every target is itself informative about the data.
+About 65 seconds. This is the rule from the earlier slide biting. Random forest wins on paper and still loses, and I want that said plainly because it is the kind of thing a panel tests you on. The elastic net is worth one sentence of explanation: it keeps a small number of requirements and pushes the rest to exactly zero, so what comes out is already a short list.
 :::
 
-## Country matters, and that is exactly why it is left out
+## Knowing the country helps a lot, which is why it is put aside from the predictors
 
-Adding one column per country to each chosen model:
-
-| Target | Without country | With country | Variance between countries |
-|---|---|---|---|
-| `QU` | 0.062 | 0.119 | 20.7% |
-| `R0712` | 0.192 | 0.323 | 41.0% |
-| `R0722` | 0.183 | 0.305 | 41.1% |
-
-- The gain is real and it is **background**: income, infrastructure, everything the assessment never measures, nothing a facility can act on
-- With country in the model, every requirement coefficient becomes a within-country association, hiding how small that signal is
+<svg viewBox="0 0 1300 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bar chart comparing model fit with and without country columns" style="width:100%;max-width:1080px;height:auto;display:block;margin:0 auto;">
+  <g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif">
+  <line x1="150" y1="345" x2="1240" y2="345" stroke="#8a97a6" stroke-width="2"/>
+  <text x="60" y="200" font-size="21" fill="#33495d" transform="rotate(-90 60 200)" text-anchor="middle">R² unseen</text>
+  <g>
+    <rect x="230" y="295" width="90" height="50" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"/>
+    <rect x="330" y="250" width="90" height="95" fill="#1f6db4"/>
+    <rect x="590" y="191" width="90" height="154" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"/>
+    <rect x="690" y="87" width="90" height="258" fill="#1f6db4"/>
+    <rect x="950" y="199" width="90" height="146" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"/>
+    <rect x="1050" y="101" width="90" height="244" fill="#1f6db4"/>
+  </g>
+  <g font-size="24" fill="#33495d" text-anchor="middle">
+    <text x="275" y="285">0.062</text>
+    <text x="375" y="240">0.119</text>
+    <text x="635" y="181">0.192</text>
+    <text x="735" y="77">0.323</text>
+    <text x="995" y="189">0.183</text>
+    <text x="1095" y="91">0.305</text>
+    <text x="325" y="380" font-size="26">QU</text>
+    <text x="685" y="380" font-size="26">R0712</text>
+    <text x="1045" y="380" font-size="26">R0722</text>
+  </g>
+  <g font-size="23" fill="#33495d">
+    <rect x="230" y="405" width="26" height="18" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"/>
+    <text x="266" y="420">requirements only</text>
+    <rect x="590" y="405" width="26" height="18" fill="#1f6db4"/>
+    <text x="626" y="420">requirements plus one column per country</text>
+  </g>
+  </g>
+</svg>
 
 ::: {.notes}
-About 55 seconds. Walk the table left to right: the composite nearly doubles, the components jump by more, and the third column explains why, a fifth to two fifths of variation lies between countries. Then the reasoning: the question is about requirements, so the main specification excludes country and pays a stated price. The stress-testing section measures that price directly.
+Between a fifth and two fifths of all variation sits between countries. That is income and infrastructure, and no facility can act on it.
+::: 
+
+::: {.notes}
+About 55 seconds. Walk the chart: pale bars are the model I report, solid bars add one column per country, and every pair roughly doubles. Then the reasoning, which matters more than the numbers: my question is about requirements, and once country is in the model every requirement number becomes a within-country comparison, which hides how small the requirement signal really is. So I pay the price of the pale bars on purpose, and I measure that price in section 5.
 :::
 
 ## What I will cover
 
 1. [The question]{.graylight}
-2. [The data and its filters]{.graylight}
+2. [The data and the filters]{.graylight}
 3. [Targets and models]{.graylight}
 4. [**What drives quality**]{.remember}
 5. [Stress-testing the answer]{.graylight}
-6. [What it means and what follows]{.graylight}
+6. [What it means and what comes next]{.graylight}
 
 ::: {.notes}
 5 seconds.
 :::
 
-# 4. What drives quality {.graylight}
+## Four requirements drive the composite Quality score, and two have negative effect {.tight-table}
 
-## Four requirements drive the composite, and two point the wrong way
+<style>
+section.tight-table table { width: 100%; table-layout: fixed; font-size: 0.8em; }
+section.tight-table th, section.tight-table td { padding: 0.3em 0; vertical-align: middle; }
+section.tight-table th:nth-child(1), section.tight-table td:nth-child(1) { width: 12%; }
+section.tight-table th:nth-child(2), section.tight-table td:nth-child(2) { width: 72%; padding-left: 0; }
+section.tight-table th:nth-child(3), section.tight-table td:nth-child(3) { width: 16%; text-align: right !important; padding-right: 0; }
+</style>
 
-200 bootstrap resamples of the elastic net; conclusive means the 95% interval excludes zero.
-
-| Code | Requirement | Effect |
+| Code | What is checked | Effect |
 |---|---|---|
-| `R0290` | Staff know the discard time of multi-dose vials | [+0.0114]{.strong-blue} |
-| `R0322` | The facility has multi-dose vial SOPs | [+0.0105]{.strong-blue} |
-| `R0040` | Sufficient positive cold storage capacity | [−0.0121]{.orange} |
-| `R0156` | The temperature form is graphical | [−0.0078]{.orange} |
+| `R0290` | Responsible staff know the discard time of multi-dose vials. | [+0.0114]{.strong-blue} |
+| `R0322` | The facility has SOPs (Standard Operating Procedure) for the multi-dose vial policy. | [+0.0105]{.strong-blue} |
+| `R0040` | The facility has sufficient positive cold storage capacity to accommodate the expected maximum stock levels of vaccines. | [−0.0121]{.orange} |
+| `R0156` | The temperature record is a graph rather than a list | [−0.0078]{.orange} |
 
 . . .
 
-[Meeting an EVM requirement should not make vaccines worse. Section 5 resolves this puzzle.]{.remember}
+[Meeting two WHO requirements have make vaccines quality worse.]{.remember}
 
 ::: {.notes}
-About 70 seconds. Guide through every row. The two positives are exactly what the instrument intends, and both are about multi-dose vials, echoing the opening story. Then slow down on the two negatives: more cold storage capacity and a nicer-looking form go with lower quality. Pause before revealing the remember line, let the puzzle register, and promise the resolution rather than giving it away.
+About 70 seconds. Read all four rows straight off the slide. The two blue ones are exactly what the assessment intends, and both are about the vials from the opening story. Then slow right down on the orange ones: more fridge space and a tidier temperature chart go with worse quality. Do not explain it yet. Reveal the last line, let it sit, and tell them section 5 explains what is really going on. This is the hook that carries the middle of the talk.
 :::
 
-## The components agree: what staff know moves the needle
+## On the two Quality components {.no-footer .two-comp}
 
-All conclusive component effects are positive, estimated the same way on each component's own facilities.
+<style>
+body:has(section.no-footer.present) div.footer { display: none !important; }
+section.two-comp div.columns { font-size: 0.82em; }
+section.two-comp div.column { box-sizing: border-box; padding: 0; }
+section.two-comp .columns > .column > :not(ul, ol) { margin-left: 0; margin-right: 0.35rem; }
+section.two-comp .columns > .column:last-child > :not(ul, ol) { margin-left: 0.35rem; margin-right: 0; }
+section.two-comp ul { margin-top: 0.15em; padding-left: 0.9em; }
+section.two-comp li { margin-bottom: 0.35em; line-height: 1.25; }
+section.two-comp .defn { display: block; color: #5a6b7c; margin: 0.15em 0 0.55em 0; }
+section.two-comp > p { font-size: 0.82em; }
+</style>
 
 :::: {.columns}
 ::: {.column width="50%"}
-**`R0712` (4 conclusive)**
+**`R0712`, four conclusive**
 
-- `R0290` discard time [+0.039]{.strong-blue}
-- `R0257` trained to monitor performance [+0.039]{.strong-blue}
-- `R0272` storage principles [+0.029]{.strong-blue}
-- `R0037` fire extinguishers [+0.028]{.strong-blue}
+[Multi-dose vial vaccines are never administered more than 28 days after opening.]{.defn}
+
+- `R0290` Staff know the discard time of multi-dose vials. [+0.039]{.strong-blue}
+- `R0257` Staff are trained how to monitor ISC performance. [+0.039]{.strong-blue}
+- `R0272` Staff know key principles and procedures of vaccine & dry goods storage. [+0.029]{.strong-blue}
+- `R0037` Storage buildings have functional certified fire extinguishers. [+0.028]{.strong-blue}
 :::
 ::: {.column width="50%"}
-**`R0722` (5 conclusive)**
+**`R0722`, five conclusive**
 
-- `R0037` fire extinguishers [+0.044]{.strong-blue}
-- `R0293` opened-vial wastage types [+0.039]{.strong-blue}
-- `R0290` discard time [+0.035]{.strong-blue}
-- `R0358` staff paid on time [+0.033]{.strong-blue}
-- `R0129` waste in proper bins [+0.030]{.strong-blue}
+[There are no opened multi-dose vials in stock that were opened more than 28 days ago.]{.defn}
+
+- `R0037` Storage buildings have functional certified fire extinguishers. [+0.044]{.strong-blue}
+- `R0293` Staff know the main types of opened vial wastage. [+0.039]{.strong-blue}
+- `R0290` Staff know the discard time of multi-dose vials. [+0.035]{.strong-blue}
+- `R0358` Staff are paid in full and on time. [+0.033]{.strong-blue}
+- `R0129` Waste is stored in plastic or metal bins. [+0.030]{.strong-blue}
 :::
 ::::
 
-[`R0290`, knowing the discard time, is the only requirement on all three lists.]{.remember}
+[`R0290`, knowing when a vial must go, is the only requirement on all three lists.]{.remember}
+
+::: footer
+&nbsp;
+:::
 
 ::: {.notes}
-About 70 seconds. Read both columns aloud, then land the thread: staff knowledge and training dominate, and knowing the discard time appears everywhere. Also name the odd ones out now, fire extinguishers and salaries and waste bins have no route to a vial, and say that the next section deals with them. One more note: the assessment year is also conclusive for both components, which is the country label from section 2 showing through, not a change over time.
+About 70 seconds. Read both columns aloud, then land the common thread. Point out the odd ones honestly: fire extinguishers, salaries and waste bins cannot touch a vial, so something else is behind them, and the next section deals with it. Add that the assessment year is conclusive for both components too, which is the country label from earlier showing through rather than any change over time.
 :::
 
 ## What I will cover
 
 1. [The question]{.graylight}
-2. [The data and its filters]{.graylight}
+2. [The data and the filters]{.graylight}
 3. [Targets and models]{.graylight}
 4. [What drives quality]{.graylight}
 5. [**Stress-testing the answer**]{.remember}
-6. [What it means and what follows]{.graylight}
+6. [What it means and what comes next]{.graylight}
 
 ::: {.notes}
 5 seconds.
 :::
 
-# 5. Stress-testing the answer {.graylight}
+## Results verification
 
-## Thirty shuffled outcomes produced zero false positives
-
-Two checks on whether the lists can be trusted name by name.
-
-- **Shuffle the outcome, keep everything else**: ten shuffles per target under identical settings produced 0 conclusive effects every single time, against real counts of 4, 4 and 5
-- **Remove every invented value**: refitting only on facilities where the leading requirements were actually scored, all 13 effects keep their direction, 9 of 13 stay conclusive
-- One flag: the multi-dose SOP effect on the composite shrinks close to zero without the filled rows, so it leans on the median filling and is held more lightly
+- **Shuffling the answers.** Values of the target scores were randomly shuffled so no requirement could possibly explain them, then the whole machine was ran again. Ten times per target, thirty runs, and it found **zero** requirements, against real counts of 4, 4, and 5.
+- **Removing the filled-in values.** Where a requirement does not apply, the model needs a number, the median of the column was put. Refitting only on facilities that were actually scored, all 13 leading effects keep their direction and 9 stay conclusive (expect `R0290`, `R0322`, `R0257`, `R0037`).
+- The one hold loosely is `R0322` (The facility has SOPs (Standard Operating Procedure) for the multi-dose vial policy): without the filled rows its effect drops to nearly nothing.
 
 ::: {.notes}
-About 55 seconds. First bullet is the calibration: the same machinery that yields the real lists yields nothing at all out of pure noise, so a list of this length cannot be luck. Second bullet addresses the filling compromise: the linear models are handed a median where a requirement did not apply, and the directions all survive without it. Name the R0322 flag honestly.
+About 60 seconds. The first bullet is the important one, so put it in plain speech: if my method finds four requirements out of pure noise, then finding four in the real data proves nothing. It found none, thirty times running. The second bullet defends the one compromise in the data preparation, and the third is me flagging my own weakest result before Bahman does.
 :::
 
-## Six different model families point at the same names
+## On the composite, every conclusive requirement is named by most families
 
-Permutation importance, computed identically for ridge, fractional logit, boosted trees, bagged trees, randomised trees and XGBoost.
+<svg viewBox="0 0 1300 310" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="How many of six model families name each conclusive requirement for the composite score" style="width:100%;max-width:1080px;height:auto;display:block;margin:0 auto;">
+  <g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif">
+  <text x="1085" y="32" font-size="21" fill="#33495d" text-anchor="middle">families naming it, out of six</text>
+  <g font-size="24">
+    <text x="20" y="85" fill="#1f6db4">R0156</text>
+    <text x="130" y="85" fill="#33495d">The temperature form is graphical</text>
+    <text x="20" y="145" fill="#1f6db4">R0040</text>
+    <text x="130" y="145" fill="#33495d">Sufficient positive cold storage capacity</text>
+    <text x="20" y="205" fill="#1f6db4">R0290</text>
+    <text x="130" y="205" fill="#33495d">Staff know the discard time of multi-dose vials</text>
+    <text x="20" y="265" fill="#1f6db4">R0322</text>
+    <text x="130" y="265" fill="#33495d">The facility has SOPs for the multi-dose vial policy</text>
+  </g>
+  <g fill="#1f6db4">
+    <circle cx="960" cy="77" r="13"/><circle cx="1010" cy="77" r="13"/><circle cx="1060" cy="77" r="13"/><circle cx="1110" cy="77" r="13"/><circle cx="1160" cy="77" r="13"/><circle cx="1210" cy="77" r="13"/>
+    <circle cx="960" cy="137" r="13"/><circle cx="1010" cy="137" r="13"/><circle cx="1060" cy="137" r="13"/><circle cx="1110" cy="137" r="13"/><circle cx="1160" cy="137" r="13"/>
+    <circle cx="960" cy="197" r="13"/><circle cx="1010" cy="197" r="13"/><circle cx="1060" cy="197" r="13"/><circle cx="1110" cy="197" r="13"/><circle cx="1160" cy="197" r="13"/>
+    <circle cx="960" cy="257" r="13"/><circle cx="1010" cy="257" r="13"/><circle cx="1060" cy="257" r="13"/><circle cx="1110" cy="257" r="13"/>
+  </g>
+  <g fill="none" stroke="#7ba3d4" stroke-width="2">
+    <circle cx="1210" cy="137" r="13"/>
+    <circle cx="1210" cy="197" r="13"/>
+    <circle cx="1160" cy="257" r="13"/><circle cx="1210" cy="257" r="13"/>
+  </g>
+  </g>
+</svg>
 
-- On the composite: the graphical form named by **6 of 6** families, cold storage capacity and the discard time by **5 of 6**
-- On the components: the top effect of each is named by **6 of 6**, discard time for `R0712` and opened-vial wastage knowledge for `R0722`
-- TabPFN, allowed only to re-rank, keeps the same names near the top
-
-[Agreement across models that fit in genuinely different ways cannot be one algorithm's artefact.]{.remember}
+The six are **ridge, fractional logit, boosted trees, bagged trees, randomised-split trees and XGBoost**. Boosted trees and XGBoost are never handed a filled-in value, so a requirement they name alongside the other four cannot be an artefact of the filling.
 
 ::: {.notes}
-About 50 seconds. The point is independence: families that fill missing values and families that never do, linear and tree-based, all reach for the same columns. Note the design honesty: TabPFN is deliberately not an independent nominator, it can demote candidates but cannot introduce a name of its own.
+About 30 seconds. Explain the picture once and it carries the next two slides: each row is a requirement I called conclusive earlier, and a filled dot means that family also put it in its own top twenty, ranked by permutation importance with ten shuffles per column. Name the six families off the slide. The point to land is that all four rows sit at four or better, and the graphical form is unanimous. If asked which families fill: ridge, the fractional logit, bagged trees and randomised-split trees are handed a median wherever a requirement did not apply, while boosted trees and XGBoost handle those cells natively and are never given one.
 :::
 
-## The negative effects are the assessment exposing itself
+## On R0712, the agreement narrows to one requirement
 
-Half of the composite's parts are only scored when the assessor observes a session in progress. Facilities with vaccines actively in circulation face the harder questions.
+<svg viewBox="0 0 1300 310" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="How many of six model families name each conclusive requirement for R0712" style="width:100%;max-width:1080px;height:auto;display:block;margin:0 auto;">
+  <g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif">
+  <text x="1085" y="32" font-size="21" fill="#33495d" text-anchor="middle">families naming it, out of six</text>
+  <g font-size="24">
+    <text x="20" y="85" fill="#1f6db4">R0290</text>
+    <text x="130" y="85" fill="#33495d">Staff know the discard time of multi-dose vials</text>
+    <text x="20" y="145" fill="#1f6db4">R0272</text>
+    <text x="130" y="145" fill="#33495d">Staff know key principles of vaccine storage</text>
+    <text x="20" y="205" fill="#1f6db4">R0257</text>
+    <text x="130" y="205" fill="#33495d">Staff are trained how to monitor supply performance</text>
+    <text x="20" y="265" fill="#1f6db4">R0037</text>
+    <text x="130" y="265" fill="#33495d">Storage buildings have functional fire extinguishers</text>
+  </g>
+  <g fill="#1f6db4">
+    <circle cx="960" cy="77" r="13"/><circle cx="1010" cy="77" r="13"/><circle cx="1060" cy="77" r="13"/><circle cx="1110" cy="77" r="13"/><circle cx="1160" cy="77" r="13"/><circle cx="1210" cy="77" r="13"/>
+    <circle cx="960" cy="137" r="13"/><circle cx="1010" cy="137" r="13"/><circle cx="1060" cy="137" r="13"/>
+    <circle cx="960" cy="197" r="13"/><circle cx="1010" cy="197" r="13"/>
+    <circle cx="960" cy="257" r="13"/><circle cx="1010" cy="257" r="13"/>
+  </g>
+  <g fill="none" stroke="#7ba3d4" stroke-width="2">
+    <circle cx="1110" cy="137" r="13"/><circle cx="1160" cy="137" r="13"/><circle cx="1210" cy="137" r="13"/>
+    <circle cx="1060" cy="197" r="13"/><circle cx="1110" cy="197" r="13"/><circle cx="1160" cy="197" r="13"/><circle cx="1210" cy="197" r="13"/>
+    <circle cx="1060" cy="257" r="13"/><circle cx="1110" cy="257" r="13"/><circle cx="1160" cy="257" r="13"/><circle cx="1210" cy="257" r="13"/>
+  </g>
+  </g>
+</svg>
 
-. . .
-
-- Every one of the six most-named requirements carries **positive extra exposure**: meeting it marks a busy facility (+0.04 to +0.11)
-- The only **negative** quality gaps are exactly the two puzzles: cold storage capacity [−0.048]{.orange} and the graphical form [−0.026]{.orange}
-- Every staff-knowledge requirement stays **positive despite the penalty**, led by the discard time at [+0.076]{.strong-blue}
-
-[The rule this feeds: a statistical signal and a route from the requirement to the vial, both required.]{.remember}
+[Knowing the discard time is the one requirement every family reaches for. The other three rest on their effect estimates alone, so I hold them more loosely.]{.remember}
 
 ::: {.notes}
-About 70 seconds. This is the resolution promised in section 4, so take it slowly. First the mechanism: well-equipped facilities are busy facilities, busy facilities get asked the hard questions, so equipment and paperwork requirements pick up a penalty that has nothing to do with the requirement itself. Then the split: the negative gaps land precisely on the equipment and paperwork pair, the positives all on what staff know. Close with the rule, because it is the practical filter for EVM-Lite.
+About 25 seconds. Be straight about the weak rows: fire extinguishers and the training requirement are named by only two families, so the bootstrap intervals are the whole of their evidence. That is a reason to treat them as leads rather than findings, and it is the honest counterweight to the clean shuffle result on the previous slide.
 :::
 
-## Take away the country resemblance and see what is left
+## On R0722, most of the list survives the same check
 
-Two ways of asking whether the requirement signal travels beyond the assessed countries.
+<svg viewBox="0 0 1300 370" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="How many of six model families name each conclusive requirement for R0722" style="width:100%;max-width:1080px;height:auto;display:block;margin:0 auto;">
+  <g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif">
+  <text x="1085" y="32" font-size="21" fill="#33495d" text-anchor="middle">families naming it, out of six</text>
+  <g font-size="24">
+    <text x="20" y="85" fill="#1f6db4">R0293</text>
+    <text x="130" y="85" fill="#33495d">Staff know the main types of opened vial wastage</text>
+    <text x="20" y="145" fill="#1f6db4">R0037</text>
+    <text x="130" y="145" fill="#33495d">Storage buildings have functional fire extinguishers</text>
+    <text x="20" y="205" fill="#1f6db4">R0358</text>
+    <text x="130" y="205" fill="#33495d">Staff are paid in full and on time</text>
+    <text x="20" y="265" fill="#1f6db4">R0129</text>
+    <text x="130" y="265" fill="#33495d">Waste is stored in plastic or metal bins</text>
+    <text x="20" y="325" fill="#1f6db4">R0290</text>
+    <text x="130" y="325" fill="#33495d">Staff know the discard time of multi-dose vials</text>
+  </g>
+  <g fill="#1f6db4">
+    <circle cx="960" cy="77" r="13"/><circle cx="1010" cy="77" r="13"/><circle cx="1060" cy="77" r="13"/><circle cx="1110" cy="77" r="13"/><circle cx="1160" cy="77" r="13"/><circle cx="1210" cy="77" r="13"/>
+    <circle cx="960" cy="137" r="13"/><circle cx="1010" cy="137" r="13"/><circle cx="1060" cy="137" r="13"/><circle cx="1110" cy="137" r="13"/><circle cx="1160" cy="137" r="13"/>
+    <circle cx="960" cy="197" r="13"/><circle cx="1010" cy="197" r="13"/><circle cx="1060" cy="197" r="13"/><circle cx="1110" cy="197" r="13"/><circle cx="1160" cy="197" r="13"/>
+    <circle cx="960" cy="257" r="13"/><circle cx="1010" cy="257" r="13"/><circle cx="1060" cy="257" r="13"/><circle cx="1110" cy="257" r="13"/>
+    <circle cx="960" cy="317" r="13"/><circle cx="1010" cy="317" r="13"/><circle cx="1060" cy="317" r="13"/>
+  </g>
+  <g fill="none" stroke="#7ba3d4" stroke-width="2">
+    <circle cx="1210" cy="137" r="13"/>
+    <circle cx="1210" cy="197" r="13"/>
+    <circle cx="1160" cy="257" r="13"/><circle cx="1210" cy="257" r="13"/>
+    <circle cx="1110" cy="317" r="13"/><circle cx="1160" cy="317" r="13"/><circle cx="1210" cy="317" r="13"/>
+  </g>
+  </g>
+</svg>
 
-| Target | Random folds | Whole countries held out |
-|---|---|---|
-| `QU` | 0.054 | [−0.027]{.orange} |
-| `R0712` | 0.178 | 0.060 |
-| `R0722` | 0.168 | 0.039 |
-
-- Subtracting each country's own average from everything: training 0.139, test [−0.154]{.orange}, a collapse
-- **Every headline figure is regime-dependent**: a shortened checklist used inside the assessed countries can quote the left column; any claim about a new country must quote the right one
+Four of the five sit at four families or better, and knowing the types of opened vial wastage is unanimous.
 
 ::: {.notes}
-About 55 seconds. Walk the table: random folds describe one more facility in a country the data already covers; grouped folds describe a country never seen, and every figure falls. The demeaning line is the same message from inside a single split. This is the most important caveat in the talk, read the bold sentence exactly as written.
+About 25 seconds. Note the mirror image of the previous slide: R0290 is named by every family on R0712 but by only three here, while R0037 is weak on R0712 and strong here. The two components measure different things, so a requirement can matter for one and not the other. Add that vote counts near the top-twenty boundary can move between runs, so read the pattern rather than the exact number.
+:::
+
+## Why meeting a requirement can look like it reduces Quality score
+
+<svg viewBox="0 0 1300 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chain showing why better equipped facilities face the harder questions" style="width:100%;max-width:1150px;height:auto;display:block;margin:0 auto;">
+  <g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif">
+  <g fill="#e3edf9" stroke="#7ba3d4" stroke-width="1.5">
+    <rect x="10" y="30" width="280" height="160" rx="8"/>
+    <rect x="340" y="30" width="280" height="160" rx="8"/>
+    <rect x="670" y="30" width="280" height="160" rx="8"/>
+  </g>
+  <rect x="1000" y="30" width="290" height="160" rx="8" fill="#f7e3d6" stroke="#D55E00" stroke-width="2"/>
+  <g stroke="#8a97a6" stroke-width="2" fill="none">
+    <line x1="295" y1="110" x2="335" y2="110"/>
+    <line x1="625" y1="110" x2="665" y2="110"/>
+    <line x1="955" y1="110" x2="995" y2="110"/>
+  </g>
+  <g fill="#8a97a6">
+    <path d="M340 110 L326 103 L326 117 Z"/>
+    <path d="M670 110 L656 103 L656 117 Z"/>
+    <path d="M1000 110 L986 103 L986 117 Z"/>
+  </g>
+  <g font-size="20" fill="#33495d" text-anchor="middle">
+    <text x="150" y="68">Three of the six quality</text>
+    <text x="150" y="100">checks are only scored</text>
+    <text x="150" y="132">while an assessor</text>
+    <text x="150" y="164">watches a real session</text>
+    <text x="480" y="68">They are the hard ones.</text>
+    <text x="480" y="100">Only a facility with</text>
+    <text x="480" y="132">vaccines in use gets</text>
+    <text x="480" y="164">asked them</text>
+    <text x="810" y="68">Better equipped</text>
+    <text x="810" y="100">facilities are busier,</text>
+    <text x="810" y="132">so they get asked</text>
+    <text x="810" y="164">more often</text>
+    <text x="1145" y="68">So their score can</text>
+    <text x="1145" y="100">come out lower, even</text>
+    <text x="1145" y="132">though their vaccines</text>
+    <text x="1145" y="164">are no worse</text>
+  </g>
+  </g>
+</svg>
+
+Take `R0040`, having enough cold storage. **90%** of facilities meet it. Those that do are asked the multi-dose vial questions **11 percent more often**, and they average **0.890** against **0.938** for those that do not.
+
+::: {.notes}
+About 45 seconds, and it is the idea the whole section turns on, so do not rush. Walk the four boxes left to right. Box one points straight back to the grid earlier: the left-hand column there, the three checks that need a session in progress. Box two: those are the questions facilities actually fail, and you can only fail a question you were asked. Box three: a facility with spare fridge capacity is a facility running sessions. Box four: so the better equipped facility sits the harder test and can score lower for a reason that has nothing to do with its vaccines. Then read the cold storage numbers underneath as the worked example.
+:::
+
+## Average Quality score among facilities meeting and not meeting requirements
+
+<svg viewBox="0 0 1300 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Average quality score of facilities that meet each conclusive requirement against those that do not" style="width:100%;max-width:1030px;height:auto;display:block;margin:0 auto;">
+  <g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif">
+  <circle cx="430" cy="28" r="11" fill="#ffffff" stroke="#8a97a6" stroke-width="2.5"/>
+  <text x="452" y="36" font-size="21" fill="#33495d">facilities that do not meet it</text>
+  <circle cx="830" cy="28" r="11" fill="#33495d"/>
+  <text x="852" y="36" font-size="21" fill="#33495d">facilities that meet it</text>
+  <text x="1290" y="36" font-size="19" fill="#8a97a6" text-anchor="end">difference</text>
+  <g font-size="24">
+    <text x="20" y="93" fill="#1f6db4">R0290</text><text x="130" y="93" fill="#33495d">staff know discard time</text>
+    <text x="20" y="138" fill="#1f6db4">R0322</text><text x="130" y="138" fill="#33495d">multi-dose vial SOPs</text>
+    <text x="20" y="183" fill="#D55E00">R0156</text><text x="130" y="183" fill="#33495d">the form is graphical</text>
+    <text x="20" y="228" fill="#D55E00">R0040</text><text x="130" y="228" fill="#33495d">cold storage capacity</text>
+  </g>
+  <g stroke-width="3">
+    <line x1="481" y1="85" x2="835" y2="85" stroke="#1f6db4"/>
+    <line x1="651" y1="130" x2="876" y2="130" stroke="#1f6db4"/>
+    <line x1="757" y1="175" x2="876" y2="175" stroke="#D55E00"/>
+    <line x1="844" y1="220" x2="1065" y2="220" stroke="#D55E00"/>
+  </g>
+  <g fill="#ffffff" stroke-width="2.5">
+    <circle cx="481" cy="85" r="11" stroke="#1f6db4"/>
+    <circle cx="651" cy="130" r="11" stroke="#1f6db4"/>
+    <circle cx="876" cy="175" r="11" stroke="#D55E00"/>
+    <circle cx="1065" cy="220" r="11" stroke="#D55E00"/>
+  </g>
+  <g>
+    <circle cx="835" cy="85" r="11" fill="#1f6db4"/>
+    <circle cx="876" cy="130" r="11" fill="#1f6db4"/>
+    <circle cx="757" cy="175" r="11" fill="#D55E00"/>
+    <circle cx="844" cy="220" r="11" fill="#D55E00"/>
+  </g>
+  <g font-size="24" text-anchor="end">
+    <text x="1290" y="93" fill="#1f6db4">+0.076</text>
+    <text x="1290" y="138" fill="#1f6db4">+0.049</text>
+    <text x="1290" y="183" fill="#D55E00">−0.026</text>
+    <text x="1290" y="228" fill="#D55E00">−0.048</text>
+  </g>
+  <line x1="430" y1="265" x2="1140" y2="265" stroke="#8a97a6" stroke-width="2"/>
+  <g font-size="20" fill="#33495d" text-anchor="middle">
+    <text x="430" y="292">0.80</text>
+    <text x="660" y="292">0.85</text>
+    <text x="890" y="292">0.90</text>
+    <text x="1120" y="292">0.95</text>
+    <text x="785" y="320" font-size="21">average quality score</text>
+  </g>
+  </g>
+</svg>
+
+[These are the composite's four conclusive requirements.]{.remember}
+
+::: {.notes}
+About 45 seconds. Read the chart before drawing any conclusion. Each row is one of the four requirements that came out conclusive for the composite, the same four from earlier. The hollow circle is the average quality score of facilities that do not meet it, the solid circle is the average for facilities that do, and the number on the right is the difference between them. The top two move right, so meeting them goes with a better score. The bottom two move left. Now the key sentence: the pressure from the previous slide pulls every row leftwards, so the two that still land on the right are managing it against that headwind, while the two on the left are exactly what the artefact predicts. If asked whether this holds beyond these four, the same check was run on the six requirements the model families agree on most, and the two extra ones, knowing the stock system and training in planning, also came out positive at plus 0.032 and plus 0.012. Close on the rule: a statistical signal is not enough, there must also be a route from the requirement to the vial, and cold storage capacity and the shape of a form have no such route.
 :::
 
 ## What I will cover
 
 1. [The question]{.graylight}
-2. [The data and its filters]{.graylight}
+2. [The data and the filters]{.graylight}
 3. [Targets and models]{.graylight}
 4. [What drives quality]{.graylight}
 5. [Stress-testing the answer]{.graylight}
-6. [**What it means and what follows**]{.remember}
+6. [**What it means and what comes next**]{.remember}
 
 ::: {.notes}
 5 seconds.
 :::
 
-# 6. What it means and what follows {.graylight}
+## Conclusive requirements do most of the work of 172 columns
 
-## Four requirements keep most of what 170 explain
+<svg viewBox="0 0 1300 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bar chart comparing the full requirement set with the short list" style="width:100%;max-width:1080px;height:auto;display:block;margin:0 auto;">
+  <g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif">
+  <line x1="150" y1="330" x2="1240" y2="330" stroke="#8a97a6" stroke-width="2"/>
+  <g>
+    <rect x="230" y="249" width="85" height="81" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"/>
+    <rect x="325" y="256" width="85" height="74" fill="#1f6db4"/>
+    <rect x="590" y="80" width="85" height="250" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"/>
+    <rect x="685" y="162" width="85" height="168" fill="#1f6db4"/>
+    <rect x="950" y="92" width="85" height="238" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"/>
+    <rect x="1045" y="140" width="85" height="190" fill="#1f6db4"/>
+  </g>
+  <g font-size="24" fill="#33495d" text-anchor="middle">
+    <text x="272" y="239">0.062</text>
+    <text x="367" y="246">0.057</text>
+    <text x="632" y="70">0.192</text>
+    <text x="727" y="152">0.129</text>
+    <text x="992" y="82">0.183</text>
+    <text x="1087" y="130">0.146</text>
+    <text x="320" y="366" font-size="26">QU</text>
+    <text x="680" y="366" font-size="26">R0712</text>
+    <text x="1040" y="366" font-size="26">R0722</text>
+    <text x="320" y="396" font-size="23" fill="#1f6db4">4 questions keep 92%</text>
+    <text x="680" y="396" font-size="23" fill="#1f6db4">4 questions keep 67%</text>
+    <text x="1040" y="396" font-size="23" fill="#1f6db4">5 questions keep 80%</text>
+  </g>
+  <g font-size="23" fill="#33495d">
+    <rect x="230" y="20" width="26" height="18" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"/>
+    <text x="266" y="35">all 172 columns</text>
+    <rect x="590" y="20" width="26" height="18" fill="#1f6db4"/>
+    <text x="626" y="35">only the conclusive requirements</text>
+  </g>
+  </g>
+</svg>
 
-Refitting each target's model on its conclusive requirements alone, same twenty splits:
-
-| Target | Full set (172) | Conclusive only | Retained |
-|---|---|---|---|
-| `QU` | 0.062 | 0.057 with 4 | ~92% |
-| `R0722` | 0.183 | 0.146 with 5 | ~80% |
-| `R0712` | 0.192 | 0.129 with 4 | ~67% |
-
-- With every calibration clean, the short lists can be defended entry by entry
-- One declared optimism: the lists were chosen on the same facilities the refits split, so these are upper bounds on a list fixed in advance
-
-[That is the sentence an EVM-Lite needs.]{.remember}
 
 ::: {.notes}
-About 55 seconds. Walk the table: the composite keeps nearly everything on four requirements; the components keep the larger part on four or five. Mention that adding the two context columns lifts R0712 to 0.174, but that recovery is mostly the country label, not something a facility controls. State the optimism caveat plainly, Bahman will ask otherwise.
+About 55 seconds. Walk it: pale is everything the assessment asks, solid is the handful I named, and the gap is what a shorter instrument would give up. The composite keeps almost everything on four questions. If asked what the 172 covers: the 170 filtered requirements plus the assessment year and the target population, the same specification every earlier figure in the talk uses. Say the caveat in your own words rather than reading it, because Bahman will ask otherwise, and it is better coming from you first.
 :::
 
-## Associations today, causes next
+## Limitations and take aways
 
-Everything reported is association, and the two confounds found are exactly what causal designs handle.
+- This analysis is association-based, not causal
+- Out of 170 requirements across 77 countries, quality at the last mile comes down to a handful, and the one that appears everywhere is **staff knowing when an opened vial must be thrown away**
+- The short list passed tests like shuffling answers, six model families verification, and the removal of every filled-in value
 
-- The **exposure artefact** on the composite and the **well-run-facility proxy** on the components both survive every statistical test, because the pattern in the data is real
-- Next step: a causal treatment of the top-ranked requirements, rather than another round of the same modelling
-- A literature review to state in advance which requirements should matter, instead of annotating a list the data produced
-
-::: {.notes}
-About 40 seconds. Keep it forward-looking: the machinery is now trustworthy, so the natural next move is causal identification on the short list, plus the literature grounding. This is the discussion I want to have with Bahman after the talk.
-:::
-
-## The one-slide version
-
-- Out of **170** filtered requirements across **77** countries, quality at the last mile comes down to a handful, led by **staff knowing the discard time of multi-dose vials**
-- The list survives shuffled outcomes, six model families, an exposure check, and the removal of every invented value
-- What travels to unseen countries is much smaller than the headline, and saying so is part of the result
-
-**Thank you.** Questions welcome; backup slides follow.
+**Thank you!** Please let me know your questions. 
 
 ::: {.notes}
-About 30 seconds. Three sentences, slow, then stop on time. Do not read the backup slides unless asked.
+About 30 seconds. Three sentences, slowly, then stop. Do not wander into the backup slides unless someone asks.
 :::
 
 # Backup {.graylight}
 
-## Backup: how the choice of model was made
+## Backup: Choosing the model
 
-- All ten families over the same twenty 75/25 splits: OLS, ridge, LASSO, elastic net, fractional logit, gamma shortfall, boosted trees, bagged trees, randomised trees, XGBoost
-- Penalties earn their keep: OLS is the weakest linear model on unseen facilities for every one of the seven targets
-- Elastic net alphas: 0.012 (`QU`), 0.054 (`R0712`), 0.054 (`R0722`); LASSO ties to three decimals throughout
-- AIC and BIC, computed as a supplement, favour the models that do worst on unseen facilities, which is why repeated splits decide
+- Ten families over the same twenty splits: OLS, ridge, LASSO, elastic net, fractional logit, a gamma model on the shortfall from full marks, boosted trees, bagged trees, randomised trees, XGBoost
+- Plain OLS is the weakest linear model on unseen facilities for all seven targets, so the penalties earn their place
 
 ::: {.notes}
-For questions on model selection. The AIC point in one line: an inside-the-sample criterion rewards exactly the hard fitting that the repeated splits exist to discount.
+For questions on model choice. One line on AIC if pushed: a criterion computed inside the sample rewards exactly the hard fitting that repeated splits exist to discount.
 :::
 
-## Backup: two ways of handling values that do not exist
+## Backup: How the values that do not exist are handled
 
-- Where a requirement does not apply, linear models need a number: median filling alone, or median plus not-applicable flags
-- Flags fit slightly better, +0.02 to +0.03, about the size of the split-to-split spread, with larger overfit gaps
-- Median alone is kept: half the columns, and a flag coefficient is not something anyone can act on
-- The reassurance: the no-filling families, boosted trees, XGBoost and TabPFN, sort the targets the same way, and the complete-case check in section 5 removes the filling entirely
+- Some requirements do not apply to a facility, and a linear model still needs a number in that cell
+- Two options: fill with the median value, or fill and add a marker column saying the value was filled
+- Markers fit better by but it's negligible, but they double the number of columns
+- The simple fill is kept, because a marker coefficient is not something a manager can act on
 
 ::: {.notes}
-For questions on missing data. The honest version: flags win narrowly on fit and lose on parsimony and actionability.
+For questions on missing data. Be straight about it: markers win narrowly on fit and lose on usefulness.
 :::
 
-## Backup: quality as ordered bands
+## Backup: quality as four ordered bands
 
-- Cutting the score into four ordered bands (cut points 0.6, 0.8, 0.95; 58% of facilities in the top band)
-- The ordinal model earns the best weighted kappa, 0.092, still weak agreement by any conventional reading
-- Always naming the largest band beats it on plain accuracy, 0.582 against 0.496
-- The top-twenty requirement list changes (7 of 20 shared with the continuous analysis) while no measure of fit improves: banding buys nothing here
-
-::: {.notes}
-For questions on whether the continuous score is the right framing.
-:::
-
-## Backup: TabPFN's role, precisely
-
-- A pre-trained tabular transformer (Hollmann et al., 2025, *Nature*), fitted in one forward pass, no filled values needed
-- Used twice, both times deliberately subordinate: corroborating the target triage, and re-ranking 62 candidate requirements on 250 test facilities
-- It may demote a name but can never introduce one, so the reported lists stay coefficient-backed
-- Its top re-ranks: correct storage temperatures, AM and PM temperature fields, packing SOPs, then the discard time and cold storage capacity
+- The score is cut at 0.6, 0.8 and 0.95, and 58% of facilities land in the top band
+- Simply always naming the biggest band beats on plain accuracy, 0.582 against 0.496
+- The top twenty requirements change under banding while no measure of fit improves, so the analysis is continued with the continuous score
 
 ::: {.notes}
-For questions on the foundation model. The design principle: the chosen model must carry coefficients; TabPFN is a cross-check, never a nominator.
+For questions about whether the continuous score is the right framing.
 :::
