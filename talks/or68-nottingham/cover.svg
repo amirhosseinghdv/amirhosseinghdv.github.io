@@ -1,0 +1,69 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Data points feeding into a decision node, over Welsh hills and water">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#eef4fa"/>
+      <stop offset="1" stop-color="#dbe8f3"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect x="0" y="0" width="1200" height="630" fill="url(#sky)"/>
+
+  <!-- Rain, top right -->
+  <g stroke="#7ba3d4" stroke-width="3" stroke-linecap="round" opacity="0.45">
+    <line x1="900" y1="60" x2="886" y2="88"/>
+    <line x1="960" y1="45" x2="946" y2="73"/>
+    <line x1="1020" y1="75" x2="1006" y2="103"/>
+    <line x1="1080" y1="52" x2="1066" y2="80"/>
+    <line x1="1140" y1="82" x2="1126" y2="110"/>
+    <line x1="995" y1="120" x2="981" y2="148"/>
+  </g>
+
+  <!-- Hills -->
+  <path d="M0 505 Q 220 445 430 495 T 830 500 T 1200 470 L 1200 630 L 0 630 Z" fill="#c7dbed"/>
+  <path d="M0 545 Q 260 495 560 540 T 1200 550 L 1200 630 L 0 630 Z" fill="#adc9e4"/>
+
+  <!-- Water -->
+  <path d="M0 560 Q 100 552 200 560 T 400 560 T 600 560 T 800 560 T 1000 560 T 1200 560" fill="none" stroke="#3a86c8" stroke-width="3" opacity="0.7"/>
+  <path d="M0 572 Q 100 564 200 572 T 400 572 T 600 572 T 800 572 T 1000 572 T 1200 572 L 1200 630 L 0 630 Z" fill="#0066b2"/>
+
+  <!-- Scattered data points on the left, converging into a decision node, then plans out -->
+  <g fill="#3a86c8" opacity="0.75">
+    <circle cx="128" cy="182" r="9"/>
+    <circle cx="196" cy="252" r="9"/>
+    <circle cx="146" cy="318" r="9"/>
+    <circle cx="224" cy="386" r="9"/>
+    <circle cx="120" cy="430" r="9"/>
+    <circle cx="238" cy="150" r="9"/>
+    <circle cx="286" cy="316" r="9"/>
+  </g>
+
+  <g fill="none" stroke="#7ba3d4" stroke-width="2.5" opacity="0.75">
+    <path d="M137 184 C 300 200, 380 260, 508 300"/>
+    <path d="M205 254 C 320 268, 400 282, 508 306"/>
+    <path d="M155 320 C 300 322, 400 318, 508 316"/>
+    <path d="M233 388 C 340 372, 420 344, 508 326"/>
+    <path d="M129 432 C 300 420, 400 372, 508 332"/>
+    <path d="M247 152 C 360 186, 420 250, 508 296"/>
+    <path d="M295 318 C 360 318, 440 318, 508 318"/>
+  </g>
+
+  <!-- Decision node -->
+  <circle cx="556" cy="316" r="46" fill="#024c86"/>
+  <circle cx="556" cy="316" r="60" fill="none" stroke="#024c86" stroke-width="3" opacity="0.3"/>
+
+  <!-- Decisions fanning out to plausible futures -->
+  <g fill="none" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="16 12">
+    <path d="M616 316 C 800 316, 900 205, 1070 168" stroke="#024c86"/>
+    <path d="M616 316 C 800 316, 900 268, 1070 246" stroke="#0066b2"/>
+    <path d="M616 316 L 1070 316" stroke="#3a86c8"/>
+    <path d="M616 316 C 800 316, 900 372, 1070 400" stroke="#0066b2"/>
+  </g>
+
+  <g fill="#ffffff" stroke-width="3.5">
+    <circle cx="1070" cy="168" r="10" stroke="#024c86"/>
+    <circle cx="1070" cy="246" r="10" stroke="#0066b2"/>
+    <circle cx="1070" cy="316" r="10" stroke="#3a86c8"/>
+    <circle cx="1070" cy="400" r="10" stroke="#0066b2"/>
+  </g>
+</svg>

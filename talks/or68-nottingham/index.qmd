@@ -1,0 +1,26 @@
+---
+title: "How Floods and Rising Sea Levels Disrupt Healthcare Service Delivery: A Mixed-Methods Framework"
+description: "Presentation for the OR68 Annual Conference in Nottingham: the problem, WP1 in depth, and how the three work packages connect."
+author: "Amirhossein Ghadiri"
+date: "2026-09-10"
+image: "cover.svg"
+categories:
+  - Floods
+  - Healthcare
+  - Machine Learning
+  - OR68
+---
+
+```{=html}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<a href="slides/or68_nottingham.html" target="_blank" rel="noopener noreferrer">
+  <button id="journal-article-btn">
+    <i class="fas fa-display"></i> Open slides
+  </button>
+</a>
+```
+
+This talk was prepared for OR68, the Annual Conference of the Operational Research Society, held at the University of Nottingham in September 2026 under the theme From Data to Decisions.
+
+Floods and rising sea levels keep disrupting how healthcare is delivered in Wales. Yet, where the water goes is mapped, not what stops working. The talk walks through the three connected work packages. The first builds the missing evidence base with a text-mining pipeline and Welsh case studies. The second identifies which facilities are vulnerable and what drives that vulnerability. The third plans for uncertain futures using optimisation under uncertainty.
