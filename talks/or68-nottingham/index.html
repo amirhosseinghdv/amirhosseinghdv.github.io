@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Amirhossein Ghadiri">
+<meta name="dcterms.date" content="2026-09-10">
+<meta name="description" content="Presentation for the OR68 Annual Conference in Nottingham: the problem, WP1 in depth, and how the three work packages connect.">
 
-<title>Working Papers</title>
+<title>How Floods and Rising Sea Levels Disrupt Healthcare Service Delivery: A Mixed-Methods Framework</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -36,8 +39,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-listing/list.min.js"></script>
-<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -75,67 +76,11 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<meta property="og:title" content="Working Papers">
+<meta property="og:title" content="How Floods and Rising Sea Levels Disrupt Healthcare Service Delivery: A Mixed-Methods Framework">
+<meta property="og:description" content="Presentation for the OR68 Annual Conference in Nottingham: the problem, WP1 in depth, and how the three work packages connect.">
+<meta property="og:image" content="https://amirhosseinghdv.github.io/talks/or68-nottingham/cover.svg">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -212,14 +157,37 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Working Papers</h1>
-</div>
+<h1 class="title">How Floods and Rising Sea Levels Disrupt Healthcare Service Delivery: A Mixed-Methods Framework</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Floods</div>
+    <div class="quarto-category">Healthcare</div>
+    <div class="quarto-category">Machine Learning</div>
+    <div class="quarto-category">OR68</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    Presentation for the OR68 Annual Conference in Nottingham: the problem, WP1 in depth, and how the three work packages connect.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Amirhossein Ghadiri </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 10, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -229,54 +197,19 @@ window.Quarto = {
 </header>
 
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<a href="slides/or68_nottingham.html" target="_blank" rel="noopener noreferrer">
+  <button id="journal-article-btn">
+    <i class="fas fa-display"></i> Open slides
+  </button>
+</a>
+<p>This talk was prepared for OR68, the Annual Conference of the Operational Research Society, held at the University of Nottingham in September 2026 under the theme From Data to Decisions.</p>
+<p>Floods and rising sea levels keep disrupting how healthcare is delivered in Wales. Yet, where the water goes is mapped, not what stops working. The talk walks through the three connected work packages. The first builds the missing evidence base with a text-mining pipeline and Welsh case studies. The second identifies which facilities are vulnerable and what drives that vulnerability. The third plans for uncertain futures using optimisation under uncertainty.</p>
 
 
 
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<div class="listing-actions-group">
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-
-<th>
-Title
-</th>
-
-<th>
-Authors
-</th>
-
-<th>
-Keywords
-</th>
-
-</tr>
-</thead>
-<tbody class="list">
-
-<tr data-index="0" data-categories="Q29tcHV0ZXIlMjBWaXNpb24lMkNGdXp6eSUyMExvZ2ljJTJDRGVlcCUyMExlYXJuaW5nJTJDVW5kZXIlMjByZXZpZXc=" data-listing-date-sort="1704067200000" data-listing-file-modified-sort="1787900647263" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="273" data-listing-title-sort="Combining Computer Vision with Fuzzy Logic for Real-time Evaluation of Personal Protective Equipment Compliance" data-listing-filename-sort="index.qmd">
-<td>
-<a href="../../publications/working_papers/ppe-fuzzy-vision/index.html" class="title listing-title">Combining Computer Vision with Fuzzy Logic for Real-time Evaluation of Personal Protective Equipment Compliance</a>
-</td>
-<td>
-<span class="listing-author">Amirhossein Ghadiri, Vahid Shahhosseini</span>
-</td>
-<td>
-<span class="listing-categories">Computer Vision, Fuzzy Logic, Deep Learning, Under review</span>
-</td>
-
-</tr>
-
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -364,11 +297,6 @@ Keywords
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
-            // target, if specified
-            link.setAttribute("target", "_blank");
-            if (link.getAttribute("rel") === null) {
-              link.setAttribute("rel", "noopener");
-            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

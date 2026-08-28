@@ -427,11 +427,158 @@
     "text": "Backup: quality as four ordered bands\n\nThe score is cut at 0.6, 0.8 and 0.95, and 58% of facilities land in the top band\nSimply always naming the biggest band beats on plain accuracy, 0.582 against 0.496\nThe top twenty requirements change under banding while no measure of fit improves, so the analysis is continued with the continuous score\n\n\nFor questions about whether the continuous score is the right framing."
   },
   {
+    "objectID": "talks/or68-nottingham/slides/or68_nottingham.html#monmouth-november-2024",
+    "href": "talks/or68-nottingham/slides/or68_nottingham.html#monmouth-november-2024",
+    "title": "How Floods and Rising Sea Levels Disrupt Healthcare Service Delivery: A Mixed-Methods Framework",
+    "section": "Monmouth, November 2024",
+    "text": "Monmouth, November 2024\nA community hospital takes on water. Staff move every patient up to the first floor and wait there. Their access is cut off until the water level drops.\n\nOn the city’s main street, a pharmacy, a dentist, and a GP surgery all flood at once.\n\n\nThe water never reaches the electrical substations, but they fail anyway. Power is gone for up to 48 hours, and people on home oxygen and dialysis machines, well outside the flooded streets, are suddenly at risk.\n\n\nThis is what flooding disruption to healthcare actually looks like. My PhD is about understanding it, measuring it, and planning for it.\n\nAbout 75 seconds. Open slowly, tell it as a story. This is a real Welsh case, Storm Bert in Monmouth, from Public Health Wales. Useful follow-on fact for questions: the GP surgery, Castlegate, was displaced to another site for over six months. The point to land: the damage is rarely just the flooded building, it is the cascade. Hold the last line, then move to the photo. This is an OR audience, so they will know the methods but not the Welsh health system, and the story is what makes the problem concrete before any method appears."
+  },
+  {
+    "objectID": "talks/or68-nottingham/slides/or68_nottingham.html#three-health-services-sit-on-this-one-street",
+    "href": "talks/or68-nottingham/slides/or68_nottingham.html#three-health-services-sit-on-this-one-street",
+    "title": "How Floods and Rising Sea Levels Disrupt Healthcare Service Delivery: A Mixed-Methods Framework",
+    "section": "Three health services sit on this one street",
+    "text": "Three health services sit on this one street\n\n\nMonnow Street, Monmouth.\n\n\nAbout 25 seconds. Do not linger. Point out that this is an ordinary Welsh market town high street, not an obvious disaster zone, and that three separate health services sit along it. The single sentence to say out loud: when this street floods you do not lose one building, you lose a cluster of services that patients depend on together. Then move on."
+  },
+  {
+    "objectID": "talks/or68-nottingham/slides/or68_nottingham.html#what-i-will-cover",
+    "href": "talks/or68-nottingham/slides/or68_nottingham.html#what-i-will-cover",
+    "title": "How Floods and Rising Sea Levels Disrupt Healthcare Service Delivery: A Mixed-Methods Framework",
+    "section": "What I will cover",
+    "text": "What I will cover\n\nThe problem\nInterconnected research directions\nWP1: mapping how floods disrupt care\nWP2 and WP3: measure it, then plan for it\nKey Takeaways\n\n\n15 seconds. One line each, then move. The agenda comes back once, before part four, so the room always knows where we are."
+  },
+  {
+    "objectID": "talks/or68-nottingham/slides/or68_nottingham.html#the-question-behind-everything",
+    "href": "talks/or68-nottingham/slides/or68_nottingham.html#the-question-behind-everything",
+    "title": "How Floods and Rising Sea Levels Disrupt Healthcare Service Delivery: A Mixed-Methods Framework",
+    "section": "The question behind everything",
+    "text": "The question behind everything\nFloods and rising sea levels keep disrupting how healthcare is delivered in Wales. We map where the water goes, but we do not map what stops working.\n\nRoughly one in eight properties in Wales sits at flood risk, and the climate signal points to wetter winters and higher seas 1\nThere is no central record of how floods disrupt healthcare delivery, who it hits, or for how long 2\n\nHow do floods disrupt healthcare service delivery, and what can we do about it?\n\nAbout 1 minute. Establish the gap clearly for a mixed audience: flood maps tell us which buildings get wet, and say nothing about which services fail and for whom. That blind spot is the service layer, and it is where the whole PhD sits. Read the research question out loud.\n\nNatural Resources WalesPublic Health Wales"
+  },
+  {
+    "objectID": "talks/or68-nottingham/slides/or68_nottingham.html#we-can-see-the-water-coming.-we-cannot-see-what-services-it-disrupt",
+    "href": "talks/or68-nottingham/slides/or68_nottingham.html#we-can-see-the-water-coming.-we-cannot-see-what-services-it-disrupt",
+    "title": "How Floods and Rising Sea Levels Disrupt Healthcare Service Delivery: A Mixed-Methods Framework",
+    "section": "We can see the water coming. We cannot see what services it disrupt,",
+    "text": "We can see the water coming. We cannot see what services it disrupt,\n\n\nA river overflowing through a riverside town\n\n\nAbout 30 seconds. This is the hazard layer, and it is the part we are already good at. River gauges, rainfall radar, and flood warnings describe this water very well. Say the contrast plainly: hydrology tells us where the water will be, and nothing in that forecast tells a health board which clinics will close, which staff will not get in, or which patients will miss dialysis. That gap between a well modelled hazard and an unmodelled service consequence is the whole reason this project exists. Then move to the work packages."
+  },
+  {
+    "objectID": "talks/or68-nottingham/slides/or68_nottingham.html#what-i-will-cover-1",
+    "href": "talks/or68-nottingham/slides/or68_nottingham.html#what-i-will-cover-1",
+    "title": "How Floods and Rising Sea Levels Disrupt Healthcare Service Delivery: A Mixed-Methods Framework",
+    "section": "What I will cover",
+    "text": "What I will cover\n\nThe problem\nInterconnected research directions\nWP1: mapping how floods disrupt care\nWP2 and WP3: measure it, then plan for it\nKey Takeaways"
+  },
+  {
+    "objectID": "talks/or68-nottingham/slides/or68_nottingham.html#three-connected-packages-one-thread",
+    "href": "talks/or68-nottingham/slides/or68_nottingham.html#three-connected-packages-one-thread",
+    "title": "How Floods and Rising Sea Levels Disrupt Healthcare Service Delivery: A Mixed-Methods Framework",
+    "section": "Three connected packages, one thread",
+    "text": "Three connected packages, one thread\n\n                  drivers become features, disruption labels today’s vulnerability is the baseline   WP1 How floods disrupt healthcare delivery WP2 Which facilities are vulnerable, what are vulnerability drivers WP3 Planning resilience under uncertainty \n\nEach package feeds the next. WP1 defines what the models need to consider and measure, and the current vulnerability defines what the future planning adapts.\n\nAbout 1 minute. This is the spine of the talk. WP1 establishes what actually happens, because right now the evidence itself is missing. WP2 turns those mechanisms into measurement: which facilities are vulnerable, and what a flood causally does to demand. WP3 takes today’s picture into futures we cannot assign probabilities to, and plans under that. The arrows are the argument: you cannot model vulnerability well until the qualitative work tells you what to model, and you cannot plan for the future without a defensible baseline. I will spend most time on WP1, since it is furthest along, then sketch the other two."
+  },
+  {
+    "objectID": "talks/or68-nottingham/slides/or68_nottingham.html#what-i-will-cover-2",
+    "href": "talks/or68-nottingham/slides/or68_nottingham.html#what-i-will-cover-2",
+    "title": "How Floods and Rising Sea Levels Disrupt Healthcare Service Delivery: A Mixed-Methods Framework",
+    "section": "What I will cover",
+    "text": "What I will cover\n\nThe problem\nInterconnected research directions\nWP1: mapping how floods disrupt care\nWP2 and WP3: measure it, then plan for it\nKey Takeaways"
+  },
+  {
+    "objectID": "talks/or68-nottingham/slides/or68_nottingham.html#disruption-propagates-it-does-not-stay-put",
+    "href": "talks/or68-nottingham/slides/or68_nottingham.html#disruption-propagates-it-does-not-stay-put",
+    "title": "How Floods and Rising Sea Levels Disrupt Healthcare Service Delivery: A Mixed-Methods Framework",
+    "section": "Disruption propagates, it does not stay put",
+    "text": "Disruption propagates, it does not stay put\nHealthcare delivery is a system of interdependent parts. A flood is a shock that propagates through them.\n\n                         A · Hazard B · Infrastructure C · Facility & workforce D · Demand   the flood itself power, water, transport, IT closures, staff cannot reach can patients still reach care    X · Cross-cutting cascades across layers, over time, and reaching facilities that never flood \n\nA facility can stay completely dry and still stop delivering care. Monmouth proved it.\n\nAbout 1 minute, and this is the conceptual spine of WP1, distilled from a structured synthesis of about 70 studies across more than 20 countries. Walk it left to right. Layer A is the flood. It knocks out the infrastructure care leans on, B: power, water, transport, IT. That hits the facility and its workforce, C: closures, and staff who cannot get in. That changes demand, D: who needs care and whether they can reach it. The band underneath, X, is the interesting part: failures cascade across layers, evolve over hours to months, and reach facilities that never flood, through a severed road or a lost substation. On current evidence the dominant pathways are access, power, and workforce, not the flooded building. That is exactly the Monmouth story from the opening, and the whole reason this needs more than a flood map."
+  },
+  {
+    "objectID": "talks/or68-nottingham/slides/or68_nottingham.html#a-hospital-can-become-an-island-without-ever-getting-wet",
+    "href": "talks/or68-nottingham/slides/or68_nottingham.html#a-hospital-can-become-an-island-without-ever-getting-wet",
+    "title": "How Floods and Rising Sea Levels Disrupt Healthcare Service Delivery: A Mixed-Methods Framework",
+    "section": "A hospital can become an island without ever getting wet",
+    "text": "A hospital can become an island without ever getting wet\n\n\nAccident and Emergency, Nevill Hall Hospital, Abergavenny.\n\n\nAbout 30 seconds. This is a working Welsh NHS hospital in the same health board as the Monmouth case, with an ambulance at the A&E doors. Make the layer C point concrete: the building here is fine, the doors are open, the staff are willing. What fails is everything around it. If the access road floods, that ambulance diverts and outpatients do not arrive. If the substation goes, the site runs on generators with a limited window. If staff live on the far side of a closed bridge, the rota collapses. So the question a flood map cannot answer is not is this building wet, it is can care still be delivered from it. That is what WP1 is trying to make measurable."
+  },
+  {
+    "objectID": "talks/or68-nottingham/slides/or68_nottingham.html#two-methods-one-picture",
+    "href": "talks/or68-nottingham/slides/or68_nottingham.html#two-methods-one-picture",
+    "title": "How Floods and Rising Sea Levels Disrupt Healthcare Service Delivery: A Mixed-Methods Framework",
+    "section": "Two methods, one picture",
+    "text": "Two methods, one picture\nWP1 combines computational reach with qualitative depth.\n\n                 Large-scale NLP news, reports, Senedd record Case studies and interviews in Wales Disruption taxonomy Quantified effect sizes \n\nThe text gives breadth and the what. The interviews give the why and the cascades. Together they triangulate.\n\nAbout 1 minute. Newspapers, reports, and parliamentary records tell you what happened but rarely why, and cascading effects mostly surface when you talk to the people who ran the response. So the NLP is one input into a case-study design, not the work package on its own. The final step quantifies effect sizes, anchored where possible in records rather than expert opinion alone. The next slide shows where the four cases sit."
+  },
+  {
+    "objectID": "talks/or68-nottingham/slides/or68_nottingham.html#four-contrasting-cases-four-flood-mechanisms",
+    "href": "talks/or68-nottingham/slides/or68_nottingham.html#four-contrasting-cases-four-flood-mechanisms",
+    "title": "How Floods and Rising Sea Levels Disrupt Healthcare Service Delivery: A Mixed-Methods Framework",
+    "section": "Four contrasting cases, four flood mechanisms",
+    "text": "Four contrasting cases, four flood mechanisms\n\n\nLocal authority boundaries: ONS Open Geography Portal.\n\n\nAbout 45 seconds, and this is the slide to guide people through properly, since most of the room will not know Welsh geography. Say first what the map is: all 22 Welsh local authorities, with the four case study areas shaded darker. Then walk the four. Monmouth in the east is river flooding in a market town. Rhondda Cynon Taf in the valleys is river flooding through dense residential streets. Newport and the Gwent Levels on the south coast is coastal and tidal. Tenby in the far west is the cut-off case, where the town is not flooded but the roads in are. Land the design point: this is deliberate variation, not convenience sampling, because a comparative design needs contrast in both the mechanism and the population."
+  },
+  {
+    "objectID": "talks/or68-nottingham/slides/or68_nottingham.html#the-evidence-base-is-gathered",
+    "href": "talks/or68-nottingham/slides/or68_nottingham.html#the-evidence-base-is-gathered",
+    "title": "How Floods and Rising Sea Levels Disrupt Healthcare Service Delivery: A Mixed-Methods Framework",
+    "section": "The evidence base is gathered",
+    "text": "The evidence base is gathered\n\nFirst the academic literature: About 70 peer-reviewed studies from more than 20 countries\nThen the text corpus: Documents from news, grey literature, humanitarian reports, council papers, government publications, and the Senedd records\nMultiple filtering stages to keep documents relevant to the intersection of floods and healthcare service delivery, keep 84,877.\n\nRecall-first strategy, because a lost document costs evidence; an extra read only costs compute.\n\nAbout 55 seconds. Two passes, and say them in order. Pass one is human reading: roughly 70 peer-reviewed studies, hand-coded, and that synthesis is where the coding frame comes from. Pass two is machine reading at a scale no human could do: 144,171 documents across thirteen sources, news through GDELT plus grey literature, meaning documents produced outside academic publishing, humanitarian situation reports, Welsh council committee papers, government publications, and the Senedd record in English and Welsh. 28,222 of them mention a Welsh place. Then the filter confession, worth saying out loud: three stages, each judged against a gold set I labelled by hand, and the automatic threshold was rejected because it lost 47 percent of the true disruption documents. The closing line is the design principle behind every threshold choice."
+  },
+  {
+    "objectID": "talks/or68-nottingham/slides/or68_nottingham.html#the-extraction-framework",
+    "href": "talks/or68-nottingham/slides/or68_nottingham.html#the-extraction-framework",
+    "title": "How Floods and Rising Sea Levels Disrupt Healthcare Service Delivery: A Mixed-Methods Framework",
+    "section": "The extraction framework",
+    "text": "The extraction framework\n\nqwen2.5 32B, extract disruptions by reading every document with an engineered prompt, randomness off and a fixed seed, so a rerun gives exactly the same answer\nEvery extracted disruption must quote the exact sentence it came from to be verifiable\nGrouped by place and date, 14,553 distinct floods are returned\n\n\nAbout 60 seconds. Walk it as a chain of trust. The model is open weights, so anyone can rerun it; randomness is off and the seed fixed, so the same input gives the same output; and the instructions it receives are generated from the coding scheme file, so there is no hand-written prompt that could quietly disagree with the codebook. Then the proof rule: no disruption counts unless the model copies out the exact sentence it read, and every one of those 120,480 sentences was programmatically checked to exist in its source document. The cleaning step is a final filter on the outputs themselves, removing duplicates and vague generic claims, half a percent. Define the unit clearly for the room: one account is one document telling one disruption story. Grouping by place and date is what stops syndication inflating the counts, and 2,293 floods are corroborated by at least two independent sources."
+  },
+  {
+    "objectID": "talks/or68-nottingham/slides/or68_nottingham.html#from-32292-accounts-to-one-disruption-tree",
+    "href": "talks/or68-nottingham/slides/or68_nottingham.html#from-32292-accounts-to-one-disruption-tree",
+    "title": "How Floods and Rising Sea Levels Disrupt Healthcare Service Delivery: A Mixed-Methods Framework",
+    "section": "From 32,292 accounts to one disruption tree",
+    "text": "From 32,292 accounts to one disruption tree\n\n                   Flooded roads cut off access to care People unable to reach facilities Electricity disrupted Water and sanitation fail Access cut off by flooding Disruption reaches facilities outside the flood footprint   seen in 265 floods, 340 documents seen in 80 floods, 89 documents seen in 69 floods, 84 documents \n\n\nAccounts describing the same step are merged into 22,138 unique steps, joined by 58,999 cause-and-effect links\nOnly links seen in at least two floods and two documents are released: 4,645 clear the bar; the tree keeps the 1,597 steps they connect\nWe hand-checked 100 outputs first; 37 held a step the text did not support, and that error rate set the bar and is reported openly\n\n\nAbout 60 seconds. Explain the picture first: three real links from the graph with their support counts, and the counts are distinct real-world floods, not documents, so one syndicated article cannot inflate them. The left pair is the strongest link in the whole graph and it is the Monmouth story again: roads, then access, then care. Then the construction in plain words. Many accounts describe the same step in different wording, so they are merged; each merged step is a node, and a link means one step was reported leading to another. The full graph holds everything; what we release is the subset of links with independent support, at least two floods and two documents, and drawing only those links naturally keeps only the steps they touch, which is why the tree is smaller than the graph. Close on the audit: before building, I hand-checked 100 machine outputs against their source text and 37 contained a step the text did not actually support. That number is in the method report, it is why the two-flood two-document bar exists, and reporting it openly is what makes the rest credible."
+  },
+  {
+    "objectID": "talks/or68-nottingham/slides/or68_nottingham.html#where-we-are",
+    "href": "talks/or68-nottingham/slides/or68_nottingham.html#where-we-are",
+    "title": "How Floods and Rising Sea Levels Disrupt Healthcare Service Delivery: A Mixed-Methods Framework",
+    "section": "Where we are",
+    "text": "Where we are\n\nThe problem\nInterconnected research directions\nWP1: mapping how floods disrupt care\nWP2 and WP3: measure it, then plan for it\nKey Takeaways\n\n\n10 seconds. WP1 defines the mechanisms. Now, briefly, what the next two packages do with them."
+  },
+  {
+    "objectID": "talks/or68-nottingham/slides/or68_nottingham.html#wp2-which-facilities-fail-and-how-demand-shifts",
+    "href": "talks/or68-nottingham/slides/or68_nottingham.html#wp2-which-facilities-fail-and-how-demand-shifts",
+    "title": "How Floods and Rising Sea Levels Disrupt Healthcare Service Delivery: A Mixed-Methods Framework",
+    "section": "WP2: which facilities fail, and how demand shifts",
+    "text": "WP2: which facilities fail, and how demand shifts\nA spatio-temporal model that scores healthcare facilities and tracks how floods change demand.\n\nInputs: flood hazard, road accessibility, facility characteristics, population context\nA vulnerability score for each facility that varies across space and time\nHow demand moves during and after a flood, using interrupted time series\nCausal machine learning to estimate effect sizes rather than mere correlation\n\n\nPartners are clear that the drivers of vulnerability matter more than the score itself.\n\n\nAbout 1 minute. WP2 is where WP1’s mechanisms become measurement. It is a prediction model, spatial and temporal, and the staff dimension came straight from the qualitative work: a facility is only as available as the people who can reach it. The uncertainty here is attribution: a demand spike after a flood is not proof the flood caused it, so the toolkit is causal, interrupted time series and double machine learning, to separate effect from coincidence. Partners repeatedly said the actionable output is which factors drive vulnerability, for example a single access road, more than any composite number."
+  },
+  {
+    "objectID": "talks/or68-nottingham/slides/or68_nottingham.html#wp3-planning-resilience-under-uncertainty",
+    "href": "talks/or68-nottingham/slides/or68_nottingham.html#wp3-planning-resilience-under-uncertainty",
+    "title": "How Floods and Rising Sea Levels Disrupt Healthcare Service Delivery: A Mixed-Methods Framework",
+    "section": "WP3: planning resilience under uncertainty",
+    "text": "WP3: planning resilience under uncertainty\nHow healthcare delivery stays functional as the climate shifts, and how scarce resources are planned for floods.\n\nScenario-based exposure of Welsh healthcare assets under RCP 4.5, RCP 8.5, 2 and 4 degrees of warming\nAdaptation woven into routine investment, not separate adaptation investment\nStochastic and robust optimisation, since the future is uncertain by nature\n\n\nAbout 1 minute. WP3 is the future-facing package and the deepest uncertainty in the project. There is no way to validate a 30-year projection today, so this is closer to foresight than prediction: you plan across plausible futures rather than forecasting one. Stochastic programming handles the uncertainty you can put probabilities on; robust optimisation handles the uncertainty you cannot. The framing was reshaped by partners: a real-time resource model has no live data to run on in a real event, so the viable, useful version is offline scenario-based preparedness, which is also what the Civil Contingencies Act duty to plan actually asks for."
+  },
+  {
+    "objectID": "talks/or68-nottingham/slides/or68_nottingham.html#where-we-are-1",
+    "href": "talks/or68-nottingham/slides/or68_nottingham.html#where-we-are-1",
+    "title": "How Floods and Rising Sea Levels Disrupt Healthcare Service Delivery: A Mixed-Methods Framework",
+    "section": "Where we are",
+    "text": "Where we are\n\nThe problem\nInterconnected research directions\nWP1: mapping how floods disrupt care\nWP2 and WP3: measure it, then plan for it\nKey Takeaways"
+  },
+  {
+    "objectID": "talks/or68-nottingham/slides/or68_nottingham.html#if-you-take-three-things-away",
+    "href": "talks/or68-nottingham/slides/or68_nottingham.html#if-you-take-three-things-away",
+    "title": "How Floods and Rising Sea Levels Disrupt Healthcare Service Delivery: A Mixed-Methods Framework",
+    "section": "If you take three things away",
+    "text": "If you take three things away\n\nWP1 is the foundation, and it is being carried out\nThe work is grounded in real Welsh cases, not in the literature alone, with interconnected research directions: evidence, cause, and the future\nBuilt with a live network of Welsh partners, so the outputs are plans and tools health practitioners can actually use\n\n\nAbout 40 seconds. Slow down for these three. The gap, the intellectual structure, and the route to practice. Then hand over for questions. The backup slides cover the coding scheme, WP2 and WP3 in depth, the partner network, and the Welsh data landscape."
+  },
+  {
+    "objectID": "talks/or68-nottingham/slides/or68_nottingham.html#thank-you",
+    "href": "talks/or68-nottingham/slides/or68_nottingham.html#thank-you",
+    "title": "How Floods and Rising Sea Levels Disrupt Healthcare Service Delivery: A Mixed-Methods Framework",
+    "section": "Thank you 💬",
+    "text": "Thank you 💬\nQuestions and discussion welcome.\nAmirhossein Ghadiri\nData Lab for Social Good, Cardiff Business School\nSupervised by Bahman Rostami-Tabar, Thomas Woolley, and William Bennett | Funded by WGSSS (ESRC)\n GhadiriA@cardiff.ac.uk\n amirhosseinghdv |  amirhossein-ghadiri | 🌐 amirhosseinghdv.github.io\n\nSlides available at: amirhosseinghdv.github.io\n\n\nFinish under time. Backups: the coding scheme, WP2 depth, WP3 depth, the partner network, and the Welsh data landscape."
+  },
+  {
     "objectID": "talks/index.html",
     "href": "talks/index.html",
     "title": "Talks",
     "section": "",
-    "text": "What drives vaccine quality at the last mile? Evidence from WHO EVM assessments in 77 countries\n\n\nThe Quality component of the WHO EVM (Effective Vaccine Management) project: filtering 891 requirements down to a defensible short list, one winning model across quality-related targets, and the stress tests that make the list trustworthy.\n\n\n\n\n\nAug 26, 2026\n\n\nAmirhossein Ghadiri\n\n\n\n\n\n\n\n\n\n\n\n\nClimate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding\n\n\nPhD presentation for the DL4SG Summer School on uncertainty and the future: the problem, WP1 in depth, and how each work package answers a different kind of uncertainty.\n\n\n\n\n\nJul 9, 2026\n\n\nAmirhossein Ghadiri\n\n\n\n\n\n\n\n\n\n\n\n\nNine-month review: Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding\n\n\nThe whole project at nine months: the three work packages, detailed progress on WP1, and the plan for the next six months.\n\n\n\n\n\nJun 25, 2026\n\n\nAmirhossein Ghadiri\n\n\n\n\n\n\n\n\n\n\n\n\nHow floods disrupt healthcare\n\n\nWP1 progress talk: mapping the mechanisms behind health service failure during floods, grounded in Wales.\n\n\n\n\n\nJun 15, 2026\n\n\nAmirhossein Ghadiri\n\n\n\n\n\nNo matching items"
+    "text": "How Floods and Rising Sea Levels Disrupt Healthcare Service Delivery: A Mixed-Methods Framework\n\n\nPresentation for the OR68 Annual Conference in Nottingham: the problem, WP1 in depth, and how the three work packages connect.\n\n\n\n\n\nSep 10, 2026\n\n\nAmirhossein Ghadiri\n\n\n\n\n\n\n\n\n\n\n\n\nWhat drives vaccine quality at the last mile? Evidence from WHO EVM assessments in 77 countries\n\n\nThe Quality component of the WHO EVM (Effective Vaccine Management) project: filtering 891 requirements down to a defensible short list, one winning model across quality-related targets, and the stress tests that make the list trustworthy.\n\n\n\n\n\nAug 26, 2026\n\n\nAmirhossein Ghadiri\n\n\n\n\n\n\n\n\n\n\n\n\nClimate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding\n\n\nPhD presentation for the DL4SG Summer School on uncertainty and the future: the problem, WP1 in depth, and how each work package answers a different kind of uncertainty.\n\n\n\n\n\nJul 9, 2026\n\n\nAmirhossein Ghadiri\n\n\n\n\n\n\n\n\n\n\n\n\nNine-month review: Climate change and the future of health and care service delivery in Wales: Building resilience to rising sea levels & flooding\n\n\nThe whole project at nine months: the three work packages, detailed progress on WP1, and the plan for the next six months.\n\n\n\n\n\nJun 25, 2026\n\n\nAmirhossein Ghadiri\n\n\n\n\n\n\n\n\n\n\n\n\nHow floods disrupt healthcare\n\n\nWP1 progress talk: mapping the mechanisms behind health service failure during floods, grounded in Wales.\n\n\n\n\n\nJun 15, 2026\n\n\nAmirhossein Ghadiri\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "talks/uncertainty-summer-school/slides/uncertainty_summer_school.html#monmouth-november-2024",
@@ -936,6 +1083,13 @@
     "title": "First Post",
     "section": "",
     "text": "Slides\n  \n\nSed risus ultricies tristique nulla aliquet. Neque volutpat ac tincidunt vitae semper quis lectus nulla.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim sed faucibus turpis in eu mi bibendum neque. Ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Velit sed ullamcorper morbi tincidunt ornare massa. Sagittis id consectetur purus ut faucibus pulvinar elementum integer. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero. Lobortis feugiat vivamus at augue eget arcu. Aliquam ut porttitor leo a diam sollicitudin tempor id eu. Mauris a diam maecenas sed enim ut sem viverra aliquet. Enim ut tellus elementum sagittis vitae et leo duis. Molestie at elementum eu facilisis sed odio morbi quis commodo. Sapien pellentesque habitant morbi tristique senectus. Quam vulputate dignissim suspendisse in est. Nulla pellentesque dignissim enim sit amet venenatis urna cursus eget.\nVelit aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Viverra mauris in aliquam sem fringilla ut morbi tincidunt augue. Tortor at auctor urna nunc id. Sit amet consectetur adipiscing elit duis tristique sollicitudin. Aliquet nibh praesent tristique magna sit amet purus. Tristique senectus et netus et malesuada fames ac turpis. Hac habitasse platea dictumst quisque. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Iaculis at erat pellentesque adipiscing. Cras tincidunt lobortis feugiat vivamus. Nisi est sit amet facilisis magna etiam. Pharetra pharetra massa massa ultricies mi quis hendrerit. Vitae sapien pellentesque habitant morbi tristique senectus. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae."
+  },
+  {
+    "objectID": "talks/or68-nottingham/index.html",
+    "href": "talks/or68-nottingham/index.html",
+    "title": "How Floods and Rising Sea Levels Disrupt Healthcare Service Delivery: A Mixed-Methods Framework",
+    "section": "",
+    "text": "Open slides\n  \n\nThis talk was prepared for OR68, the Annual Conference of the Operational Research Society, held at the University of Nottingham in September 2026 under the theme From Data to Decisions.\nFloods and rising sea levels keep disrupting how healthcare is delivered in Wales. Yet, where the water goes is mapped, not what stops working. The talk walks through the three connected work packages. The first builds the missing evidence base with a text-mining pipeline and Welsh case studies. The second identifies which facilities are vulnerable and what drives that vulnerability. The third plans for uncertain futures using optimisation under uncertainty."
   },
   {
     "objectID": "talks/evm-vaccine-quality/index.html",
