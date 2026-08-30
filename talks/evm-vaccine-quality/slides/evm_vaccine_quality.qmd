@@ -3,11 +3,9 @@ title: "What drives vaccine quality at the last mile?"
 subtitle: "WHO EVM assessments across 77 countries | The Quality component"
 author:
   - Amirhossein Ghadiri, PhD Student
-  - Jayeed Bin Kibria, MSc Student
   - Bahman Rostami-Tabar, Supervisor
 institute:
   - Data Lab for Social Good, Cardiff Business School, Cardiff University
-  - Cardiff Business School, Cardiff University
   - Data Lab for Social Good, Cardiff Business School, Cardiff University
 format:
   revealjs:
