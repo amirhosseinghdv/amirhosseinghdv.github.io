@@ -1,7 +1,41 @@
 [
   {
+    "listing": "/talks/index.html",
+    "items": [
+      "/talks/or68-nottingham/index.html",
+      "/talks/evm-vaccine-quality/index.html",
+      "/talks/uncertainty-summer-school/index.html",
+      "/talks/nine-month-review/index.html",
+      "/talks/wp1-floods-healthcare/index.html"
+    ]
+  },
+  {
+    "listing": "/publications/book_chapters/index.html",
+    "items": []
+  },
+  {
     "listing": "/publications/technical_reports/index.html",
     "items": []
+  },
+  {
+    "listing": "/projects/forecasting/index.html",
+    "items": [
+      "/projects/forecasting/first-post/index.html"
+    ]
+  },
+  {
+    "listing": "/projects/sustainability/index.html",
+    "items": [
+      "/projects/sustainability/first-post/index.html"
+    ]
+  },
+  {
+    "listing": "/projects/data_science/index.html",
+    "items": [
+      "/projects/data_science/first-post/index.html",
+      "/projects/data_science/scond-post/index.html",
+      "/projects/data_science/third-post/index.html"
+    ]
   },
   {
     "listing": "/publications/working_papers/index.html",
@@ -14,44 +48,10 @@
     "items": []
   },
   {
-    "listing": "/talks/index.html",
-    "items": [
-      "/talks/or68-nottingham/index.html",
-      "/talks/evm-vaccine-quality/index.html",
-      "/talks/uncertainty-summer-school/index.html",
-      "/talks/nine-month-review/index.html",
-      "/talks/wp1-floods-healthcare/index.html"
-    ]
-  },
-  {
-    "listing": "/projects/sustainability/index.html",
-    "items": [
-      "/projects/sustainability/first-post/index.html"
-    ]
-  },
-  {
-    "listing": "/projects/forecasting/index.html",
-    "items": [
-      "/projects/forecasting/first-post/index.html"
-    ]
-  },
-  {
-    "listing": "/projects/data_science/index.html",
-    "items": [
-      "/projects/data_science/first-post/index.html",
-      "/projects/data_science/scond-post/index.html",
-      "/projects/data_science/third-post/index.html"
-    ]
-  },
-  {
     "listing": "/blog/index.html",
     "items": [
       "/blog/reading-disasters-with-llms/index.html",
       "/blog/floods-and-healthcare/index.html"
     ]
-  },
-  {
-    "listing": "/publications/book_chapters/index.html",
-    "items": []
   }
 ]
