@@ -7,6 +7,15 @@ author:
 institute:
   - Data Lab for Social Good, Cardiff Business School, Cardiff University
   - Data Lab for Social Good, Cardiff Business School, Cardiff University
+title-slide-attributes:
+  data-background-image: "images/who.png, images/dl4sg.png, images/cardiff.png"
+  data-background-size: "auto 70px, auto 70px, auto 70px"
+  data-background-position: "12% 91%, 50% 91%, 88% 91%"
+  data-background-repeat: "no-repeat, no-repeat, no-repeat"
+resources:
+  - images/who.png
+  - images/dl4sg.png
+  - images/cardiff.png
 format:
   revealjs:
     multiplex: false
@@ -189,8 +198,7 @@ About 40 seconds. Say why the distinction bites: a model can be excellent at gue
 Three things:
 
 - **R squared on unseen facilities.** Facilities differ in quality. R squared is the share of that difference the fitted model accounts for, from 0 for none to 1 for all. It will always be measured on facilities the model was never fitted on.
-- **Conclusive.**  Each model is fitted on 200 resamples of the facilities. A requirement counts as conclusive only if 95% of those runs put it on the same side of zero
-- **Size.** The quality score runs from 0 to 1, so an effect of 0.04 is about four points on a 100-point scale
+- **Conclusive.**  Each model is fitted on 200 resamples of the facilities 20 times. A requirement will be called conclusive only if 95% of those runs put it on the same side of zero
 
 ::: {.notes}
 About 55 seconds. This slide buys back time everywhere else, so do not rush it. The 200 resamples idea is worth a sentence in plain speech: shuffle which facilities you happen to look at, refit, and see whether the answer keeps pointing the same way.
@@ -274,7 +282,9 @@ About 55 seconds. This slide buys back time everywhere else, so do not rush it. 
   </g>
 </svg>
 
+::: {.notes}
 No input requirement shares a questionnaire item with the quality scores, so nothing on the left hand-side restates the answer.
+:::
 
 ::: {.notes}
 About 75 seconds, the longest single slide, so guide it properly. Top row, left to right: 4,287 rows cover every level of the supply chain; I keep the 2,290 Service Points because that is the last mile, the fridge in the story; 2,258 of those have a quality score. Bottom row: 891 requirements in the workbook; 207 are the input requirements a manager can actually act on; 36 go because they apply to fewer than one facility in ten; one is an exact duplicate of another. The two rows meet on the right: 2,258 facilities, 172 columns, which is the 170 requirements plus assessment year and target population, across 77 countries. Then the line underneath: I checked that no requirement is scored from the same questionnaire item as the outcome, which would have made the whole thing circular.
@@ -478,7 +488,7 @@ About 70 seconds. Read both columns aloud, then land the common thread. Point ou
 
 ## Results verification
 
-- **Shuffling the answers.** Values of the target scores were randomly shuffled so no requirement could possibly explain them, then the whole machine was ran again. Ten times per target, thirty runs, and it found **zero** requirements, against real counts of 4, 4, and 5.
+- **Shuffling the answers.** Values of the target scores were randomly shuffled, then the whole machine was run again. It found **zero** requirements, against real counts of 4, 4, and 5.
 - **Removing the filled-in values.** Where a requirement does not apply, the model needs a number, the median of the column was put. Refitting only on facilities that were actually scored, all 13 leading effects keep their direction and 9 stay conclusive (expect `R0290`, `R0322`, `R0257`, `R0037`).
 - The one hold loosely is `R0322` (The facility has SOPs (Standard Operating Procedure) for the multi-dose vial policy): without the filled rows its effect drops to nearly nothing.
 
@@ -550,7 +560,7 @@ About 30 seconds. Explain the picture once and it carries the next two slides: e
   </g>
 </svg>
 
-[Knowing the discard time is the one requirement every family reaches for. The other three rest on their effect estimates alone, so I hold them more loosely.]{.remember}
+[Knowing the discard time is the one requirement every family reaches for.]{.remember}
 
 ::: {.notes}
 About 25 seconds. Be straight about the weak rows: fire extinguishers and the training requirement are named by only two families, so the bootstrap intervals are the whole of their evidence. That is a reason to treat them as leads rather than findings, and it is the honest counterweight to the clean shuffle result on the previous slide.
