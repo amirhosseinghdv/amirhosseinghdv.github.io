@@ -228,17 +228,6 @@ Healthcare delivery is a system of interdependent parts. A flood is a shock that
 About 1 minute, and this is the conceptual spine of WP1, distilled from a structured synthesis of about 70 studies across more than 20 countries. Walk it left to right. Layer A is the flood. It knocks out the infrastructure care leans on, B: power, water, transport, IT. That hits the facility and its workforce, C: closures, and staff who cannot get in. That changes demand, D: who needs care and whether they can reach it. The band underneath, X, is the interesting part: failures cascade across layers, evolve over hours to months, and reach facilities that never flood, through a severed road or a lost substation. On current evidence the dominant pathways are access, power, and workforce, not the flooded building. That is exactly the Monmouth story from the opening, and the whole reason this needs more than a flood map.
 :::
 
-## A hospital can become an island without ever getting wet
-
-![](images/welsh_hospital.jpg){fig-align="center" width="25%"}
-
-::: {.textcenter}
-[Accident and Emergency, Nevill Hall Hospital, Abergavenny.]{style="font-size:0.55em; font-style:italic;"}
-:::
-
-::: {.notes}
-About 30 seconds. This is a working Welsh NHS hospital in the same health board as the Monmouth case, with an ambulance at the A&E doors. Make the layer C point concrete: the building here is fine, the doors are open, the staff are willing. What fails is everything around it. If the access road floods, that ambulance diverts and outpatients do not arrive. If the substation goes, the site runs on generators with a limited window. If staff live on the far side of a closed bridge, the rota collapses. So the question a flood map cannot answer is not is this building wet, it is can care still be delivered from it. That is what WP1 is trying to make measurable.
-:::
 
 ## Two methods, one picture
 
@@ -350,7 +339,7 @@ How healthcare delivery stays functional as the climate shifts, and how scarce r
 
 - Scenario-based exposure of Welsh healthcare assets under RCP 4.5, RCP 8.5, 2 and 4 degrees of warming
 - Adaptation woven into routine investment, not separate adaptation investment
-- Stochastic and robust optimisation, since the future is uncertain by nature
+- Optimization under uncertainty, since the future is uncertain by nature
 
 ::: {.notes}
 About 1 minute. WP3 is the future-facing package and the deepest uncertainty in the project. There is no way to validate a 30-year projection today, so this is closer to foresight than prediction: you plan across plausible futures rather than forecasting one. Stochastic programming handles the uncertainty you can put probabilities on; robust optimisation handles the uncertainty you cannot. The framing was reshaped by partners: a real-time resource model has no live data to run on in a real event, so the viable, useful version is offline scenario-based preparedness, which is also what the Civil Contingencies Act duty to plan actually asks for.
