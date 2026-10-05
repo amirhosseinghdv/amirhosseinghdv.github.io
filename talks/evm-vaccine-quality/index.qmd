@@ -1,8 +1,8 @@
 ---
 title: "What drives vaccine quality at the last mile? Evidence from WHO EVM assessments in 77 countries"
-description: "The Quality component of the WHO EVM (Effective Vaccine Management) project: filtering 891 requirements down to a defensible short list, one winning model across quality-related targets, and the stress tests that make the list trustworthy."
+description: "The Quality component of the WHO EVM (Effective Vaccine Management) project: a defensible short list from 891 requirements, the stress tests behind it, a causal estimate for every requirement with double machine learning, and the same analysis repeated on provisional subcategory scores."
 author: "Amirhossein Ghadiri"
-date: "2026-08-26"
+date: "2026-10-05"
 image: "cover.svg"
 categories:
   - Vaccine supply chains
@@ -22,6 +22,6 @@ categories:
 </a>
 ```
 
-This talk presents the Quality component of our WHO Effective Vaccine Management project. Starting from 4,287 assessment rows and 891 requirements, it walks through the filters that produce one clean matrix of 2,258 last-mile facilities in 77 countries, the screening that sets aside four ceiling-bound targets, and the model comparison that the elastic net wins for the composite quality score and both multi-dose vial components.
+This talk presents the Quality component of our WHO Effective Vaccine Management project. Starting from 4,287 assessment rows and 891 requirements, it walks through the filters that produce one clean matrix of 2,258 last-mile facilities in 77 countries, the screening that sets aside four ceiling-bound targets, and the model comparison that the elastic net wins for the composite quality score and both multi-dose vial components. For each target it shows the 25 largest effects and the ten requirements the model has least use for, with the rule that chose them.
 
-The findings come with their own stress tests: a shuffled-outcome calibration that produced zero false positives, agreement across six model families, an exposure check that explains why two requirements point the wrong way, and a complete-case refit that removes every invented value. The talk closes on what a shortened EVM-Lite instrument could keep, and on the causal work that should come next.
+The findings come with their own stress tests: a shuffled-outcome calibration, agreement across six model families, an exposure check that explains why a requirement can point the wrong way, and a complete-case refit that removes every filled-in value. A causal section then estimates, for every requirement, the effect that survives holding all the others fixed, using double machine learning with countries kept together, and puts the leading effects through a within-country comparison, a hidden-factor sensitivity test, a controls check and a negative control. The same analysis is repeated on fourteen provisional subcategory scores, and the talk closes on what the evidence supports and what comes next.

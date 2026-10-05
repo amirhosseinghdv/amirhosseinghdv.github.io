@@ -35,6 +35,24 @@ format:
       toggleNotesButton: true
 ---
 
+
+<style>
+.reveal section.tbl table { width: 100%; table-layout: fixed; border-collapse: collapse; }
+.reveal section.tbl th, .reveal section.tbl td { padding: 0.12em 0.3em; vertical-align: middle; line-height: 1.15; }
+.reveal section.tbl th { text-align: left; }
+.reveal section.tbl td:nth-child(n+4), .reveal section.tbl th:nth-child(n+4) { text-align: right; }
+.reveal section.t25 table { font-size: 0.46em; }
+.reveal section.t14 table { font-size: 0.56em; }
+.reveal section.t10 table { font-size: 0.6em; }
+.reveal section.t7 table { font-size: 0.66em; }
+.reveal section.tbl td:nth-child(3), .reveal section.tbl th:nth-child(3) { width: 36%; text-align: left; }
+.reveal section.tbl td:nth-child(2), .reveal section.tbl th:nth-child(2) { width: 7%; text-align: left; }
+.reveal section.tbl td:nth-child(1), .reveal section.tbl th:nth-child(1) { width: 4%; text-align: left; }
+.reveal section.wide3 td:nth-child(3), .reveal section.wide3 th:nth-child(3) { width: 44%; }
+.reveal section.tbl p { font-size: 0.72em; margin-top: 0.4em; }
+.reveal .smallnote { font-size: 0.7em; color: #5a6b7c; }
+</style>
+
 ## A fridge in a small clinic
 
 <svg viewBox="0 0 1300 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A vaccine fridge and three opened vials, one dated, one undated, one expired" style="width:100%;max-width:1080px;height:auto;display:block;margin:0 auto;">
@@ -98,10 +116,12 @@ About 60 seconds. Start with the picture and talk through it: the fridge on the 
 3. [Targets and models]{.graylight}
 4. [What drives quality]{.graylight}
 5. [Stress-testing the answer]{.graylight}
-6. [What it means and what comes next]{.graylight}
+6. [Causal estimates]{.graylight}
+7. [Subcategory scores]{.graylight}
+8. [What it means and what comes next]{.graylight}
 
 ::: {.notes}
-15 seconds. One line each. This slide comes back at every transition with the highlight moved, so you always know where we are.
+5 seconds. Move the highlight and go.
 :::
 
 ## One assessment, three components, and this is about Quality
@@ -195,13 +215,13 @@ About 40 seconds. Say why the distinction bites: a model can be excellent at gue
 
 ## How to read every number I show
 
-Three things:
-
-- **R squared on unseen facilities.** Facilities differ in quality. R squared is the share of that difference the fitted model accounts for, from 0 for none to 1 for all. It will always be measured on facilities the model was never fitted on.
-- **Conclusive.**  Each model is fitted on 200 resamples of the facilities 20 times. A requirement will be called conclusive only if 95% of those runs put it on the same side of zero
+- **R squared on unseen facilities.** Facilities differ in quality. R squared is the share of that difference a fitted model accounts for, from 0 for none to 1 for all. It is always measured on facilities the model was never fitted on.
+- **Effect.** The change in the quality score, which runs from 0 to 1, for one standard deviation more of a requirement's score. The causal section later uses a plainer unit: the change from not met to met in full.
+- **Conclusive.** The model is refitted on 200 random resamples of the facilities. A requirement is conclusive when the middle 95% of its effects across those refits lies on one side of zero, and at least half of the refits keep it in the model at all.
+- **Not applicable.** Where a requirement does not apply to a facility, the linear models are given the column's mean. The checks later remove those filled cells and look again.
 
 ::: {.notes}
-About 55 seconds. This slide buys back time everywhere else, so do not rush it. The 200 resamples idea is worth a sentence in plain speech: shuffle which facilities you happen to look at, refit, and see whether the answer keeps pointing the same way.
+About 60 seconds. This slide buys back time everywhere else, so do not rush it. The resamples idea in plain speech: shuffle which facilities you happen to look at, refit, and see whether the answer keeps pointing the same way. Say that the mean filling is new in this version of the analysis, and that a later slide removes it to check.
 :::
 
 ## What I will cover
@@ -211,7 +231,9 @@ About 55 seconds. This slide buys back time everywhere else, so do not rush it. 
 3. [Targets and models]{.graylight}
 4. [What drives quality]{.graylight}
 5. [Stress-testing the answer]{.graylight}
-6. [What it means and what comes next]{.graylight}
+6. [Causal estimates]{.graylight}
+7. [Subcategory scores]{.graylight}
+8. [What it means and what comes next]{.graylight}
 
 ::: {.notes}
 5 seconds. Move the highlight and go.
@@ -312,80 +334,49 @@ About 35 seconds. Small check, large consequence. Flag now that the year turns o
 3. [**Targets and models**]{.remember}
 4. [What drives quality]{.graylight}
 5. [Stress-testing the answer]{.graylight}
-6. [What it means and what comes next]{.graylight}
+6. [Causal estimates]{.graylight}
+7. [Subcategory scores]{.graylight}
+8. [What it means and what comes next]{.graylight}
 
 ::: {.notes}
-5 seconds.
+5 seconds. Move the highlight and go.
 :::
 
-## Four of the seven targets have not much to explain
+## Four of the seven targets have almost nothing to explain
 
 | Target | Facilities at full marks | Best R² on unseen facilities |
 |---|---|---|
-| `R0712` vials, use within 28 days | 54.9% | 0.185 |
-| `R0722` vials, none left past 28 days | 54.5% | 0.174 |
-| `QU` composite quality | 58.2% | 0.067 |
-| `R0710` `R0711` `R0713` `R0716` | 93 to 97% | zero or below |
+| `R0712` vials, use within 28 days | 54.9% | 0.187 |
+| `R0722` vials, none left past 28 days | 54.5% | 0.171 |
+| `QU` composite quality | 58.2% | 0.059 |
+| `R0710` `R0711` `R0713` `R0716` | 94 to 97% | 0.05 or below |
 
-**The composite and the two vial components are carried forward.** TabPFN, a model that works in a completely different way, ranks the seven targets the same way, which reassures that this is about the data rather than the choice of model.
+**The composite and the two vial components are carried forward.** The other four cover expired and heat-damaged vaccine, and almost every facility already passes them, so there is no variation left to explain.
 
 ::: {.notes}
-About 60 seconds. Read the table row by row. The four targets I set aside cover expired stock and heat damage, and almost every facility already passes them, so there is no variation left to explain. That near-universal pass is a finding in itself about the last mile. What still separates facilities is multi-dose vial handling. Then the TabPFN line: same ordering from a model with nothing in common with mine.
+About 60 seconds. Read the table row by row. The near-universal pass on expired and heat-damaged stock is a finding in itself about the last mile. What still separates facilities is multi-dose vial handling. The R squared figures here come from five repeated splits of the facilities; the next slide uses twenty.
 :::
 
 ## The best-fitting model is not useful
 
-Ten model families, each run over twenty repeated splits of the facilities into 75% for fitting and 25% for testing.
+Eleven model families, each run over twenty repeated splits of the facilities into 75% for fitting and 25% for testing.
 
-- Random forest achieves the best raw test score on the three targets, 0.238, but it scores about 0.7 higher on the facilities it was fitted on. Huge overfit
-- XGBoost fits its training facilities perfectly, 1.000. Tre-based models are not useful for this problem
-- Among the models that can explain and have a low overfit gap, **the elastic net wins all three targets**: [0.062]{.strong-blue} for `QU`, [0.192]{.strong-blue} for `R0712`, [0.183]{.strong-blue} for `R0722`
+- Random forest has the best raw test score, 0.239 on `R0712`, but it scores about 0.65 higher on the facilities it was fitted on. It memorises them.
+- XGBoost fits its training facilities perfectly, 1.000, and does worse than a straight line on new ones. Tree models cannot answer an explanatory question here.
+- Among the models that give a readable number per requirement, **the elastic net wins all three targets**: [0.051]{.strong-blue} for `QU`, [0.191]{.strong-blue} for `R0712`, [0.180]{.strong-blue} for `R0722`.
 
 ::: {.notes}
-About 65 seconds. This is the rule from the earlier slide biting. Random forest wins on paper and still loses, and I want that said plainly because it is the kind of thing a panel tests you on. The elastic net is worth one sentence of explanation: it keeps a small number of requirements and pushes the rest to exactly zero, so what comes out is already a short list.
+About 65 seconds. This is the rule from the earlier slide biting. Random forest wins on paper and still loses, and I want that said plainly. The elastic net is worth one sentence: it keeps a small number of requirements and pushes the rest to exactly zero, so what comes out is already a short list.
 :::
 
-## Knowing the country helps a lot, which is why it is put aside from the predictors
+## Knowing the country helps a lot, which is why it is kept out of the predictors
 
-<svg viewBox="0 0 1300 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bar chart comparing model fit with and without country columns" style="width:100%;max-width:1080px;height:auto;display:block;margin:0 auto;">
-  <g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif">
-  <line x1="150" y1="345" x2="1240" y2="345" stroke="#8a97a6" stroke-width="2"/>
-  <text x="60" y="200" font-size="21" fill="#33495d" transform="rotate(-90 60 200)" text-anchor="middle">R² unseen</text>
-  <g>
-    <rect x="230" y="295" width="90" height="50" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"/>
-    <rect x="330" y="250" width="90" height="95" fill="#1f6db4"/>
-    <rect x="590" y="191" width="90" height="154" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"/>
-    <rect x="690" y="87" width="90" height="258" fill="#1f6db4"/>
-    <rect x="950" y="199" width="90" height="146" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"/>
-    <rect x="1050" y="101" width="90" height="244" fill="#1f6db4"/>
-  </g>
-  <g font-size="24" fill="#33495d" text-anchor="middle">
-    <text x="275" y="285">0.062</text>
-    <text x="375" y="240">0.119</text>
-    <text x="635" y="181">0.192</text>
-    <text x="735" y="77">0.323</text>
-    <text x="995" y="189">0.183</text>
-    <text x="1095" y="91">0.305</text>
-    <text x="325" y="380" font-size="26">QU</text>
-    <text x="685" y="380" font-size="26">R0712</text>
-    <text x="1045" y="380" font-size="26">R0722</text>
-  </g>
-  <g font-size="23" fill="#33495d">
-    <rect x="230" y="405" width="26" height="18" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"/>
-    <text x="266" y="420">requirements only</text>
-    <rect x="590" y="405" width="26" height="18" fill="#1f6db4"/>
-    <text x="626" y="420">requirements plus one column per country</text>
-  </g>
-  </g>
-</svg>
+<svg viewBox="0 0 1300 445" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:1080px;height:auto;display:block;margin:0 auto;"><g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif"><line x1="150" y1="345" x2="1240" y2="345" stroke="#8a97a6" stroke-width="2"/><text x="60" y="200" font-size="21" fill="#33495d" transform="rotate(-90 60 200)" text-anchor="middle">R² unseen</text><rect x="240" y="304" width="80" height="41" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"/><text x="280" y="294" font-size="22" fill="#33495d" text-anchor="middle">0.051</text><rect x="330" y="254" width="80" height="91" fill="#1f6db4"/><text x="370" y="244" font-size="22" fill="#33495d" text-anchor="middle">0.114</text><rect x="600" y="192" width="80" height="153" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"/><text x="640" y="182" font-size="22" fill="#33495d" text-anchor="middle">0.191</text><rect x="690" y="86" width="80" height="259" fill="#1f6db4"/><text x="730" y="76" font-size="22" fill="#33495d" text-anchor="middle">0.324</text><rect x="960" y="201" width="80" height="144" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"/><text x="1000" y="191" font-size="22" fill="#33495d" text-anchor="middle">0.180</text><rect x="1050" y="99" width="80" height="246" fill="#1f6db4"/><text x="1090" y="89" font-size="22" fill="#33495d" text-anchor="middle">0.308</text><text x="325" y="380" font-size="26" fill="#33495d" text-anchor="middle">QU</text><text x="685" y="380" font-size="26" fill="#33495d" text-anchor="middle">R0712</text><text x="1045" y="380" font-size="26" fill="#33495d" text-anchor="middle">R0722</text><rect x="230" y="405" width="26" height="18" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"/><text x="266" y="420" font-size="22" fill="#33495d">requirements only</text><rect x="650" y="405" width="26" height="18" fill="#1f6db4"/><text x="686" y="420" font-size="22" fill="#33495d">plus one column per country</text></g></svg>
 
 ::: {.notes}
-Between a fifth and two fifths of all variation sits between countries. That is income and infrastructure, and no facility can act on it.
-::: 
-
-::: {.notes}
-About 55 seconds. Walk the chart: pale bars are the model I report, solid bars add one column per country, and every pair roughly doubles. Then the reasoning, which matters more than the numbers: my question is about requirements, and once country is in the model every requirement number becomes a within-country comparison, which hides how small the requirement signal really is. So I pay the price of the pale bars on purpose, and I measure that price in section 5.
+About 55 seconds. Walk the chart: pale bars are the model I report, solid bars add one column per country, and every pair roughly doubles. Between a fifth and two fifths of all variation sits between countries: 21% for the composite, 41% and 41% for the components. That is income and infrastructure, and no facility can act on it. Once country is in the model every requirement number becomes a within-country comparison, which hides how small the requirement signal really is. So I pay the price of the pale bars on purpose, and the next slide measures that price.
 :::
+
 
 ## What I will cover
 
@@ -394,13 +385,15 @@ About 55 seconds. Walk the chart: pale bars are the model I report, solid bars a
 3. [Targets and models]{.graylight}
 4. [**What drives quality**]{.remember}
 5. [Stress-testing the answer]{.graylight}
-6. [What it means and what comes next]{.graylight}
+6. [Causal estimates]{.graylight}
+7. [Subcategory scores]{.graylight}
+8. [What it means and what comes next]{.graylight}
 
 ::: {.notes}
-5 seconds.
+5 seconds. Move the highlight and go.
 :::
 
-## Four requirements drive the composite Quality score, and two have negative effect {.tight-table}
+## Two requirements drive the composite score, and one of them pulls it down {.tight-table}
 
 <style>
 section.tight-table table { width: 100%; table-layout: fixed; font-size: 0.8em; }
@@ -412,17 +405,17 @@ section.tight-table th:nth-child(3), section.tight-table td:nth-child(3) { width
 
 | Code | What is checked | Effect |
 |---|---|---|
-| `R0290` | Responsible staff know the discard time of multi-dose vials. | [+0.0114]{.strong-blue} |
-| `R0322` | The facility has SOPs (Standard Operating Procedure) for the multi-dose vial policy. | [+0.0105]{.strong-blue} |
-| `R0040` | The facility has sufficient positive cold storage capacity to accommodate the expected maximum stock levels of vaccines. | [−0.0121]{.orange} |
-| `R0156` | The temperature record is a graph rather than a list | [−0.0078]{.orange} |
+| `R0290` | Responsible staff know the discard time of multi-dose vials. | [+0.0102]{.strong-blue} |
+| `R0040` | The facility has sufficient positive cold storage capacity for the expected maximum stock of vaccines. | [-0.0114]{.orange} |
+| `R0322` | The facility has SOPs for the multi-dose vial policy. Borderline: its interval touches zero. | [+0.0061]{.strong-blue} |
+| `R0156` | The temperature record is a graph rather than a list. Borderline, the same way. | [-0.0061]{.orange} |
 
 . . .
 
-[Meeting two WHO requirements have make vaccines quality worse.]{.remember}
+[Meeting a WHO requirement can go with a worse quality score. Section 5 explains why.]{.remember}
 
 ::: {.notes}
-About 70 seconds. Read all four rows straight off the slide. The two blue ones are exactly what the assessment intends, and both are about the vials from the opening story. Then slow right down on the orange ones: more fridge space and a tidier temperature chart go with worse quality. Do not explain it yet. Reveal the last line, let it sit, and tell them section 5 explains what is really going on. This is the hook that carries the middle of the talk.
+About 70 seconds. Two are conclusive, two sit just outside: their 200-resample intervals touch zero but stop there, and both are kept in over 90% of refits. The blue one is exactly what the assessment intends, and it is about the vials from the opening story. Then slow right down on the orange one: more fridge space goes with worse quality. Do not explain it yet. Reveal the last line, let it sit.
 :::
 
 ## On the two Quality components {.no-footer .two-comp}
@@ -439,27 +432,28 @@ section.two-comp .defn { display: block; color: #5a6b7c; margin: 0.15em 0 0.55em
 section.two-comp > p { font-size: 0.82em; }
 </style>
 
+
 :::: {.columns}
 ::: {.column width="50%"}
 **`R0712`, four conclusive**
 
 [Multi-dose vial vaccines are never administered more than 28 days after opening.]{.defn}
 
-- `R0290` Staff know the discard time of multi-dose vials. [+0.039]{.strong-blue}
-- `R0257` Staff are trained how to monitor ISC performance. [+0.039]{.strong-blue}
-- `R0272` Staff know key principles and procedures of vaccine & dry goods storage. [+0.029]{.strong-blue}
-- `R0037` Storage buildings have functional certified fire extinguishers. [+0.028]{.strong-blue}
+- `R0290` Staff know the discard time of multi-dose vials. [+0.0403]{.strong-blue}
+- `R0257` Staff are trained how to monitor supply chain performance. [+0.0387]{.strong-blue}
+- `R0037` Storage buildings have functional certified fire extinguishers. [+0.0289]{.strong-blue}
+- `R0272` Staff know the key principles of vaccine and dry goods storage. [+0.0263]{.strong-blue}
 :::
 ::: {.column width="50%"}
 **`R0722`, five conclusive**
 
 [There are no opened multi-dose vials in stock that were opened more than 28 days ago.]{.defn}
 
-- `R0037` Storage buildings have functional certified fire extinguishers. [+0.044]{.strong-blue}
-- `R0293` Staff know the main types of opened vial wastage. [+0.039]{.strong-blue}
-- `R0290` Staff know the discard time of multi-dose vials. [+0.035]{.strong-blue}
-- `R0358` Staff are paid in full and on time. [+0.033]{.strong-blue}
-- `R0129` Waste is stored in plastic or metal bins. [+0.030]{.strong-blue}
+- `R0037` Storage buildings have functional certified fire extinguishers. [+0.0463]{.strong-blue}
+- `R0293` Staff know the main types of opened vial wastage. [+0.0385]{.strong-blue}
+- `R0290` Staff know the discard time of multi-dose vials. [+0.0363]{.strong-blue}
+- `R0358` Staff are paid in full and on time. [+0.0333]{.strong-blue}
+- `R0129` Waste is stored in plastic or metal bins. [+0.0297]{.strong-blue}
 :::
 ::::
 
@@ -470,7 +464,223 @@ section.two-comp > p { font-size: 0.82em; }
 :::
 
 ::: {.notes}
-About 70 seconds. Read both columns aloud, then land the common thread. Point out the odd ones honestly: fire extinguishers, salaries and waste bins cannot touch a vial, so something else is behind them, and the next section deals with it. Add that the assessment year is conclusive for both components too, which is the country label from earlier showing through rather than any change over time.
+About 70 seconds. Read both columns aloud, then land the common thread. Point out the odd ones honestly: fire extinguishers, salaries and waste bins cannot touch a vial, so something else is behind them, and sections 5 and 6 deal with it. The assessment year is conclusive for both components too, which is the country label from earlier showing through rather than any change over time.
+:::
+
+## The 25 largest effects on the composite score, 1 to 13 {.tbl .t25}
+
+| # | Code | What is checked | Applies to | At max | Effect | Interval | Kept in | Concl. |
+|---|---|---|---|---|---|---|---|---|
+| 1 | `R0040` | Sufficient cold storage capacity for the expected maximum stock | 90% | 90% | -0.0114 | -0.0167 to -0.0062 | 100% | ✓ |
+| 2 | `R0290` | Staff know the discard time of multi-dose vials | 90% | 90% | +0.0102 | +0.0028 to +0.0171 | 100% | ✓ |
+| 3 | `R0322` | SOPs for the multi-dose vial policy | 89% | 65% | +0.0061 | +0.0000 to +0.0128 | 94% |  |
+| 4 | `R0156` | The temperature record form is graphical | 96% | 41% | -0.0061 | -0.0119 to +0.0000 | 96% |  |
+| 5 | `R0257` | Staff are trained to monitor supply chain performance | 100% | 54% | +0.0057 | +0.0000 to +0.0125 | 94% |  |
+| 6 | `R0130` | Bins are colour coded for different types of waste | 70% | 56% | +0.0054 | +0.0000 to +0.0118 | 93% |  |
+| 7 | `R0251` | Staff turnover is low | 97% | 33% | +0.0050 | +0.0000 to +0.0116 | 92% |  |
+| 8 | `R0279` | Staff know cool packs are prepared in dedicated compartments | 50% | 52% | +0.0046 | +0.0000 to +0.0097 | 93% |  |
+| 9 | `R0037` | Storage buildings have functional fire extinguishers | 100% | 19% | +0.0045 | +0.0000 to +0.0110 | 91% |  |
+| 10 | `R0136` | Supply chain staff have work mobile phones | 100% | 59% | +0.0044 | +0.0000 to +0.0129 | 83% |  |
+| 11 | `R0328` | There are safe injection SOPs in the immunization room | 98% | 24% | +0.0042 | +0.0000 to +0.0123 | 82% |  |
+| 12 | `R0292` | Staff know how to calculate the unopened vial wastage rate | 100% | 51% | +0.0035 | +0.0000 to +0.0096 | 85% |  |
+| 13 | `R0275` | Staff know how to use the stock management system | 100% | 73% | +0.0034 | +0.0000 to +0.0090 | 78% |  |
+
+[Applies to: share of facilities where the requirement was asked. At max: share of those facilities meeting it in full. Kept in: share of the 200 resamples that kept the requirement. Effect is per standard deviation of the requirement's score, on the 0 to 1 target.]{.smallnote}
+
+::: {.notes}
+About 60 seconds. Read the conclusive rows and then say what the rest of the table is for: a ranking by size so the reader can see how quickly the evidence runs out, not a list of findings. Point at the two profile columns: a requirement almost everyone meets has little room to show an effect.
+:::
+
+## The 25 largest effects on the composite score, 14 to 25 {.tbl .t25}
+
+| # | Code | What is checked | Applies to | At max | Effect | Interval | Kept in | Concl. |
+|---|---|---|---|---|---|---|---|---|
+| 14 | `R0122` | Waste handlers have boots | 16% | 60% | +0.0030 | +0.0000 to +0.0105 | 74% |  |
+| 15 | `R0064` | Vaccine refrigerator/freezers have door open alarms | 35% | 10% | -0.0030 | -0.0120 to +0.0000 | 68% |  |
+| 16 | `R0269` | Staff can correctly read a 30DTR | 71% | 85% | +0.0027 | +0.0000 to +0.0100 | 70% |  |
+| 17 | `R0186` | Stock record form has a field for VVM status | 95% | 60% | -0.0025 | -0.0085 to +0.0000 | 62% |  |
+| 18 | `R0298` | Staff know how to dispose of expired temperature monitoring devices | 100% | 82% | -0.0022 | -0.0075 to +0.0000 | 72% |  |
+| 19 | `R0272` | Staff know the principles of vaccine and dry goods storage | 99% | 87% | +0.0019 | +0.0000 to +0.0083 | 60% |  |
+| 20 | `R0212` | Receipt form has a field for Freeze indicator status of vaccines received | 84% | 56% | -0.0018 | -0.0078 to +0.0000 | 58% |  |
+| 21 | `R0154` | The form has fields for entering AM and PM temperatures | 96% | 84% | +0.0018 | +0.0000 to +0.0088 | 50% |  |
+| 22 | `R0210` | Receipt form has a field for Quantity of vaccines received | 100% | 78% | -0.0017 | -0.0067 to +0.0000 | 57% |  |
+| 23 | `R0326` | SOPs for disposal of sharps waste | 56% | 63% | +0.0016 | +0.0000 to +0.0063 | 53% |  |
+| 24 | `R0073` | Sufficient coolant pack storage capacity for daily demand | 96% | 37% | -0.0016 | -0.0071 to +0.0000 | 60% |  |
+| 25 | `R0077` | Transport is always available for scheduled vaccine distribution, collect… | 37% | 95% | +0.0015 | +0.0000 to +0.0103 | 40% |  |
+
+[Ranked by the size of the average effect. Below the conclusive rows the intervals include zero, so the order says where the evidence thins out, not which of these matter.]{.smallnote}
+
+::: {.notes}
+About 30 seconds. Do not read these rows. Say that from here down the intervals include zero, and move on.
+:::
+
+## The 25 largest effects on `R0712`, 1 to 13 {.tbl .t25}
+
+| # | Code | What is checked | Applies to | At max | Effect | Interval | Kept in | Concl. |
+|---|---|---|---|---|---|---|---|---|
+| 1 | `R0290` | Staff know the discard time of multi-dose vials | 100% | 92% | +0.0403 | +0.0137 to +0.0620 | 100% | ✓ |
+| 2 | `R0257` | Staff are trained to monitor supply chain performance | 100% | 56% | +0.0387 | +0.0094 to +0.0691 | 100% | ✓ |
+| 3 | `R0037` | Storage buildings have functional fire extinguishers | 100% | 23% | +0.0289 | +0.0007 to +0.0508 | 98% | ✓ |
+| 4 | `R0272` | Staff know the principles of vaccine and dry goods storage | 99% | 88% | +0.0263 | +0.0017 to +0.0546 | 98% | ✓ |
+| 5 | `R0156` | The temperature record form is graphical | 97% | 44% | -0.0227 | -0.0515 to +0.0000 | 94% |  |
+| 6 | `R0270` | Staff know the correct storage temperature for each vaccine | 99% | 41% | +0.0194 | +0.0000 to +0.0529 | 83% |  |
+| 7 | `R0130` | Bins are colour coded for different types of waste | 72% | 56% | +0.0187 | +0.0000 to +0.0431 | 92% |  |
+| 8 | `R0328` | There are safe injection SOPs in the immunization room | 100% | 29% | +0.0185 | +0.0000 to +0.0519 | 83% |  |
+| 9 | `R0002` | A functional landline telephone | 100% | 18% | +0.0178 | +0.0000 to +0.0454 | 90% |  |
+| 10 | `R0279` | Staff know cool packs are prepared in dedicated compartments | 52% | 49% | +0.0175 | +0.0000 to +0.0426 | 88% |  |
+| 11 | `R0129` | Waste is stored in plastic or metal bins | 100% | 48% | +0.0156 | +0.0000 to +0.0442 | 86% |  |
+| 12 | `R0251` | Staff turnover is low | 98% | 33% | +0.0138 | +0.0000 to +0.0371 | 84% |  |
+| 13 | `R0305` | SOPs for vaccine temperature monitoring in storage | 99% | 30% | +0.0115 | +0.0000 to +0.0459 | 60% |  |
+
+[Applies to: share of facilities where the requirement was asked. At max: share of those facilities meeting it in full. Kept in: share of the 200 resamples that kept the requirement. Effect is per standard deviation of the requirement's score, on the 0 to 1 target.]{.smallnote}
+
+::: {.notes}
+About 60 seconds. Read the conclusive rows and then say what the rest of the table is for: a ranking by size so the reader can see how quickly the evidence runs out, not a list of findings. Point at the two profile columns: a requirement almost everyone meets has little room to show an effect.
+:::
+
+## The 25 largest effects on `R0712`, 14 to 25 {.tbl .t25}
+
+| # | Code | What is checked | Applies to | At max | Effect | Interval | Kept in | Concl. |
+|---|---|---|---|---|---|---|---|---|
+| 14 | `R0358` | Staff are paid in full and on time | 100% | 79% | +0.0104 | +0.0000 to +0.0397 | 70% |  |
+| 15 | `R0311` | SOPs for managing vaccine stock transactions | 99% | 69% | +0.0097 | +0.0000 to +0.0402 | 52% |  |
+| 16 | `R0327` | SOPs for management of used vials | 100% | 67% | +0.0069 | +0.0000 to +0.0355 | 39% |  |
+| 17 | `R0233` | At least one member of staff is responsible for annual work planning | 100% | 62% | +0.0068 | +0.0000 to +0.0256 | 55% |  |
+| 18 | `R0182` | Stock record form has a field for Presentation (# doses per vial) | 100% | 71% | +0.0067 | +0.0000 to +0.0286 | 53% |  |
+| 19 | `R0298` | Staff know how to dispose of expired temperature monitoring devices | 100% | 84% | -0.0066 | -0.0312 to +0.0000 | 60% |  |
+| 20 | `R0357` | Funds for staff salaries are received on time | 19% | 88% | +0.0066 | +0.0000 to +0.0265 | 60% |  |
+| 21 | `R0307` | SOPs for vaccine storage | 99% | 70% | +0.0065 | +0.0000 to +0.0381 | 38% |  |
+| 22 | `R0123` | Waste handlers have an apron | 18% | 60% | +0.0063 | +0.0000 to +0.0287 | 51% |  |
+| 23 | `R0236` | At least one member of staff is responsible for monitoring ISC performance | 100% | 72% | +0.0061 | +0.0000 to +0.0365 | 35% |  |
+| 24 | `R0370` | Funds received for electricity are sufficient | 16% | 88% | -0.0059 | -0.0253 to +0.0000 | 52% |  |
+| 25 | `R0062` | Vaccine refrigerators/freezers have functioning voltage regulators | 97% | 41% | +0.0057 | +0.0000 to +0.0272 | 54% |  |
+
+[Ranked by the size of the average effect. Below the conclusive rows the intervals include zero, so the order says where the evidence thins out, not which of these matter.]{.smallnote}
+
+::: {.notes}
+About 30 seconds. Do not read these rows. Say that from here down the intervals include zero, and move on.
+:::
+
+## The 25 largest effects on `R0722`, 1 to 13 {.tbl .t25}
+
+| # | Code | What is checked | Applies to | At max | Effect | Interval | Kept in | Concl. |
+|---|---|---|---|---|---|---|---|---|
+| 1 | `R0037` | Storage buildings have functional fire extinguishers | 100% | 21% | +0.0463 | +0.0168 to +0.0737 | 100% | ✓ |
+| 2 | `R0293` | Staff know the main types of opened-vial wastage | 100% | 88% | +0.0385 | +0.0081 to +0.0629 | 100% | ✓ |
+| 3 | `R0290` | Staff know the discard time of multi-dose vials | 95% | 92% | +0.0363 | +0.0112 to +0.0588 | 99% | ✓ |
+| 4 | `R0358` | Staff are paid in full and on time | 100% | 81% | +0.0333 | +0.0088 to +0.0589 | 100% | ✓ |
+| 5 | `R0129` | Waste is stored in plastic or metal bins | 100% | 48% | +0.0297 | +0.0069 to +0.0586 | 99% | ✓ |
+| 6 | `R0257` | Staff are trained to monitor supply chain performance | 100% | 57% | +0.0281 | +0.0000 to +0.0580 | 91% |  |
+| 7 | `R0040` | Sufficient cold storage capacity for the expected maximum stock | 88% | 92% | -0.0173 | -0.0427 to +0.0000 | 86% |  |
+| 8 | `R0279` | Staff know cool packs are prepared in dedicated compartments | 47% | 50% | +0.0161 | +0.0000 to +0.0423 | 88% |  |
+| 9 | `R0328` | There are safe injection SOPs in the immunization room | 99% | 30% | +0.0147 | +0.0000 to +0.0449 | 78% |  |
+| 10 | `R0260` | Staff are trained in routine refrigeration maintenance | 100% | 55% | -0.0134 | -0.0336 to +0.0000 | 80% |  |
+| 11 | `R0155` | The form has fields for temperature alarms | 100% | 69% | -0.0113 | -0.0359 to +0.0000 | 72% |  |
+| 12 | `R0272` | Staff know the principles of vaccine and dry goods storage | 100% | 91% | +0.0110 | +0.0000 to +0.0336 | 76% |  |
+| 13 | `R0251` | Staff turnover is low | 98% | 30% | +0.0104 | +0.0000 to +0.0350 | 76% |  |
+
+[Applies to: share of facilities where the requirement was asked. At max: share of those facilities meeting it in full. Kept in: share of the 200 resamples that kept the requirement. Effect is per standard deviation of the requirement's score, on the 0 to 1 target.]{.smallnote}
+
+::: {.notes}
+About 60 seconds. Read the conclusive rows and then say what the rest of the table is for: a ranking by size so the reader can see how quickly the evidence runs out, not a list of findings. Point at the two profile columns: a requirement almost everyone meets has little room to show an effect.
+:::
+
+## The 25 largest effects on `R0722`, 14 to 25 {.tbl .t25}
+
+| # | Code | What is checked | Applies to | At max | Effect | Interval | Kept in | Concl. |
+|---|---|---|---|---|---|---|---|---|
+| 14 | `R0326` | SOPs for disposal of sharps waste | 58% | 69% | +0.0104 | +0.0000 to +0.0355 | 71% |  |
+| 15 | `R0236` | At least one member of staff is responsible for monitoring ISC performance | 100% | 73% | +0.0104 | +0.0000 to +0.0386 | 58% |  |
+| 16 | `R0062` | Vaccine refrigerators/freezers have functioning voltage regulators | 100% | 44% | +0.0093 | +0.0000 to +0.0303 | 66% |  |
+| 17 | `R0128` | The waste storage area is covered | 100% | 62% | +0.0083 | +0.0000 to +0.0336 | 62% |  |
+| 18 | `R0187` | Stock record form has a field for Transaction type | 100% | 61% | +0.0083 | +0.0000 to +0.0302 | 64% |  |
+| 19 | `R0275` | Staff know how to use the stock management system | 100% | 75% | +0.0080 | +0.0000 to +0.0328 | 64% |  |
+| 20 | `R0280` | Staff know how to prevent freezing during transportation in cold climates | 65% | 24% | +0.0077 | +0.0000 to +0.0311 | 60% |  |
+| 21 | `R0323` | SOPs for handling diluents | 100% | 68% | +0.0071 | +0.0000 to +0.0327 | 46% |  |
+| 22 | `R0308` | A vaccine storage emergency contingency plan | 100% | 61% | +0.0070 | +0.0000 to +0.0311 | 50% |  |
+| 23 | `R0002` | A functional landline telephone | 100% | 17% | +0.0064 | +0.0000 to +0.0290 | 57% |  |
+| 24 | `R0122` | Waste handlers have boots | 16% | 65% | +0.0062 | +0.0000 to +0.0256 | 52% |  |
+| 25 | `R0106` | The waste burial site has clear warning signs | 22% | 16% | +0.0058 | +0.0000 to +0.0270 | 60% |  |
+
+[Ranked by the size of the average effect. Below the conclusive rows the intervals include zero, so the order says where the evidence thins out, not which of these matter.]{.smallnote}
+
+::: {.notes}
+About 30 seconds. Do not read these rows. Say that from here down the intervals include zero, and move on.
+:::
+
+## How the ten least useful requirements were chosen
+
+The bottom of a list is harder to define than the top, because the elastic net sets many coefficients to exactly zero and nothing orders them. So the rule has three steps, applied separately to each target.
+
+1. **Set aside the requirements with no room to vary**: those met in full by fewer than 5% or more than 95% of the facilities where they apply. A column that never changes cannot earn a low rank.
+2. **Among the rest, take the ten kept in the fewest of the 200 resamples.** A requirement the model drops almost every time is one it has no use for.
+3. **Break ties by the smallest average effect, then by the weakest raw correlation with the target.** The correlation is only a tie-breaker; it is not what the model uses.
+
+::: {.notes}
+About 45 seconds. The WHO team asked for this as a credibility check: a method that ranks sensibly at the top should rank sensibly at the bottom too. Explain why step 1 is needed: a requirement everyone meets would otherwise land at the bottom for the wrong reason.
+:::
+
+## The ten requirements the model has least use for on the composite score {.tbl .t10}
+
+| # | Code | What is checked | Applies to | At max | Kept in | Effect | Correlation |
+|---|---|---|---|---|---|---|---|
+| 1 | `R0321` | SOPs for the shake test | 86% | 59% | 0% | +0.0000 | 0.084 |
+| 2 | `R0329` | SOPs are written in a local language | 97% | 68% | 0% | +0.0000 | 0.095 |
+| 3 | `R0327` | SOPs for management of used vials | 99% | 63% | 0% | +0.0000 | 0.096 |
+| 4 | `R0311` | SOPs for managing vaccine stock transactions | 99% | 66% | 0% | +0.0000 | 0.109 |
+| 5 | `R0183` | Stock record form has a field for Quantity | 100% | 83% | 0% | -0.0000 | 0.041 |
+| 6 | `R0386` | Facility funds received for storage are sufficient | 14% | 89% | 0% | -0.0000 | 0.013 |
+| 7 | `R0185` | Stock record form has a field for Expiry date | 100% | 78% | 0% | -0.0000 | 0.021 |
+| 8 | `R0120` | Waste handlers have protective eyewear | 16% | 51% | 1% | +0.0000 | 0.078 |
+| 9 | `R0389` | Funds for maintenance of buildings are received on time | 21% | 84% | 1% | +0.0000 | 0.038 |
+| 10 | `R0393` | Funds for maintenance of cold chain equipment are received on time | 16% | 84% | 1% | +0.0000 | 0.042 |
+
+[Ranked from the bottom: 1 is the least used. Kept in: share of the 200 resamples that kept the requirement at all. Correlation: absolute raw correlation with the target, the final tie-breaker only.]{.smallnote}
+
+::: {.notes}
+About 40 seconds. Read three or four rows, enough to show the pattern. Note that several are funding items that apply to only one facility in six, which is a theme that returns in the causal section.
+:::
+
+## The ten requirements the model has least use for on `R0712` {.tbl .t10}
+
+| # | Code | What is checked | Applies to | At max | Kept in | Effect | Correlation |
+|---|---|---|---|---|---|---|---|
+| 1 | `R0183` | Stock record form has a field for Quantity | 100% | 86% | 0% | +0.0000 | 0.114 |
+| 2 | `R0010` | Hand washing or hand sanitizing facilities | 100% | 90% | 0% | +0.0000 | 0.117 |
+| 3 | `R0316` | SOPs for packing insulated containers | 77% | 66% | 0% | +0.0000 | 0.158 |
+| 4 | `R0124` | Waste handlers have trousers | 18% | 48% | 0% | -0.0000 | 0.078 |
+| 5 | `R0329` | SOPs are written in a local language | 98% | 72% | 0% | +0.0000 | 0.209 |
+| 6 | `R0309` | SOPs/guidelines for routine maintenance of refrigeration equipment | 97% | 56% | 0% | -0.0000 | 0.100 |
+| 7 | `R0211` | Receipt form has a field for VVM status of vaccines received | 99% | 94% | 1% | -0.0000 | 0.060 |
+| 8 | `R0117` | Waste handlers have protective gloves | 35% | 74% | 1% | -0.0000 | 0.074 |
+| 9 | `R0390` | Facility funds received for maintenance of buildings are sufficient | 21% | 84% | 2% | -0.0000 | 0.043 |
+| 10 | `R0260` | Staff are trained in routine refrigeration maintenance | 97% | 54% | 2% | -0.0000 | 0.031 |
+
+[Ranked from the bottom: 1 is the least used. Kept in: share of the 200 resamples that kept the requirement at all. Correlation: absolute raw correlation with the target, the final tie-breaker only.]{.smallnote}
+
+::: {.notes}
+About 40 seconds. Read three or four rows, enough to show the pattern. Note that several are funding items that apply to only one facility in six, which is a theme that returns in the causal section.
+:::
+
+## The ten requirements the model has least use for on `R0722` {.tbl .t10}
+
+| # | Code | What is checked | Applies to | At max | Kept in | Effect | Correlation |
+|---|---|---|---|---|---|---|---|
+| 1 | `R0253` | Staff are trained in annual work planning | 100% | 47% | 0% | +0.0000 | 0.055 |
+| 2 | `R0185` | Stock record form has a field for Expiry date | 100% | 82% | 0% | +0.0000 | 0.089 |
+| 3 | `R0329` | SOPs are written in a local language | 98% | 72% | 0% | +0.0000 | 0.171 |
+| 4 | `R0307` | SOPs for vaccine storage | 100% | 70% | 0% | +0.0000 | 0.194 |
+| 5 | `R0136` | Supply chain staff have work mobile phones | 100% | 53% | 0% | +0.0000 | 0.116 |
+| 6 | `R0250` | Two or more members of staff are assigned to manage immunization waste | 100% | 61% | 0% | +0.0000 | 0.038 |
+| 7 | `R0264` | Staff are trained in planning vaccine collection/distribution and/or outr… | 65% | 69% | 1% | +0.0000 | 0.064 |
+| 8 | `R0004` | A reliable internet connection | 100% | 45% | 1% | +0.0000 | 0.099 |
+| 9 | `R0400` | Funds for vaccine transportation or outreach are received in full | 24% | 87% | 1% | -0.0000 | 0.085 |
+| 10 | `R0210` | Receipt form has a field for Quantity of vaccines received | 100% | 81% | 1% | +0.0000 | 0.048 |
+
+[Ranked from the bottom: 1 is the least used. Kept in: share of the 200 resamples that kept the requirement at all. Correlation: absolute raw correlation with the target, the final tie-breaker only.]{.smallnote}
+
+::: {.notes}
+About 40 seconds. Read three or four rows, enough to show the pattern. Note that several are funding items that apply to only one facility in six, which is a theme that returns in the causal section.
 :::
 
 ## What I will cover
@@ -480,129 +690,64 @@ About 70 seconds. Read both columns aloud, then land the common thread. Point ou
 3. [Targets and models]{.graylight}
 4. [What drives quality]{.graylight}
 5. [**Stress-testing the answer**]{.remember}
-6. [What it means and what comes next]{.graylight}
+6. [Causal estimates]{.graylight}
+7. [Subcategory scores]{.graylight}
+8. [What it means and what comes next]{.graylight}
 
 ::: {.notes}
-5 seconds.
+5 seconds. Move the highlight and go.
 :::
 
-## Results verification
+## Shuffling the answers finds almost nothing, so the real counts mean something
 
-- **Shuffling the answers.** Values of the target scores were randomly shuffled, then the whole machine was run again. It found **zero** requirements, against real counts of 4, 4, and 5.
-- **Removing the filled-in values.** Where a requirement does not apply, the model needs a number, the median of the column was put. Refitting only on facilities that were actually scored, all 13 leading effects keep their direction and 9 stay conclusive (expect `R0290`, `R0322`, `R0257`, `R0037`).
-- The one hold loosely is `R0322` (The facility has SOPs (Standard Operating Procedure) for the multi-dose vial policy): without the filled rows its effect drops to nearly nothing.
+- The target scores were shuffled at random across facilities and the whole machine was run again, ten times per target.
+- Real counts: **2, 4 and 5** conclusive requirements. On shuffled scores: one false alarm in thirty runs, on the composite, and none on the components.
+- The largest effect any shuffled run produced is a noise ceiling: 0.0063 for the composite, 0.0238 and 0.0192 for the components. Every conclusive effect clears its ceiling, and on `R0722` so does one more, training to monitor supply chain performance.
 
 ::: {.notes}
-About 60 seconds. The first bullet is the important one, so put it in plain speech: if my method finds four requirements out of pure noise, then finding four in the real data proves nothing. It found none, thirty times running. The second bullet defends the one compromise in the data preparation, and the third is me flagging my own weakest result before Bahman does.
+About 60 seconds. Put the first point in plain speech: if the method found requirements out of pure noise, then finding them in the real data would prove nothing. It found one in thirty tries. The noise ceiling is a second, gentler bar: anything below it could have come from noise. Everything conclusive is above it.
 :::
 
-## On the composite, every conclusive requirement is named by most families
+## Removing the filled-in values changes little
 
-<svg viewBox="0 0 1300 310" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="How many of six model families name each conclusive requirement for the composite score" style="width:100%;max-width:1080px;height:auto;display:block;margin:0 auto;">
-  <g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif">
-  <text x="1085" y="32" font-size="21" fill="#33495d" text-anchor="middle">families naming it, out of six</text>
-  <g font-size="24">
-    <text x="20" y="85" fill="#1f6db4">R0156</text>
-    <text x="130" y="85" fill="#33495d">The temperature form is graphical</text>
-    <text x="20" y="145" fill="#1f6db4">R0040</text>
-    <text x="130" y="145" fill="#33495d">Sufficient positive cold storage capacity</text>
-    <text x="20" y="205" fill="#1f6db4">R0290</text>
-    <text x="130" y="205" fill="#33495d">Staff know the discard time of multi-dose vials</text>
-    <text x="20" y="265" fill="#1f6db4">R0322</text>
-    <text x="130" y="265" fill="#33495d">The facility has SOPs for the multi-dose vial policy</text>
-  </g>
-  <g fill="#1f6db4">
-    <circle cx="960" cy="77" r="13"/><circle cx="1010" cy="77" r="13"/><circle cx="1060" cy="77" r="13"/><circle cx="1110" cy="77" r="13"/><circle cx="1160" cy="77" r="13"/><circle cx="1210" cy="77" r="13"/>
-    <circle cx="960" cy="137" r="13"/><circle cx="1010" cy="137" r="13"/><circle cx="1060" cy="137" r="13"/><circle cx="1110" cy="137" r="13"/><circle cx="1160" cy="137" r="13"/>
-    <circle cx="960" cy="197" r="13"/><circle cx="1010" cy="197" r="13"/><circle cx="1060" cy="197" r="13"/><circle cx="1110" cy="197" r="13"/><circle cx="1160" cy="197" r="13"/>
-    <circle cx="960" cy="257" r="13"/><circle cx="1010" cy="257" r="13"/><circle cx="1060" cy="257" r="13"/><circle cx="1110" cy="257" r="13"/>
-  </g>
-  <g fill="none" stroke="#7ba3d4" stroke-width="2">
-    <circle cx="1210" cy="137" r="13"/>
-    <circle cx="1210" cy="197" r="13"/>
-    <circle cx="1160" cy="257" r="13"/><circle cx="1210" cy="257" r="13"/>
-  </g>
-  </g>
-</svg>
+Where a requirement does not apply, the model was given the column's mean. Refitting only on facilities where the leading requirements were actually scored:
 
-The six are **ridge, fractional logit, boosted trees, bagged trees, randomised-split trees and XGBoost**. Boosted trees and XGBoost are never handed a filled-in value, so a requirement they name alongside the other four cannot be an artefact of the filling.
+- All 11 leading effects keep their direction, and 8 stay conclusive.
+- The three that lose the flag are `R0290` on the composite, and `R0257` and `R0037` on `R0712`: the discard-time requirement, training, and fire extinguishers. Their effects shrink but keep their sign.
+- The composite keeps 1,810 of 2,258 facilities in this check, and the components keep 1,066 of 1,077 and 1,039 of 1,098.
 
 ::: {.notes}
-About 30 seconds. Explain the picture once and it carries the next two slides: each row is a requirement I called conclusive earlier, and a filled dot means that family also put it in its own top twenty, ranked by permutation importance with ten shuffles per column. Name the six families off the slide. The point to land is that all four rows sit at four or better, and the graphical form is unanimous. If asked which families fill: ridge, the fractional logit, bagged trees and randomised-split trees are handed a median wherever a requirement did not apply, while boosted trees and XGBoost handle those cells natively and are never given one.
+About 45 seconds. This defends the one compromise in the data preparation. Be straight that the discard-time requirement on the composite halves without its filled rows; it stays positive, and it comes back strongly in the causal section.
 :::
 
-## On R0712, the agreement narrows to one requirement
+## Six other model families name most of the same requirements {.tbl .t14}
 
-<svg viewBox="0 0 1300 310" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="How many of six model families name each conclusive requirement for R0712" style="width:100%;max-width:1080px;height:auto;display:block;margin:0 auto;">
-  <g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif">
-  <text x="1085" y="32" font-size="21" fill="#33495d" text-anchor="middle">families naming it, out of six</text>
-  <g font-size="24">
-    <text x="20" y="85" fill="#1f6db4">R0290</text>
-    <text x="130" y="85" fill="#33495d">Staff know the discard time of multi-dose vials</text>
-    <text x="20" y="145" fill="#1f6db4">R0272</text>
-    <text x="130" y="145" fill="#33495d">Staff know key principles of vaccine storage</text>
-    <text x="20" y="205" fill="#1f6db4">R0257</text>
-    <text x="130" y="205" fill="#33495d">Staff are trained how to monitor supply performance</text>
-    <text x="20" y="265" fill="#1f6db4">R0037</text>
-    <text x="130" y="265" fill="#33495d">Storage buildings have functional fire extinguishers</text>
-  </g>
-  <g fill="#1f6db4">
-    <circle cx="960" cy="77" r="13"/><circle cx="1010" cy="77" r="13"/><circle cx="1060" cy="77" r="13"/><circle cx="1110" cy="77" r="13"/><circle cx="1160" cy="77" r="13"/><circle cx="1210" cy="77" r="13"/>
-    <circle cx="960" cy="137" r="13"/><circle cx="1010" cy="137" r="13"/><circle cx="1060" cy="137" r="13"/>
-    <circle cx="960" cy="197" r="13"/><circle cx="1010" cy="197" r="13"/>
-    <circle cx="960" cy="257" r="13"/><circle cx="1010" cy="257" r="13"/>
-  </g>
-  <g fill="none" stroke="#7ba3d4" stroke-width="2">
-    <circle cx="1110" cy="137" r="13"/><circle cx="1160" cy="137" r="13"/><circle cx="1210" cy="137" r="13"/>
-    <circle cx="1060" cy="197" r="13"/><circle cx="1110" cy="197" r="13"/><circle cx="1160" cy="197" r="13"/><circle cx="1210" cy="197" r="13"/>
-    <circle cx="1060" cy="257" r="13"/><circle cx="1110" cy="257" r="13"/><circle cx="1160" cy="257" r="13"/><circle cx="1210" cy="257" r="13"/>
-  </g>
-  </g>
-</svg>
+Each family ranks requirements its own way, by how much shuffling a column hurts its predictions. A requirement is named when it lands in that family's top twenty.
 
-[Knowing the discard time is the one requirement every family reaches for.]{.remember}
+|  | Composite score | Named by |
+|---|---|---|
+| `R0156` | The temperature record form is graphical | 6 of 6 |
+| `R0040` | Sufficient cold storage capacity for the expected maximum stock | 5 of 6 |
+| `R0290` | Staff know the discard time of multi-dose vials | 5 of 6 |
+| `R0322` | SOPs for the multi-dose vial policy | 3 of 6 |
+
+|  | `R0712` | Named by |
+|---|---|---|
+| `R0290` | Staff know the discard time of multi-dose vials | 6 of 6 |
+| `R0257` | Staff are trained to monitor supply chain performance | 3 of 6 |
+| `R0037` | Storage buildings have functional fire extinguishers | 3 of 6 |
+| `R0272` | Staff know the principles of vaccine and dry goods storage | 2 of 6 |
+
+|  | `R0722` | Named by |
+|---|---|---|
+| `R0293` | Staff know the main types of opened-vial wastage | 6 of 6 |
+| `R0037` | Storage buildings have functional fire extinguishers | 5 of 6 |
+| `R0290` | Staff know the discard time of multi-dose vials | 5 of 6 |
+| `R0358` | Staff are paid in full and on time | 5 of 6 |
+| `R0129` | Waste is stored in plastic or metal bins | 4 of 6 |
 
 ::: {.notes}
-About 25 seconds. Be straight about the weak rows: fire extinguishers and the training requirement are named by only two families, so the bootstrap intervals are the whole of their evidence. That is a reason to treat them as leads rather than findings, and it is the honest counterweight to the clean shuffle result on the previous slide.
-:::
-
-## On R0722, most of the list survives the same check
-
-<svg viewBox="0 0 1300 370" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="How many of six model families name each conclusive requirement for R0722" style="width:100%;max-width:1080px;height:auto;display:block;margin:0 auto;">
-  <g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif">
-  <text x="1085" y="32" font-size="21" fill="#33495d" text-anchor="middle">families naming it, out of six</text>
-  <g font-size="24">
-    <text x="20" y="85" fill="#1f6db4">R0293</text>
-    <text x="130" y="85" fill="#33495d">Staff know the main types of opened vial wastage</text>
-    <text x="20" y="145" fill="#1f6db4">R0037</text>
-    <text x="130" y="145" fill="#33495d">Storage buildings have functional fire extinguishers</text>
-    <text x="20" y="205" fill="#1f6db4">R0358</text>
-    <text x="130" y="205" fill="#33495d">Staff are paid in full and on time</text>
-    <text x="20" y="265" fill="#1f6db4">R0129</text>
-    <text x="130" y="265" fill="#33495d">Waste is stored in plastic or metal bins</text>
-    <text x="20" y="325" fill="#1f6db4">R0290</text>
-    <text x="130" y="325" fill="#33495d">Staff know the discard time of multi-dose vials</text>
-  </g>
-  <g fill="#1f6db4">
-    <circle cx="960" cy="77" r="13"/><circle cx="1010" cy="77" r="13"/><circle cx="1060" cy="77" r="13"/><circle cx="1110" cy="77" r="13"/><circle cx="1160" cy="77" r="13"/><circle cx="1210" cy="77" r="13"/>
-    <circle cx="960" cy="137" r="13"/><circle cx="1010" cy="137" r="13"/><circle cx="1060" cy="137" r="13"/><circle cx="1110" cy="137" r="13"/><circle cx="1160" cy="137" r="13"/>
-    <circle cx="960" cy="197" r="13"/><circle cx="1010" cy="197" r="13"/><circle cx="1060" cy="197" r="13"/><circle cx="1110" cy="197" r="13"/><circle cx="1160" cy="197" r="13"/>
-    <circle cx="960" cy="257" r="13"/><circle cx="1010" cy="257" r="13"/><circle cx="1060" cy="257" r="13"/><circle cx="1110" cy="257" r="13"/>
-    <circle cx="960" cy="317" r="13"/><circle cx="1010" cy="317" r="13"/><circle cx="1060" cy="317" r="13"/>
-  </g>
-  <g fill="none" stroke="#7ba3d4" stroke-width="2">
-    <circle cx="1210" cy="137" r="13"/>
-    <circle cx="1210" cy="197" r="13"/>
-    <circle cx="1160" cy="257" r="13"/><circle cx="1210" cy="257" r="13"/>
-    <circle cx="1110" cy="317" r="13"/><circle cx="1160" cy="317" r="13"/><circle cx="1210" cy="317" r="13"/>
-  </g>
-  </g>
-</svg>
-
-Four of the five sit at four families or better, and knowing the types of opened vial wastage is unanimous.
-
-::: {.notes}
-About 25 seconds. Note the mirror image of the previous slide: R0290 is named by every family on R0712 but by only three here, while R0037 is weak on R0712 and strong here. The two components measure different things, so a requirement can matter for one and not the other. Add that vote counts near the top-twenty boundary can move between runs, so read the pattern rather than the exact number.
+About 50 seconds. The six are ridge, the fractional logit, boosted trees, bagged trees, randomised-split trees and XGBoost. The two tree families never see a filled-in value, so a requirement they name cannot be an artefact of the filling. Land on the pattern: the discard-time requirement is named by five or six families on every target; the odd ones, fire extinguishers and storage principles, get the fewest votes.
 :::
 
 ## Why meeting a requirement can look like it reduces Quality score
@@ -646,66 +791,37 @@ About 25 seconds. Note the mirror image of the previous slide: R0290 is named by
   </g>
 </svg>
 
-Take `R0040`, having enough cold storage. **90%** of facilities meet it. Those that do are asked the multi-dose vial questions **11 percent more often**, and they average **0.890** against **0.938** for those that do not.
+Take `R0040`, having enough cold storage. **90%** of facilities meet it. Those that do are asked the multi-dose vial questions **11 points more often**, and they average **0.890** against **0.938** for those that do not.
 
 ::: {.notes}
-About 45 seconds, and it is the idea the whole section turns on, so do not rush. Walk the four boxes left to right. Box one points straight back to the grid earlier: the left-hand column there, the three checks that need a session in progress. Box two: those are the questions facilities actually fail, and you can only fail a question you were asked. Box three: a facility with spare fridge capacity is a facility running sessions. Box four: so the better equipped facility sits the harder test and can score lower for a reason that has nothing to do with its vaccines. Then read the cold storage numbers underneath as the worked example.
+About 45 seconds, and it is the idea the whole section turns on, so do not rush. Walk the four boxes left to right. Box one points back to the grid: the three checks that need a session in progress. Box two: those are the questions facilities actually fail, and you can only fail a question you were asked. Box three: a facility with spare fridge capacity is a facility running sessions. Box four: so the better equipped facility sits the harder test and can score lower for a reason that has nothing to do with its vaccines. Then read the cold storage numbers as the worked example.
 :::
 
-## Average Quality score among facilities meeting and not meeting requirements
+## The same pressure pulls every requirement down, so a positive gap is earned against a headwind {.tbl .t10 .wide3}
 
-<svg viewBox="0 0 1300 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Average quality score of facilities that meet each conclusive requirement against those that do not" style="width:100%;max-width:1030px;height:auto;display:block;margin:0 auto;">
-  <g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif">
-  <circle cx="430" cy="28" r="11" fill="#ffffff" stroke="#8a97a6" stroke-width="2.5"/>
-  <text x="452" y="36" font-size="21" fill="#33495d">facilities that do not meet it</text>
-  <circle cx="830" cy="28" r="11" fill="#33495d"/>
-  <text x="852" y="36" font-size="21" fill="#33495d">facilities that meet it</text>
-  <text x="1290" y="36" font-size="19" fill="#8a97a6" text-anchor="end">difference</text>
-  <g font-size="24">
-    <text x="20" y="93" fill="#1f6db4">R0290</text><text x="130" y="93" fill="#33495d">staff know discard time</text>
-    <text x="20" y="138" fill="#1f6db4">R0322</text><text x="130" y="138" fill="#33495d">multi-dose vial SOPs</text>
-    <text x="20" y="183" fill="#D55E00">R0156</text><text x="130" y="183" fill="#33495d">the form is graphical</text>
-    <text x="20" y="228" fill="#D55E00">R0040</text><text x="130" y="228" fill="#33495d">cold storage capacity</text>
-  </g>
-  <g stroke-width="3">
-    <line x1="481" y1="85" x2="835" y2="85" stroke="#1f6db4"/>
-    <line x1="651" y1="130" x2="876" y2="130" stroke="#1f6db4"/>
-    <line x1="757" y1="175" x2="876" y2="175" stroke="#D55E00"/>
-    <line x1="844" y1="220" x2="1065" y2="220" stroke="#D55E00"/>
-  </g>
-  <g fill="#ffffff" stroke-width="2.5">
-    <circle cx="481" cy="85" r="11" stroke="#1f6db4"/>
-    <circle cx="651" cy="130" r="11" stroke="#1f6db4"/>
-    <circle cx="876" cy="175" r="11" stroke="#D55E00"/>
-    <circle cx="1065" cy="220" r="11" stroke="#D55E00"/>
-  </g>
-  <g>
-    <circle cx="835" cy="85" r="11" fill="#1f6db4"/>
-    <circle cx="876" cy="130" r="11" fill="#1f6db4"/>
-    <circle cx="757" cy="175" r="11" fill="#D55E00"/>
-    <circle cx="844" cy="220" r="11" fill="#D55E00"/>
-  </g>
-  <g font-size="24" text-anchor="end">
-    <text x="1290" y="93" fill="#1f6db4">+0.076</text>
-    <text x="1290" y="138" fill="#1f6db4">+0.049</text>
-    <text x="1290" y="183" fill="#D55E00">−0.026</text>
-    <text x="1290" y="228" fill="#D55E00">−0.048</text>
-  </g>
-  <line x1="430" y1="265" x2="1140" y2="265" stroke="#8a97a6" stroke-width="2"/>
-  <g font-size="20" fill="#33495d" text-anchor="middle">
-    <text x="430" y="292">0.80</text>
-    <text x="660" y="292">0.85</text>
-    <text x="890" y="292">0.90</text>
-    <text x="1120" y="292">0.95</text>
-    <text x="785" y="320" font-size="21">average quality score</text>
-  </g>
-  </g>
-</svg>
+|  | Requirement | Met by | Score if met | Score if not | Gap | Asked the session questions more often, by |
+|---|---|---|---|---|---|---|
+| `R0290` | Staff know the discard time of multi-dose vials | 90% | 0.888 | 0.811 | +0.076 | +11 points |
+| `R0130` | Bins are colour coded for different types of waste | 57% | 0.909 | 0.870 | +0.039 | +4 points |
+| `R0270` | Staff know the correct storage temperature for each vaccine | 37% | 0.884 | 0.890 | -0.005 | +14 points |
+| `R0005` | At least eight hours of grid electricity each day | 94% | 0.900 | 0.925 | -0.025 | +1 points |
+| `R0156` | The temperature record form is graphical | 41% | 0.871 | 0.897 | -0.026 | +4 points |
+| `R0040` | Sufficient cold storage capacity for the expected maximum stock | 90% | 0.890 | 0.938 | -0.048 | +11 points |
 
-[These are the composite's four conclusive requirements.]{.remember}
+[The six requirements the model families agree on most. Every one is asked the session-based questions more often when met; only two still score higher when met.]{.smallnote}
 
 ::: {.notes}
-About 45 seconds. Read the chart before drawing any conclusion. Each row is one of the four requirements that came out conclusive for the composite, the same four from earlier. The hollow circle is the average quality score of facilities that do not meet it, the solid circle is the average for facilities that do, and the number on the right is the difference between them. The top two move right, so meeting them goes with a better score. The bottom two move left. Now the key sentence: the pressure from the previous slide pulls every row leftwards, so the two that still land on the right are managing it against that headwind, while the two on the left are exactly what the artefact predicts. If asked whether this holds beyond these four, the same check was run on the six requirements the model families agree on most, and the two extra ones, knowing the stock system and training in planning, also came out positive at plus 0.032 and plus 0.012. Close on the rule: a statistical signal is not enough, there must also be a route from the requirement to the vial, and cold storage capacity and the shape of a form have no such route.
+About 45 seconds. Read the gap column and the exposure column together. Every requirement is exposed to the harder questions more often when met, so every gap is pulled towards the negative. The two that still land positive, the discard time and colour-coded bins, are managing it against that headwind. The four negatives are what the artefact predicts, and cold storage is the clearest. Close on the rule: a statistical signal is not enough, there must also be a route from the requirement to the vial.
+:::
+
+## A short list keeps most of the signal, and the top 25 beats all 172
+
+<svg viewBox="0 0 1300 430" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:1080px;height:auto;display:block;margin:0 auto;"><g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif"><line x1="150" y1="330" x2="1240" y2="330" stroke="#8a97a6" stroke-width="2"/><text x="60" y="200" font-size="21" fill="#33495d" transform="rotate(-90 60 200)" text-anchor="middle">R² unseen</text><rect x="195" y="264" width="80" height="66" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"/><text x="235" y="254" font-size="22" fill="#33495d" text-anchor="middle">0.051</text><rect x="285" y="296" width="80" height="34" fill="#1f6db4"/><text x="325" y="286" font-size="22" fill="#33495d" text-anchor="middle">0.026</text><rect x="375" y="227" width="80" height="103" fill="#7ba3d4"/><text x="415" y="217" font-size="22" fill="#33495d" text-anchor="middle">0.079</text><rect x="555" y="82" width="80" height="248" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"/><text x="595" y="72" font-size="22" fill="#33495d" text-anchor="middle">0.191</text><rect x="645" y="164" width="80" height="166" fill="#1f6db4"/><text x="685" y="154" font-size="22" fill="#33495d" text-anchor="middle">0.128</text><rect x="735" y="50" width="80" height="280" fill="#7ba3d4"/><text x="775" y="40" font-size="22" fill="#33495d" text-anchor="middle">0.215</text><rect x="915" y="96" width="80" height="234" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"/><text x="955" y="86" font-size="22" fill="#33495d" text-anchor="middle">0.180</text><rect x="1005" y="140" width="80" height="190" fill="#1f6db4"/><text x="1045" y="130" font-size="22" fill="#33495d" text-anchor="middle">0.146</text><rect x="1095" y="58" width="80" height="272" fill="#7ba3d4"/><text x="1135" y="48" font-size="22" fill="#33495d" text-anchor="middle">0.209</text><text x="325" y="365" font-size="26" fill="#33495d" text-anchor="middle">QU</text><text x="685" y="365" font-size="26" fill="#33495d" text-anchor="middle">R0712</text><text x="1045" y="365" font-size="26" fill="#33495d" text-anchor="middle">R0722</text><rect x="230" y="390" width="26" height="18" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"/><text x="266" y="405" font-size="22" fill="#33495d">all 172 columns</text><rect x="650" y="390" width="26" height="18" fill="#1f6db4"/><text x="686" y="405" font-size="22" fill="#33495d">conclusive only</text><rect x="1070" y="390" width="26" height="18" fill="#7ba3d4"/><text x="1106" y="405" font-size="22" fill="#33495d">top 25 only</text></g></svg>
+
+[Two questions keep 51% of the composite's fit, four keep 67% on `R0712`, five keep 81% on `R0722`. The top 25 does better than all 172 on every target because a penalised model with 147 weak columns removed can use a lighter penalty.]{.smallnote}
+
+::: {.notes}
+About 55 seconds. Walk it: pale is everything the assessment asks, solid is the handful I named, and the middle shade is the top 25. The gap between pale and solid is what a two-question or five-question instrument would give up. Say the caveat yourself: the lists were chosen on the same facilities the refits are split from, so these are upper bounds on what a list fixed in advance would achieve.
 :::
 
 ## What I will cover
@@ -715,92 +831,438 @@ About 45 seconds. Read the chart before drawing any conclusion. Each row is one 
 3. [Targets and models]{.graylight}
 4. [What drives quality]{.graylight}
 5. [Stress-testing the answer]{.graylight}
-6. [**What it means and what comes next**]{.remember}
+6. [**Causal estimates**]{.remember}
+7. [Subcategory scores]{.graylight}
+8. [What it means and what comes next]{.graylight}
 
 ::: {.notes}
-5 seconds.
+5 seconds. Move the highlight and go.
 :::
 
-## Conclusive requirements do most of the work of 172 columns
+## From association to an adjusted effect, in three steps
 
-<svg viewBox="0 0 1300 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bar chart comparing the full requirement set with the short list" style="width:100%;max-width:1080px;height:auto;display:block;margin:0 auto;">
-  <g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif">
-  <line x1="150" y1="330" x2="1240" y2="330" stroke="#8a97a6" stroke-width="2"/>
-  <g>
-    <rect x="230" y="249" width="85" height="81" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"/>
-    <rect x="325" y="256" width="85" height="74" fill="#1f6db4"/>
-    <rect x="590" y="80" width="85" height="250" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"/>
-    <rect x="685" y="162" width="85" height="168" fill="#1f6db4"/>
-    <rect x="950" y="92" width="85" height="238" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"/>
-    <rect x="1045" y="140" width="85" height="190" fill="#1f6db4"/>
-  </g>
-  <g font-size="24" fill="#33495d" text-anchor="middle">
-    <text x="272" y="239">0.062</text>
-    <text x="367" y="246">0.057</text>
-    <text x="632" y="70">0.192</text>
-    <text x="727" y="152">0.129</text>
-    <text x="992" y="82">0.183</text>
-    <text x="1087" y="130">0.146</text>
-    <text x="320" y="366" font-size="26">QU</text>
-    <text x="680" y="366" font-size="26">R0712</text>
-    <text x="1040" y="366" font-size="26">R0722</text>
-    <text x="320" y="396" font-size="23" fill="#1f6db4">4 questions keep 92%</text>
-    <text x="680" y="396" font-size="23" fill="#1f6db4">4 questions keep 67%</text>
-    <text x="1040" y="396" font-size="23" fill="#1f6db4">5 questions keep 80%</text>
-  </g>
-  <g font-size="23" fill="#33495d">
-    <rect x="230" y="20" width="26" height="18" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"/>
-    <text x="266" y="35">all 172 columns</text>
-    <rect x="590" y="20" width="26" height="18" fill="#1f6db4"/>
-    <text x="626" y="35">only the conclusive requirements</text>
-  </g>
-  </g>
-</svg>
+Facilities that meet one requirement tend to meet many others, so a simple comparison mixes them all together. Double machine learning compares facilities that are alike on every other column.
 
+Take one requirement, say staff knowing the discard time, and call it the **treatment**. The quality score is the **outcome**. Every other column is a **control**.
+
+1. **Remove from the outcome what the controls can predict.** An elastic net predicts the outcome from the controls alone; what it cannot predict is kept. This leftover is a residual.
+2. **Remove from the treatment what the controls can predict.** A second elastic net does the same for the treatment.
+3. **Compare the two residuals.** The slope of a straight line through them is the estimate. If the two leftovers still move together, that link cannot come from any of the controls.
+
+The effect is in plain units: **the change in the score when a facility goes from not meeting the requirement to meeting it in full**. On the two components, 10 points means ten more facilities in a hundred meeting the target.
 
 ::: {.notes}
-About 55 seconds. Walk it: pale is everything the assessment asks, solid is the handful I named, and the gap is what a shorter instrument would give up. The composite keeps almost everything on four questions. If asked what the 172 covers: the 170 filtered requirements plus the assessment year and the target population, the same specification every earlier figure in the talk uses. Say the caveat in your own words rather than reading it, because Bahman will ask otherwise, and it is better coming from you first.
+About 90 seconds. This is the one slide that has to land. Use the discard-time example all the way through. Step 1 and 2 strip out everything the other 171 columns can explain; step 3 asks whether what is left still moves together. Then the unit: not a coefficient per standard deviation any more, but the gap between a facility whose staff know the rule and an otherwise similar facility whose staff do not.
 :::
 
-## Limitations and take aways
+## How a result counts, and why country is held fixed
 
-- This analysis is association-based, not causal
-- Out of 170 requirements across 77 countries, quality at the last mile comes down to a handful, and the one that appears everywhere is **staff knowing when an opened vial must be thrown away**
-- The short list passed tests like shuffling answers, six model families verification, and the removal of every filled-in value
-
-**Thank you!** Please let me know your questions. 
+- **Predictions never see the facility's own country.** Whole countries are split into five groups; each group's residuals come from models fitted on the other four. The split is repeated five times with different groupings and the median is reported.
+- **q-value.** About 170 columns are tested per target, so some look important by luck. A q-value is a p-value corrected for that. **Conclusive means a q-value below 0.05**, using standard errors that let facilities in the same country move together.
+- **Thin evidence.** A column that applies to fewer than a quarter of facilities, or that over 95% of facilities answer the same way, is estimated but not flagged: too few facilities sit on one side of it.
+- **Country, two ways.** Leaving country out compares facilities across all 77 countries, so differences between countries, in policies, supply systems and assessment teams, can masquerade as requirement effects. **Centring every column within its country compares only facilities in the same country, which is the fairer test and the part a country programme can act on.** The scan over all 172 columns uses the first to find candidates; the verdict uses the second.
 
 ::: {.notes}
-About 30 seconds. Three sentences, slowly, then stop. Do not wander into the backup slides unless someone asks.
+About 80 seconds. Three definitions and one decision. On country: the within-country version is stricter because it throws away all between-country differences, good and bad, and asks only whether a facility that meets the requirement does better than its neighbours in the same country. That is why it is the one the conclusions rest on, and why effects shrink when it is applied.
+:::
+
+## Seven effects survive adjustment, and three survive every check {.tbl .t10}
+
+| Target | Code | What is checked | Effect, points | q | Kept within country | Hidden factor could move it by | Own subcategory removed | Verdict |
+|---|---|---|---|---|---|---|---|---|
+| `QU` | `R0040` | Sufficient cold storage capacity for the expected maximum stock | -6.2 | 0.005 | 97% | 1% | -6 → -6 | no route to a vial; the exposure effect |
+| `R0712` | `R0290` | Staff know the discard time of multi-dose vials | +27.4 | 0.029 | 57% | 6% | +27 → +26 | passes every check |
+| `R0712` | `R0272` | Staff know the principles of vaccine and dry goods storage | +19.6 | 0.029 | 55% | 5% | +20 → +21 | passes every check |
+| `R0722` | `R0290` | Staff know the discard time of multi-dose vials | +28.9 | <0.001 | 52% | 7% | +29 → +33 | passes every check |
+| `R0722` | `R0293` | Staff know the main types of opened-vial wastage | +24.6 | 0.001 | 57% | 4% | +25 → +27 | passes every check |
+| `R0722` | `R0358` | Staff are paid in full and on time | +17.8 | 0.040 | 30% | 12% | +18 → +18 | mostly between countries |
+| `R0722` | `R0260` | Staff are trained in routine refrigeration maintenance | -20.4 | 0.040 | 37% | 12% | -20 → -7 | depends on the controls |
+
+[Effect: change in the score, in points out of 100, from not met to met in full. Kept within country: share of the effect that remains when every column is centred within its country. Hidden factor: the largest change a hidden factor as strong as salaries, fire extinguishers or facility size could make. Own subcategory removed: the effect when the treatment's own subcategory is taken out of the controls.]{.smallnote}
+
+::: {.notes}
+About 90 seconds. Read the three that pass every check first: knowing the discard time on both components, knowing the storage principles, knowing the types of opened-vial wastage. Each keeps about half its size within countries, which means half of the association came from between-country differences and half from facilities of the same country. Then the three that fail: cold storage passes every statistical check but has no route to a vial and is explained by exposure; salaries keep 30% within countries and are the effect a hidden factor could move most; the negative training effect collapses from 20 points to 7 as soon as the other training requirements leave the controls.
+:::
+
+## A requirement that cannot matter comes out at nothing within countries
+
+Fire extinguishers in the storage building cannot affect how long an opened vial is kept. In the screening they were conclusive on both components. They are the test of whether the adjustment removes the well-run-facility mark.
+
+- After adjustment: +14 points on `R0712` with a q-value of 0.41, and +18 points on `R0722` with a q-value of 0.11. Not conclusive on either.
+- Within countries: 26% of the effect remains on `R0712`, and on `R0722` and the composite the sign flips.
+
+**The adjustment removes most of the mark, and holding country fixed removes the rest.** That is the behaviour a working adjustment should show.
+
+::: {.notes}
+About 40 seconds. This is a negative control, the same idea as a placebo. A method that still finds an effect for fire extinguishers within a country would be finding management, not fire safety. It finds nothing, which is the result that lets the knowledge effects be believed.
+:::
+
+## Where the screening's top 25 land under the causal estimate, the composite score {.tbl .t25}
+
+| # | Code | What is checked | Screening effect | Causal effect, points | q | Causal rank | Concl. |
+|---|---|---|---|---|---|---|---|
+| 1 | `R0040` | Sufficient cold storage capacity for the expected maximum stock | -0.0114 | -6.2 | 0.005 | 1 of 116 | ✓ |
+| 2 | `R0290` | Staff know the discard time of multi-dose vials | +0.0102 | +5.6 | 0.110 | 3 of 116 |  |
+| 3 | `R0322` | SOPs for the multi-dose vial policy | +0.0061 | +2.4 | 0.689 | 31 of 116 |  |
+| 4 | `R0156` | The temperature record form is graphical | -0.0061 | -3.6 | 0.333 | 15 of 116 |  |
+| 5 | `R0257` | Staff are trained to monitor supply chain performance | +0.0057 | +3.4 | 0.333 | 17 of 116 |  |
+| 6 | `R0130` | Bins are colour coded for different types of waste | +0.0054 | +3.9 | 0.333 | 8 of 116 |  |
+| 7 | `R0251` | Staff turnover is low | +0.0050 | +4.4 | 0.330 | 6 of 116 |  |
+| 8 | `R0279` | Staff know cool packs are prepared in dedicated compartments | +0.0046 | +3.2 | 0.333 | 19 of 116 |  |
+| 9 | `R0037` | Storage buildings have functional fire extinguishers | +0.0045 | +3.0 | 0.382 | 22 of 116 |  |
+| 10 | `R0136` | Supply chain staff have work mobile phones | +0.0044 | +5.5 | 0.330 | 4 of 116 |  |
+| 11 | `R0328` | There are safe injection SOPs in the immunization room | +0.0042 | +3.8 | 0.333 | 10 of 116 |  |
+| 12 | `R0292` | Staff know how to calculate the unopened vial wastage rate | +0.0035 | +2.0 | 0.494 | 42 of 116 |  |
+| 13 | `R0275` | Staff know how to use the stock management system | +0.0034 | +2.3 | 0.424 | 36 of 116 |  |
+| 14 | `R0122` | Waste handlers have boots | +0.0030 | +7.7 |  | thin |  |
+| 15 | `R0064` | Vaccine refrigerator/freezers have door open alarms | -0.0030 | -3.1 | 0.851 | 20 of 116 |  |
+| 16 | `R0269` | Staff can correctly read a 30DTR | +0.0027 | +2.4 | 0.591 | 34 of 116 |  |
+| 17 | `R0186` | Stock record form has a field for VVM status | -0.0025 | -1.2 | 0.876 | 63 of 116 |  |
+| 18 | `R0298` | Staff know how to dispose of expired temperature monitoring devices | -0.0022 | -2.4 | 0.333 | 32 of 116 |  |
+| 19 | `R0272` | Staff know the principles of vaccine and dry goods storage | +0.0019 | +2.9 | 0.591 | 24 of 116 |  |
+| 20 | `R0212` | Receipt form has a field for Freeze indicator status of vac… | -0.0018 | -1.4 | 0.868 | 54 of 116 |  |
+| 21 | `R0154` | The form has fields for entering AM and PM temperatures | +0.0018 | +3.8 | 0.595 | 9 of 116 |  |
+| 22 | `R0210` | Receipt form has a field for Quantity of vaccines received | -0.0017 | -2.0 | 0.689 | 43 of 116 |  |
+| 23 | `R0326` | SOPs for disposal of sharps waste | +0.0016 | +0.3 | 0.987 | 97 of 116 |  |
+| 24 | `R0073` | Sufficient coolant pack storage capacity for daily demand | -0.0016 | -1.2 | 0.851 | 61 of 116 |  |
+| 25 | `R0077` | Transport is always available for scheduled vaccine distrib… | +0.0015 | +3.7 | 0.802 | 13 of 116 |  |
+
+[Causal rank: position among the 116 requirements with enough evidence, by the size of the adjusted effect. Thin: too few facilities on one side to rank. Conclusive: q below 0.05.]{.smallnote}
+
+::: {.notes}
+About 45 seconds. The point of the slide is the agreement at the top and the reshuffle below it. Say where the screening's conclusive rows land, and point at one or two that rise or fall a long way. Do not read the table.
+:::
+
+## Where the screening's top 25 land under the causal estimate, `R0712` {.tbl .t25}
+
+| # | Code | What is checked | Screening effect | Causal effect, points | q | Causal rank | Concl. |
+|---|---|---|---|---|---|---|---|
+| 1 | `R0290` | Staff know the discard time of multi-dose vials | +0.0403 | +27.4 | 0.029 | 3 of 112 | ✓ |
+| 2 | `R0257` | Staff are trained to monitor supply chain performance | +0.0387 | +22.0 | 0.070 | 6 of 112 |  |
+| 3 | `R0037` | Storage buildings have functional fire extinguishers | +0.0289 | +13.8 | 0.413 | 18 of 112 |  |
+| 4 | `R0272` | Staff know the principles of vaccine and dry goods storage | +0.0263 | +19.6 | 0.029 | 8 of 112 | ✓ |
+| 5 | `R0156` | The temperature record form is graphical | -0.0227 | -14.8 | 0.298 | 15 of 112 |  |
+| 6 | `R0270` | Staff know the correct storage temperature for each vaccine | +0.0194 | +33.3 | 0.680 | 1 of 112 |  |
+| 7 | `R0130` | Bins are colour coded for different types of waste | +0.0187 | +20.1 | 0.119 | 7 of 112 |  |
+| 8 | `R0328` | There are safe injection SOPs in the immunization room | +0.0185 | +13.6 | 0.599 | 19 of 112 |  |
+| 9 | `R0002` | A functional landline telephone | +0.0178 | +15.2 | 0.183 | 14 of 112 |  |
+| 10 | `R0279` | Staff know cool packs are prepared in dedicated compartments | +0.0175 | +11.3 | 0.298 | 28 of 112 |  |
+| 11 | `R0129` | Waste is stored in plastic or metal bins | +0.0156 | +12.3 | 0.213 | 23 of 112 |  |
+| 12 | `R0251` | Staff turnover is low | +0.0138 | +16.6 | 0.310 | 9 of 112 |  |
+| 13 | `R0305` | SOPs for vaccine temperature monitoring in storage | +0.0115 | +11.0 | 0.870 | 30 of 112 |  |
+| 14 | `R0358` | Staff are paid in full and on time | +0.0104 | +10.2 | 0.573 | 32 of 112 |  |
+| 15 | `R0311` | SOPs for managing vaccine stock transactions | +0.0097 | +12.9 | 0.754 | 21 of 112 |  |
+| 16 | `R0327` | SOPs for management of used vials | +0.0069 | +8.3 | 0.795 | 39 of 112 |  |
+| 17 | `R0233` | At least one member of staff is responsible for annual work… | +0.0068 | +9.0 | 0.763 | 36 of 112 |  |
+| 18 | `R0182` | Stock record form has a field for Presentation (# doses per… | +0.0067 | +6.6 | 0.718 | 50 of 112 |  |
+| 19 | `R0298` | Staff know how to dispose of expired temperature monitoring devices | -0.0066 | -11.7 | 0.183 | 24 of 112 |  |
+| 20 | `R0357` | Funds for staff salaries are received on time | +0.0066 | +17.3 |  | thin |  |
+| 21 | `R0307` | SOPs for vaccine storage | +0.0065 | +7.3 | 0.798 | 43 of 112 |  |
+| 22 | `R0123` | Waste handlers have an apron | +0.0063 | +12.1 |  | thin |  |
+| 23 | `R0236` | At least one member of staff is responsible for monitoring… | +0.0061 | +1.7 | 0.942 | 96 of 112 |  |
+| 24 | `R0370` | Funds received for electricity are sufficient | -0.0059 | -11.8 |  | thin |  |
+| 25 | `R0062` | Vaccine refrigerators/freezers have functioning voltage reg… | +0.0057 | +7.2 | 0.395 | 44 of 112 |  |
+
+[Causal rank: position among the 112 requirements with enough evidence, by the size of the adjusted effect. Thin: too few facilities on one side to rank. Conclusive: q below 0.05.]{.smallnote}
+
+::: {.notes}
+About 45 seconds. The point of the slide is the agreement at the top and the reshuffle below it. Say where the screening's conclusive rows land, and point at one or two that rise or fall a long way. Do not read the table.
+:::
+
+## Where the screening's top 25 land under the causal estimate, `R0722` {.tbl .t25}
+
+| # | Code | What is checked | Screening effect | Causal effect, points | q | Causal rank | Concl. |
+|---|---|---|---|---|---|---|---|
+| 1 | `R0037` | Storage buildings have functional fire extinguishers | +0.0463 | +18.2 | 0.106 | 6 of 113 |  |
+| 2 | `R0293` | Staff know the main types of opened-vial wastage | +0.0385 | +24.6 | 0.001 | 2 of 113 | ✓ |
+| 3 | `R0290` | Staff know the discard time of multi-dose vials | +0.0363 | +28.9 | <0.001 | 1 of 113 | ✓ |
+| 4 | `R0358` | Staff are paid in full and on time | +0.0333 | +17.8 | 0.040 | 9 of 113 | ✓ |
+| 5 | `R0129` | Waste is stored in plastic or metal bins | +0.0297 | +14.4 | 0.085 | 20 of 113 |  |
+| 6 | `R0257` | Staff are trained to monitor supply chain performance | +0.0281 | +17.4 | 0.179 | 12 of 113 |  |
+| 7 | `R0040` | Sufficient cold storage capacity for the expected maximum stock | -0.0173 | -17.2 | 0.156 | 13 of 113 |  |
+| 8 | `R0279` | Staff know cool packs are prepared in dedicated compartments | +0.0161 | +12.0 | 0.158 | 27 of 113 |  |
+| 9 | `R0328` | There are safe injection SOPs in the immunization room | +0.0147 | +15.1 | 0.175 | 19 of 113 |  |
+| 10 | `R0260` | Staff are trained in routine refrigeration maintenance | -0.0134 | -20.4 | 0.040 | 3 of 113 | ✓ |
+| 11 | `R0155` | The form has fields for temperature alarms | -0.0113 | -17.4 | 0.245 | 11 of 113 |  |
+| 12 | `R0272` | Staff know the principles of vaccine and dry goods storage | +0.0110 | +11.6 | 0.389 | 30 of 113 |  |
+| 13 | `R0251` | Staff turnover is low | +0.0104 | +16.7 | 0.156 | 16 of 113 |  |
+| 14 | `R0326` | SOPs for disposal of sharps waste | +0.0104 | +11.8 | 0.753 | 29 of 113 |  |
+| 15 | `R0236` | At least one member of staff is responsible for monitoring… | +0.0104 | +3.9 | 0.863 | 79 of 113 |  |
+| 16 | `R0062` | Vaccine refrigerators/freezers have functioning voltage reg… | +0.0093 | +8.3 | 0.316 | 46 of 113 |  |
+| 17 | `R0128` | The waste storage area is covered | +0.0083 | +8.2 | 0.413 | 47 of 113 |  |
+| 18 | `R0187` | Stock record form has a field for Transaction type | +0.0083 | +11.4 | 0.320 | 32 of 113 |  |
+| 19 | `R0275` | Staff know how to use the stock management system | +0.0080 | +7.6 | 0.527 | 55 of 113 |  |
+| 20 | `R0280` | Staff know how to prevent freezing during transportation in… | +0.0077 | +15.9 | 0.293 | 18 of 113 |  |
+| 21 | `R0323` | SOPs for handling diluents | +0.0071 | +18.3 | 0.293 | 5 of 113 |  |
+| 22 | `R0308` | A vaccine storage emergency contingency plan | +0.0070 | +8.2 | 0.753 | 48 of 113 |  |
+| 23 | `R0002` | A functional landline telephone | +0.0064 | +8.1 | 0.527 | 49 of 113 |  |
+| 24 | `R0122` | Waste handlers have boots | +0.0062 | +26.4 |  | thin |  |
+| 25 | `R0106` | The waste burial site has clear warning signs | +0.0058 | +24.4 |  | thin |  |
+
+[Causal rank: position among the 113 requirements with enough evidence, by the size of the adjusted effect. Thin: too few facilities on one side to rank. Conclusive: q below 0.05.]{.smallnote}
+
+::: {.notes}
+About 45 seconds. The point of the slide is the agreement at the top and the reshuffle below it. Say where the screening's conclusive rows land, and point at one or two that rise or fall a long way. Do not read the table.
+:::
+
+## The two rankings agree on what matters and disagree below it
+
+| | Composite | `R0712` | `R0722` |
+|---|---|---|---|
+| Rank correlation between the two sets of effects | 0.51 | 0.47 | 0.54 |
+| Requirements given the same sign | 78% | 82% | 78% |
+| Of the 25 largest effects, in both lists | 14 | 13 | 13 |
+| Conclusive in the screening | 2 | 4 | 5 |
+| Conclusive after adjustment | 1 | 2 | 4 |
+| Conclusive under both | 1 | 2 | 3 |
+
+Adjustment removed names from the conclusive lists and added one: a negative effect of refrigeration maintenance training on `R0722`, which the controls check on the earlier slide removes again. The names that dropped out are fire extinguishers on both components, training to monitor performance, waste bins, and the discard time on the composite, which stays positive but misses the threshold.
+
+::: {.notes}
+About 50 seconds. Moderate agreement on the order, strong agreement on the names that matter. The requirements that drop out are the ones the mechanism reading had already set apart as marks of a well-run facility.
+:::
+
+## What I will cover
+
+1. [The question]{.graylight}
+2. [The data and the filters]{.graylight}
+3. [Targets and models]{.graylight}
+4. [What drives quality]{.graylight}
+5. [Stress-testing the answer]{.graylight}
+6. [Causal estimates]{.graylight}
+7. [**Subcategory scores**]{.remember}
+8. [What it means and what comes next]{.graylight}
+
+::: {.notes}
+5 seconds. Move the highlight and go.
+:::
+
+## Fourteen subcategory scores, built by a colleague and still provisional
+
+The EVM framework groups its requirements into subcategories such as `C4.3 Knowledge and understanding` or `C5.3 SOPs`. A colleague on the project, Jayeed, built one score per subcategory and facility.
+
+- Each score is constructed from the requirement-level scores inside that subcategory, allowing for requirements that do not apply to a facility and for differences in scoring between questionnaire versions, which matter most in `C5` and `C6`.
+- As a check, he rebuilt the six category scores `C1` to `C6` from them and compared the result with WHO's own category scores.
+- **The adjustments for the earlier questionnaire versions have not yet been confirmed with WHO.** A meeting with Paul Colrain is being arranged for that. Until then, every result in this section is provisional and may change.
+
+::: {.notes}
+About 50 seconds. Credit the construction and state the caveat in the same breath. The reason the section is here anyway: if the analysis gives the same answer at this coarser level, that is evidence the requirement-level answer is not an artefact of 170 narrow columns.
+:::
+
+## The fourteen scores stand in for the 170 requirements {.tbl .t14}
+
+| Code | Subcategory | Applies to | Mean score | At the maximum |
+|---|---|---|---|---|
+| `C1.1` | Utilities & services | 100% | 0.79 | 10% |
+| `C1.2` | Buildings & facilities | 100% | 0.37 | 16% |
+| `C2.1.1` | Cold storage equipment | 100% | 0.69 | 5% |
+| `C2.2.1` | Vehicles | 37% | 0.90 | 81% |
+| `C2.2.2` | Insulated containers | 90% | 0.91 | 72% |
+| `C2.3` | Other equipment | 100% | 0.85 | 16% |
+| `C3.1` | General IT equipment | 100% | 0.73 | 59% |
+| `C3.2` | Data management technology | 100% | 0.79 | 10% |
+| `C4.1` | Staffing | 100% | 0.68 | 3% |
+| `C4.2` | Training | 100% | 0.66 | 10% |
+| `C4.3` | Knowledge & understanding | 100% | 0.80 | 4% |
+| `C5.3` | SOPs | 100% | 0.57 | 12% |
+| `C6.1` | Salaries | 98% | 0.78 | 76% |
+| `C6.2` | Funds for operations | 33% | 0.84 | 66% |
+
+[Each score runs from 0 to 1. Vehicles and funds for operations apply to about a third of facilities; the rest apply almost everywhere.]{.smallnote}
+
+::: {.notes}
+About 35 seconds. Two things to point at: knowledge and understanding and staffing are smooth scores with hundreds of distinct values, while salaries takes only seven, and three quarters of facilities sit at its maximum. The same mean filling as before is used where a score does not apply.
+:::
+
+## The same model wins again, and the fourteen scores explain less than the 170 requirements
+
+| | Composite | `R0712` | `R0722` |
+|---|---|---|---|
+| Elastic net on 14 subcategory scores | 0.022 | 0.169 | 0.144 |
+| Elastic net on 170 requirements, from section 3 | 0.051 | 0.191 | 0.180 |
+| Random forest on 14 subcategory scores | 0.058 | 0.223 | 0.168 |
+
+- On `R0712` the fractional logit edges the elastic net, 0.172 against 0.169, by less than the variation between splits. That counts as a tie, so **the elastic net is used for all three targets** and the subcategory numbers can be read against the requirement numbers.
+- Adding one column per country lifts the three to 0.130, 0.341 and 0.324. On a country never seen the figures fall to -0.063, 0.086 and 0.032.
+
+::: {.notes}
+About 55 seconds. Fourteen averages carry less information than the 170 items they summarise, so the fit drops; the ordering of the targets does not change. The tree models still memorise. Country matters even more at this level, and the unseen-country figures are the honest ones again.
+:::
+
+## Buildings, IT equipment and written procedures lift the composite; cold storage equipment pulls it down {.tbl .t14}
+
+| # | Code | Subcategory | Effect | Interval | Kept in | Concl. |
+|---|---|---|---|---|---|---|
+| 1 | `C1.2` | Buildings & facilities | +0.0119 | +0.0051 to +0.0183 | 100% | ✓ |
+| 2 | `C3.1` | General IT equipment | +0.0099 | +0.0027 to +0.0189 | 100% | ✓ |
+| 3 | `C2.1.1` | Cold storage equipment | -0.0085 | -0.0144 to -0.0025 | 100% | ✓ |
+| 4 | `C5.3` | SOPs | +0.0084 | +0.0019 to +0.0161 | 98% | ✓ |
+| 5 | `C4.3` | Knowledge & understanding | +0.0058 | +0.0000 to +0.0145 | 93% |  |
+| 6 | `C4.2` | Training | +0.0036 | +0.0000 to +0.0108 | 74% |  |
+| 7 | `C2.3` | Other equipment | +0.0023 | +0.0000 to +0.0085 | 64% |  |
+| 8 | `C2.2.1` | Vehicles | -0.0016 | -0.0073 to +0.0031 | 64% |  |
+| 9 | `C3.2` | Data management technology | -0.0016 | -0.0077 to +0.0015 | 58% |  |
+| 10 | `C6.1` | Salaries | +0.0014 | -0.0000 to +0.0072 | 54% |  |
+| 11 | `C6.2` | Funds for operations | +0.0013 | +0.0000 to +0.0070 | 50% |  |
+| 12 | `C1.1` | Utilities & services | -0.0003 | -0.0044 to +0.0033 | 35% |  |
+| 13 | `C2.2.2` | Insulated containers | +0.0002 | -0.0017 to +0.0041 | 30% |  |
+| 14 | `C4.1` | Staffing | +0.0001 | -0.0016 to +0.0022 | 18% |  |
+
+[All fourteen subcategories, ranked by the size of the average effect. Effect is per standard deviation of the score, on the 0 to 1 target; conclusive as before.]{.smallnote}
+
+::: {.notes}
+About 45 seconds. Read the conclusive rows and the sign of cold storage equipment, which is negative on all three targets, the same artefact as the cold-storage requirement. Say that knowledge and understanding is conclusive on both components but just misses on the composite.
+:::
+
+## Written procedures, knowledge and buildings carry `R0712` {.tbl .t14}
+
+| # | Code | Subcategory | Effect | Interval | Kept in | Concl. |
+|---|---|---|---|---|---|---|
+| 1 | `C5.3` | SOPs | +0.0626 | +0.0294 to +0.0974 | 100% | ✓ |
+| 2 | `C4.3` | Knowledge & understanding | +0.0558 | +0.0280 to +0.0872 | 100% | ✓ |
+| 3 | `C1.2` | Buildings & facilities | +0.0469 | +0.0215 to +0.0700 | 100% | ✓ |
+| 4 | `C4.2` | Training | +0.0266 | +0.0000 to +0.0599 | 92% |  |
+| 5 | `C6.1` | Salaries | +0.0264 | +0.0000 to +0.0590 | 96% |  |
+| 6 | `C2.3` | Other equipment | +0.0066 | +0.0000 to +0.0289 | 55% |  |
+| 7 | `C3.1` | General IT equipment | -0.0045 | -0.0231 to +0.0000 | 38% |  |
+| 8 | `C2.1.1` | Cold storage equipment | -0.0036 | -0.0217 to +0.0000 | 38% |  |
+| 9 | `C2.2.2` | Insulated containers | +0.0031 | -0.0000 to +0.0199 | 36% |  |
+| 10 | `C2.2.1` | Vehicles | +0.0021 | +0.0000 to +0.0166 | 30% |  |
+| 11 | `C4.1` | Staffing | +0.0017 | +0.0000 to +0.0141 | 24% |  |
+| 12 | `C1.1` | Utilities & services | +0.0006 | -0.0019 to +0.0112 | 14% |  |
+| 13 | `C6.2` | Funds for operations | +0.0006 | -0.0069 to +0.0103 | 23% |  |
+| 14 | `C3.2` | Data management technology | -0.0002 | -0.0072 to +0.0050 | 13% |  |
+
+[All fourteen subcategories, ranked by the size of the average effect. Effect is per standard deviation of the score, on the 0 to 1 target; conclusive as before.]{.smallnote}
+
+::: {.notes}
+About 45 seconds. Read the conclusive rows and the sign of cold storage equipment, which is negative on all three targets, the same artefact as the cold-storage requirement. Say that knowledge and understanding is conclusive on both components but just misses on the composite.
+:::
+
+## Knowledge, buildings and salaries carry `R0722` {.tbl .t14}
+
+| # | Code | Subcategory | Effect | Interval | Kept in | Concl. |
+|---|---|---|---|---|---|---|
+| 1 | `C4.3` | Knowledge & understanding | +0.0745 | +0.0473 to +0.1020 | 100% | ✓ |
+| 2 | `C1.2` | Buildings & facilities | +0.0709 | +0.0413 to +0.0964 | 100% | ✓ |
+| 3 | `C6.1` | Salaries | +0.0509 | +0.0270 to +0.0775 | 100% | ✓ |
+| 4 | `C5.3` | SOPs | +0.0237 | +0.0000 to +0.0511 | 91% |  |
+| 5 | `C2.3` | Other equipment | +0.0150 | +0.0000 to +0.0426 | 80% |  |
+| 6 | `C4.2` | Training | +0.0067 | +0.0000 to +0.0288 | 60% |  |
+| 7 | `C4.1` | Staffing | +0.0043 | +0.0000 to +0.0256 | 43% |  |
+| 8 | `C1.1` | Utilities & services | +0.0039 | +0.0000 to +0.0229 | 41% |  |
+| 9 | `C2.1.1` | Cold storage equipment | -0.0026 | -0.0168 to +0.0000 | 32% |  |
+| 10 | `C2.2.1` | Vehicles | -0.0024 | -0.0172 to +0.0000 | 28% |  |
+| 11 | `C6.2` | Funds for operations | +0.0018 | +0.0000 to +0.0159 | 27% |  |
+| 12 | `C3.2` | Data management technology | +0.0008 | +0.0000 to +0.0112 | 12% |  |
+| 13 | `C2.2.2` | Insulated containers | -0.0008 | -0.0091 to +0.0000 | 14% |  |
+| 14 | `C3.1` | General IT equipment | -0.0000 | +0.0000 to +0.0000 | 3% |  |
+
+[All fourteen subcategories, ranked by the size of the average effect. Effect is per standard deviation of the score, on the 0 to 1 target; conclusive as before.]{.smallnote}
+
+::: {.notes}
+About 45 seconds. Read the conclusive rows and the sign of cold storage equipment, which is negative on all three targets, the same artefact as the cold-storage requirement. Say that knowledge and understanding is conclusive on both components but just misses on the composite.
+:::
+
+## The subcategory results pass the same stress tests
+
+- **Shuffled scores.** Thirty shuffled runs produced no conclusive subcategory at all. The noise ceilings are 0.0063, 0.0194 and 0.0160, and every conclusive effect clears its ceiling.
+- **Other model families.** On `R0722` all three conclusive subcategories are named by all six families. On `R0712`, knowledge and written procedures are named by all six and buildings by two. On the composite the families agree least with the elastic net: they name data management (5 of 6) and knowledge (5 of 6) most often, and each of the four conclusive subcategories only twice.
+- **Removing filled-in values.** All ten conclusive subcategory effects keep their direction and their flag; almost no facility has a filled cell at this level.
+- **Short lists.** The conclusive subcategories alone keep 100% of the composite's fit, 73% on `R0712` and 98% on `R0722`.
+
+::: {.notes}
+About 70 seconds. The same four checks as at requirement level. The disagreement on the composite is worth saying out loud: with only fourteen columns, the elastic net and the tree families spread their choices differently, and the composite is where every method has least to work with. The exposure check at this level finds the same thing as before: cold storage equipment is the one subcategory whose score falls when it is better.
+:::
+
+## The causal estimate at subcategory level tells the same story {.tbl .t14}
+
+| Target | Code | Subcategory | Effect, points | q | Conclusive | Conclusive in the screening |
+|---|---|---|---|---|---|---|
+| `QU` | `C2.1.1` | Cold storage equipment | -6 | 0.227 |  | ✓ |
+| `QU` | `C3.1` | General IT equipment | +5 | 0.227 |  | ✓ |
+| `QU` | `C1.2` | Buildings & facilities | +5 | 0.164 |  | ✓ |
+| `R0712` | `C5.3` | SOPs | +24 | 0.009 | ✓ | ✓ |
+| `R0712` | `C4.3` | Knowledge & understanding | +51 | 0.053 |  | ✓ |
+| `R0712` | `C4.2` | Training | +17 | 0.061 |  |  |
+| `R0712` | `C1.2` | Buildings & facilities | +18 | 0.103 |  | ✓ |
+| `R0722` | `C4.3` | Knowledge & understanding | +67 | 0.016 | ✓ | ✓ |
+| `R0722` | `C1.2` | Buildings & facilities | +26 | 0.005 | ✓ | ✓ |
+| `R0722` | `C6.1` | Salaries | +21 | 0.005 | ✓ | ✓ |
+
+[Effect: change in the target, in points out of 100, when the subcategory goes from its lowest possible score to its highest. A whole range is a large move, so a quarter of the knowledge range, 13 points on `R0712` and 17 on `R0722`, is the realistic figure to quote.]{.smallnote}
+
+::: {.notes}
+About 60 seconds. On R0722 the three conclusive subcategories are the screening's three. On R0712 only written procedures clears the line; knowledge has the largest effect, 51 points over its full range, but its q-value sits at 0.053, just outside. On the composite nothing is conclusive, and cold storage equipment is again the largest effect, downwards. One level up, the answer is the same: what staff know carries the two vial targets.
+:::
+
+## What I will cover
+
+1. [The question]{.graylight}
+2. [The data and the filters]{.graylight}
+3. [Targets and models]{.graylight}
+4. [What drives quality]{.graylight}
+5. [Stress-testing the answer]{.graylight}
+6. [Causal estimates]{.graylight}
+7. [Subcategory scores]{.graylight}
+8. [**What it means and what comes next**]{.remember}
+
+::: {.notes}
+5 seconds. Move the highlight and go.
+:::
+
+## What the evidence supports
+
+- Out of 170 requirements across 77 countries, quality at the last mile comes down to a handful, and **what staff know is what matters**: the discard time of multi-dose vials, the principles of vaccine storage, and the types of opened-vial wastage.
+- Those three pass every test in the analysis: conclusive after adjustment, about half their effect intact within countries, beyond the reach of any measured stand-in for a hidden factor, unmoved when their neighbours leave the controls, and each with a direct route to an opened vial.
+- The requirements that only mark a well-run facility, fire extinguishers, salaries, waste bins, drop out once facilities are compared within their own country.
+- The composite score is a weak target with a hard ceiling. Its one conclusive effect, cold storage capacity, is a measurement artefact: better equipped facilities sit the harder test.
+
+::: {.notes}
+About 70 seconds. Four sentences, slowly. The first is the headline. The second is why it can be believed. The third is what the causal section removed. The fourth is the honest reading of the composite.
+:::
+
+## What the evidence does not support, and what comes next
+
+- **The screening effects are associations, and the causal effects are causal only if nothing unmeasured drives both a requirement and quality.** Every check narrows that doubt; none removes it.
+- Half of each knowledge effect comes from differences between countries. The within-country half is the part a facility can act on.
+- The subcategory results are provisional until the score construction is confirmed with WHO.
+- Next: confirm the subcategory scores; write the named requirements down before the next round of assessments arrives and test them on countries that played no part in choosing them; choose the controls for each requirement from the structure of the EVM framework.
+
+**Thank you.** Questions welcome.
+
+::: {.notes}
+About 45 seconds. End on the next step with the new assessments: a list fixed in advance and tested on countries that had no say in it is the one test that would settle the question.
 :::
 
 # Backup {.graylight}
 
-## Backup: Choosing the model
+## Backup: choosing the model
 
-- Ten families over the same twenty splits: OLS, ridge, LASSO, elastic net, fractional logit, a gamma model on the shortfall from full marks, boosted trees, bagged trees, randomised trees, XGBoost
-- Plain OLS is the weakest linear model on unseen facilities for all seven targets, so the penalties earn their place
+- Eleven families over the same twenty splits: ordinary least squares, ridge, LASSO, elastic net, fractional logit, a gamma model on the shortfall from full marks, boosted trees, bagged trees, randomised-split trees, XGBoost and the mean of the training data as a floor.
+- Plain least squares is the weakest linear model on unseen facilities for every target, so the penalties earn their place.
+- The elastic net and the LASSO tie on every target; the elastic net is reported because it handles groups of near-identical requirements more gracefully.
 
 ::: {.notes}
 For questions on model choice. One line on AIC if pushed: a criterion computed inside the sample rewards exactly the hard fitting that repeated splits exist to discount.
 :::
 
-## Backup: How the values that do not exist are handled
+## Backup: how the values that do not exist are handled
 
-- Some requirements do not apply to a facility, and a linear model still needs a number in that cell
-- Two options: fill with the median value, or fill and add a marker column saying the value was filled
-- Markers fit better by but it's negligible, but they double the number of columns
-- The simple fill is kept, because a marker coefficient is not something a manager can act on
+- Some requirements do not apply to a facility, and a linear model still needs a number in that cell.
+- Two options were compared: fill with the column's mean, or fill and add a marker column saying the value was filled.
+- The markers fit slightly better and double the number of columns, and a marker coefficient is not something a manager can act on, so the simple fill is kept.
+- Two checks limit the cost: the tree families that need no filling name the same requirements, and refitting on fully scored facilities keeps every leading direction.
 
 ::: {.notes}
-For questions on missing data. Be straight about it: markers win narrowly on fit and lose on usefulness.
+For questions on missing data. Be straight: markers win narrowly on fit and lose on usefulness.
 :::
 
 ## Backup: quality as four ordered bands
 
-- The score is cut at 0.6, 0.8 and 0.95, and 58% of facilities land in the top band
-- Simply always naming the biggest band beats on plain accuracy, 0.582 against 0.496
-- The top twenty requirements change under banding while no measure of fit improves, so the analysis is continued with the continuous score
+- The composite score was cut at 0.6, 0.8 and 0.95, and 58% of facilities land in the top band.
+- Always naming the biggest band beats the ordinal model on plain accuracy, 0.582 against 0.496, and the model's agreement with the truth beyond chance is 0.092, weak by any usual standard.
+- The top twenty requirements change under banding while no measure of fit improves, so the analysis keeps the continuous score.
 
 ::: {.notes}
 For questions about whether the continuous score is the right framing.
