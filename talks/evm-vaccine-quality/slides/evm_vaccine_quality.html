@@ -162,6 +162,25 @@ Bahman Rostami-Tabar, Supervisor
 </div>
 
 </section>
+<section class="slide level2">
+
+<style>
+.reveal section.tbl table { width: 100%; table-layout: fixed; border-collapse: collapse; }
+.reveal section.tbl th, .reveal section.tbl td { padding: 0.12em 0.3em; vertical-align: middle; line-height: 1.15; }
+.reveal section.tbl th { text-align: left; }
+.reveal section.tbl td:nth-child(n+4), .reveal section.tbl th:nth-child(n+4) { text-align: right; }
+.reveal section.t25 table { font-size: 0.46em; }
+.reveal section.t14 table { font-size: 0.56em; }
+.reveal section.t10 table { font-size: 0.6em; }
+.reveal section.t7 table { font-size: 0.66em; }
+.reveal section.tbl td:nth-child(3), .reveal section.tbl th:nth-child(3) { width: 36%; text-align: left; }
+.reveal section.tbl td:nth-child(2), .reveal section.tbl th:nth-child(2) { width: 7%; text-align: left; }
+.reveal section.tbl td:nth-child(1), .reveal section.tbl th:nth-child(1) { width: 4%; text-align: left; }
+.reveal section.wide3 td:nth-child(3), .reveal section.wide3 th:nth-child(3) { width: 44%; }
+.reveal section.tbl p { font-size: 0.72em; margin-top: 0.4em; }
+.reveal .smallnote { font-size: 0.7em; color: #5a6b7c; }
+</style>
+</section>
 <section id="a-fridge-in-a-small-clinic" class="slide level2">
 <h2>A fridge in a small clinic</h2>
 <svg viewbox="0 0 1300 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A vaccine fridge and three opened vials, one dated, one undated, one expired" style="width:100%;max-width:1080px;height:auto;display:block;margin:0 auto;">
@@ -195,10 +214,12 @@ Bahman Rostami-Tabar, Supervisor
 <li><span class="graylight">Targets and models</span></li>
 <li><span class="graylight">What drives quality</span></li>
 <li><span class="graylight">Stress-testing the answer</span></li>
+<li><span class="graylight">Causal estimates</span></li>
+<li><span class="graylight">Subcategory scores</span></li>
 <li><span class="graylight">What it means and what comes next</span></li>
 </ol>
 <aside class="notes">
-<p>15 seconds. One line each. This slide comes back at every transition with the highlight moved, so you always know where we are.</p>
+<p>5 seconds. Move the highlight and go.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -275,13 +296,14 @@ Bahman Rostami-Tabar, Supervisor
 <aside><ol class="aside-footnotes"><li id="fn1"><p>Shmueli, G. (2010). To explain or to predict? <em>Statistical Science</em>, 25(3), 289-310.</p></li></ol></aside></section>
 <section id="how-to-read-every-number-i-show" class="slide level2">
 <h2>How to read every number I show</h2>
-<p>Three things:</p>
 <ul>
-<li><strong>R squared on unseen facilities.</strong> Facilities differ in quality. R squared is the share of that difference the fitted model accounts for, from 0 for none to 1 for all. It will always be measured on facilities the model was never fitted on.</li>
-<li><strong>Conclusive.</strong> Each model is fitted on 200 resamples of the facilities 20 times. A requirement will be called conclusive only if 95% of those runs put it on the same side of zero</li>
+<li><strong>R squared on unseen facilities.</strong> Facilities differ in quality. R squared is the share of that difference a fitted model accounts for, from 0 for none to 1 for all. It is always measured on facilities the model was never fitted on.</li>
+<li><strong>Effect.</strong> The change in the quality score, which runs from 0 to 1, for one standard deviation more of a requirement’s score. The causal section later uses a plainer unit: the change from not met to met in full.</li>
+<li><strong>Conclusive.</strong> The model is refitted on 200 random resamples of the facilities. A requirement is conclusive when the middle 95% of its effects across those refits lies on one side of zero, and at least half of the refits keep it in the model at all.</li>
+<li><strong>Not applicable.</strong> Where a requirement does not apply to a facility, the linear models are given the column’s mean. The checks later remove those filled cells and look again.</li>
 </ul>
 <aside class="notes">
-<p>About 55 seconds. This slide buys back time everywhere else, so do not rush it. The 200 resamples idea is worth a sentence in plain speech: shuffle which facilities you happen to look at, refit, and see whether the answer keeps pointing the same way.</p>
+<p>About 60 seconds. This slide buys back time everywhere else, so do not rush it. The resamples idea in plain speech: shuffle which facilities you happen to look at, refit, and see whether the answer keeps pointing the same way. Say that the mean filling is new in this version of the analysis, and that a later slide removes it to check.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -302,6 +324,8 @@ Bahman Rostami-Tabar, Supervisor
 <li><span class="graylight">Targets and models</span></li>
 <li><span class="graylight">What drives quality</span></li>
 <li><span class="graylight">Stress-testing the answer</span></li>
+<li><span class="graylight">Causal estimates</span></li>
+<li><span class="graylight">Subcategory scores</span></li>
 <li><span class="graylight">What it means and what comes next</span></li>
 </ol>
 <aside class="notes">
@@ -394,10 +418,12 @@ Bahman Rostami-Tabar, Supervisor
 <li><span class="remember"><strong>Targets and models</strong></span></li>
 <li><span class="graylight">What drives quality</span></li>
 <li><span class="graylight">Stress-testing the answer</span></li>
+<li><span class="graylight">Causal estimates</span></li>
+<li><span class="graylight">Subcategory scores</span></li>
 <li><span class="graylight">What it means and what comes next</span></li>
 </ol>
 <aside class="notes">
-<p>5 seconds.</p>
+<p>5 seconds. Move the highlight and go.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -410,8 +436,8 @@ Bahman Rostami-Tabar, Supervisor
           display:block!important;
       }</style></aside>
 </section>
-<section id="four-of-the-seven-targets-have-not-much-to-explain" class="slide level2">
-<h2>Four of the seven targets have not much to explain</h2>
+<section id="four-of-the-seven-targets-have-almost-nothing-to-explain" class="slide level2">
+<h2>Four of the seven targets have almost nothing to explain</h2>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -424,28 +450,28 @@ Bahman Rostami-Tabar, Supervisor
 <tr class="odd">
 <td><code>R0712</code> vials, use within 28 days</td>
 <td>54.9%</td>
-<td>0.185</td>
+<td>0.187</td>
 </tr>
 <tr class="even">
 <td><code>R0722</code> vials, none left past 28 days</td>
 <td>54.5%</td>
-<td>0.174</td>
+<td>0.171</td>
 </tr>
 <tr class="odd">
 <td><code>QU</code> composite quality</td>
 <td>58.2%</td>
-<td>0.067</td>
+<td>0.059</td>
 </tr>
 <tr class="even">
 <td><code>R0710</code> <code>R0711</code> <code>R0713</code> <code>R0716</code></td>
-<td>93 to 97%</td>
-<td>zero or below</td>
+<td>94 to 97%</td>
+<td>0.05 or below</td>
 </tr>
 </tbody>
 </table>
-<p><strong>The composite and the two vial components are carried forward.</strong> TabPFN, a model that works in a completely different way, ranks the seven targets the same way, which reassures that this is about the data rather than the choice of model.</p>
+<p><strong>The composite and the two vial components are carried forward.</strong> The other four cover expired and heat-damaged vaccine, and almost every facility already passes them, so there is no variation left to explain.</p>
 <aside class="notes">
-<p>About 60 seconds. Read the table row by row. The four targets I set aside cover expired stock and heat damage, and almost every facility already passes them, so there is no variation left to explain. That near-universal pass is a finding in itself about the last mile. What still separates facilities is multi-dose vial handling. Then the TabPFN line: same ordering from a model with nothing in common with mine.</p>
+<p>About 60 seconds. Read the table row by row. The near-universal pass on expired and heat-damaged stock is a finding in itself about the last mile. What still separates facilities is multi-dose vial handling. The R squared figures here come from five repeated splits of the facilities; the next slide uses twenty.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -460,14 +486,14 @@ Bahman Rostami-Tabar, Supervisor
 </section>
 <section id="the-best-fitting-model-is-not-useful" class="slide level2">
 <h2>The best-fitting model is not useful</h2>
-<p>Ten model families, each run over twenty repeated splits of the facilities into 75% for fitting and 25% for testing.</p>
+<p>Eleven model families, each run over twenty repeated splits of the facilities into 75% for fitting and 25% for testing.</p>
 <ul>
-<li>Random forest achieves the best raw test score on the three targets, 0.238, but it scores about 0.7 higher on the facilities it was fitted on. Huge overfit</li>
-<li>XGBoost fits its training facilities perfectly, 1.000. Tre-based models are not useful for this problem</li>
-<li>Among the models that can explain and have a low overfit gap, <strong>the elastic net wins all three targets</strong>: <span class="strong-blue">0.062</span> for <code>QU</code>, <span class="strong-blue">0.192</span> for <code>R0712</code>, <span class="strong-blue">0.183</span> for <code>R0722</code></li>
+<li>Random forest has the best raw test score, 0.239 on <code>R0712</code>, but it scores about 0.65 higher on the facilities it was fitted on. It memorises them.</li>
+<li>XGBoost fits its training facilities perfectly, 1.000, and does worse than a straight line on new ones. Tree models cannot answer an explanatory question here.</li>
+<li>Among the models that give a readable number per requirement, <strong>the elastic net wins all three targets</strong>: <span class="strong-blue">0.051</span> for <code>QU</code>, <span class="strong-blue">0.191</span> for <code>R0712</code>, <span class="strong-blue">0.180</span> for <code>R0722</code>.</li>
 </ul>
 <aside class="notes">
-<p>About 65 seconds. This is the rule from the earlier slide biting. Random forest wins on paper and still loses, and I want that said plainly because it is the kind of thing a panel tests you on. The elastic net is worth one sentence of explanation: it keeps a small number of requirements and pushes the rest to exactly zero, so what comes out is already a short list.</p>
+<p>About 65 seconds. This is the rule from the earlier slide biting. Random forest wins on paper and still loses, and I want that said plainly. The elastic net is worth one sentence: it keeps a small number of requirements and pushes the rest to exactly zero, so what comes out is already a short list.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -480,26 +506,13 @@ Bahman Rostami-Tabar, Supervisor
           display:block!important;
       }</style></aside>
 </section>
-<section id="knowing-the-country-helps-a-lot-which-is-why-it-is-put-aside-from-the-predictors" class="slide level2">
-<h2>Knowing the country helps a lot, which is why it is put aside from the predictors</h2>
-<svg viewbox="0 0 1300 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bar chart comparing model fit with and without country columns" style="width:100%;max-width:1080px;height:auto;display:block;margin:0 auto;">
-<g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif"> <line x1="150" y1="345" x2="1240" y2="345" stroke="#8a97a6" stroke-width="2"></line> <text x="60" y="200" font-size="21" fill="#33495d" transform="rotate(-90 60 200)" text-anchor="middle">R² unseen</text> <g> <rect x="230" y="295" width="90" height="50" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"></rect> <rect x="330" y="250" width="90" height="95" fill="#1f6db4"></rect> <rect x="590" y="191" width="90" height="154" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"></rect> <rect x="690" y="87" width="90" height="258" fill="#1f6db4"></rect> <rect x="950" y="199" width="90" height="146" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"></rect> <rect x="1050" y="101" width="90" height="244" fill="#1f6db4"></rect> </g> <g font-size="24" fill="#33495d" text-anchor="middle"> <text x="275" y="285">0.062</text> <text x="375" y="240">0.119</text> <text x="635" y="181">0.192</text> <text x="735" y="77">0.323</text> <text x="995" y="189">0.183</text> <text x="1095" y="91">0.305</text> <text x="325" y="380" font-size="26">QU</text> <text x="685" y="380" font-size="26">R0712</text> <text x="1045" y="380" font-size="26">R0722</text> </g> <g font-size="23" fill="#33495d"> <rect x="230" y="405" width="26" height="18" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"></rect> <text x="266" y="420">requirements only</text> <rect x="590" y="405" width="26" height="18" fill="#1f6db4"></rect> <text x="626" y="420">requirements plus one column per country</text> </g> </g>
+<section id="knowing-the-country-helps-a-lot-which-is-why-it-is-kept-out-of-the-predictors" class="slide level2">
+<h2>Knowing the country helps a lot, which is why it is kept out of the predictors</h2>
+<svg viewbox="0 0 1300 445" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:1080px;height:auto;display:block;margin:0 auto;">
+<g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif"><line x1="150" y1="345" x2="1240" y2="345" stroke="#8a97a6" stroke-width="2"></line><text x="60" y="200" font-size="21" fill="#33495d" transform="rotate(-90 60 200)" text-anchor="middle">R² unseen</text><rect x="240" y="304" width="80" height="41" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"></rect><text x="280" y="294" font-size="22" fill="#33495d" text-anchor="middle">0.051</text><rect x="330" y="254" width="80" height="91" fill="#1f6db4"></rect><text x="370" y="244" font-size="22" fill="#33495d" text-anchor="middle">0.114</text><rect x="600" y="192" width="80" height="153" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"></rect><text x="640" y="182" font-size="22" fill="#33495d" text-anchor="middle">0.191</text><rect x="690" y="86" width="80" height="259" fill="#1f6db4"></rect><text x="730" y="76" font-size="22" fill="#33495d" text-anchor="middle">0.324</text><rect x="960" y="201" width="80" height="144" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"></rect><text x="1000" y="191" font-size="22" fill="#33495d" text-anchor="middle">0.180</text><rect x="1050" y="99" width="80" height="246" fill="#1f6db4"></rect><text x="1090" y="89" font-size="22" fill="#33495d" text-anchor="middle">0.308</text><text x="325" y="380" font-size="26" fill="#33495d" text-anchor="middle">QU</text><text x="685" y="380" font-size="26" fill="#33495d" text-anchor="middle">R0712</text><text x="1045" y="380" font-size="26" fill="#33495d" text-anchor="middle">R0722</text><rect x="230" y="405" width="26" height="18" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"></rect><text x="266" y="420" font-size="22" fill="#33495d">requirements only</text><rect x="650" y="405" width="26" height="18" fill="#1f6db4"></rect><text x="686" y="420" font-size="22" fill="#33495d">plus one column per country</text></g>
 </svg>
 <aside class="notes">
-<p>Between a fifth and two fifths of all variation sits between countries. That is income and infrastructure, and no facility can act on it.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-<aside class="notes">
-<p>About 55 seconds. Walk the chart: pale bars are the model I report, solid bars add one column per country, and every pair roughly doubles. Then the reasoning, which matters more than the numbers: my question is about requirements, and once country is in the model every requirement number becomes a within-country comparison, which hides how small the requirement signal really is. So I pay the price of the pale bars on purpose, and I measure that price in section 5.</p>
+<p>About 55 seconds. Walk the chart: pale bars are the model I report, solid bars add one column per country, and every pair roughly doubles. Between a fifth and two fifths of all variation sits between countries: 21% for the composite, 41% and 41% for the components. That is income and infrastructure, and no facility can act on it. Once country is in the model every requirement number becomes a within-country comparison, which hides how small the requirement signal really is. So I pay the price of the pale bars on purpose, and the next slide measures that price.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -520,10 +533,12 @@ Bahman Rostami-Tabar, Supervisor
 <li><span class="graylight">Targets and models</span></li>
 <li><span class="remember"><strong>What drives quality</strong></span></li>
 <li><span class="graylight">Stress-testing the answer</span></li>
+<li><span class="graylight">Causal estimates</span></li>
+<li><span class="graylight">Subcategory scores</span></li>
 <li><span class="graylight">What it means and what comes next</span></li>
 </ol>
 <aside class="notes">
-<p>5 seconds.</p>
+<p>5 seconds. Move the highlight and go.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -536,8 +551,8 @@ Bahman Rostami-Tabar, Supervisor
           display:block!important;
       }</style></aside>
 </section>
-<section id="four-requirements-drive-the-composite-quality-score-and-two-have-negative-effect" class="slide level2 tight-table">
-<h2>Four requirements drive the composite Quality score, and two have negative effect</h2>
+<section id="two-requirements-drive-the-composite-score-and-one-of-them-pulls-it-down" class="slide level2 tight-table">
+<h2>Two requirements drive the composite score, and one of them pulls it down</h2>
 <style>
 section.tight-table table { width: 100%; table-layout: fixed; font-size: 0.8em; }
 section.tight-table th, section.tight-table td { padding: 0.3em 0; vertical-align: middle; }
@@ -562,29 +577,29 @@ section.tight-table th:nth-child(3), section.tight-table td:nth-child(3) { width
 <tr class="odd">
 <td><code>R0290</code></td>
 <td>Responsible staff know the discard time of multi-dose vials.</td>
-<td><span class="strong-blue">+0.0114</span></td>
+<td><span class="strong-blue">+0.0102</span></td>
 </tr>
 <tr class="even">
-<td><code>R0322</code></td>
-<td>The facility has SOPs (Standard Operating Procedure) for the multi-dose vial policy.</td>
-<td><span class="strong-blue">+0.0105</span></td>
+<td><code>R0040</code></td>
+<td>The facility has sufficient positive cold storage capacity for the expected maximum stock of vaccines.</td>
+<td><span class="orange">-0.0114</span></td>
 </tr>
 <tr class="odd">
-<td><code>R0040</code></td>
-<td>The facility has sufficient positive cold storage capacity to accommodate the expected maximum stock levels of vaccines.</td>
-<td><span class="orange">−0.0121</span></td>
+<td><code>R0322</code></td>
+<td>The facility has SOPs for the multi-dose vial policy. Borderline: its interval touches zero.</td>
+<td><span class="strong-blue">+0.0061</span></td>
 </tr>
 <tr class="even">
 <td><code>R0156</code></td>
-<td>The temperature record is a graph rather than a list</td>
-<td><span class="orange">−0.0078</span></td>
+<td>The temperature record is a graph rather than a list. Borderline, the same way.</td>
+<td><span class="orange">-0.0061</span></td>
 </tr>
 </tbody>
 </table>
 <div class="fragment">
-<p><span class="remember">Meeting two WHO requirements have make vaccines quality worse.</span></p>
+<p><span class="remember">Meeting a WHO requirement can go with a worse quality score. Section 5 explains why.</span></p>
 <aside class="notes">
-<p>About 70 seconds. Read all four rows straight off the slide. The two blue ones are exactly what the assessment intends, and both are about the vials from the opening story. Then slow right down on the orange ones: more fridge space and a tidier temperature chart go with worse quality. Do not explain it yet. Reveal the last line, let it sit, and tell them section 5 explains what is really going on. This is the hook that carries the middle of the talk.</p>
+<p>About 70 seconds. Two are conclusive, two sit just outside: their 200-resample intervals touch zero but stop there, and both are kept in over 90% of refits. The blue one is exactly what the assessment intends, and it is about the vials from the opening story. Then slow right down on the orange one: more fridge space goes with worse quality. Do not explain it yet. Reveal the last line, let it sit.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -616,20 +631,20 @@ section.two-comp > p { font-size: 0.82em; }
 <p><strong><code>R0712</code>, four conclusive</strong></p>
 <p><span class="defn">Multi-dose vial vaccines are never administered more than 28 days after opening.</span></p>
 <ul>
-<li><code>R0290</code> Staff know the discard time of multi-dose vials. <span class="strong-blue">+0.039</span></li>
-<li><code>R0257</code> Staff are trained how to monitor ISC performance. <span class="strong-blue">+0.039</span></li>
-<li><code>R0272</code> Staff know key principles and procedures of vaccine &amp; dry goods storage. <span class="strong-blue">+0.029</span></li>
-<li><code>R0037</code> Storage buildings have functional certified fire extinguishers. <span class="strong-blue">+0.028</span></li>
+<li><code>R0290</code> Staff know the discard time of multi-dose vials. <span class="strong-blue">+0.0403</span></li>
+<li><code>R0257</code> Staff are trained how to monitor supply chain performance. <span class="strong-blue">+0.0387</span></li>
+<li><code>R0037</code> Storage buildings have functional certified fire extinguishers. <span class="strong-blue">+0.0289</span></li>
+<li><code>R0272</code> Staff know the key principles of vaccine and dry goods storage. <span class="strong-blue">+0.0263</span></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <p><strong><code>R0722</code>, five conclusive</strong></p>
 <p><span class="defn">There are no opened multi-dose vials in stock that were opened more than 28 days ago.</span></p>
 <ul>
-<li><code>R0037</code> Storage buildings have functional certified fire extinguishers. <span class="strong-blue">+0.044</span></li>
-<li><code>R0293</code> Staff know the main types of opened vial wastage. <span class="strong-blue">+0.039</span></li>
-<li><code>R0290</code> Staff know the discard time of multi-dose vials. <span class="strong-blue">+0.035</span></li>
-<li><code>R0358</code> Staff are paid in full and on time. <span class="strong-blue">+0.033</span></li>
-<li><code>R0129</code> Waste is stored in plastic or metal bins. <span class="strong-blue">+0.030</span></li>
+<li><code>R0037</code> Storage buildings have functional certified fire extinguishers. <span class="strong-blue">+0.0463</span></li>
+<li><code>R0293</code> Staff know the main types of opened vial wastage. <span class="strong-blue">+0.0385</span></li>
+<li><code>R0290</code> Staff know the discard time of multi-dose vials. <span class="strong-blue">+0.0363</span></li>
+<li><code>R0358</code> Staff are paid in full and on time. <span class="strong-blue">+0.0333</span></li>
+<li><code>R0129</code> Waste is stored in plastic or metal bins. <span class="strong-blue">+0.0297</span></li>
 </ul>
 </div></div>
 <p><span class="remember"><code>R0290</code>, knowing when a vial must go, is the only requirement on all three lists.</span></p>
@@ -637,7 +652,1553 @@ section.two-comp > p { font-size: 0.82em; }
 <p>&nbsp;</p>
 </div>
 <aside class="notes">
-<p>About 70 seconds. Read both columns aloud, then land the common thread. Point out the odd ones honestly: fire extinguishers, salaries and waste bins cannot touch a vial, so something else is behind them, and the next section deals with it. Add that the assessment year is conclusive for both components too, which is the country label from earlier showing through rather than any change over time.</p>
+<p>About 70 seconds. Read both columns aloud, then land the common thread. Point out the odd ones honestly: fire extinguishers, salaries and waste bins cannot touch a vial, so something else is behind them, and sections 5 and 6 deal with it. The assessment year is conclusive for both components too, which is the country label from earlier showing through rather than any change over time.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-25-largest-effects-on-the-composite-score-1-to-13" class="slide level2 tbl t25">
+<h2>The 25 largest effects on the composite score, 1 to 13</h2>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Code</th>
+<th>What is checked</th>
+<th>Applies to</th>
+<th>At max</th>
+<th>Effect</th>
+<th>Interval</th>
+<th>Kept in</th>
+<th>Concl.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><code>R0040</code></td>
+<td>Sufficient cold storage capacity for the expected maximum stock</td>
+<td>90%</td>
+<td>90%</td>
+<td>-0.0114</td>
+<td>-0.0167 to -0.0062</td>
+<td>100%</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><code>R0290</code></td>
+<td>Staff know the discard time of multi-dose vials</td>
+<td>90%</td>
+<td>90%</td>
+<td>+0.0102</td>
+<td>+0.0028 to +0.0171</td>
+<td>100%</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><code>R0322</code></td>
+<td>SOPs for the multi-dose vial policy</td>
+<td>89%</td>
+<td>65%</td>
+<td>+0.0061</td>
+<td>+0.0000 to +0.0128</td>
+<td>94%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><code>R0156</code></td>
+<td>The temperature record form is graphical</td>
+<td>96%</td>
+<td>41%</td>
+<td>-0.0061</td>
+<td>-0.0119 to +0.0000</td>
+<td>96%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td><code>R0257</code></td>
+<td>Staff are trained to monitor supply chain performance</td>
+<td>100%</td>
+<td>54%</td>
+<td>+0.0057</td>
+<td>+0.0000 to +0.0125</td>
+<td>94%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td><code>R0130</code></td>
+<td>Bins are colour coded for different types of waste</td>
+<td>70%</td>
+<td>56%</td>
+<td>+0.0054</td>
+<td>+0.0000 to +0.0118</td>
+<td>93%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td><code>R0251</code></td>
+<td>Staff turnover is low</td>
+<td>97%</td>
+<td>33%</td>
+<td>+0.0050</td>
+<td>+0.0000 to +0.0116</td>
+<td>92%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td><code>R0279</code></td>
+<td>Staff know cool packs are prepared in dedicated compartments</td>
+<td>50%</td>
+<td>52%</td>
+<td>+0.0046</td>
+<td>+0.0000 to +0.0097</td>
+<td>93%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td><code>R0037</code></td>
+<td>Storage buildings have functional fire extinguishers</td>
+<td>100%</td>
+<td>19%</td>
+<td>+0.0045</td>
+<td>+0.0000 to +0.0110</td>
+<td>91%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td><code>R0136</code></td>
+<td>Supply chain staff have work mobile phones</td>
+<td>100%</td>
+<td>59%</td>
+<td>+0.0044</td>
+<td>+0.0000 to +0.0129</td>
+<td>83%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td><code>R0328</code></td>
+<td>There are safe injection SOPs in the immunization room</td>
+<td>98%</td>
+<td>24%</td>
+<td>+0.0042</td>
+<td>+0.0000 to +0.0123</td>
+<td>82%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td><code>R0292</code></td>
+<td>Staff know how to calculate the unopened vial wastage rate</td>
+<td>100%</td>
+<td>51%</td>
+<td>+0.0035</td>
+<td>+0.0000 to +0.0096</td>
+<td>85%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td><code>R0275</code></td>
+<td>Staff know how to use the stock management system</td>
+<td>100%</td>
+<td>73%</td>
+<td>+0.0034</td>
+<td>+0.0000 to +0.0090</td>
+<td>78%</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><span class="smallnote">Applies to: share of facilities where the requirement was asked. At max: share of those facilities meeting it in full. Kept in: share of the 200 resamples that kept the requirement. Effect is per standard deviation of the requirement’s score, on the 0 to 1 target.</span></p>
+<aside class="notes">
+<p>About 60 seconds. Read the conclusive rows and then say what the rest of the table is for: a ranking by size so the reader can see how quickly the evidence runs out, not a list of findings. Point at the two profile columns: a requirement almost everyone meets has little room to show an effect.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-25-largest-effects-on-the-composite-score-14-to-25" class="slide level2 tbl t25">
+<h2>The 25 largest effects on the composite score, 14 to 25</h2>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Code</th>
+<th>What is checked</th>
+<th>Applies to</th>
+<th>At max</th>
+<th>Effect</th>
+<th>Interval</th>
+<th>Kept in</th>
+<th>Concl.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>14</td>
+<td><code>R0122</code></td>
+<td>Waste handlers have boots</td>
+<td>16%</td>
+<td>60%</td>
+<td>+0.0030</td>
+<td>+0.0000 to +0.0105</td>
+<td>74%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td><code>R0064</code></td>
+<td>Vaccine refrigerator/freezers have door open alarms</td>
+<td>35%</td>
+<td>10%</td>
+<td>-0.0030</td>
+<td>-0.0120 to +0.0000</td>
+<td>68%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>16</td>
+<td><code>R0269</code></td>
+<td>Staff can correctly read a 30DTR</td>
+<td>71%</td>
+<td>85%</td>
+<td>+0.0027</td>
+<td>+0.0000 to +0.0100</td>
+<td>70%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>17</td>
+<td><code>R0186</code></td>
+<td>Stock record form has a field for VVM status</td>
+<td>95%</td>
+<td>60%</td>
+<td>-0.0025</td>
+<td>-0.0085 to +0.0000</td>
+<td>62%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>18</td>
+<td><code>R0298</code></td>
+<td>Staff know how to dispose of expired temperature monitoring devices</td>
+<td>100%</td>
+<td>82%</td>
+<td>-0.0022</td>
+<td>-0.0075 to +0.0000</td>
+<td>72%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>19</td>
+<td><code>R0272</code></td>
+<td>Staff know the principles of vaccine and dry goods storage</td>
+<td>99%</td>
+<td>87%</td>
+<td>+0.0019</td>
+<td>+0.0000 to +0.0083</td>
+<td>60%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>20</td>
+<td><code>R0212</code></td>
+<td>Receipt form has a field for Freeze indicator status of vaccines received</td>
+<td>84%</td>
+<td>56%</td>
+<td>-0.0018</td>
+<td>-0.0078 to +0.0000</td>
+<td>58%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>21</td>
+<td><code>R0154</code></td>
+<td>The form has fields for entering AM and PM temperatures</td>
+<td>96%</td>
+<td>84%</td>
+<td>+0.0018</td>
+<td>+0.0000 to +0.0088</td>
+<td>50%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>22</td>
+<td><code>R0210</code></td>
+<td>Receipt form has a field for Quantity of vaccines received</td>
+<td>100%</td>
+<td>78%</td>
+<td>-0.0017</td>
+<td>-0.0067 to +0.0000</td>
+<td>57%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>23</td>
+<td><code>R0326</code></td>
+<td>SOPs for disposal of sharps waste</td>
+<td>56%</td>
+<td>63%</td>
+<td>+0.0016</td>
+<td>+0.0000 to +0.0063</td>
+<td>53%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>24</td>
+<td><code>R0073</code></td>
+<td>Sufficient coolant pack storage capacity for daily demand</td>
+<td>96%</td>
+<td>37%</td>
+<td>-0.0016</td>
+<td>-0.0071 to +0.0000</td>
+<td>60%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>25</td>
+<td><code>R0077</code></td>
+<td>Transport is always available for scheduled vaccine distribution, collect…</td>
+<td>37%</td>
+<td>95%</td>
+<td>+0.0015</td>
+<td>+0.0000 to +0.0103</td>
+<td>40%</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><span class="smallnote">Ranked by the size of the average effect. Below the conclusive rows the intervals include zero, so the order says where the evidence thins out, not which of these matter.</span></p>
+<aside class="notes">
+<p>About 30 seconds. Do not read these rows. Say that from here down the intervals include zero, and move on.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-25-largest-effects-on-r0712-1-to-13" class="slide level2 tbl t25">
+<h2>The 25 largest effects on <code>R0712</code>, 1 to 13</h2>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Code</th>
+<th>What is checked</th>
+<th>Applies to</th>
+<th>At max</th>
+<th>Effect</th>
+<th>Interval</th>
+<th>Kept in</th>
+<th>Concl.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><code>R0290</code></td>
+<td>Staff know the discard time of multi-dose vials</td>
+<td>100%</td>
+<td>92%</td>
+<td>+0.0403</td>
+<td>+0.0137 to +0.0620</td>
+<td>100%</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><code>R0257</code></td>
+<td>Staff are trained to monitor supply chain performance</td>
+<td>100%</td>
+<td>56%</td>
+<td>+0.0387</td>
+<td>+0.0094 to +0.0691</td>
+<td>100%</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><code>R0037</code></td>
+<td>Storage buildings have functional fire extinguishers</td>
+<td>100%</td>
+<td>23%</td>
+<td>+0.0289</td>
+<td>+0.0007 to +0.0508</td>
+<td>98%</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><code>R0272</code></td>
+<td>Staff know the principles of vaccine and dry goods storage</td>
+<td>99%</td>
+<td>88%</td>
+<td>+0.0263</td>
+<td>+0.0017 to +0.0546</td>
+<td>98%</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td><code>R0156</code></td>
+<td>The temperature record form is graphical</td>
+<td>97%</td>
+<td>44%</td>
+<td>-0.0227</td>
+<td>-0.0515 to +0.0000</td>
+<td>94%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td><code>R0270</code></td>
+<td>Staff know the correct storage temperature for each vaccine</td>
+<td>99%</td>
+<td>41%</td>
+<td>+0.0194</td>
+<td>+0.0000 to +0.0529</td>
+<td>83%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td><code>R0130</code></td>
+<td>Bins are colour coded for different types of waste</td>
+<td>72%</td>
+<td>56%</td>
+<td>+0.0187</td>
+<td>+0.0000 to +0.0431</td>
+<td>92%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td><code>R0328</code></td>
+<td>There are safe injection SOPs in the immunization room</td>
+<td>100%</td>
+<td>29%</td>
+<td>+0.0185</td>
+<td>+0.0000 to +0.0519</td>
+<td>83%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td><code>R0002</code></td>
+<td>A functional landline telephone</td>
+<td>100%</td>
+<td>18%</td>
+<td>+0.0178</td>
+<td>+0.0000 to +0.0454</td>
+<td>90%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td><code>R0279</code></td>
+<td>Staff know cool packs are prepared in dedicated compartments</td>
+<td>52%</td>
+<td>49%</td>
+<td>+0.0175</td>
+<td>+0.0000 to +0.0426</td>
+<td>88%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td><code>R0129</code></td>
+<td>Waste is stored in plastic or metal bins</td>
+<td>100%</td>
+<td>48%</td>
+<td>+0.0156</td>
+<td>+0.0000 to +0.0442</td>
+<td>86%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td><code>R0251</code></td>
+<td>Staff turnover is low</td>
+<td>98%</td>
+<td>33%</td>
+<td>+0.0138</td>
+<td>+0.0000 to +0.0371</td>
+<td>84%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td><code>R0305</code></td>
+<td>SOPs for vaccine temperature monitoring in storage</td>
+<td>99%</td>
+<td>30%</td>
+<td>+0.0115</td>
+<td>+0.0000 to +0.0459</td>
+<td>60%</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><span class="smallnote">Applies to: share of facilities where the requirement was asked. At max: share of those facilities meeting it in full. Kept in: share of the 200 resamples that kept the requirement. Effect is per standard deviation of the requirement’s score, on the 0 to 1 target.</span></p>
+<aside class="notes">
+<p>About 60 seconds. Read the conclusive rows and then say what the rest of the table is for: a ranking by size so the reader can see how quickly the evidence runs out, not a list of findings. Point at the two profile columns: a requirement almost everyone meets has little room to show an effect.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-25-largest-effects-on-r0712-14-to-25" class="slide level2 tbl t25">
+<h2>The 25 largest effects on <code>R0712</code>, 14 to 25</h2>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Code</th>
+<th>What is checked</th>
+<th>Applies to</th>
+<th>At max</th>
+<th>Effect</th>
+<th>Interval</th>
+<th>Kept in</th>
+<th>Concl.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>14</td>
+<td><code>R0358</code></td>
+<td>Staff are paid in full and on time</td>
+<td>100%</td>
+<td>79%</td>
+<td>+0.0104</td>
+<td>+0.0000 to +0.0397</td>
+<td>70%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td><code>R0311</code></td>
+<td>SOPs for managing vaccine stock transactions</td>
+<td>99%</td>
+<td>69%</td>
+<td>+0.0097</td>
+<td>+0.0000 to +0.0402</td>
+<td>52%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>16</td>
+<td><code>R0327</code></td>
+<td>SOPs for management of used vials</td>
+<td>100%</td>
+<td>67%</td>
+<td>+0.0069</td>
+<td>+0.0000 to +0.0355</td>
+<td>39%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>17</td>
+<td><code>R0233</code></td>
+<td>At least one member of staff is responsible for annual work planning</td>
+<td>100%</td>
+<td>62%</td>
+<td>+0.0068</td>
+<td>+0.0000 to +0.0256</td>
+<td>55%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>18</td>
+<td><code>R0182</code></td>
+<td>Stock record form has a field for Presentation (# doses per vial)</td>
+<td>100%</td>
+<td>71%</td>
+<td>+0.0067</td>
+<td>+0.0000 to +0.0286</td>
+<td>53%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>19</td>
+<td><code>R0298</code></td>
+<td>Staff know how to dispose of expired temperature monitoring devices</td>
+<td>100%</td>
+<td>84%</td>
+<td>-0.0066</td>
+<td>-0.0312 to +0.0000</td>
+<td>60%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>20</td>
+<td><code>R0357</code></td>
+<td>Funds for staff salaries are received on time</td>
+<td>19%</td>
+<td>88%</td>
+<td>+0.0066</td>
+<td>+0.0000 to +0.0265</td>
+<td>60%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>21</td>
+<td><code>R0307</code></td>
+<td>SOPs for vaccine storage</td>
+<td>99%</td>
+<td>70%</td>
+<td>+0.0065</td>
+<td>+0.0000 to +0.0381</td>
+<td>38%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>22</td>
+<td><code>R0123</code></td>
+<td>Waste handlers have an apron</td>
+<td>18%</td>
+<td>60%</td>
+<td>+0.0063</td>
+<td>+0.0000 to +0.0287</td>
+<td>51%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>23</td>
+<td><code>R0236</code></td>
+<td>At least one member of staff is responsible for monitoring ISC performance</td>
+<td>100%</td>
+<td>72%</td>
+<td>+0.0061</td>
+<td>+0.0000 to +0.0365</td>
+<td>35%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>24</td>
+<td><code>R0370</code></td>
+<td>Funds received for electricity are sufficient</td>
+<td>16%</td>
+<td>88%</td>
+<td>-0.0059</td>
+<td>-0.0253 to +0.0000</td>
+<td>52%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>25</td>
+<td><code>R0062</code></td>
+<td>Vaccine refrigerators/freezers have functioning voltage regulators</td>
+<td>97%</td>
+<td>41%</td>
+<td>+0.0057</td>
+<td>+0.0000 to +0.0272</td>
+<td>54%</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><span class="smallnote">Ranked by the size of the average effect. Below the conclusive rows the intervals include zero, so the order says where the evidence thins out, not which of these matter.</span></p>
+<aside class="notes">
+<p>About 30 seconds. Do not read these rows. Say that from here down the intervals include zero, and move on.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-25-largest-effects-on-r0722-1-to-13" class="slide level2 tbl t25">
+<h2>The 25 largest effects on <code>R0722</code>, 1 to 13</h2>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Code</th>
+<th>What is checked</th>
+<th>Applies to</th>
+<th>At max</th>
+<th>Effect</th>
+<th>Interval</th>
+<th>Kept in</th>
+<th>Concl.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><code>R0037</code></td>
+<td>Storage buildings have functional fire extinguishers</td>
+<td>100%</td>
+<td>21%</td>
+<td>+0.0463</td>
+<td>+0.0168 to +0.0737</td>
+<td>100%</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><code>R0293</code></td>
+<td>Staff know the main types of opened-vial wastage</td>
+<td>100%</td>
+<td>88%</td>
+<td>+0.0385</td>
+<td>+0.0081 to +0.0629</td>
+<td>100%</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><code>R0290</code></td>
+<td>Staff know the discard time of multi-dose vials</td>
+<td>95%</td>
+<td>92%</td>
+<td>+0.0363</td>
+<td>+0.0112 to +0.0588</td>
+<td>99%</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><code>R0358</code></td>
+<td>Staff are paid in full and on time</td>
+<td>100%</td>
+<td>81%</td>
+<td>+0.0333</td>
+<td>+0.0088 to +0.0589</td>
+<td>100%</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td><code>R0129</code></td>
+<td>Waste is stored in plastic or metal bins</td>
+<td>100%</td>
+<td>48%</td>
+<td>+0.0297</td>
+<td>+0.0069 to +0.0586</td>
+<td>99%</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td><code>R0257</code></td>
+<td>Staff are trained to monitor supply chain performance</td>
+<td>100%</td>
+<td>57%</td>
+<td>+0.0281</td>
+<td>+0.0000 to +0.0580</td>
+<td>91%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td><code>R0040</code></td>
+<td>Sufficient cold storage capacity for the expected maximum stock</td>
+<td>88%</td>
+<td>92%</td>
+<td>-0.0173</td>
+<td>-0.0427 to +0.0000</td>
+<td>86%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td><code>R0279</code></td>
+<td>Staff know cool packs are prepared in dedicated compartments</td>
+<td>47%</td>
+<td>50%</td>
+<td>+0.0161</td>
+<td>+0.0000 to +0.0423</td>
+<td>88%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td><code>R0328</code></td>
+<td>There are safe injection SOPs in the immunization room</td>
+<td>99%</td>
+<td>30%</td>
+<td>+0.0147</td>
+<td>+0.0000 to +0.0449</td>
+<td>78%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td><code>R0260</code></td>
+<td>Staff are trained in routine refrigeration maintenance</td>
+<td>100%</td>
+<td>55%</td>
+<td>-0.0134</td>
+<td>-0.0336 to +0.0000</td>
+<td>80%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td><code>R0155</code></td>
+<td>The form has fields for temperature alarms</td>
+<td>100%</td>
+<td>69%</td>
+<td>-0.0113</td>
+<td>-0.0359 to +0.0000</td>
+<td>72%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td><code>R0272</code></td>
+<td>Staff know the principles of vaccine and dry goods storage</td>
+<td>100%</td>
+<td>91%</td>
+<td>+0.0110</td>
+<td>+0.0000 to +0.0336</td>
+<td>76%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td><code>R0251</code></td>
+<td>Staff turnover is low</td>
+<td>98%</td>
+<td>30%</td>
+<td>+0.0104</td>
+<td>+0.0000 to +0.0350</td>
+<td>76%</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><span class="smallnote">Applies to: share of facilities where the requirement was asked. At max: share of those facilities meeting it in full. Kept in: share of the 200 resamples that kept the requirement. Effect is per standard deviation of the requirement’s score, on the 0 to 1 target.</span></p>
+<aside class="notes">
+<p>About 60 seconds. Read the conclusive rows and then say what the rest of the table is for: a ranking by size so the reader can see how quickly the evidence runs out, not a list of findings. Point at the two profile columns: a requirement almost everyone meets has little room to show an effect.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-25-largest-effects-on-r0722-14-to-25" class="slide level2 tbl t25">
+<h2>The 25 largest effects on <code>R0722</code>, 14 to 25</h2>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Code</th>
+<th>What is checked</th>
+<th>Applies to</th>
+<th>At max</th>
+<th>Effect</th>
+<th>Interval</th>
+<th>Kept in</th>
+<th>Concl.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>14</td>
+<td><code>R0326</code></td>
+<td>SOPs for disposal of sharps waste</td>
+<td>58%</td>
+<td>69%</td>
+<td>+0.0104</td>
+<td>+0.0000 to +0.0355</td>
+<td>71%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td><code>R0236</code></td>
+<td>At least one member of staff is responsible for monitoring ISC performance</td>
+<td>100%</td>
+<td>73%</td>
+<td>+0.0104</td>
+<td>+0.0000 to +0.0386</td>
+<td>58%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>16</td>
+<td><code>R0062</code></td>
+<td>Vaccine refrigerators/freezers have functioning voltage regulators</td>
+<td>100%</td>
+<td>44%</td>
+<td>+0.0093</td>
+<td>+0.0000 to +0.0303</td>
+<td>66%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>17</td>
+<td><code>R0128</code></td>
+<td>The waste storage area is covered</td>
+<td>100%</td>
+<td>62%</td>
+<td>+0.0083</td>
+<td>+0.0000 to +0.0336</td>
+<td>62%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>18</td>
+<td><code>R0187</code></td>
+<td>Stock record form has a field for Transaction type</td>
+<td>100%</td>
+<td>61%</td>
+<td>+0.0083</td>
+<td>+0.0000 to +0.0302</td>
+<td>64%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>19</td>
+<td><code>R0275</code></td>
+<td>Staff know how to use the stock management system</td>
+<td>100%</td>
+<td>75%</td>
+<td>+0.0080</td>
+<td>+0.0000 to +0.0328</td>
+<td>64%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>20</td>
+<td><code>R0280</code></td>
+<td>Staff know how to prevent freezing during transportation in cold climates</td>
+<td>65%</td>
+<td>24%</td>
+<td>+0.0077</td>
+<td>+0.0000 to +0.0311</td>
+<td>60%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>21</td>
+<td><code>R0323</code></td>
+<td>SOPs for handling diluents</td>
+<td>100%</td>
+<td>68%</td>
+<td>+0.0071</td>
+<td>+0.0000 to +0.0327</td>
+<td>46%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>22</td>
+<td><code>R0308</code></td>
+<td>A vaccine storage emergency contingency plan</td>
+<td>100%</td>
+<td>61%</td>
+<td>+0.0070</td>
+<td>+0.0000 to +0.0311</td>
+<td>50%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>23</td>
+<td><code>R0002</code></td>
+<td>A functional landline telephone</td>
+<td>100%</td>
+<td>17%</td>
+<td>+0.0064</td>
+<td>+0.0000 to +0.0290</td>
+<td>57%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>24</td>
+<td><code>R0122</code></td>
+<td>Waste handlers have boots</td>
+<td>16%</td>
+<td>65%</td>
+<td>+0.0062</td>
+<td>+0.0000 to +0.0256</td>
+<td>52%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>25</td>
+<td><code>R0106</code></td>
+<td>The waste burial site has clear warning signs</td>
+<td>22%</td>
+<td>16%</td>
+<td>+0.0058</td>
+<td>+0.0000 to +0.0270</td>
+<td>60%</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><span class="smallnote">Ranked by the size of the average effect. Below the conclusive rows the intervals include zero, so the order says where the evidence thins out, not which of these matter.</span></p>
+<aside class="notes">
+<p>About 30 seconds. Do not read these rows. Say that from here down the intervals include zero, and move on.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="how-the-ten-least-useful-requirements-were-chosen" class="slide level2">
+<h2>How the ten least useful requirements were chosen</h2>
+<p>The bottom of a list is harder to define than the top, because the elastic net sets many coefficients to exactly zero and nothing orders them. So the rule has three steps, applied separately to each target.</p>
+<ol type="1">
+<li><strong>Set aside the requirements with no room to vary</strong>: those met in full by fewer than 5% or more than 95% of the facilities where they apply. A column that never changes cannot earn a low rank.</li>
+<li><strong>Among the rest, take the ten kept in the fewest of the 200 resamples.</strong> A requirement the model drops almost every time is one it has no use for.</li>
+<li><strong>Break ties by the smallest average effect, then by the weakest raw correlation with the target.</strong> The correlation is only a tie-breaker; it is not what the model uses.</li>
+</ol>
+<aside class="notes">
+<p>About 45 seconds. The WHO team asked for this as a credibility check: a method that ranks sensibly at the top should rank sensibly at the bottom too. Explain why step 1 is needed: a requirement everyone meets would otherwise land at the bottom for the wrong reason.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-ten-requirements-the-model-has-least-use-for-on-the-composite-score" class="slide level2 tbl t10">
+<h2>The ten requirements the model has least use for on the composite score</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Code</th>
+<th>What is checked</th>
+<th>Applies to</th>
+<th>At max</th>
+<th>Kept in</th>
+<th>Effect</th>
+<th>Correlation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><code>R0321</code></td>
+<td>SOPs for the shake test</td>
+<td>86%</td>
+<td>59%</td>
+<td>0%</td>
+<td>+0.0000</td>
+<td>0.084</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><code>R0329</code></td>
+<td>SOPs are written in a local language</td>
+<td>97%</td>
+<td>68%</td>
+<td>0%</td>
+<td>+0.0000</td>
+<td>0.095</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><code>R0327</code></td>
+<td>SOPs for management of used vials</td>
+<td>99%</td>
+<td>63%</td>
+<td>0%</td>
+<td>+0.0000</td>
+<td>0.096</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><code>R0311</code></td>
+<td>SOPs for managing vaccine stock transactions</td>
+<td>99%</td>
+<td>66%</td>
+<td>0%</td>
+<td>+0.0000</td>
+<td>0.109</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td><code>R0183</code></td>
+<td>Stock record form has a field for Quantity</td>
+<td>100%</td>
+<td>83%</td>
+<td>0%</td>
+<td>-0.0000</td>
+<td>0.041</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td><code>R0386</code></td>
+<td>Facility funds received for storage are sufficient</td>
+<td>14%</td>
+<td>89%</td>
+<td>0%</td>
+<td>-0.0000</td>
+<td>0.013</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td><code>R0185</code></td>
+<td>Stock record form has a field for Expiry date</td>
+<td>100%</td>
+<td>78%</td>
+<td>0%</td>
+<td>-0.0000</td>
+<td>0.021</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td><code>R0120</code></td>
+<td>Waste handlers have protective eyewear</td>
+<td>16%</td>
+<td>51%</td>
+<td>1%</td>
+<td>+0.0000</td>
+<td>0.078</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td><code>R0389</code></td>
+<td>Funds for maintenance of buildings are received on time</td>
+<td>21%</td>
+<td>84%</td>
+<td>1%</td>
+<td>+0.0000</td>
+<td>0.038</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td><code>R0393</code></td>
+<td>Funds for maintenance of cold chain equipment are received on time</td>
+<td>16%</td>
+<td>84%</td>
+<td>1%</td>
+<td>+0.0000</td>
+<td>0.042</td>
+</tr>
+</tbody>
+</table>
+<p><span class="smallnote">Ranked from the bottom: 1 is the least used. Kept in: share of the 200 resamples that kept the requirement at all. Correlation: absolute raw correlation with the target, the final tie-breaker only.</span></p>
+<aside class="notes">
+<p>About 40 seconds. Read three or four rows, enough to show the pattern. Note that several are funding items that apply to only one facility in six, which is a theme that returns in the causal section.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-ten-requirements-the-model-has-least-use-for-on-r0712" class="slide level2 tbl t10">
+<h2>The ten requirements the model has least use for on <code>R0712</code></h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Code</th>
+<th>What is checked</th>
+<th>Applies to</th>
+<th>At max</th>
+<th>Kept in</th>
+<th>Effect</th>
+<th>Correlation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><code>R0183</code></td>
+<td>Stock record form has a field for Quantity</td>
+<td>100%</td>
+<td>86%</td>
+<td>0%</td>
+<td>+0.0000</td>
+<td>0.114</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><code>R0010</code></td>
+<td>Hand washing or hand sanitizing facilities</td>
+<td>100%</td>
+<td>90%</td>
+<td>0%</td>
+<td>+0.0000</td>
+<td>0.117</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><code>R0316</code></td>
+<td>SOPs for packing insulated containers</td>
+<td>77%</td>
+<td>66%</td>
+<td>0%</td>
+<td>+0.0000</td>
+<td>0.158</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><code>R0124</code></td>
+<td>Waste handlers have trousers</td>
+<td>18%</td>
+<td>48%</td>
+<td>0%</td>
+<td>-0.0000</td>
+<td>0.078</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td><code>R0329</code></td>
+<td>SOPs are written in a local language</td>
+<td>98%</td>
+<td>72%</td>
+<td>0%</td>
+<td>+0.0000</td>
+<td>0.209</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td><code>R0309</code></td>
+<td>SOPs/guidelines for routine maintenance of refrigeration equipment</td>
+<td>97%</td>
+<td>56%</td>
+<td>0%</td>
+<td>-0.0000</td>
+<td>0.100</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td><code>R0211</code></td>
+<td>Receipt form has a field for VVM status of vaccines received</td>
+<td>99%</td>
+<td>94%</td>
+<td>1%</td>
+<td>-0.0000</td>
+<td>0.060</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td><code>R0117</code></td>
+<td>Waste handlers have protective gloves</td>
+<td>35%</td>
+<td>74%</td>
+<td>1%</td>
+<td>-0.0000</td>
+<td>0.074</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td><code>R0390</code></td>
+<td>Facility funds received for maintenance of buildings are sufficient</td>
+<td>21%</td>
+<td>84%</td>
+<td>2%</td>
+<td>-0.0000</td>
+<td>0.043</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td><code>R0260</code></td>
+<td>Staff are trained in routine refrigeration maintenance</td>
+<td>97%</td>
+<td>54%</td>
+<td>2%</td>
+<td>-0.0000</td>
+<td>0.031</td>
+</tr>
+</tbody>
+</table>
+<p><span class="smallnote">Ranked from the bottom: 1 is the least used. Kept in: share of the 200 resamples that kept the requirement at all. Correlation: absolute raw correlation with the target, the final tie-breaker only.</span></p>
+<aside class="notes">
+<p>About 40 seconds. Read three or four rows, enough to show the pattern. Note that several are funding items that apply to only one facility in six, which is a theme that returns in the causal section.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-ten-requirements-the-model-has-least-use-for-on-r0722" class="slide level2 tbl t10">
+<h2>The ten requirements the model has least use for on <code>R0722</code></h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Code</th>
+<th>What is checked</th>
+<th>Applies to</th>
+<th>At max</th>
+<th>Kept in</th>
+<th>Effect</th>
+<th>Correlation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><code>R0253</code></td>
+<td>Staff are trained in annual work planning</td>
+<td>100%</td>
+<td>47%</td>
+<td>0%</td>
+<td>+0.0000</td>
+<td>0.055</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><code>R0185</code></td>
+<td>Stock record form has a field for Expiry date</td>
+<td>100%</td>
+<td>82%</td>
+<td>0%</td>
+<td>+0.0000</td>
+<td>0.089</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><code>R0329</code></td>
+<td>SOPs are written in a local language</td>
+<td>98%</td>
+<td>72%</td>
+<td>0%</td>
+<td>+0.0000</td>
+<td>0.171</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><code>R0307</code></td>
+<td>SOPs for vaccine storage</td>
+<td>100%</td>
+<td>70%</td>
+<td>0%</td>
+<td>+0.0000</td>
+<td>0.194</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td><code>R0136</code></td>
+<td>Supply chain staff have work mobile phones</td>
+<td>100%</td>
+<td>53%</td>
+<td>0%</td>
+<td>+0.0000</td>
+<td>0.116</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td><code>R0250</code></td>
+<td>Two or more members of staff are assigned to manage immunization waste</td>
+<td>100%</td>
+<td>61%</td>
+<td>0%</td>
+<td>+0.0000</td>
+<td>0.038</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td><code>R0264</code></td>
+<td>Staff are trained in planning vaccine collection/distribution and/or outr…</td>
+<td>65%</td>
+<td>69%</td>
+<td>1%</td>
+<td>+0.0000</td>
+<td>0.064</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td><code>R0004</code></td>
+<td>A reliable internet connection</td>
+<td>100%</td>
+<td>45%</td>
+<td>1%</td>
+<td>+0.0000</td>
+<td>0.099</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td><code>R0400</code></td>
+<td>Funds for vaccine transportation or outreach are received in full</td>
+<td>24%</td>
+<td>87%</td>
+<td>1%</td>
+<td>-0.0000</td>
+<td>0.085</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td><code>R0210</code></td>
+<td>Receipt form has a field for Quantity of vaccines received</td>
+<td>100%</td>
+<td>81%</td>
+<td>1%</td>
+<td>+0.0000</td>
+<td>0.048</td>
+</tr>
+</tbody>
+</table>
+<p><span class="smallnote">Ranked from the bottom: 1 is the least used. Kept in: share of the 200 resamples that kept the requirement at all. Correlation: absolute raw correlation with the target, the final tie-breaker only.</span></p>
+<aside class="notes">
+<p>About 40 seconds. Read three or four rows, enough to show the pattern. Note that several are funding items that apply to only one facility in six, which is a theme that returns in the causal section.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -658,10 +2219,12 @@ section.two-comp > p { font-size: 0.82em; }
 <li><span class="graylight">Targets and models</span></li>
 <li><span class="graylight">What drives quality</span></li>
 <li><span class="remember"><strong>Stress-testing the answer</strong></span></li>
+<li><span class="graylight">Causal estimates</span></li>
+<li><span class="graylight">Subcategory scores</span></li>
 <li><span class="graylight">What it means and what comes next</span></li>
 </ol>
 <aside class="notes">
-<p>5 seconds.</p>
+<p>5 seconds. Move the highlight and go.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -674,15 +2237,15 @@ section.two-comp > p { font-size: 0.82em; }
           display:block!important;
       }</style></aside>
 </section>
-<section id="results-verification" class="slide level2">
-<h2>Results verification</h2>
+<section id="shuffling-the-answers-finds-almost-nothing-so-the-real-counts-mean-something" class="slide level2">
+<h2>Shuffling the answers finds almost nothing, so the real counts mean something</h2>
 <ul>
-<li><strong>Shuffling the answers.</strong> Values of the target scores were randomly shuffled, then the whole machine was run again. It found <strong>zero</strong> requirements, against real counts of 4, 4, and 5.</li>
-<li><strong>Removing the filled-in values.</strong> Where a requirement does not apply, the model needs a number, the median of the column was put. Refitting only on facilities that were actually scored, all 13 leading effects keep their direction and 9 stay conclusive (expect <code>R0290</code>, <code>R0322</code>, <code>R0257</code>, <code>R0037</code>).</li>
-<li>The one hold loosely is <code>R0322</code> (The facility has SOPs (Standard Operating Procedure) for the multi-dose vial policy): without the filled rows its effect drops to nearly nothing.</li>
+<li>The target scores were shuffled at random across facilities and the whole machine was run again, ten times per target.</li>
+<li>Real counts: <strong>2, 4 and 5</strong> conclusive requirements. On shuffled scores: one false alarm in thirty runs, on the composite, and none on the components.</li>
+<li>The largest effect any shuffled run produced is a noise ceiling: 0.0063 for the composite, 0.0238 and 0.0192 for the components. Every conclusive effect clears its ceiling, and on <code>R0722</code> so does one more, training to monitor supply chain performance.</li>
 </ul>
 <aside class="notes">
-<p>About 60 seconds. The first bullet is the important one, so put it in plain speech: if my method finds four requirements out of pure noise, then finding four in the real data proves nothing. It found none, thirty times running. The second bullet defends the one compromise in the data preparation, and the third is me flagging my own weakest result before Bahman does.</p>
+<p>About 60 seconds. Put the first point in plain speech: if the method found requirements out of pure noise, then finding them in the real data would prove nothing. It found one in thirty tries. The noise ceiling is a second, gentler bar: anything below it could have come from noise. Everything conclusive is above it.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -695,14 +2258,16 @@ section.two-comp > p { font-size: 0.82em; }
           display:block!important;
       }</style></aside>
 </section>
-<section id="on-the-composite-every-conclusive-requirement-is-named-by-most-families" class="slide level2">
-<h2>On the composite, every conclusive requirement is named by most families</h2>
-<svg viewbox="0 0 1300 310" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="How many of six model families name each conclusive requirement for the composite score" style="width:100%;max-width:1080px;height:auto;display:block;margin:0 auto;">
-<g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif"> <text x="1085" y="32" font-size="21" fill="#33495d" text-anchor="middle">families naming it, out of six</text> <g font-size="24"> <text x="20" y="85" fill="#1f6db4">R0156</text> <text x="130" y="85" fill="#33495d">The temperature form is graphical</text> <text x="20" y="145" fill="#1f6db4">R0040</text> <text x="130" y="145" fill="#33495d">Sufficient positive cold storage capacity</text> <text x="20" y="205" fill="#1f6db4">R0290</text> <text x="130" y="205" fill="#33495d">Staff know the discard time of multi-dose vials</text> <text x="20" y="265" fill="#1f6db4">R0322</text> <text x="130" y="265" fill="#33495d">The facility has SOPs for the multi-dose vial policy</text> </g> <g fill="#1f6db4"> <circle cx="960" cy="77" r="13"></circle><circle cx="1010" cy="77" r="13"></circle><circle cx="1060" cy="77" r="13"></circle><circle cx="1110" cy="77" r="13"></circle><circle cx="1160" cy="77" r="13"></circle><circle cx="1210" cy="77" r="13"></circle> <circle cx="960" cy="137" r="13"></circle><circle cx="1010" cy="137" r="13"></circle><circle cx="1060" cy="137" r="13"></circle><circle cx="1110" cy="137" r="13"></circle><circle cx="1160" cy="137" r="13"></circle> <circle cx="960" cy="197" r="13"></circle><circle cx="1010" cy="197" r="13"></circle><circle cx="1060" cy="197" r="13"></circle><circle cx="1110" cy="197" r="13"></circle><circle cx="1160" cy="197" r="13"></circle> <circle cx="960" cy="257" r="13"></circle><circle cx="1010" cy="257" r="13"></circle><circle cx="1060" cy="257" r="13"></circle><circle cx="1110" cy="257" r="13"></circle> </g> <g fill="none" stroke="#7ba3d4" stroke-width="2"> <circle cx="1210" cy="137" r="13"></circle> <circle cx="1210" cy="197" r="13"></circle> <circle cx="1160" cy="257" r="13"></circle><circle cx="1210" cy="257" r="13"></circle> </g> </g>
-</svg>
-<p>The six are <strong>ridge, fractional logit, boosted trees, bagged trees, randomised-split trees and XGBoost</strong>. Boosted trees and XGBoost are never handed a filled-in value, so a requirement they name alongside the other four cannot be an artefact of the filling.</p>
+<section id="removing-the-filled-in-values-changes-little" class="slide level2">
+<h2>Removing the filled-in values changes little</h2>
+<p>Where a requirement does not apply, the model was given the column’s mean. Refitting only on facilities where the leading requirements were actually scored:</p>
+<ul>
+<li>All 11 leading effects keep their direction, and 8 stay conclusive.</li>
+<li>The three that lose the flag are <code>R0290</code> on the composite, and <code>R0257</code> and <code>R0037</code> on <code>R0712</code>: the discard-time requirement, training, and fire extinguishers. Their effects shrink but keep their sign.</li>
+<li>The composite keeps 1,810 of 2,258 facilities in this check, and the components keep 1,066 of 1,077 and 1,039 of 1,098.</li>
+</ul>
 <aside class="notes">
-<p>About 30 seconds. Explain the picture once and it carries the next two slides: each row is a requirement I called conclusive earlier, and a filled dot means that family also put it in its own top twenty, ranked by permutation importance with ten shuffles per column. Name the six families off the slide. The point to land is that all four rows sit at four or better, and the graphical form is unanimous. If asked which families fill: ridge, the fractional logit, bagged trees and randomised-split trees are handed a median wherever a requirement did not apply, while boosted trees and XGBoost handle those cells natively and are never given one.</p>
+<p>About 45 seconds. This defends the one compromise in the data preparation. Be straight that the discard-time requirement on the composite halves without its filled rows; it stays positive, and it comes back strongly in the causal section.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -715,34 +2280,124 @@ section.two-comp > p { font-size: 0.82em; }
           display:block!important;
       }</style></aside>
 </section>
-<section id="on-r0712-the-agreement-narrows-to-one-requirement" class="slide level2">
-<h2>On R0712, the agreement narrows to one requirement</h2>
-<svg viewbox="0 0 1300 310" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="How many of six model families name each conclusive requirement for R0712" style="width:100%;max-width:1080px;height:auto;display:block;margin:0 auto;">
-<g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif"> <text x="1085" y="32" font-size="21" fill="#33495d" text-anchor="middle">families naming it, out of six</text> <g font-size="24"> <text x="20" y="85" fill="#1f6db4">R0290</text> <text x="130" y="85" fill="#33495d">Staff know the discard time of multi-dose vials</text> <text x="20" y="145" fill="#1f6db4">R0272</text> <text x="130" y="145" fill="#33495d">Staff know key principles of vaccine storage</text> <text x="20" y="205" fill="#1f6db4">R0257</text> <text x="130" y="205" fill="#33495d">Staff are trained how to monitor supply performance</text> <text x="20" y="265" fill="#1f6db4">R0037</text> <text x="130" y="265" fill="#33495d">Storage buildings have functional fire extinguishers</text> </g> <g fill="#1f6db4"> <circle cx="960" cy="77" r="13"></circle><circle cx="1010" cy="77" r="13"></circle><circle cx="1060" cy="77" r="13"></circle><circle cx="1110" cy="77" r="13"></circle><circle cx="1160" cy="77" r="13"></circle><circle cx="1210" cy="77" r="13"></circle> <circle cx="960" cy="137" r="13"></circle><circle cx="1010" cy="137" r="13"></circle><circle cx="1060" cy="137" r="13"></circle> <circle cx="960" cy="197" r="13"></circle><circle cx="1010" cy="197" r="13"></circle> <circle cx="960" cy="257" r="13"></circle><circle cx="1010" cy="257" r="13"></circle> </g> <g fill="none" stroke="#7ba3d4" stroke-width="2"> <circle cx="1110" cy="137" r="13"></circle><circle cx="1160" cy="137" r="13"></circle><circle cx="1210" cy="137" r="13"></circle> <circle cx="1060" cy="197" r="13"></circle><circle cx="1110" cy="197" r="13"></circle><circle cx="1160" cy="197" r="13"></circle><circle cx="1210" cy="197" r="13"></circle> <circle cx="1060" cy="257" r="13"></circle><circle cx="1110" cy="257" r="13"></circle><circle cx="1160" cy="257" r="13"></circle><circle cx="1210" cy="257" r="13"></circle> </g> </g>
-</svg>
-<p><span class="remember">Knowing the discard time is the one requirement every family reaches for.</span></p>
+<section id="six-other-model-families-name-most-of-the-same-requirements" class="slide level2 tbl t14">
+<h2>Six other model families name most of the same requirements</h2>
+<p>Each family ranks requirements its own way, by how much shuffling a column hurts its predictions. A requirement is named when it lands in that family’s top twenty.</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Composite score</th>
+<th>Named by</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>R0156</code></td>
+<td>The temperature record form is graphical</td>
+<td>6 of 6</td>
+</tr>
+<tr class="even">
+<td><code>R0040</code></td>
+<td>Sufficient cold storage capacity for the expected maximum stock</td>
+<td>5 of 6</td>
+</tr>
+<tr class="odd">
+<td><code>R0290</code></td>
+<td>Staff know the discard time of multi-dose vials</td>
+<td>5 of 6</td>
+</tr>
+<tr class="even">
+<td><code>R0322</code></td>
+<td>SOPs for the multi-dose vial policy</td>
+<td>3 of 6</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><code>R0712</code></th>
+<th>Named by</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>R0290</code></td>
+<td>Staff know the discard time of multi-dose vials</td>
+<td>6 of 6</td>
+</tr>
+<tr class="even">
+<td><code>R0257</code></td>
+<td>Staff are trained to monitor supply chain performance</td>
+<td>3 of 6</td>
+</tr>
+<tr class="odd">
+<td><code>R0037</code></td>
+<td>Storage buildings have functional fire extinguishers</td>
+<td>3 of 6</td>
+</tr>
+<tr class="even">
+<td><code>R0272</code></td>
+<td>Staff know the principles of vaccine and dry goods storage</td>
+<td>2 of 6</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><code>R0722</code></th>
+<th>Named by</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>R0293</code></td>
+<td>Staff know the main types of opened-vial wastage</td>
+<td>6 of 6</td>
+</tr>
+<tr class="even">
+<td><code>R0037</code></td>
+<td>Storage buildings have functional fire extinguishers</td>
+<td>5 of 6</td>
+</tr>
+<tr class="odd">
+<td><code>R0290</code></td>
+<td>Staff know the discard time of multi-dose vials</td>
+<td>5 of 6</td>
+</tr>
+<tr class="even">
+<td><code>R0358</code></td>
+<td>Staff are paid in full and on time</td>
+<td>5 of 6</td>
+</tr>
+<tr class="odd">
+<td><code>R0129</code></td>
+<td>Waste is stored in plastic or metal bins</td>
+<td>4 of 6</td>
+</tr>
+</tbody>
+</table>
 <aside class="notes">
-<p>About 25 seconds. Be straight about the weak rows: fire extinguishers and the training requirement are named by only two families, so the bootstrap intervals are the whole of their evidence. That is a reason to treat them as leads rather than findings, and it is the honest counterweight to the clean shuffle result on the previous slide.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="on-r0722-most-of-the-list-survives-the-same-check" class="slide level2">
-<h2>On R0722, most of the list survives the same check</h2>
-<svg viewbox="0 0 1300 370" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="How many of six model families name each conclusive requirement for R0722" style="width:100%;max-width:1080px;height:auto;display:block;margin:0 auto;">
-<g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif"> <text x="1085" y="32" font-size="21" fill="#33495d" text-anchor="middle">families naming it, out of six</text> <g font-size="24"> <text x="20" y="85" fill="#1f6db4">R0293</text> <text x="130" y="85" fill="#33495d">Staff know the main types of opened vial wastage</text> <text x="20" y="145" fill="#1f6db4">R0037</text> <text x="130" y="145" fill="#33495d">Storage buildings have functional fire extinguishers</text> <text x="20" y="205" fill="#1f6db4">R0358</text> <text x="130" y="205" fill="#33495d">Staff are paid in full and on time</text> <text x="20" y="265" fill="#1f6db4">R0129</text> <text x="130" y="265" fill="#33495d">Waste is stored in plastic or metal bins</text> <text x="20" y="325" fill="#1f6db4">R0290</text> <text x="130" y="325" fill="#33495d">Staff know the discard time of multi-dose vials</text> </g> <g fill="#1f6db4"> <circle cx="960" cy="77" r="13"></circle><circle cx="1010" cy="77" r="13"></circle><circle cx="1060" cy="77" r="13"></circle><circle cx="1110" cy="77" r="13"></circle><circle cx="1160" cy="77" r="13"></circle><circle cx="1210" cy="77" r="13"></circle> <circle cx="960" cy="137" r="13"></circle><circle cx="1010" cy="137" r="13"></circle><circle cx="1060" cy="137" r="13"></circle><circle cx="1110" cy="137" r="13"></circle><circle cx="1160" cy="137" r="13"></circle> <circle cx="960" cy="197" r="13"></circle><circle cx="1010" cy="197" r="13"></circle><circle cx="1060" cy="197" r="13"></circle><circle cx="1110" cy="197" r="13"></circle><circle cx="1160" cy="197" r="13"></circle> <circle cx="960" cy="257" r="13"></circle><circle cx="1010" cy="257" r="13"></circle><circle cx="1060" cy="257" r="13"></circle><circle cx="1110" cy="257" r="13"></circle> <circle cx="960" cy="317" r="13"></circle><circle cx="1010" cy="317" r="13"></circle><circle cx="1060" cy="317" r="13"></circle> </g> <g fill="none" stroke="#7ba3d4" stroke-width="2"> <circle cx="1210" cy="137" r="13"></circle> <circle cx="1210" cy="197" r="13"></circle> <circle cx="1160" cy="257" r="13"></circle><circle cx="1210" cy="257" r="13"></circle> <circle cx="1110" cy="317" r="13"></circle><circle cx="1160" cy="317" r="13"></circle><circle cx="1210" cy="317" r="13"></circle> </g> </g>
-</svg>
-<p>Four of the five sit at four families or better, and knowing the types of opened vial wastage is unanimous.</p>
-<aside class="notes">
-<p>About 25 seconds. Note the mirror image of the previous slide: R0290 is named by every family on R0712 but by only three here, while R0037 is weak on R0712 and strong here. The two components measure different things, so a requirement can matter for one and not the other. Add that vote counts near the top-twenty boundary can move between runs, so read the pattern rather than the exact number.</p>
+<p>About 50 seconds. The six are ridge, the fractional logit, boosted trees, bagged trees, randomised-split trees and XGBoost. The two tree families never see a filled-in value, so a requirement they name cannot be an artefact of the filling. Land on the pattern: the discard-time requirement is named by five or six families on every target; the odd ones, fire extinguishers and storage principles, get the fewest votes.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -760,9 +2415,9 @@ section.two-comp > p { font-size: 0.82em; }
 <svg viewbox="0 0 1300 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chain showing why better equipped facilities face the harder questions" style="width:100%;max-width:1150px;height:auto;display:block;margin:0 auto;">
 <g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif"> <g fill="#e3edf9" stroke="#7ba3d4" stroke-width="1.5"> <rect x="10" y="30" width="280" height="160" rx="8"></rect> <rect x="340" y="30" width="280" height="160" rx="8"></rect> <rect x="670" y="30" width="280" height="160" rx="8"></rect> </g> <rect x="1000" y="30" width="290" height="160" rx="8" fill="#f7e3d6" stroke="#D55E00" stroke-width="2"></rect> <g stroke="#8a97a6" stroke-width="2" fill="none"> <line x1="295" y1="110" x2="335" y2="110"></line> <line x1="625" y1="110" x2="665" y2="110"></line> <line x1="955" y1="110" x2="995" y2="110"></line> </g> <g fill="#8a97a6"> <path d="M340 110 L326 103 L326 117 Z"></path> <path d="M670 110 L656 103 L656 117 Z"></path> <path d="M1000 110 L986 103 L986 117 Z"></path> </g> <g font-size="20" fill="#33495d" text-anchor="middle"> <text x="150" y="68">Three of the six quality</text> <text x="150" y="100">checks are only scored</text> <text x="150" y="132">while an assessor</text> <text x="150" y="164">watches a real session</text> <text x="480" y="68">They are the hard ones.</text> <text x="480" y="100">Only a facility with</text> <text x="480" y="132">vaccines in use gets</text> <text x="480" y="164">asked them</text> <text x="810" y="68">Better equipped</text> <text x="810" y="100">facilities are busier,</text> <text x="810" y="132">so they get asked</text> <text x="810" y="164">more often</text> <text x="1145" y="68">So their score can</text> <text x="1145" y="100">come out lower, even</text> <text x="1145" y="132">though their vaccines</text> <text x="1145" y="164">are no worse</text> </g> </g>
 </svg>
-<p>Take <code>R0040</code>, having enough cold storage. <strong>90%</strong> of facilities meet it. Those that do are asked the multi-dose vial questions <strong>11 percent more often</strong>, and they average <strong>0.890</strong> against <strong>0.938</strong> for those that do not.</p>
+<p>Take <code>R0040</code>, having enough cold storage. <strong>90%</strong> of facilities meet it. Those that do are asked the multi-dose vial questions <strong>11 points more often</strong>, and they average <strong>0.890</strong> against <strong>0.938</strong> for those that do not.</p>
 <aside class="notes">
-<p>About 45 seconds, and it is the idea the whole section turns on, so do not rush. Walk the four boxes left to right. Box one points straight back to the grid earlier: the left-hand column there, the three checks that need a session in progress. Box two: those are the questions facilities actually fail, and you can only fail a question you were asked. Box three: a facility with spare fridge capacity is a facility running sessions. Box four: so the better equipped facility sits the harder test and can score lower for a reason that has nothing to do with its vaccines. Then read the cold storage numbers underneath as the worked example.</p>
+<p>About 45 seconds, and it is the idea the whole section turns on, so do not rush. Walk the four boxes left to right. Box one points back to the grid: the three checks that need a session in progress. Box two: those are the questions facilities actually fail, and you can only fail a question you were asked. Box three: a facility with spare fridge capacity is a facility running sessions. Box four: so the better equipped facility sits the harder test and can score lower for a reason that has nothing to do with its vaccines. Then read the cold storage numbers as the worked example.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -775,14 +2430,109 @@ section.two-comp > p { font-size: 0.82em; }
           display:block!important;
       }</style></aside>
 </section>
-<section id="average-quality-score-among-facilities-meeting-and-not-meeting-requirements" class="slide level2">
-<h2>Average Quality score among facilities meeting and not meeting requirements</h2>
-<svg viewbox="0 0 1300 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Average quality score of facilities that meet each conclusive requirement against those that do not" style="width:100%;max-width:1030px;height:auto;display:block;margin:0 auto;">
-<g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif"> <circle cx="430" cy="28" r="11" fill="#ffffff" stroke="#8a97a6" stroke-width="2.5"></circle> <text x="452" y="36" font-size="21" fill="#33495d">facilities that do not meet it</text> <circle cx="830" cy="28" r="11" fill="#33495d"></circle> <text x="852" y="36" font-size="21" fill="#33495d">facilities that meet it</text> <text x="1290" y="36" font-size="19" fill="#8a97a6" text-anchor="end">difference</text> <g font-size="24"> <text x="20" y="93" fill="#1f6db4">R0290</text><text x="130" y="93" fill="#33495d">staff know discard time</text> <text x="20" y="138" fill="#1f6db4">R0322</text><text x="130" y="138" fill="#33495d">multi-dose vial SOPs</text> <text x="20" y="183" fill="#D55E00">R0156</text><text x="130" y="183" fill="#33495d">the form is graphical</text> <text x="20" y="228" fill="#D55E00">R0040</text><text x="130" y="228" fill="#33495d">cold storage capacity</text> </g> <g stroke-width="3"> <line x1="481" y1="85" x2="835" y2="85" stroke="#1f6db4"></line> <line x1="651" y1="130" x2="876" y2="130" stroke="#1f6db4"></line> <line x1="757" y1="175" x2="876" y2="175" stroke="#D55E00"></line> <line x1="844" y1="220" x2="1065" y2="220" stroke="#D55E00"></line> </g> <g fill="#ffffff" stroke-width="2.5"> <circle cx="481" cy="85" r="11" stroke="#1f6db4"></circle> <circle cx="651" cy="130" r="11" stroke="#1f6db4"></circle> <circle cx="876" cy="175" r="11" stroke="#D55E00"></circle> <circle cx="1065" cy="220" r="11" stroke="#D55E00"></circle> </g> <g> <circle cx="835" cy="85" r="11" fill="#1f6db4"></circle> <circle cx="876" cy="130" r="11" fill="#1f6db4"></circle> <circle cx="757" cy="175" r="11" fill="#D55E00"></circle> <circle cx="844" cy="220" r="11" fill="#D55E00"></circle> </g> <g font-size="24" text-anchor="end"> <text x="1290" y="93" fill="#1f6db4">+0.076</text> <text x="1290" y="138" fill="#1f6db4">+0.049</text> <text x="1290" y="183" fill="#D55E00">−0.026</text> <text x="1290" y="228" fill="#D55E00">−0.048</text> </g> <line x1="430" y1="265" x2="1140" y2="265" stroke="#8a97a6" stroke-width="2"></line> <g font-size="20" fill="#33495d" text-anchor="middle"> <text x="430" y="292">0.80</text> <text x="660" y="292">0.85</text> <text x="890" y="292">0.90</text> <text x="1120" y="292">0.95</text> <text x="785" y="320" font-size="21">average quality score</text> </g> </g>
-</svg>
-<p><span class="remember">These are the composite’s four conclusive requirements.</span></p>
+<section id="the-same-pressure-pulls-every-requirement-down-so-a-positive-gap-is-earned-against-a-headwind" class="slide level2 tbl t10 wide3">
+<h2>The same pressure pulls every requirement down, so a positive gap is earned against a headwind</h2>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Requirement</th>
+<th>Met by</th>
+<th>Score if met</th>
+<th>Score if not</th>
+<th>Gap</th>
+<th>Asked the session questions more often, by</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>R0290</code></td>
+<td>Staff know the discard time of multi-dose vials</td>
+<td>90%</td>
+<td>0.888</td>
+<td>0.811</td>
+<td>+0.076</td>
+<td>+11 points</td>
+</tr>
+<tr class="even">
+<td><code>R0130</code></td>
+<td>Bins are colour coded for different types of waste</td>
+<td>57%</td>
+<td>0.909</td>
+<td>0.870</td>
+<td>+0.039</td>
+<td>+4 points</td>
+</tr>
+<tr class="odd">
+<td><code>R0270</code></td>
+<td>Staff know the correct storage temperature for each vaccine</td>
+<td>37%</td>
+<td>0.884</td>
+<td>0.890</td>
+<td>-0.005</td>
+<td>+14 points</td>
+</tr>
+<tr class="even">
+<td><code>R0005</code></td>
+<td>At least eight hours of grid electricity each day</td>
+<td>94%</td>
+<td>0.900</td>
+<td>0.925</td>
+<td>-0.025</td>
+<td>+1 points</td>
+</tr>
+<tr class="odd">
+<td><code>R0156</code></td>
+<td>The temperature record form is graphical</td>
+<td>41%</td>
+<td>0.871</td>
+<td>0.897</td>
+<td>-0.026</td>
+<td>+4 points</td>
+</tr>
+<tr class="even">
+<td><code>R0040</code></td>
+<td>Sufficient cold storage capacity for the expected maximum stock</td>
+<td>90%</td>
+<td>0.890</td>
+<td>0.938</td>
+<td>-0.048</td>
+<td>+11 points</td>
+</tr>
+</tbody>
+</table>
+<p><span class="smallnote">The six requirements the model families agree on most. Every one is asked the session-based questions more often when met; only two still score higher when met.</span></p>
 <aside class="notes">
-<p>About 45 seconds. Read the chart before drawing any conclusion. Each row is one of the four requirements that came out conclusive for the composite, the same four from earlier. The hollow circle is the average quality score of facilities that do not meet it, the solid circle is the average for facilities that do, and the number on the right is the difference between them. The top two move right, so meeting them goes with a better score. The bottom two move left. Now the key sentence: the pressure from the previous slide pulls every row leftwards, so the two that still land on the right are managing it against that headwind, while the two on the left are exactly what the artefact predicts. If asked whether this holds beyond these four, the same check was run on the six requirements the model families agree on most, and the two extra ones, knowing the stock system and training in planning, also came out positive at plus 0.032 and plus 0.012. Close on the rule: a statistical signal is not enough, there must also be a route from the requirement to the vial, and cold storage capacity and the shape of a form have no such route.</p>
+<p>About 45 seconds. Read the gap column and the exposure column together. Every requirement is exposed to the harder questions more often when met, so every gap is pulled towards the negative. The two that still land positive, the discard time and colour-coded bins, are managing it against that headwind. The four negatives are what the artefact predicts, and cold storage is the clearest. Close on the rule: a statistical signal is not enough, there must also be a route from the requirement to the vial.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="a-short-list-keeps-most-of-the-signal-and-the-top-25-beats-all-172" class="slide level2">
+<h2>A short list keeps most of the signal, and the top 25 beats all 172</h2>
+<svg viewbox="0 0 1300 430" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:1080px;height:auto;display:block;margin:0 auto;">
+<g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif"><line x1="150" y1="330" x2="1240" y2="330" stroke="#8a97a6" stroke-width="2"></line><text x="60" y="200" font-size="21" fill="#33495d" transform="rotate(-90 60 200)" text-anchor="middle">R² unseen</text><rect x="195" y="264" width="80" height="66" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"></rect><text x="235" y="254" font-size="22" fill="#33495d" text-anchor="middle">0.051</text><rect x="285" y="296" width="80" height="34" fill="#1f6db4"></rect><text x="325" y="286" font-size="22" fill="#33495d" text-anchor="middle">0.026</text><rect x="375" y="227" width="80" height="103" fill="#7ba3d4"></rect><text x="415" y="217" font-size="22" fill="#33495d" text-anchor="middle">0.079</text><rect x="555" y="82" width="80" height="248" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"></rect><text x="595" y="72" font-size="22" fill="#33495d" text-anchor="middle">0.191</text><rect x="645" y="164" width="80" height="166" fill="#1f6db4"></rect><text x="685" y="154" font-size="22" fill="#33495d" text-anchor="middle">0.128</text><rect x="735" y="50" width="80" height="280" fill="#7ba3d4"></rect><text x="775" y="40" font-size="22" fill="#33495d" text-anchor="middle">0.215</text><rect x="915" y="96" width="80" height="234" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"></rect><text x="955" y="86" font-size="22" fill="#33495d" text-anchor="middle">0.180</text><rect x="1005" y="140" width="80" height="190" fill="#1f6db4"></rect><text x="1045" y="130" font-size="22" fill="#33495d" text-anchor="middle">0.146</text><rect x="1095" y="58" width="80" height="272" fill="#7ba3d4"></rect><text x="1135" y="48" font-size="22" fill="#33495d" text-anchor="middle">0.209</text><text x="325" y="365" font-size="26" fill="#33495d" text-anchor="middle">QU</text><text x="685" y="365" font-size="26" fill="#33495d" text-anchor="middle">R0712</text><text x="1045" y="365" font-size="26" fill="#33495d" text-anchor="middle">R0722</text><rect x="230" y="390" width="26" height="18" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"></rect><text x="266" y="405" font-size="22" fill="#33495d">all 172 columns</text><rect x="650" y="390" width="26" height="18" fill="#1f6db4"></rect><text x="686" y="405" font-size="22" fill="#33495d">conclusive only</text><rect x="1070" y="390" width="26" height="18" fill="#7ba3d4"></rect><text x="1106" y="405" font-size="22" fill="#33495d">top 25 only</text></g>
+</svg>
+<p><span class="smallnote">Two questions keep 51% of the composite’s fit, four keep 67% on <code>R0712</code>, five keep 81% on <code>R0722</code>. The top 25 does better than all 172 on every target because a penalised model with 147 weak columns removed can use a lighter penalty.</span></p>
+<aside class="notes">
+<p>About 55 seconds. Walk it: pale is everything the assessment asks, solid is the handful I named, and the middle shade is the top 25. The gap between pale and solid is what a two-question or five-question instrument would give up. Say the caveat yourself: the lists were chosen on the same facilities the refits are split from, so these are upper bounds on what a list fixed in advance would achieve.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -803,10 +2553,2064 @@ section.two-comp > p { font-size: 0.82em; }
 <li><span class="graylight">Targets and models</span></li>
 <li><span class="graylight">What drives quality</span></li>
 <li><span class="graylight">Stress-testing the answer</span></li>
+<li><span class="remember"><strong>Causal estimates</strong></span></li>
+<li><span class="graylight">Subcategory scores</span></li>
+<li><span class="graylight">What it means and what comes next</span></li>
+</ol>
+<aside class="notes">
+<p>5 seconds. Move the highlight and go.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="from-association-to-an-adjusted-effect-in-three-steps" class="slide level2">
+<h2>From association to an adjusted effect, in three steps</h2>
+<p>Facilities that meet one requirement tend to meet many others, so a simple comparison mixes them all together. Double machine learning compares facilities that are alike on every other column.</p>
+<p>Take one requirement, say staff knowing the discard time, and call it the <strong>treatment</strong>. The quality score is the <strong>outcome</strong>. Every other column is a <strong>control</strong>.</p>
+<ol type="1">
+<li><strong>Remove from the outcome what the controls can predict.</strong> An elastic net predicts the outcome from the controls alone; what it cannot predict is kept. This leftover is a residual.</li>
+<li><strong>Remove from the treatment what the controls can predict.</strong> A second elastic net does the same for the treatment.</li>
+<li><strong>Compare the two residuals.</strong> The slope of a straight line through them is the estimate. If the two leftovers still move together, that link cannot come from any of the controls.</li>
+</ol>
+<p>The effect is in plain units: <strong>the change in the score when a facility goes from not meeting the requirement to meeting it in full</strong>. On the two components, 10 points means ten more facilities in a hundred meeting the target.</p>
+<aside class="notes">
+<p>About 90 seconds. This is the one slide that has to land. Use the discard-time example all the way through. Step 1 and 2 strip out everything the other 171 columns can explain; step 3 asks whether what is left still moves together. Then the unit: not a coefficient per standard deviation any more, but the gap between a facility whose staff know the rule and an otherwise similar facility whose staff do not.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="how-a-result-counts-and-why-country-is-held-fixed" class="slide level2">
+<h2>How a result counts, and why country is held fixed</h2>
+<ul>
+<li><strong>Predictions never see the facility’s own country.</strong> Whole countries are split into five groups; each group’s residuals come from models fitted on the other four. The split is repeated five times with different groupings and the median is reported.</li>
+<li><strong>q-value.</strong> About 170 columns are tested per target, so some look important by luck. A q-value is a p-value corrected for that. <strong>Conclusive means a q-value below 0.05</strong>, using standard errors that let facilities in the same country move together.</li>
+<li><strong>Thin evidence.</strong> A column that applies to fewer than a quarter of facilities, or that over 95% of facilities answer the same way, is estimated but not flagged: too few facilities sit on one side of it.</li>
+<li><strong>Country, two ways.</strong> Leaving country out compares facilities across all 77 countries, so differences between countries, in policies, supply systems and assessment teams, can masquerade as requirement effects. <strong>Centring every column within its country compares only facilities in the same country, which is the fairer test and the part a country programme can act on.</strong> The scan over all 172 columns uses the first to find candidates; the verdict uses the second.</li>
+</ul>
+<aside class="notes">
+<p>About 80 seconds. Three definitions and one decision. On country: the within-country version is stricter because it throws away all between-country differences, good and bad, and asks only whether a facility that meets the requirement does better than its neighbours in the same country. That is why it is the one the conclusions rest on, and why effects shrink when it is applied.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="seven-effects-survive-adjustment-and-three-survive-every-check" class="slide level2 tbl t10">
+<h2>Seven effects survive adjustment, and three survive every check</h2>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Target</th>
+<th>Code</th>
+<th>What is checked</th>
+<th>Effect, points</th>
+<th>q</th>
+<th>Kept within country</th>
+<th>Hidden factor could move it by</th>
+<th>Own subcategory removed</th>
+<th>Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>QU</code></td>
+<td><code>R0040</code></td>
+<td>Sufficient cold storage capacity for the expected maximum stock</td>
+<td>-6.2</td>
+<td>0.005</td>
+<td>97%</td>
+<td>1%</td>
+<td>-6 → -6</td>
+<td>no route to a vial; the exposure effect</td>
+</tr>
+<tr class="even">
+<td><code>R0712</code></td>
+<td><code>R0290</code></td>
+<td>Staff know the discard time of multi-dose vials</td>
+<td>+27.4</td>
+<td>0.029</td>
+<td>57%</td>
+<td>6%</td>
+<td>+27 → +26</td>
+<td>passes every check</td>
+</tr>
+<tr class="odd">
+<td><code>R0712</code></td>
+<td><code>R0272</code></td>
+<td>Staff know the principles of vaccine and dry goods storage</td>
+<td>+19.6</td>
+<td>0.029</td>
+<td>55%</td>
+<td>5%</td>
+<td>+20 → +21</td>
+<td>passes every check</td>
+</tr>
+<tr class="even">
+<td><code>R0722</code></td>
+<td><code>R0290</code></td>
+<td>Staff know the discard time of multi-dose vials</td>
+<td>+28.9</td>
+<td>&lt;0.001</td>
+<td>52%</td>
+<td>7%</td>
+<td>+29 → +33</td>
+<td>passes every check</td>
+</tr>
+<tr class="odd">
+<td><code>R0722</code></td>
+<td><code>R0293</code></td>
+<td>Staff know the main types of opened-vial wastage</td>
+<td>+24.6</td>
+<td>0.001</td>
+<td>57%</td>
+<td>4%</td>
+<td>+25 → +27</td>
+<td>passes every check</td>
+</tr>
+<tr class="even">
+<td><code>R0722</code></td>
+<td><code>R0358</code></td>
+<td>Staff are paid in full and on time</td>
+<td>+17.8</td>
+<td>0.040</td>
+<td>30%</td>
+<td>12%</td>
+<td>+18 → +18</td>
+<td>mostly between countries</td>
+</tr>
+<tr class="odd">
+<td><code>R0722</code></td>
+<td><code>R0260</code></td>
+<td>Staff are trained in routine refrigeration maintenance</td>
+<td>-20.4</td>
+<td>0.040</td>
+<td>37%</td>
+<td>12%</td>
+<td>-20 → -7</td>
+<td>depends on the controls</td>
+</tr>
+</tbody>
+</table>
+<p><span class="smallnote">Effect: change in the score, in points out of 100, from not met to met in full. Kept within country: share of the effect that remains when every column is centred within its country. Hidden factor: the largest change a hidden factor as strong as salaries, fire extinguishers or facility size could make. Own subcategory removed: the effect when the treatment’s own subcategory is taken out of the controls.</span></p>
+<aside class="notes">
+<p>About 90 seconds. Read the three that pass every check first: knowing the discard time on both components, knowing the storage principles, knowing the types of opened-vial wastage. Each keeps about half its size within countries, which means half of the association came from between-country differences and half from facilities of the same country. Then the three that fail: cold storage passes every statistical check but has no route to a vial and is explained by exposure; salaries keep 30% within countries and are the effect a hidden factor could move most; the negative training effect collapses from 20 points to 7 as soon as the other training requirements leave the controls.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="a-requirement-that-cannot-matter-comes-out-at-nothing-within-countries" class="slide level2">
+<h2>A requirement that cannot matter comes out at nothing within countries</h2>
+<p>Fire extinguishers in the storage building cannot affect how long an opened vial is kept. In the screening they were conclusive on both components. They are the test of whether the adjustment removes the well-run-facility mark.</p>
+<ul>
+<li>After adjustment: +14 points on <code>R0712</code> with a q-value of 0.41, and +18 points on <code>R0722</code> with a q-value of 0.11. Not conclusive on either.</li>
+<li>Within countries: 26% of the effect remains on <code>R0712</code>, and on <code>R0722</code> and the composite the sign flips.</li>
+</ul>
+<p><strong>The adjustment removes most of the mark, and holding country fixed removes the rest.</strong> That is the behaviour a working adjustment should show.</p>
+<aside class="notes">
+<p>About 40 seconds. This is a negative control, the same idea as a placebo. A method that still finds an effect for fire extinguishers within a country would be finding management, not fire safety. It finds nothing, which is the result that lets the knowledge effects be believed.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="where-the-screenings-top-25-land-under-the-causal-estimate-the-composite-score" class="slide level2 tbl t25">
+<h2>Where the screening’s top 25 land under the causal estimate, the composite score</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Code</th>
+<th>What is checked</th>
+<th>Screening effect</th>
+<th>Causal effect, points</th>
+<th>q</th>
+<th>Causal rank</th>
+<th>Concl.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><code>R0040</code></td>
+<td>Sufficient cold storage capacity for the expected maximum stock</td>
+<td>-0.0114</td>
+<td>-6.2</td>
+<td>0.005</td>
+<td>1 of 116</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><code>R0290</code></td>
+<td>Staff know the discard time of multi-dose vials</td>
+<td>+0.0102</td>
+<td>+5.6</td>
+<td>0.110</td>
+<td>3 of 116</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><code>R0322</code></td>
+<td>SOPs for the multi-dose vial policy</td>
+<td>+0.0061</td>
+<td>+2.4</td>
+<td>0.689</td>
+<td>31 of 116</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><code>R0156</code></td>
+<td>The temperature record form is graphical</td>
+<td>-0.0061</td>
+<td>-3.6</td>
+<td>0.333</td>
+<td>15 of 116</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td><code>R0257</code></td>
+<td>Staff are trained to monitor supply chain performance</td>
+<td>+0.0057</td>
+<td>+3.4</td>
+<td>0.333</td>
+<td>17 of 116</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td><code>R0130</code></td>
+<td>Bins are colour coded for different types of waste</td>
+<td>+0.0054</td>
+<td>+3.9</td>
+<td>0.333</td>
+<td>8 of 116</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td><code>R0251</code></td>
+<td>Staff turnover is low</td>
+<td>+0.0050</td>
+<td>+4.4</td>
+<td>0.330</td>
+<td>6 of 116</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td><code>R0279</code></td>
+<td>Staff know cool packs are prepared in dedicated compartments</td>
+<td>+0.0046</td>
+<td>+3.2</td>
+<td>0.333</td>
+<td>19 of 116</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td><code>R0037</code></td>
+<td>Storage buildings have functional fire extinguishers</td>
+<td>+0.0045</td>
+<td>+3.0</td>
+<td>0.382</td>
+<td>22 of 116</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td><code>R0136</code></td>
+<td>Supply chain staff have work mobile phones</td>
+<td>+0.0044</td>
+<td>+5.5</td>
+<td>0.330</td>
+<td>4 of 116</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td><code>R0328</code></td>
+<td>There are safe injection SOPs in the immunization room</td>
+<td>+0.0042</td>
+<td>+3.8</td>
+<td>0.333</td>
+<td>10 of 116</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td><code>R0292</code></td>
+<td>Staff know how to calculate the unopened vial wastage rate</td>
+<td>+0.0035</td>
+<td>+2.0</td>
+<td>0.494</td>
+<td>42 of 116</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td><code>R0275</code></td>
+<td>Staff know how to use the stock management system</td>
+<td>+0.0034</td>
+<td>+2.3</td>
+<td>0.424</td>
+<td>36 of 116</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td><code>R0122</code></td>
+<td>Waste handlers have boots</td>
+<td>+0.0030</td>
+<td>+7.7</td>
+<td></td>
+<td>thin</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td><code>R0064</code></td>
+<td>Vaccine refrigerator/freezers have door open alarms</td>
+<td>-0.0030</td>
+<td>-3.1</td>
+<td>0.851</td>
+<td>20 of 116</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td><code>R0269</code></td>
+<td>Staff can correctly read a 30DTR</td>
+<td>+0.0027</td>
+<td>+2.4</td>
+<td>0.591</td>
+<td>34 of 116</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>17</td>
+<td><code>R0186</code></td>
+<td>Stock record form has a field for VVM status</td>
+<td>-0.0025</td>
+<td>-1.2</td>
+<td>0.876</td>
+<td>63 of 116</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>18</td>
+<td><code>R0298</code></td>
+<td>Staff know how to dispose of expired temperature monitoring devices</td>
+<td>-0.0022</td>
+<td>-2.4</td>
+<td>0.333</td>
+<td>32 of 116</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>19</td>
+<td><code>R0272</code></td>
+<td>Staff know the principles of vaccine and dry goods storage</td>
+<td>+0.0019</td>
+<td>+2.9</td>
+<td>0.591</td>
+<td>24 of 116</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>20</td>
+<td><code>R0212</code></td>
+<td>Receipt form has a field for Freeze indicator status of vac…</td>
+<td>-0.0018</td>
+<td>-1.4</td>
+<td>0.868</td>
+<td>54 of 116</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>21</td>
+<td><code>R0154</code></td>
+<td>The form has fields for entering AM and PM temperatures</td>
+<td>+0.0018</td>
+<td>+3.8</td>
+<td>0.595</td>
+<td>9 of 116</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>22</td>
+<td><code>R0210</code></td>
+<td>Receipt form has a field for Quantity of vaccines received</td>
+<td>-0.0017</td>
+<td>-2.0</td>
+<td>0.689</td>
+<td>43 of 116</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>23</td>
+<td><code>R0326</code></td>
+<td>SOPs for disposal of sharps waste</td>
+<td>+0.0016</td>
+<td>+0.3</td>
+<td>0.987</td>
+<td>97 of 116</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>24</td>
+<td><code>R0073</code></td>
+<td>Sufficient coolant pack storage capacity for daily demand</td>
+<td>-0.0016</td>
+<td>-1.2</td>
+<td>0.851</td>
+<td>61 of 116</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>25</td>
+<td><code>R0077</code></td>
+<td>Transport is always available for scheduled vaccine distrib…</td>
+<td>+0.0015</td>
+<td>+3.7</td>
+<td>0.802</td>
+<td>13 of 116</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><span class="smallnote">Causal rank: position among the 116 requirements with enough evidence, by the size of the adjusted effect. Thin: too few facilities on one side to rank. Conclusive: q below 0.05.</span></p>
+<aside class="notes">
+<p>About 45 seconds. The point of the slide is the agreement at the top and the reshuffle below it. Say where the screening’s conclusive rows land, and point at one or two that rise or fall a long way. Do not read the table.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="where-the-screenings-top-25-land-under-the-causal-estimate-r0712" class="slide level2 tbl t25">
+<h2>Where the screening’s top 25 land under the causal estimate, <code>R0712</code></h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Code</th>
+<th>What is checked</th>
+<th>Screening effect</th>
+<th>Causal effect, points</th>
+<th>q</th>
+<th>Causal rank</th>
+<th>Concl.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><code>R0290</code></td>
+<td>Staff know the discard time of multi-dose vials</td>
+<td>+0.0403</td>
+<td>+27.4</td>
+<td>0.029</td>
+<td>3 of 112</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><code>R0257</code></td>
+<td>Staff are trained to monitor supply chain performance</td>
+<td>+0.0387</td>
+<td>+22.0</td>
+<td>0.070</td>
+<td>6 of 112</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><code>R0037</code></td>
+<td>Storage buildings have functional fire extinguishers</td>
+<td>+0.0289</td>
+<td>+13.8</td>
+<td>0.413</td>
+<td>18 of 112</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><code>R0272</code></td>
+<td>Staff know the principles of vaccine and dry goods storage</td>
+<td>+0.0263</td>
+<td>+19.6</td>
+<td>0.029</td>
+<td>8 of 112</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td><code>R0156</code></td>
+<td>The temperature record form is graphical</td>
+<td>-0.0227</td>
+<td>-14.8</td>
+<td>0.298</td>
+<td>15 of 112</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td><code>R0270</code></td>
+<td>Staff know the correct storage temperature for each vaccine</td>
+<td>+0.0194</td>
+<td>+33.3</td>
+<td>0.680</td>
+<td>1 of 112</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td><code>R0130</code></td>
+<td>Bins are colour coded for different types of waste</td>
+<td>+0.0187</td>
+<td>+20.1</td>
+<td>0.119</td>
+<td>7 of 112</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td><code>R0328</code></td>
+<td>There are safe injection SOPs in the immunization room</td>
+<td>+0.0185</td>
+<td>+13.6</td>
+<td>0.599</td>
+<td>19 of 112</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td><code>R0002</code></td>
+<td>A functional landline telephone</td>
+<td>+0.0178</td>
+<td>+15.2</td>
+<td>0.183</td>
+<td>14 of 112</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td><code>R0279</code></td>
+<td>Staff know cool packs are prepared in dedicated compartments</td>
+<td>+0.0175</td>
+<td>+11.3</td>
+<td>0.298</td>
+<td>28 of 112</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td><code>R0129</code></td>
+<td>Waste is stored in plastic or metal bins</td>
+<td>+0.0156</td>
+<td>+12.3</td>
+<td>0.213</td>
+<td>23 of 112</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td><code>R0251</code></td>
+<td>Staff turnover is low</td>
+<td>+0.0138</td>
+<td>+16.6</td>
+<td>0.310</td>
+<td>9 of 112</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td><code>R0305</code></td>
+<td>SOPs for vaccine temperature monitoring in storage</td>
+<td>+0.0115</td>
+<td>+11.0</td>
+<td>0.870</td>
+<td>30 of 112</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td><code>R0358</code></td>
+<td>Staff are paid in full and on time</td>
+<td>+0.0104</td>
+<td>+10.2</td>
+<td>0.573</td>
+<td>32 of 112</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td><code>R0311</code></td>
+<td>SOPs for managing vaccine stock transactions</td>
+<td>+0.0097</td>
+<td>+12.9</td>
+<td>0.754</td>
+<td>21 of 112</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td><code>R0327</code></td>
+<td>SOPs for management of used vials</td>
+<td>+0.0069</td>
+<td>+8.3</td>
+<td>0.795</td>
+<td>39 of 112</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>17</td>
+<td><code>R0233</code></td>
+<td>At least one member of staff is responsible for annual work…</td>
+<td>+0.0068</td>
+<td>+9.0</td>
+<td>0.763</td>
+<td>36 of 112</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>18</td>
+<td><code>R0182</code></td>
+<td>Stock record form has a field for Presentation (# doses per…</td>
+<td>+0.0067</td>
+<td>+6.6</td>
+<td>0.718</td>
+<td>50 of 112</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>19</td>
+<td><code>R0298</code></td>
+<td>Staff know how to dispose of expired temperature monitoring devices</td>
+<td>-0.0066</td>
+<td>-11.7</td>
+<td>0.183</td>
+<td>24 of 112</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>20</td>
+<td><code>R0357</code></td>
+<td>Funds for staff salaries are received on time</td>
+<td>+0.0066</td>
+<td>+17.3</td>
+<td></td>
+<td>thin</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>21</td>
+<td><code>R0307</code></td>
+<td>SOPs for vaccine storage</td>
+<td>+0.0065</td>
+<td>+7.3</td>
+<td>0.798</td>
+<td>43 of 112</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>22</td>
+<td><code>R0123</code></td>
+<td>Waste handlers have an apron</td>
+<td>+0.0063</td>
+<td>+12.1</td>
+<td></td>
+<td>thin</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>23</td>
+<td><code>R0236</code></td>
+<td>At least one member of staff is responsible for monitoring…</td>
+<td>+0.0061</td>
+<td>+1.7</td>
+<td>0.942</td>
+<td>96 of 112</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>24</td>
+<td><code>R0370</code></td>
+<td>Funds received for electricity are sufficient</td>
+<td>-0.0059</td>
+<td>-11.8</td>
+<td></td>
+<td>thin</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>25</td>
+<td><code>R0062</code></td>
+<td>Vaccine refrigerators/freezers have functioning voltage reg…</td>
+<td>+0.0057</td>
+<td>+7.2</td>
+<td>0.395</td>
+<td>44 of 112</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><span class="smallnote">Causal rank: position among the 112 requirements with enough evidence, by the size of the adjusted effect. Thin: too few facilities on one side to rank. Conclusive: q below 0.05.</span></p>
+<aside class="notes">
+<p>About 45 seconds. The point of the slide is the agreement at the top and the reshuffle below it. Say where the screening’s conclusive rows land, and point at one or two that rise or fall a long way. Do not read the table.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="where-the-screenings-top-25-land-under-the-causal-estimate-r0722" class="slide level2 tbl t25">
+<h2>Where the screening’s top 25 land under the causal estimate, <code>R0722</code></h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Code</th>
+<th>What is checked</th>
+<th>Screening effect</th>
+<th>Causal effect, points</th>
+<th>q</th>
+<th>Causal rank</th>
+<th>Concl.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><code>R0037</code></td>
+<td>Storage buildings have functional fire extinguishers</td>
+<td>+0.0463</td>
+<td>+18.2</td>
+<td>0.106</td>
+<td>6 of 113</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><code>R0293</code></td>
+<td>Staff know the main types of opened-vial wastage</td>
+<td>+0.0385</td>
+<td>+24.6</td>
+<td>0.001</td>
+<td>2 of 113</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><code>R0290</code></td>
+<td>Staff know the discard time of multi-dose vials</td>
+<td>+0.0363</td>
+<td>+28.9</td>
+<td>&lt;0.001</td>
+<td>1 of 113</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><code>R0358</code></td>
+<td>Staff are paid in full and on time</td>
+<td>+0.0333</td>
+<td>+17.8</td>
+<td>0.040</td>
+<td>9 of 113</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td><code>R0129</code></td>
+<td>Waste is stored in plastic or metal bins</td>
+<td>+0.0297</td>
+<td>+14.4</td>
+<td>0.085</td>
+<td>20 of 113</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td><code>R0257</code></td>
+<td>Staff are trained to monitor supply chain performance</td>
+<td>+0.0281</td>
+<td>+17.4</td>
+<td>0.179</td>
+<td>12 of 113</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td><code>R0040</code></td>
+<td>Sufficient cold storage capacity for the expected maximum stock</td>
+<td>-0.0173</td>
+<td>-17.2</td>
+<td>0.156</td>
+<td>13 of 113</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td><code>R0279</code></td>
+<td>Staff know cool packs are prepared in dedicated compartments</td>
+<td>+0.0161</td>
+<td>+12.0</td>
+<td>0.158</td>
+<td>27 of 113</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td><code>R0328</code></td>
+<td>There are safe injection SOPs in the immunization room</td>
+<td>+0.0147</td>
+<td>+15.1</td>
+<td>0.175</td>
+<td>19 of 113</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td><code>R0260</code></td>
+<td>Staff are trained in routine refrigeration maintenance</td>
+<td>-0.0134</td>
+<td>-20.4</td>
+<td>0.040</td>
+<td>3 of 113</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td><code>R0155</code></td>
+<td>The form has fields for temperature alarms</td>
+<td>-0.0113</td>
+<td>-17.4</td>
+<td>0.245</td>
+<td>11 of 113</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td><code>R0272</code></td>
+<td>Staff know the principles of vaccine and dry goods storage</td>
+<td>+0.0110</td>
+<td>+11.6</td>
+<td>0.389</td>
+<td>30 of 113</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td><code>R0251</code></td>
+<td>Staff turnover is low</td>
+<td>+0.0104</td>
+<td>+16.7</td>
+<td>0.156</td>
+<td>16 of 113</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td><code>R0326</code></td>
+<td>SOPs for disposal of sharps waste</td>
+<td>+0.0104</td>
+<td>+11.8</td>
+<td>0.753</td>
+<td>29 of 113</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td><code>R0236</code></td>
+<td>At least one member of staff is responsible for monitoring…</td>
+<td>+0.0104</td>
+<td>+3.9</td>
+<td>0.863</td>
+<td>79 of 113</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td><code>R0062</code></td>
+<td>Vaccine refrigerators/freezers have functioning voltage reg…</td>
+<td>+0.0093</td>
+<td>+8.3</td>
+<td>0.316</td>
+<td>46 of 113</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>17</td>
+<td><code>R0128</code></td>
+<td>The waste storage area is covered</td>
+<td>+0.0083</td>
+<td>+8.2</td>
+<td>0.413</td>
+<td>47 of 113</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>18</td>
+<td><code>R0187</code></td>
+<td>Stock record form has a field for Transaction type</td>
+<td>+0.0083</td>
+<td>+11.4</td>
+<td>0.320</td>
+<td>32 of 113</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>19</td>
+<td><code>R0275</code></td>
+<td>Staff know how to use the stock management system</td>
+<td>+0.0080</td>
+<td>+7.6</td>
+<td>0.527</td>
+<td>55 of 113</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>20</td>
+<td><code>R0280</code></td>
+<td>Staff know how to prevent freezing during transportation in…</td>
+<td>+0.0077</td>
+<td>+15.9</td>
+<td>0.293</td>
+<td>18 of 113</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>21</td>
+<td><code>R0323</code></td>
+<td>SOPs for handling diluents</td>
+<td>+0.0071</td>
+<td>+18.3</td>
+<td>0.293</td>
+<td>5 of 113</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>22</td>
+<td><code>R0308</code></td>
+<td>A vaccine storage emergency contingency plan</td>
+<td>+0.0070</td>
+<td>+8.2</td>
+<td>0.753</td>
+<td>48 of 113</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>23</td>
+<td><code>R0002</code></td>
+<td>A functional landline telephone</td>
+<td>+0.0064</td>
+<td>+8.1</td>
+<td>0.527</td>
+<td>49 of 113</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>24</td>
+<td><code>R0122</code></td>
+<td>Waste handlers have boots</td>
+<td>+0.0062</td>
+<td>+26.4</td>
+<td></td>
+<td>thin</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>25</td>
+<td><code>R0106</code></td>
+<td>The waste burial site has clear warning signs</td>
+<td>+0.0058</td>
+<td>+24.4</td>
+<td></td>
+<td>thin</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><span class="smallnote">Causal rank: position among the 113 requirements with enough evidence, by the size of the adjusted effect. Thin: too few facilities on one side to rank. Conclusive: q below 0.05.</span></p>
+<aside class="notes">
+<p>About 45 seconds. The point of the slide is the agreement at the top and the reshuffle below it. Say where the screening’s conclusive rows land, and point at one or two that rise or fall a long way. Do not read the table.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-two-rankings-agree-on-what-matters-and-disagree-below-it" class="slide level2">
+<h2>The two rankings agree on what matters and disagree below it</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Composite</th>
+<th><code>R0712</code></th>
+<th><code>R0722</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Rank correlation between the two sets of effects</td>
+<td>0.51</td>
+<td>0.47</td>
+<td>0.54</td>
+</tr>
+<tr class="even">
+<td>Requirements given the same sign</td>
+<td>78%</td>
+<td>82%</td>
+<td>78%</td>
+</tr>
+<tr class="odd">
+<td>Of the 25 largest effects, in both lists</td>
+<td>14</td>
+<td>13</td>
+<td>13</td>
+</tr>
+<tr class="even">
+<td>Conclusive in the screening</td>
+<td>2</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>Conclusive after adjustment</td>
+<td>1</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>Conclusive under both</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>Adjustment removed names from the conclusive lists and added one: a negative effect of refrigeration maintenance training on <code>R0722</code>, which the controls check on the earlier slide removes again. The names that dropped out are fire extinguishers on both components, training to monitor performance, waste bins, and the discard time on the composite, which stays positive but misses the threshold.</p>
+<aside class="notes">
+<p>About 50 seconds. Moderate agreement on the order, strong agreement on the names that matter. The requirements that drop out are the ones the mechanism reading had already set apart as marks of a well-run facility.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-i-will-cover-6" class="slide level2">
+<h2>What I will cover</h2>
+<ol type="1">
+<li><span class="graylight">The question</span></li>
+<li><span class="graylight">The data and the filters</span></li>
+<li><span class="graylight">Targets and models</span></li>
+<li><span class="graylight">What drives quality</span></li>
+<li><span class="graylight">Stress-testing the answer</span></li>
+<li><span class="graylight">Causal estimates</span></li>
+<li><span class="remember"><strong>Subcategory scores</strong></span></li>
+<li><span class="graylight">What it means and what comes next</span></li>
+</ol>
+<aside class="notes">
+<p>5 seconds. Move the highlight and go.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="fourteen-subcategory-scores-built-by-a-colleague-and-still-provisional" class="slide level2">
+<h2>Fourteen subcategory scores, built by a colleague and still provisional</h2>
+<p>The EVM framework groups its requirements into subcategories such as <code>C4.3 Knowledge and understanding</code> or <code>C5.3 SOPs</code>. A colleague on the project, Jayeed, built one score per subcategory and facility.</p>
+<ul>
+<li>Each score is constructed from the requirement-level scores inside that subcategory, allowing for requirements that do not apply to a facility and for differences in scoring between questionnaire versions, which matter most in <code>C5</code> and <code>C6</code>.</li>
+<li>As a check, he rebuilt the six category scores <code>C1</code> to <code>C6</code> from them and compared the result with WHO’s own category scores.</li>
+<li><strong>The adjustments for the earlier questionnaire versions have not yet been confirmed with WHO.</strong> A meeting with Paul Colrain is being arranged for that. Until then, every result in this section is provisional and may change.</li>
+</ul>
+<aside class="notes">
+<p>About 50 seconds. Credit the construction and state the caveat in the same breath. The reason the section is here anyway: if the analysis gives the same answer at this coarser level, that is evidence the requirement-level answer is not an artefact of 170 narrow columns.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-fourteen-scores-stand-in-for-the-170-requirements" class="slide level2 tbl t14">
+<h2>The fourteen scores stand in for the 170 requirements</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Code</th>
+<th>Subcategory</th>
+<th>Applies to</th>
+<th>Mean score</th>
+<th>At the maximum</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>C1.1</code></td>
+<td>Utilities &amp; services</td>
+<td>100%</td>
+<td>0.79</td>
+<td>10%</td>
+</tr>
+<tr class="even">
+<td><code>C1.2</code></td>
+<td>Buildings &amp; facilities</td>
+<td>100%</td>
+<td>0.37</td>
+<td>16%</td>
+</tr>
+<tr class="odd">
+<td><code>C2.1.1</code></td>
+<td>Cold storage equipment</td>
+<td>100%</td>
+<td>0.69</td>
+<td>5%</td>
+</tr>
+<tr class="even">
+<td><code>C2.2.1</code></td>
+<td>Vehicles</td>
+<td>37%</td>
+<td>0.90</td>
+<td>81%</td>
+</tr>
+<tr class="odd">
+<td><code>C2.2.2</code></td>
+<td>Insulated containers</td>
+<td>90%</td>
+<td>0.91</td>
+<td>72%</td>
+</tr>
+<tr class="even">
+<td><code>C2.3</code></td>
+<td>Other equipment</td>
+<td>100%</td>
+<td>0.85</td>
+<td>16%</td>
+</tr>
+<tr class="odd">
+<td><code>C3.1</code></td>
+<td>General IT equipment</td>
+<td>100%</td>
+<td>0.73</td>
+<td>59%</td>
+</tr>
+<tr class="even">
+<td><code>C3.2</code></td>
+<td>Data management technology</td>
+<td>100%</td>
+<td>0.79</td>
+<td>10%</td>
+</tr>
+<tr class="odd">
+<td><code>C4.1</code></td>
+<td>Staffing</td>
+<td>100%</td>
+<td>0.68</td>
+<td>3%</td>
+</tr>
+<tr class="even">
+<td><code>C4.2</code></td>
+<td>Training</td>
+<td>100%</td>
+<td>0.66</td>
+<td>10%</td>
+</tr>
+<tr class="odd">
+<td><code>C4.3</code></td>
+<td>Knowledge &amp; understanding</td>
+<td>100%</td>
+<td>0.80</td>
+<td>4%</td>
+</tr>
+<tr class="even">
+<td><code>C5.3</code></td>
+<td>SOPs</td>
+<td>100%</td>
+<td>0.57</td>
+<td>12%</td>
+</tr>
+<tr class="odd">
+<td><code>C6.1</code></td>
+<td>Salaries</td>
+<td>98%</td>
+<td>0.78</td>
+<td>76%</td>
+</tr>
+<tr class="even">
+<td><code>C6.2</code></td>
+<td>Funds for operations</td>
+<td>33%</td>
+<td>0.84</td>
+<td>66%</td>
+</tr>
+</tbody>
+</table>
+<p><span class="smallnote">Each score runs from 0 to 1. Vehicles and funds for operations apply to about a third of facilities; the rest apply almost everywhere.</span></p>
+<aside class="notes">
+<p>About 35 seconds. Two things to point at: knowledge and understanding and staffing are smooth scores with hundreds of distinct values, while salaries takes only seven, and three quarters of facilities sit at its maximum. The same mean filling as before is used where a score does not apply.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-same-model-wins-again-and-the-fourteen-scores-explain-less-than-the-170-requirements" class="slide level2">
+<h2>The same model wins again, and the fourteen scores explain less than the 170 requirements</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Composite</th>
+<th><code>R0712</code></th>
+<th><code>R0722</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Elastic net on 14 subcategory scores</td>
+<td>0.022</td>
+<td>0.169</td>
+<td>0.144</td>
+</tr>
+<tr class="even">
+<td>Elastic net on 170 requirements, from section 3</td>
+<td>0.051</td>
+<td>0.191</td>
+<td>0.180</td>
+</tr>
+<tr class="odd">
+<td>Random forest on 14 subcategory scores</td>
+<td>0.058</td>
+<td>0.223</td>
+<td>0.168</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>On <code>R0712</code> the fractional logit edges the elastic net, 0.172 against 0.169, by less than the variation between splits. That counts as a tie, so <strong>the elastic net is used for all three targets</strong> and the subcategory numbers can be read against the requirement numbers.</li>
+<li>Adding one column per country lifts the three to 0.130, 0.341 and 0.324. On a country never seen the figures fall to -0.063, 0.086 and 0.032.</li>
+</ul>
+<aside class="notes">
+<p>About 55 seconds. Fourteen averages carry less information than the 170 items they summarise, so the fit drops; the ordering of the targets does not change. The tree models still memorise. Country matters even more at this level, and the unseen-country figures are the honest ones again.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="buildings-it-equipment-and-written-procedures-lift-the-composite-cold-storage-equipment-pulls-it-down" class="slide level2 tbl t14">
+<h2>Buildings, IT equipment and written procedures lift the composite; cold storage equipment pulls it down</h2>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Code</th>
+<th>Subcategory</th>
+<th>Effect</th>
+<th>Interval</th>
+<th>Kept in</th>
+<th>Concl.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><code>C1.2</code></td>
+<td>Buildings &amp; facilities</td>
+<td>+0.0119</td>
+<td>+0.0051 to +0.0183</td>
+<td>100%</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><code>C3.1</code></td>
+<td>General IT equipment</td>
+<td>+0.0099</td>
+<td>+0.0027 to +0.0189</td>
+<td>100%</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><code>C2.1.1</code></td>
+<td>Cold storage equipment</td>
+<td>-0.0085</td>
+<td>-0.0144 to -0.0025</td>
+<td>100%</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><code>C5.3</code></td>
+<td>SOPs</td>
+<td>+0.0084</td>
+<td>+0.0019 to +0.0161</td>
+<td>98%</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td><code>C4.3</code></td>
+<td>Knowledge &amp; understanding</td>
+<td>+0.0058</td>
+<td>+0.0000 to +0.0145</td>
+<td>93%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td><code>C4.2</code></td>
+<td>Training</td>
+<td>+0.0036</td>
+<td>+0.0000 to +0.0108</td>
+<td>74%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td><code>C2.3</code></td>
+<td>Other equipment</td>
+<td>+0.0023</td>
+<td>+0.0000 to +0.0085</td>
+<td>64%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td><code>C2.2.1</code></td>
+<td>Vehicles</td>
+<td>-0.0016</td>
+<td>-0.0073 to +0.0031</td>
+<td>64%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td><code>C3.2</code></td>
+<td>Data management technology</td>
+<td>-0.0016</td>
+<td>-0.0077 to +0.0015</td>
+<td>58%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td><code>C6.1</code></td>
+<td>Salaries</td>
+<td>+0.0014</td>
+<td>-0.0000 to +0.0072</td>
+<td>54%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td><code>C6.2</code></td>
+<td>Funds for operations</td>
+<td>+0.0013</td>
+<td>+0.0000 to +0.0070</td>
+<td>50%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td><code>C1.1</code></td>
+<td>Utilities &amp; services</td>
+<td>-0.0003</td>
+<td>-0.0044 to +0.0033</td>
+<td>35%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td><code>C2.2.2</code></td>
+<td>Insulated containers</td>
+<td>+0.0002</td>
+<td>-0.0017 to +0.0041</td>
+<td>30%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td><code>C4.1</code></td>
+<td>Staffing</td>
+<td>+0.0001</td>
+<td>-0.0016 to +0.0022</td>
+<td>18%</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><span class="smallnote">All fourteen subcategories, ranked by the size of the average effect. Effect is per standard deviation of the score, on the 0 to 1 target; conclusive as before.</span></p>
+<aside class="notes">
+<p>About 45 seconds. Read the conclusive rows and the sign of cold storage equipment, which is negative on all three targets, the same artefact as the cold-storage requirement. Say that knowledge and understanding is conclusive on both components but just misses on the composite.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="written-procedures-knowledge-and-buildings-carry-r0712" class="slide level2 tbl t14">
+<h2>Written procedures, knowledge and buildings carry <code>R0712</code></h2>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Code</th>
+<th>Subcategory</th>
+<th>Effect</th>
+<th>Interval</th>
+<th>Kept in</th>
+<th>Concl.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><code>C5.3</code></td>
+<td>SOPs</td>
+<td>+0.0626</td>
+<td>+0.0294 to +0.0974</td>
+<td>100%</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><code>C4.3</code></td>
+<td>Knowledge &amp; understanding</td>
+<td>+0.0558</td>
+<td>+0.0280 to +0.0872</td>
+<td>100%</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><code>C1.2</code></td>
+<td>Buildings &amp; facilities</td>
+<td>+0.0469</td>
+<td>+0.0215 to +0.0700</td>
+<td>100%</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><code>C4.2</code></td>
+<td>Training</td>
+<td>+0.0266</td>
+<td>+0.0000 to +0.0599</td>
+<td>92%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td><code>C6.1</code></td>
+<td>Salaries</td>
+<td>+0.0264</td>
+<td>+0.0000 to +0.0590</td>
+<td>96%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td><code>C2.3</code></td>
+<td>Other equipment</td>
+<td>+0.0066</td>
+<td>+0.0000 to +0.0289</td>
+<td>55%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td><code>C3.1</code></td>
+<td>General IT equipment</td>
+<td>-0.0045</td>
+<td>-0.0231 to +0.0000</td>
+<td>38%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td><code>C2.1.1</code></td>
+<td>Cold storage equipment</td>
+<td>-0.0036</td>
+<td>-0.0217 to +0.0000</td>
+<td>38%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td><code>C2.2.2</code></td>
+<td>Insulated containers</td>
+<td>+0.0031</td>
+<td>-0.0000 to +0.0199</td>
+<td>36%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td><code>C2.2.1</code></td>
+<td>Vehicles</td>
+<td>+0.0021</td>
+<td>+0.0000 to +0.0166</td>
+<td>30%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td><code>C4.1</code></td>
+<td>Staffing</td>
+<td>+0.0017</td>
+<td>+0.0000 to +0.0141</td>
+<td>24%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td><code>C1.1</code></td>
+<td>Utilities &amp; services</td>
+<td>+0.0006</td>
+<td>-0.0019 to +0.0112</td>
+<td>14%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td><code>C6.2</code></td>
+<td>Funds for operations</td>
+<td>+0.0006</td>
+<td>-0.0069 to +0.0103</td>
+<td>23%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td><code>C3.2</code></td>
+<td>Data management technology</td>
+<td>-0.0002</td>
+<td>-0.0072 to +0.0050</td>
+<td>13%</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><span class="smallnote">All fourteen subcategories, ranked by the size of the average effect. Effect is per standard deviation of the score, on the 0 to 1 target; conclusive as before.</span></p>
+<aside class="notes">
+<p>About 45 seconds. Read the conclusive rows and the sign of cold storage equipment, which is negative on all three targets, the same artefact as the cold-storage requirement. Say that knowledge and understanding is conclusive on both components but just misses on the composite.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="knowledge-buildings-and-salaries-carry-r0722" class="slide level2 tbl t14">
+<h2>Knowledge, buildings and salaries carry <code>R0722</code></h2>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Code</th>
+<th>Subcategory</th>
+<th>Effect</th>
+<th>Interval</th>
+<th>Kept in</th>
+<th>Concl.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><code>C4.3</code></td>
+<td>Knowledge &amp; understanding</td>
+<td>+0.0745</td>
+<td>+0.0473 to +0.1020</td>
+<td>100%</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><code>C1.2</code></td>
+<td>Buildings &amp; facilities</td>
+<td>+0.0709</td>
+<td>+0.0413 to +0.0964</td>
+<td>100%</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><code>C6.1</code></td>
+<td>Salaries</td>
+<td>+0.0509</td>
+<td>+0.0270 to +0.0775</td>
+<td>100%</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><code>C5.3</code></td>
+<td>SOPs</td>
+<td>+0.0237</td>
+<td>+0.0000 to +0.0511</td>
+<td>91%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td><code>C2.3</code></td>
+<td>Other equipment</td>
+<td>+0.0150</td>
+<td>+0.0000 to +0.0426</td>
+<td>80%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td><code>C4.2</code></td>
+<td>Training</td>
+<td>+0.0067</td>
+<td>+0.0000 to +0.0288</td>
+<td>60%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td><code>C4.1</code></td>
+<td>Staffing</td>
+<td>+0.0043</td>
+<td>+0.0000 to +0.0256</td>
+<td>43%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td><code>C1.1</code></td>
+<td>Utilities &amp; services</td>
+<td>+0.0039</td>
+<td>+0.0000 to +0.0229</td>
+<td>41%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td><code>C2.1.1</code></td>
+<td>Cold storage equipment</td>
+<td>-0.0026</td>
+<td>-0.0168 to +0.0000</td>
+<td>32%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td><code>C2.2.1</code></td>
+<td>Vehicles</td>
+<td>-0.0024</td>
+<td>-0.0172 to +0.0000</td>
+<td>28%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td><code>C6.2</code></td>
+<td>Funds for operations</td>
+<td>+0.0018</td>
+<td>+0.0000 to +0.0159</td>
+<td>27%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td><code>C3.2</code></td>
+<td>Data management technology</td>
+<td>+0.0008</td>
+<td>+0.0000 to +0.0112</td>
+<td>12%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td><code>C2.2.2</code></td>
+<td>Insulated containers</td>
+<td>-0.0008</td>
+<td>-0.0091 to +0.0000</td>
+<td>14%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td><code>C3.1</code></td>
+<td>General IT equipment</td>
+<td>-0.0000</td>
+<td>+0.0000 to +0.0000</td>
+<td>3%</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><span class="smallnote">All fourteen subcategories, ranked by the size of the average effect. Effect is per standard deviation of the score, on the 0 to 1 target; conclusive as before.</span></p>
+<aside class="notes">
+<p>About 45 seconds. Read the conclusive rows and the sign of cold storage equipment, which is negative on all three targets, the same artefact as the cold-storage requirement. Say that knowledge and understanding is conclusive on both components but just misses on the composite.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-subcategory-results-pass-the-same-stress-tests" class="slide level2">
+<h2>The subcategory results pass the same stress tests</h2>
+<ul>
+<li><strong>Shuffled scores.</strong> Thirty shuffled runs produced no conclusive subcategory at all. The noise ceilings are 0.0063, 0.0194 and 0.0160, and every conclusive effect clears its ceiling.</li>
+<li><strong>Other model families.</strong> On <code>R0722</code> all three conclusive subcategories are named by all six families. On <code>R0712</code>, knowledge and written procedures are named by all six and buildings by two. On the composite the families agree least with the elastic net: they name data management (5 of 6) and knowledge (5 of 6) most often, and each of the four conclusive subcategories only twice.</li>
+<li><strong>Removing filled-in values.</strong> All ten conclusive subcategory effects keep their direction and their flag; almost no facility has a filled cell at this level.</li>
+<li><strong>Short lists.</strong> The conclusive subcategories alone keep 100% of the composite’s fit, 73% on <code>R0712</code> and 98% on <code>R0722</code>.</li>
+</ul>
+<aside class="notes">
+<p>About 70 seconds. The same four checks as at requirement level. The disagreement on the composite is worth saying out loud: with only fourteen columns, the elastic net and the tree families spread their choices differently, and the composite is where every method has least to work with. The exposure check at this level finds the same thing as before: cold storage equipment is the one subcategory whose score falls when it is better.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-causal-estimate-at-subcategory-level-tells-the-same-story" class="slide level2 tbl t14">
+<h2>The causal estimate at subcategory level tells the same story</h2>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Target</th>
+<th>Code</th>
+<th>Subcategory</th>
+<th>Effect, points</th>
+<th>q</th>
+<th>Conclusive</th>
+<th>Conclusive in the screening</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>QU</code></td>
+<td><code>C2.1.1</code></td>
+<td>Cold storage equipment</td>
+<td>-6</td>
+<td>0.227</td>
+<td></td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td><code>QU</code></td>
+<td><code>C3.1</code></td>
+<td>General IT equipment</td>
+<td>+5</td>
+<td>0.227</td>
+<td></td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td><code>QU</code></td>
+<td><code>C1.2</code></td>
+<td>Buildings &amp; facilities</td>
+<td>+5</td>
+<td>0.164</td>
+<td></td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td><code>R0712</code></td>
+<td><code>C5.3</code></td>
+<td>SOPs</td>
+<td>+24</td>
+<td>0.009</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td><code>R0712</code></td>
+<td><code>C4.3</code></td>
+<td>Knowledge &amp; understanding</td>
+<td>+51</td>
+<td>0.053</td>
+<td></td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td><code>R0712</code></td>
+<td><code>C4.2</code></td>
+<td>Training</td>
+<td>+17</td>
+<td>0.061</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>R0712</code></td>
+<td><code>C1.2</code></td>
+<td>Buildings &amp; facilities</td>
+<td>+18</td>
+<td>0.103</td>
+<td></td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td><code>R0722</code></td>
+<td><code>C4.3</code></td>
+<td>Knowledge &amp; understanding</td>
+<td>+67</td>
+<td>0.016</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td><code>R0722</code></td>
+<td><code>C1.2</code></td>
+<td>Buildings &amp; facilities</td>
+<td>+26</td>
+<td>0.005</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td><code>R0722</code></td>
+<td><code>C6.1</code></td>
+<td>Salaries</td>
+<td>+21</td>
+<td>0.005</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<p><span class="smallnote">Effect: change in the target, in points out of 100, when the subcategory goes from its lowest possible score to its highest. A whole range is a large move, so a quarter of the knowledge range, 13 points on <code>R0712</code> and 17 on <code>R0722</code>, is the realistic figure to quote.</span></p>
+<aside class="notes">
+<p>About 60 seconds. On R0722 the three conclusive subcategories are the screening’s three. On R0712 only written procedures clears the line; knowledge has the largest effect, 51 points over its full range, but its q-value sits at 0.053, just outside. On the composite nothing is conclusive, and cold storage equipment is again the largest effect, downwards. One level up, the answer is the same: what staff know carries the two vial targets.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-i-will-cover-7" class="slide level2">
+<h2>What I will cover</h2>
+<ol type="1">
+<li><span class="graylight">The question</span></li>
+<li><span class="graylight">The data and the filters</span></li>
+<li><span class="graylight">Targets and models</span></li>
+<li><span class="graylight">What drives quality</span></li>
+<li><span class="graylight">Stress-testing the answer</span></li>
+<li><span class="graylight">Causal estimates</span></li>
+<li><span class="graylight">Subcategory scores</span></li>
 <li><span class="remember"><strong>What it means and what comes next</strong></span></li>
 </ol>
 <aside class="notes">
-<p>5 seconds.</p>
+<p>5 seconds. Move the highlight and go.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -819,35 +4623,39 @@ section.two-comp > p { font-size: 0.82em; }
           display:block!important;
       }</style></aside>
 </section>
-<section id="conclusive-requirements-do-most-of-the-work-of-172-columns" class="slide level2">
-<h2>Conclusive requirements do most of the work of 172 columns</h2>
-<svg viewbox="0 0 1300 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bar chart comparing the full requirement set with the short list" style="width:100%;max-width:1080px;height:auto;display:block;margin:0 auto;">
-<g font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif"> <line x1="150" y1="330" x2="1240" y2="330" stroke="#8a97a6" stroke-width="2"></line> <g> <rect x="230" y="249" width="85" height="81" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"></rect> <rect x="325" y="256" width="85" height="74" fill="#1f6db4"></rect> <rect x="590" y="80" width="85" height="250" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"></rect> <rect x="685" y="162" width="85" height="168" fill="#1f6db4"></rect> <rect x="950" y="92" width="85" height="238" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"></rect> <rect x="1045" y="140" width="85" height="190" fill="#1f6db4"></rect> </g> <g font-size="24" fill="#33495d" text-anchor="middle"> <text x="272" y="239">0.062</text> <text x="367" y="246">0.057</text> <text x="632" y="70">0.192</text> <text x="727" y="152">0.129</text> <text x="992" y="82">0.183</text> <text x="1087" y="130">0.146</text> <text x="320" y="366" font-size="26">QU</text> <text x="680" y="366" font-size="26">R0712</text> <text x="1040" y="366" font-size="26">R0722</text> <text x="320" y="396" font-size="23" fill="#1f6db4">4 questions keep 92%</text> <text x="680" y="396" font-size="23" fill="#1f6db4">4 questions keep 67%</text> <text x="1040" y="396" font-size="23" fill="#1f6db4">5 questions keep 80%</text> </g> <g font-size="23" fill="#33495d"> <rect x="230" y="20" width="26" height="18" fill="#e3edf9" stroke="#7ba3d4" stroke-width="2"></rect> <text x="266" y="35">all 172 columns</text> <rect x="590" y="20" width="26" height="18" fill="#1f6db4"></rect> <text x="626" y="35">only the conclusive requirements</text> </g> </g>
-</svg>
-<aside class="notes">
-<p>About 55 seconds. Walk it: pale is everything the assessment asks, solid is the handful I named, and the gap is what a shorter instrument would give up. The composite keeps almost everything on four questions. If asked what the 172 covers: the 170 filtered requirements plus the assessment year and the target population, the same specification every earlier figure in the talk uses. Say the caveat in your own words rather than reading it, because Bahman will ask otherwise, and it is better coming from you first.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="limitations-and-take-aways" class="slide level2">
-<h2>Limitations and take aways</h2>
+<section id="what-the-evidence-supports" class="slide level2">
+<h2>What the evidence supports</h2>
 <ul>
-<li>This analysis is association-based, not causal</li>
-<li>Out of 170 requirements across 77 countries, quality at the last mile comes down to a handful, and the one that appears everywhere is <strong>staff knowing when an opened vial must be thrown away</strong></li>
-<li>The short list passed tests like shuffling answers, six model families verification, and the removal of every filled-in value</li>
+<li>Out of 170 requirements across 77 countries, quality at the last mile comes down to a handful, and <strong>what staff know is what matters</strong>: the discard time of multi-dose vials, the principles of vaccine storage, and the types of opened-vial wastage.</li>
+<li>Those three pass every test in the analysis: conclusive after adjustment, about half their effect intact within countries, beyond the reach of any measured stand-in for a hidden factor, unmoved when their neighbours leave the controls, and each with a direct route to an opened vial.</li>
+<li>The requirements that only mark a well-run facility, fire extinguishers, salaries, waste bins, drop out once facilities are compared within their own country.</li>
+<li>The composite score is a weak target with a hard ceiling. Its one conclusive effect, cold storage capacity, is a measurement artefact: better equipped facilities sit the harder test.</li>
 </ul>
-<p><strong>Thank you!</strong> Please let me know your questions.</p>
 <aside class="notes">
-<p>About 30 seconds. Three sentences, slowly, then stop. Do not wander into the backup slides unless someone asks.</p>
+<p>About 70 seconds. Four sentences, slowly. The first is the headline. The second is why it can be believed. The third is what the causal section removed. The fourth is the honest reading of the composite.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-the-evidence-does-not-support-and-what-comes-next" class="slide level2">
+<h2>What the evidence does not support, and what comes next</h2>
+<ul>
+<li><strong>The screening effects are associations, and the causal effects are causal only if nothing unmeasured drives both a requirement and quality.</strong> Every check narrows that doubt; none removes it.</li>
+<li>Half of each knowledge effect comes from differences between countries. The within-country half is the part a facility can act on.</li>
+<li>The subcategory results are provisional until the score construction is confirmed with WHO.</li>
+<li>Next: confirm the subcategory scores; write the named requirements down before the next round of assessments arrives and test them on countries that played no part in choosing them; choose the controls for each requirement from the structure of the EVM framework.</li>
+</ul>
+<p><strong>Thank you.</strong> Questions welcome.</p>
+<aside class="notes">
+<p>About 45 seconds. End on the next step with the new assessments: a list fixed in advance and tested on countries that had no say in it is the one test that would settle the question.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -866,10 +4674,11 @@ section.two-comp > p { font-size: 0.82em; }
 
 </section>
 <section id="backup-choosing-the-model" class="slide level2">
-<h2>Backup: Choosing the model</h2>
+<h2>Backup: choosing the model</h2>
 <ul>
-<li>Ten families over the same twenty splits: OLS, ridge, LASSO, elastic net, fractional logit, a gamma model on the shortfall from full marks, boosted trees, bagged trees, randomised trees, XGBoost</li>
-<li>Plain OLS is the weakest linear model on unseen facilities for all seven targets, so the penalties earn their place</li>
+<li>Eleven families over the same twenty splits: ordinary least squares, ridge, LASSO, elastic net, fractional logit, a gamma model on the shortfall from full marks, boosted trees, bagged trees, randomised-split trees, XGBoost and the mean of the training data as a floor.</li>
+<li>Plain least squares is the weakest linear model on unseen facilities for every target, so the penalties earn their place.</li>
+<li>The elastic net and the LASSO tie on every target; the elastic net is reported because it handles groups of near-identical requirements more gracefully.</li>
 </ul>
 <aside class="notes">
 <p>For questions on model choice. One line on AIC if pushed: a criterion computed inside the sample rewards exactly the hard fitting that repeated splits exist to discount.</p>
@@ -886,15 +4695,15 @@ section.two-comp > p { font-size: 0.82em; }
       }</style></aside>
 </section>
 <section id="backup-how-the-values-that-do-not-exist-are-handled" class="slide level2">
-<h2>Backup: How the values that do not exist are handled</h2>
+<h2>Backup: how the values that do not exist are handled</h2>
 <ul>
-<li>Some requirements do not apply to a facility, and a linear model still needs a number in that cell</li>
-<li>Two options: fill with the median value, or fill and add a marker column saying the value was filled</li>
-<li>Markers fit better by but it’s negligible, but they double the number of columns</li>
-<li>The simple fill is kept, because a marker coefficient is not something a manager can act on</li>
+<li>Some requirements do not apply to a facility, and a linear model still needs a number in that cell.</li>
+<li>Two options were compared: fill with the column’s mean, or fill and add a marker column saying the value was filled.</li>
+<li>The markers fit slightly better and double the number of columns, and a marker coefficient is not something a manager can act on, so the simple fill is kept.</li>
+<li>Two checks limit the cost: the tree families that need no filling name the same requirements, and refitting on fully scored facilities keeps every leading direction.</li>
 </ul>
 <aside class="notes">
-<p>For questions on missing data. Be straight about it: markers win narrowly on fit and lose on usefulness.</p>
+<p>For questions on missing data. Be straight: markers win narrowly on fit and lose on usefulness.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -910,9 +4719,9 @@ section.two-comp > p { font-size: 0.82em; }
 <section id="backup-quality-as-four-ordered-bands" class="slide level2">
 <h2>Backup: quality as four ordered bands</h2>
 <ul>
-<li>The score is cut at 0.6, 0.8 and 0.95, and 58% of facilities land in the top band</li>
-<li>Simply always naming the biggest band beats on plain accuracy, 0.582 against 0.496</li>
-<li>The top twenty requirements change under banding while no measure of fit improves, so the analysis is continued with the continuous score</li>
+<li>The composite score was cut at 0.6, 0.8 and 0.95, and 58% of facilities land in the top band.</li>
+<li>Always naming the biggest band beats the ordinal model on plain accuracy, 0.582 against 0.496, and the model’s agreement with the truth beyond chance is 0.092, weak by any usual standard.</li>
+<li>The top twenty requirements change under banding while no measure of fit improves, so the analysis keeps the continuous score.</li>
 </ul>
 <aside class="notes">
 <p>For questions about whether the continuous score is the right framing.</p>
